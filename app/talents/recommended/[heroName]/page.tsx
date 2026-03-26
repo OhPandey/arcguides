@@ -3,6 +3,7 @@ import TalentRenderer from "@/src/talents/components/talentRenderer";
 import { recommended } from "@/src/talents/data/builds/recommended";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Recommended Builds",
@@ -30,12 +31,14 @@ export default async function TalentsPage({ params }: PageProps) {
         currentHero={heroName}
       />
       <hr className="my-6 border-white/60" />
-      <TalentRenderer
-        heroName={heroName}
-        isRecommended={true}
-        allowEdit={false}
-        initSelectedTalentNodes={{}}
-      />
+      <Suspense>
+        <TalentRenderer
+          heroName={heroName}
+          isRecommended={true}
+          allowEdit={false}
+          initSelectedTalentNodes={{}}
+        />
+      </Suspense>
     </main>
   );
 }
