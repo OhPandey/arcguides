@@ -10,10 +10,22 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Talents (BETA)", href: "/talents" }
+    { name: "Talent Builder", href: "/talents" },
+    { name: "Recommended Builds", href: "/talents/recommended/bumi" }
   ];
-
-  const currentPage = navItems.find((item) => item.href === pathname);
+  const currentPage =
+    navItems
+      .slice()
+      .sort((a, b) => b.href.length - a.href.length)
+      .find((item) => pathname.startsWith(item.href)) ??
+    { name: "Page not found" };
+  
+  const activeItem = navItems
+    .slice()
+    .sort((a, b) => b.href.length - a.href.length)
+    .find((item) =>
+      item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
+    );
 
   return (
     <nav className="sticky top-0 z-50 border-b border-gray-800 bg-gray-900/80 backdrop-blur">
@@ -27,17 +39,16 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-8 text-sm">
           {navItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = item === activeItem;
 
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative pb-1 transition-colors ${
-                  isActive
-                    ? "text-blue-400 font-semibold"
-                    : "text-gray-300 hover:text-white"
-                }`}
+                className={`relative pb-1 transition-colors ${isActive
+                  ? "text-blue-400 font-semibold"
+                  : "text-gray-300 hover:text-white"
+                  }`}
               >
                 {item.name}
 
@@ -63,18 +74,17 @@ export default function Navbar() {
         <div className="border-t border-gray-800 bg-gray-900 md:hidden">
           <div className="flex flex-col px-6 py-3 gap-3">
             {navItems.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive = item === activeItem;
 
               return (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className={`transition-colors ${
-                    isActive
-                      ? "text-blue-400 font-semibold"
-                      : "text-gray-300 hover:text-white"
-                  }`}
+                  className={`transition-colors ${isActive
+                    ? "text-blue-400 font-semibold"
+                    : "text-gray-300 hover:text-white"
+                    }`}
                 >
                   {item.name}
                 </Link>

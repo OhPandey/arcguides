@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "ARC Guides (TEST 3) ",
+    default: "ARC Guides",
     template: "ARC Guides - %s",
   },
 };

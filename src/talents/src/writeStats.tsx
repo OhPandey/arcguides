@@ -37,7 +37,7 @@ export function WriteStats({ stats }: Props) {
                                     onClick={() => toggleCategory(category)}
                                     className="w-full flex justify-between items-center text-left font-semibold text-white/90 hover:text-white"
                                 >
-                                    <span>{category}</span>
+                                    <span>{category} ({values.length})</span>
                                     <span>{isOpen ? "−" : "+"}</span>
                                 </button>
 

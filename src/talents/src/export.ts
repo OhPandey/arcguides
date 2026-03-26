@@ -1,13 +1,11 @@
 import { toPng } from "html-to-image";
 
-export const exportURL = (selectedTalentNodes: Record<number, number>, hero: string) => { // NYI
-    return () => {
-        const encoded = btoa(JSON.stringify(selectedTalentNodes));
-        const url = `${window.location.origin}/talent?hero=${hero}&data=${encoded}`;
+export const exportURL = () => {
+    const url = window.location.href; // current full URL
 
-        navigator.clipboard.writeText(url);
-        alert("Link copied to clipboard!");
-    };
+    navigator.clipboard.writeText(url)
+        .then(() => alert("Link copied to clipboard!"))
+        .catch(() => alert("Failed to copy link."));
 };
 
 export const exportImage = (containerRef: React.RefObject<HTMLDivElement | null>, title: string) => {

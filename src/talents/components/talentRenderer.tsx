@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useMemo } from "react";
+import { useRef, useState, useMemo, useEffect } from "react";
 import { rarityColor } from "../src/rarity";
 import { heroMapping } from "../data/heroes/heroMapping";
 import { exportImage, exportURL } from "../src/export";
@@ -11,39 +11,65 @@ import { DrawNode } from "../src/drawNode";
 import { recommended } from "../data/builds/recommended";
 import { categoryIcons } from "../data/category";
 import { calculateAuraStats } from "../src/calculateStats";
-import { AuraCategory } from "../headers/aura";
 import { WriteStats } from "../src/writeStats";
 import { footer } from "../src/footer";
+import { encodeTalentData, decodeTalentData } from "../src/encoding";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { editMode } from "../src/edit";
 
 type Props =
-    | {
+     {
         heroName: string;
-        allowEdit?: boolean;
-        isRecommended: true;
-        selectedTalentNodes?: never;
+        allowEdit: boolean;
+        isRecommended: boolean;
+        initSelectedTalentNodes: Record<number, number>;
     }
-    | {
-        heroName: string;
-        allowEdit?: boolean;
-        isRecommended?: false;
-        selectedTalentNodes: Record<string, number>;
-    };
 
-export default function TalentRenderer({ heroName, selectedTalentNodes: initialTalents, allowEdit = false, isRecommended, }: Props) {
-
+export default function TalentRenderer({ heroName, allowEdit, isRecommended, initSelectedTalentNodes }: Props) {
     const hero = heroMapping[heroName];
 
     if (!hero) {
         console.error(`TalentRenderer - "${heroName}" does not exist.`);
         return "Error: Talent Tree could not be rendered.";
     }
+    
+    const router = useRouter();
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
+    const encodedData = allowEdit ? searchParams.get("data") : null;
+
+    const selectedInitialState = () => {
+        if (allowEdit) {
+            const decoded = decodeTalentData(encodedData, hero.layout);
+            return validateTalents(decoded, hero.layout ?? []);
+        }
+
+        if (isRecommended)
+            return recommended[heroName];
+
+        return validateTalents(initSelectedTalentNodes ?? {}, hero.layout ?? []);
+    };
+
+    const [selectedTalentNodes, setselectedTalentNodes] = useState(selectedInitialState);
+
+    useEffect(() => {
+        if (!allowEdit) 
+            return;
+
+        const encoded = encodeTalentData(selectedTalentNodes, hero.layout);
+        const params = new URLSearchParams();
+
+        if (encoded) 
+            params.set("data", encoded);
+
+        const newUrl = params.toString() ? `${pathname}?${params}` : pathname;
+
+        if (window.location.href !== window.location.origin + newUrl)
+            router.replace(newUrl, { scroll: false });
+    }, [selectedTalentNodes, pathname, router, allowEdit, hero.layout]);
+
 
     const containerRef = useRef<HTMLDivElement>(null);
-
-    const [selectedTalentNodes, setselectedTalentNodes] = useState(() => {
-        if (isRecommended) return recommended[heroName];
-        return validateTalents(initialTalents, hero.layout ?? []);
-    });
 
     const [showStats, setShowStats] = useState(false);
 
@@ -59,7 +85,7 @@ export default function TalentRenderer({ heroName, selectedTalentNodes: initialT
 
 
     return (
-        <div className="relative w-full flex flex-col lg:flex-row gap-4 items-stretch">
+        <div className="relative w-full flex flex-col lg:flex-row items-stretch">
             <div
                 className={`
                     w-full
@@ -69,9 +95,13 @@ export default function TalentRenderer({ heroName, selectedTalentNodes: initialT
             >
                 {/* ACTION BUTTONS */}
                 <div className="relative float-right mr-3 flex gap-2">
-                    <button className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur">
-                        ✏️
-                    </button>
+                    {!allowEdit && (
+                        <button
+                            onClick={() => editMode(heroName, selectedTalentNodes)}
+                            className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur">
+                            ✏️
+                        </button>
+                    )}
 
                     <button
                         onClick={() => exportImage(containerRef, hero.title)}
@@ -81,7 +111,7 @@ export default function TalentRenderer({ heroName, selectedTalentNodes: initialT
                     </button>
 
                     <button
-                        onClick={() => exportURL(selectedTalentNodes, heroName)}
+                        onClick={() => exportURL()}
                         className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur"
                     >
                         🔗
@@ -181,7 +211,7 @@ export default function TalentRenderer({ heroName, selectedTalentNodes: initialT
             >
                 <div className="bg-black/60 rounded-xl p-4 text-white shadow-lg backdrop-blur h-100 mt-2 lg:mt-5 flex flex-col">
 
-                    <h2 className="text-lg font-bold">Stats</h2>
+                    <h2 className="text-lg font-bold">Talent Stats</h2>
 
                     <div className="flex flex-col gap-3 text-sm">
                         <WriteStats stats={stats} />

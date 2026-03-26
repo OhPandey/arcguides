@@ -26,6 +26,13 @@ export default function Changelog() {
         <div className="space-y-6 text-sm">
 
           <div>
+            <p className="font-semibold text-white">v0.2.0 BETA (26/03/2025)</p>
+            <ul className="text-zinc-400 mt-2 space-y-1">
+              <li>• Added logic to talents. Now reachable under /talents/recommended/name and /talents/name</li>
+            </ul>
+          </div>
+
+          <div>
             <p className="font-semibold text-white">v0.1.2 BETA (26/03/2025)</p>
             <ul className="text-zinc-400 mt-2 space-y-1">
               <li>• Added stats panel to talents</li>
