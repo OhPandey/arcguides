@@ -14,9 +14,8 @@ export default function HeroSelector({ currentHero }: { currentHero: string }) {
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newHero = e.target.value;
-    const search = window.location.search;
 
-    router.push(`/talents/${newHero}${search}`);
+    router.push(`/talents/${newHero}`);
   };
 
   return (

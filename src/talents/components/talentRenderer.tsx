@@ -95,13 +95,25 @@ export default function TalentRenderer({ heroName, allowEdit, isRecommended, ini
             >
                 {/* ACTION BUTTONS */}
                 <div className="relative float-right mr-3 flex gap-2">
-                    {!allowEdit && (
+                    {
+                        !allowEdit && (
                         <button
                             onClick={() => editMode(heroName, selectedTalentNodes)}
                             className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur">
                             ✏️
                         </button>
-                    )}
+                        )
+                    }
+
+                    {
+                        allowEdit && (
+                        <button
+                            onClick={() => setselectedTalentNodes({})}
+                            className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur">
+                            ↩
+                        </button>
+                        )
+                    }
 
                     <button
                         onClick={() => exportImage(containerRef, hero.title)}
