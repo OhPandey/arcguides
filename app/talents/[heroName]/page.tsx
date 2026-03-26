@@ -33,12 +33,14 @@ export default async function TalentsPage({ params }: PageProps) {
         currentHero={heroName}
       />
       <hr className="my-6 border-white/60" />
-      <TalentRenderer
-        heroName={heroName}
-        allowEdit={true}
-        isRecommended={false}
-        initSelectedTalentNodes={{}}
-      />
+      {
+          <TalentRenderer
+          heroName={heroName}
+          allowEdit={true}
+          isRecommended={false}
+          initSelectedTalentNodes={{}}
+        />
+      }
     </main>
   );
 }
