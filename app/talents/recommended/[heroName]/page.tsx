@@ -23,7 +23,7 @@ export default async function TalentsPage({ params }: PageProps) {
   const { heroName } = await params;
 
   if (!recommended[heroName])
-    redirect("/");
+    redirect("/builds/recommended/bumi");
 
   return (
     <main className="max-w-6xl mx-auto p-6">

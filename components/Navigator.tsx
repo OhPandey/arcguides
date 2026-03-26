@@ -11,7 +11,7 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Talent Builder", href: "/talents" },
-    { name: "Recommended Builds", href: "/talents/recommended/bumi" }
+    { name: "Recommended Builds", href: "/talents/recommended" }
   ];
   const currentPage =
     navItems

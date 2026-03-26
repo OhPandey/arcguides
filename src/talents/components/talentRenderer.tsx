@@ -217,11 +217,11 @@ export default function TalentRenderer({ heroName, allowEdit, isRecommended, ini
 
             <div
                 className={`
-                    transition-all duration-300 overflow-auto mb-6
+                    transition-all duration-300 overflow-auto mt-5
                     ${showStats ? "w-full lg:w-[35%] opacity-100" : "w-0 lg:w-0 opacity-0"}
                 `}
             >
-                <div className="bg-black/60 rounded-xl p-4 text-white shadow-lg backdrop-blur h-100 mt-2 lg:mt-5 flex flex-col">
+                <div className="rounded-xl p-4 text-white shadow-lg backdrop-blur h-100 mt-2 lg:mt-5 flex flex-col">
 
                     <h2 className="text-lg font-bold">Talent Stats</h2>
 
