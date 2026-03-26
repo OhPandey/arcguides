@@ -4,7 +4,7 @@ import { TalentNode } from "../headers/talent"
 export function validateTalents(selectedTalents: Record<number, number>, layout: TalentNode[]): Record<number, number> {
     for (const talentNode of layout) {
         if ((selectedTalents[talentNode.id] || 0) <= 0)
-            continue // ignore empty nodes
+            continue
 
         const isRequiredAllowed = !talentNode.requires || talentNode.requires.every((requiredTalentNodeId: number) => {
             const requiredTalentNode = layout.find(talentNode => talentNode.id === requiredTalentNodeId)

@@ -7,26 +7,30 @@ import { exportImage, exportURL } from "../src/export";
 import { validateTalents } from "../src/validation";
 import { getHeroStar, MAXPOINTS } from "../src/hero";
 import { DrawConnections } from "../src/drawConnections";
-import { DrawTalent } from "../src/drawNode";
+import { DrawNode } from "../src/drawNode";
 import { recommended } from "../data/builds/recommended";
 import { categoryIcons } from "../data/category";
+import { calculateAuraStats } from "../src/calculateStats";
+import { AuraCategory } from "../headers/aura";
+import { WriteStats } from "../src/writeStats";
+import { footer } from "../src/footer";
 
 type Props =
     | {
         heroName: string;
         allowEdit?: boolean;
         isRecommended: true;
-        selectedTalents?: never;
+        selectedTalentNodes?: never;
     }
     | {
         heroName: string;
         allowEdit?: boolean;
         isRecommended?: false;
-        selectedTalents: Record<string, number>;
+        selectedTalentNodes: Record<string, number>;
     };
 
-export default function TalentRenderer({ heroName, selectedTalents: initialTalents, allowEdit = false, isRecommended, }: Props) {
-    
+export default function TalentRenderer({ heroName, selectedTalentNodes: initialTalents, allowEdit = false, isRecommended, }: Props) {
+
     const hero = heroMapping[heroName];
 
     if (!hero) {
@@ -36,114 +40,152 @@ export default function TalentRenderer({ heroName, selectedTalents: initialTalen
 
     const containerRef = useRef<HTMLDivElement>(null);
 
-    const [selectedTalents, setSelectedTalents] = useState(() => {
+    const [selectedTalentNodes, setselectedTalentNodes] = useState(() => {
         if (isRecommended) return recommended[heroName];
         return validateTalents(initialTalents, hero.layout ?? []);
     });
 
+    const [showStats, setShowStats] = useState(false);
+
     const talentPoints = useMemo(
-        () => Object.values(selectedTalents).reduce((sum, v) => sum + v, 0),
-        [selectedTalents]
+        () => Object.values(selectedTalentNodes).reduce((sum, v) => sum + v, 0),
+        [selectedTalentNodes]
     );
 
+    const stats = calculateAuraStats({
+        selectedTalentNodes: selectedTalentNodes,
+        layout: hero.layout,
+    });
+
+
     return (
-        <div className="relative w-full">
-            {/* ACTION BUTTONS */}
-            <div className="relative float-right mr-3 flex gap-2">
-                <button className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur">
-                    ✏️
-                </button>
-
-                <button
-                    onClick={exportImage(containerRef, hero.title)}
-                    className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur"
-                >
-                    🖨️
-                </button>
-
-                <button
-                    onClick={exportURL(selectedTalents, heroName)}
-                    className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur"
-                >
-                    🔗
-                </button>
-            </div>
-
-            {/* MAIN CONTAINER */}
+        <div className="relative w-full flex flex-col lg:flex-row gap-4 items-stretch">
             <div
-                ref={containerRef}
-                className="w-full overflow-x-auto border rounded-xl relative bg-center bg-no-repeat bg-cover mb-5"
-                style={{
-                    backgroundImage: `url('${hero.backgroundImage}')`,
-                }}
+                className={`
+                    w-full
+                    ${showStats ? "lg:w-[65%]" : "lg:w-full"}
+                    transition-all duration-300
+                `}
             >
-                <div className="relative w-225 h-160">
-                    {/* HERO HEADER */}
-                    <div className="absolute top-3 left-4 flex flex-col gap-2">
-                        <div className="flex items-start gap-3">
-                            <img
-                                src={`/arcguides/${hero.iconImage}`}
-                                alt={hero.title}
-                                className="w-11 h-12 rounded-lg object-cover"
-                            />
+                {/* ACTION BUTTONS */}
+                <div className="relative float-right mr-3 flex gap-2">
+                    <button className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur">
+                        ✏️
+                    </button>
 
-                            <div className="text-lg font-bold leading-tight">
-                                <p className={rarityColor[hero.rarity]}>
-                                    {hero.title}
-                                </p>
-                                <div className="flex flex-wrap gap-2 items-center font-normal text-white/80">
-                                    {hero.categories.map((cat, i) => (
-                                        <span key={cat} className="flex items-center gap-1">
-                                            {categoryIcons[cat] && (
-                                                <img
-                                                    src={`/arcguides/${categoryIcons[cat]}`}
-                                                    alt={cat}
-                                                    className="w-4 h-4 object-contain mb-0.5"
-                                                />
-                                            )}
-                                            <span>{cat}</span>
-                                            {i < hero.categories.length - 1 && <span>/</span>}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+                    <button
+                        onClick={() => exportImage(containerRef, hero.title)}
+                        className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur"
+                    >
+                        🖨️
+                    </button>
 
-                        <p className="text-lg font-semibold">
-                            Talent Points: {talentPoints}/{MAXPOINTS}
-                            <br />
-                            {getHeroStar(talentPoints)}
-                        </p>
-                    </div>
+                    <button
+                        onClick={() => exportURL(selectedTalentNodes, heroName)}
+                        className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur"
+                    >
+                        🔗
+                    </button>
 
-                    {/* CONNECTIONS */}
-                    <DrawConnections
-                        layout={hero.layout}
-                        selectedTalents={selectedTalents}
-                    />
-
-                    {/* TALENT NODES */}
-                    {hero.layout.map((talentNode) => (
-                        <DrawTalent
-                            key={talentNode.id}
-                            talentNode={talentNode}
-                            selectedTalents={selectedTalents}
-                            setSelectedTalents={setSelectedTalents}
-                            layout={hero.layout}
-                            talentPoints={talentPoints}
-                            allowEdit={allowEdit}
-                        />
-                    ))}
+                    <button
+                        onClick={() => setShowStats((prev) => !prev)}
+                        className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur"
+                    >
+                        📊
+                    </button>
                 </div>
 
-                {/* CONTEXT FOOTER */}
+                {/* MAIN CONTAINER */}
                 <div
-                    className="absolute bottom-2 text-center pointer-events-none select-none"
-                    style={{ width: 3100 }}
+                    ref={containerRef}
+                    className="w-full overflow-x-auto border rounded-xl relative bg-center bg-no-repeat bg-cover mb-5"
+                    style={{
+                        backgroundImage: `url('${hero.backgroundImage}')`,
+                    }}
                 >
-                    <span className="bg-black/40 rounded-md px-2 py-1 text-[12px] text-white/60 inline-block">
-                        <strong>Created by [Website - Name Subject to Change] <br></br>Avatar: The Last Airbender & The Legend of Korra © Nickelodeon // Avatar: Realms Collide © ANGames.</strong><br></br> This talent builder is an independent fan-made project and is not affiliated with, endorsed by, or sponsored by Nickelodeon or ANGames.<br></br>Avatar: Realms Collide is available on the App Store and Google Play.
-                    </span>
+                    <div className="relative w-225 h-160">
+                        {/* HERO HEADER */}
+                        <div className="absolute top-3 left-4 flex flex-col gap-2">
+                            <div className="flex items-start gap-3">
+                                <img
+                                    src={`/arcguides/${hero.iconImage}`}
+                                    alt={hero.title}
+                                    className="w-11 h-12 rounded-lg object-cover"
+                                />
+
+                                <div className="text-lg font-bold leading-tight">
+                                    <p className={rarityColor[hero.rarity]}>
+                                        {hero.title}
+                                    </p>
+                                    <div className="flex flex-wrap gap-2 items-center font-normal text-white/80">
+                                        {hero.categories.map((cat, i) => (
+                                            <span key={cat} className="flex items-center gap-1">
+                                                {categoryIcons[cat] && (
+                                                    <img
+                                                        src={`/arcguides/${categoryIcons[cat]}`}
+                                                        alt={cat}
+                                                        className="w-4 h-4 object-contain mb-0.5"
+                                                    />
+                                                )}
+                                                <span>{cat}</span>
+                                                {i < hero.categories.length - 1 && <span>/</span>}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className="text-lg font-semibold">
+                                Talent Points: {talentPoints}/{MAXPOINTS}
+                                <br />
+                                {getHeroStar(talentPoints)}
+                            </p>
+                        </div>
+
+                        {/* CONNECTIONS */}
+                        <DrawConnections
+                            layout={hero.layout}
+                            selectedTalentNodes={selectedTalentNodes}
+                        />
+
+                        {/* TALENT NODES */}
+                        {hero.layout.map((talentNode) => (
+                            <DrawNode
+                                key={talentNode.id}
+                                talentNode={talentNode}
+                                selectedTalentNodes={selectedTalentNodes}
+                                setSelectedTalentNodes={setselectedTalentNodes}
+                                layout={hero.layout}
+                                talentPoints={talentPoints}
+                                allowEdit={allowEdit}
+                            />
+                        ))}
+                    </div>
+
+                    {/* FOOTER */}
+                    <div
+                        className="absolute bottom-2 text-center pointer-events-none select-none"
+                        style={{ width: 3100 }}
+                    >
+                        <span className="bg-black/40 rounded-md px-2 py-1 text-[12px] text-white/60 inline-block" dangerouslySetInnerHTML={{ __html: footer }}>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                className={`
+                    transition-all duration-300 overflow-auto mb-6
+                    ${showStats ? "w-full lg:w-[35%] opacity-100" : "w-0 lg:w-0 opacity-0"}
+                `}
+            >
+                <div className="bg-black/60 rounded-xl p-4 text-white shadow-lg backdrop-blur h-100 mt-2 lg:mt-5 flex flex-col">
+
+                    <h2 className="text-lg font-bold">Stats</h2>
+
+                    <div className="flex flex-col gap-3 text-sm">
+                        <WriteStats stats={stats} />
+                    </div>
                 </div>
             </div>
         </div>

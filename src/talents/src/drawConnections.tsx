@@ -5,7 +5,7 @@ import { talents } from "../data/talents";
 
 interface TalentConnectionsProps {
     layout: TalentNode[];
-    selectedTalents: Record<number, number>;
+    selectedTalentNodes: Record<number, number>;
 }
 
 function isConnectionActive(currentId: number, requiredId: number,selected: Record<number, number>, layout: TalentNode[], isAny: boolean) {
@@ -28,7 +28,7 @@ function rowOffset(posRow: string, fromY: number, toY: number) { // God those di
     return 0;
 }
 
-export const DrawConnections: React.FC<TalentConnectionsProps> = ({ layout, selectedTalents }) => {
+export const DrawConnections: React.FC<TalentConnectionsProps> = ({ layout, selectedTalentNodes }) => {
     const renderLines = (isAny: boolean) =>
         {
             return layout.flatMap(talentNode => 
@@ -62,7 +62,7 @@ export const DrawConnections: React.FC<TalentConnectionsProps> = ({ layout, sele
                             const x2 = toX + 20 - nx * nodeRadius + rowOffset(talentNode.pos.row, fromY, toY) * (talentNode.pos.row === 'top' ? -1 : 1);
                             const y2 = toY + 20 - ny * nodeRadius + rowOffset(talentNode.pos.row, fromY, toY);
 
-                            const active = isConnectionActive(talentNode.id, requiredTalentNode.id, selectedTalents, layout, isAny);
+                            const active = isConnectionActive(talentNode.id, requiredTalentNode.id, selectedTalentNodes, layout, isAny);
 
                             return (
                                 <line

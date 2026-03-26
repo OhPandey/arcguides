@@ -7,27 +7,20 @@ import { getShape } from "./shape";
 
 type DrawNodeProps = {
     talentNode: TalentNode;
-    selectedTalents: Record<number, number>;
-    setSelectedTalents: React.Dispatch<React.SetStateAction<Record<number, number>>>;
+    selectedTalentNodes: Record<number, number>;
+    setSelectedTalentNodes: React.Dispatch<React.SetStateAction<Record<number, number>>>;
     layout: TalentNode[];
     talentPoints: number;
     allowEdit: boolean;
 };
 
-export const DrawTalent: React.FC<DrawNodeProps> = ({
-    talentNode,
-    selectedTalents,
-    setSelectedTalents,
-    layout,
-    talentPoints,
-    allowEdit,
-}) => {
+export const DrawNode: React.FC<DrawNodeProps> = ( {talentNode, selectedTalentNodes, setSelectedTalentNodes, layout, talentPoints, allowEdit }) => {
     const { x, y } = getCoordinates(talentNode.pos);
 
     const talent = talents[talentNode.talentId];
     const aura = auras[talent.auraId];
 
-    const currentPoints = selectedTalents[talentNode.id] ?? 0;
+    const currentPoints = selectedTalentNodes[talentNode.id] ?? 0;
     const maxPoints = talent.maxPoints ?? 1;
     const isEnhanced = talentNode.enhanced ?? false;
 
@@ -62,7 +55,7 @@ export const DrawTalent: React.FC<DrawNodeProps> = ({
         : "#001031";
 
     const cursor =
-        allowEdit && canIncrease(layout, selectedTalents, talentNode)
+        allowEdit && canIncrease(layout, selectedTalentNodes, talentNode)
             ? "pointer"
             : "default";
 
@@ -70,8 +63,8 @@ export const DrawTalent: React.FC<DrawNodeProps> = ({
         ? () =>
             handleLeftClick(
                 talentNode,
-                selectedTalents,
-                setSelectedTalents,
+                selectedTalentNodes,
+                setSelectedTalentNodes,
                 layout,
                 talentPoints
             )
@@ -79,7 +72,7 @@ export const DrawTalent: React.FC<DrawNodeProps> = ({
 
     const handleContextMenu = allowEdit
         ? (e: React.MouseEvent) =>
-            handleRightClick(e, talentNode, selectedTalents, setSelectedTalents, layout)
+            handleRightClick(e, talentNode, selectedTalentNodes, setSelectedTalentNodes, layout)
         : undefined;
 
     return (
@@ -115,7 +108,7 @@ export const DrawTalent: React.FC<DrawNodeProps> = ({
                     >
                         {/* Arrow (top) */}
                         {showTop && (
-                            <div className="w-3 h-3 bg-gray-900 rotate-45 -mb-1" />
+                            <div className="w-3 h-3 mr-50 bg-gray-900 rotate-45 -mb-1" />
                         )}
 
                         {/* Content */}
@@ -141,7 +134,7 @@ export const DrawTalent: React.FC<DrawNodeProps> = ({
 
                         {/* Arrow (bottom) */}
                         {!showTop && (
-                            <div className="w-3 h-3 bg-gray-900 rotate-45 -mt-1.5" />
+                            <div className="w-3 h-3 mr-50 bg-gray-900 rotate-45 -mt-1.5" />
                         )}
                     </div>
                 )}

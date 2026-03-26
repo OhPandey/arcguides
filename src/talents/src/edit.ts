@@ -2,7 +2,7 @@ import { talents } from "../data/talents"
 import { TalentNode } from "../headers/talent"
 import { MAXPOINTS } from "./hero"
 
-export function canIncrease(layout: TalentNode[], selectedTalents: Record<number, number>, talentNode: TalentNode): boolean {
+export function canIncrease(layout: TalentNode[], selectedTalentNodes: Record<number, number>, talentNode: TalentNode): boolean {
     const currentTalentNode = talentNode
 
     const andConnection = currentTalentNode.requires?.every(requiredTalentNodeId =>
@@ -14,7 +14,7 @@ export function canIncrease(layout: TalentNode[], selectedTalents: Record<number
 
             const talent = talents[requiredTalentNode.talentId]
 
-            return (selectedTalents[requiredTalentNode.id] || 0) === (talent.maxPoints || 1)
+            return (selectedTalentNodes[requiredTalentNode.id] || 0) === (talent.maxPoints || 1)
         }
     ) ?? true
 
@@ -27,18 +27,18 @@ export function canIncrease(layout: TalentNode[], selectedTalents: Record<number
 
         const talent = talents[requiredTalentNode.talentId]
 
-        return (selectedTalents[requiredTalentNode.id] || 0) === (talent.maxPoints || 1)
+        return (selectedTalentNodes[requiredTalentNode.id] || 0) === (talent.maxPoints || 1)
         }
     ) ?? true
 
     return andConnection && orConnection
 }
 
-export function canDecrease(layout: TalentNode[],selectedTalents: Record<number, number>, talentNode: TalentNode): boolean {
+export function canDecrease(layout: TalentNode[], selectedTalentNodes: Record<number, number>, talentNode: TalentNode): boolean {
     const currentTalentNode = talentNode
 
     return layout.every(talentNode => {
-        const isActive = (selectedTalents[talentNode.id] || 0) > 0
+        const isActive = (selectedTalentNodes[talentNode.id] || 0) > 0
         if (!isActive) 
             return true
 
@@ -55,7 +55,7 @@ export function canDecrease(layout: TalentNode[],selectedTalents: Record<number,
                     return false
 
                 const talent = talents[requiredNode.talentId]
-                return (selectedTalents[requiredNode.id] || 0) === (talent.maxPoints || 1)
+                return (selectedTalentNodes[requiredNode.id] || 0) === (talent.maxPoints || 1)
             })
         }
 
@@ -64,22 +64,22 @@ export function canDecrease(layout: TalentNode[],selectedTalents: Record<number,
 }
     
 
-export function handleLeftClick(talentNode: TalentNode, selectedTalents: Record<number, number>, setSelectedTalents: React.Dispatch<React.SetStateAction<Record<number, number>>>, layout: TalentNode[], talentPoints: number) {
-    const currentPoints = selectedTalents[talentNode.id] || 0
+export function handleLeftClick(talentNode: TalentNode, selectedTalentNodes: Record<number, number>, setSelectedTalentNodes: React.Dispatch<React.SetStateAction<Record<number, number>>>, layout: TalentNode[], talentPoints: number) {
+    const currentPoints = selectedTalentNodes[talentNode.id] || 0
     const maxPoints = talents[talentNode.talentId].maxPoints || 1
 
-    if (currentPoints >= maxPoints || talentPoints >= MAXPOINTS|| !canIncrease(layout, selectedTalents, talentNode)) 
+    if (currentPoints >= maxPoints || talentPoints >= MAXPOINTS|| !canIncrease(layout, selectedTalentNodes, talentNode)) 
         return
 
-    setSelectedTalents({ ...selectedTalents, [talentNode.id]: currentPoints + 1 })
+    setSelectedTalentNodes({ ...selectedTalentNodes, [talentNode.id]: currentPoints + 1 })
 }
 
-export function handleRightClick(e: React.MouseEvent, talentNode: TalentNode, selectedTalents: Record<number, number>, setSelectedTalents: React.Dispatch<React.SetStateAction<Record<number, number>>>, layout: TalentNode[]) {
+export function handleRightClick(e: React.MouseEvent, talentNode: TalentNode, selectedTalentNodes: Record<number, number>, setSelectedTalentNodes: React.Dispatch<React.SetStateAction<Record<number, number>>>, layout: TalentNode[]) {
     e.preventDefault()
 
-    const currentPoints = selectedTalents[talentNode.id]  || 0
-    if (currentPoints <= 0 || !canDecrease(layout, selectedTalents, talentNode)) 
+    const currentPoints = selectedTalentNodes[talentNode.id]  || 0
+    if (currentPoints <= 0 || !canDecrease(layout, selectedTalentNodes, talentNode)) 
         return
 
-    setSelectedTalents({ ...selectedTalents, [talentNode.id]: currentPoints - 1 })
+    setSelectedTalentNodes({ ...selectedTalentNodes, [talentNode.id]: currentPoints - 1 })
 }

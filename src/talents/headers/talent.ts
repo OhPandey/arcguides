@@ -1,12 +1,5 @@
 import { Position } from "./position"
 
-export type Aura = {
-  id: number
-  name: string
-  effect: string
-  unit?: string
-}
-
 export type Talent = {
   id: number
   title: string

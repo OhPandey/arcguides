@@ -1,8 +1,8 @@
 import { toPng } from "html-to-image";
 
-export const exportURL = (selectedNodes: Record<number, number>, hero: string) => {
+export const exportURL = (selectedTalentNodes: Record<number, number>, hero: string) => { // NYI
     return () => {
-        const encoded = btoa(JSON.stringify(selectedNodes));
+        const encoded = btoa(JSON.stringify(selectedTalentNodes));
         const url = `${window.location.origin}/talent?hero=${hero}&data=${encoded}`;
 
         navigator.clipboard.writeText(url);
