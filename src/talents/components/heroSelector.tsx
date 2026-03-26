@@ -19,8 +19,8 @@ export default function HeroSelector({ currentHero }: { currentHero: string }) {
   };
 
   return (
-    <div className="mb-6 flex items-center gap-3">
-      <label className="text-white/70 text-sm font-medium">
+    <div className="mb-6 flex flex-col sm:flex-row sm:items-center gap-3 w-full">
+      <label className="hidden sm:block text-white/70 text-sm font-medium">
         Select Talenttree for:
       </label>
 
@@ -29,10 +29,11 @@ export default function HeroSelector({ currentHero }: { currentHero: string }) {
           value={currentHero}
           onChange={handleChange}
           className="
+            w-full sm:w-auto
             appearance-none
             bg-black/60 backdrop-blur-md
             text-white
-            px-4 py-2 pr-10
+            px-4 py-2 lg:pr-10
             rounded-xl
             border border-white/60
             shadow-lg
