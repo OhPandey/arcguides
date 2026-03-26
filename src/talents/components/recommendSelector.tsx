@@ -23,7 +23,7 @@ export default function RecommendedSelector({ currentHero }: { currentHero: stri
 
   return (
     <div className="mb-6 flex items-center gap-3">
-      <label className="text-white/70 text-sm font-medium">
+      <label className="text-white/70 text-sm font-medium sm:block">
         Select recommended build for:
       </label>
 
@@ -35,7 +35,7 @@ export default function RecommendedSelector({ currentHero }: { currentHero: stri
             appearance-none
             bg-black/60 backdrop-blur-md
             text-white
-            px-4 py-2 pr-10
+            px-4 py-2 lg:pr-10
             rounded-xl
             border border-white/60
             shadow-lg
