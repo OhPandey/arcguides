@@ -3,6 +3,7 @@ import TalentRenderer from "@/src/talents/components/talentRenderer";
 import { heroMapping } from "@/src/talents/data/heroes/heroMapping";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
+import { Suspense } from "react";
 
 
 export const metadata: Metadata = {
@@ -33,14 +34,14 @@ export default async function TalentsPage({ params }: PageProps) {
         currentHero={heroName}
       />
       <hr className="my-6 border-white/60" />
-      {
+      <Suspense>
           <TalentRenderer
           heroName={heroName}
           allowEdit={true}
           isRecommended={false}
           initSelectedTalentNodes={{}}
         />
-      }
+      </Suspense>
     </main>
   );
 }
