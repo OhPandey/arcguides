@@ -18,7 +18,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { editMode } from "../src/edit";
 
 type Props =
-     {
+    {
         heroName: string;
         allowEdit: boolean;
         isRecommended: boolean;
@@ -32,7 +32,7 @@ export default function TalentRenderer({ heroName, allowEdit, isRecommended, ini
         console.error(`TalentRenderer - "${heroName}" does not exist.`);
         return "Error: Talent Tree could not be rendered.";
     }
-    
+
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -45,7 +45,7 @@ export default function TalentRenderer({ heroName, allowEdit, isRecommended, ini
         }
 
         if (isRecommended)
-            return recommended[heroName];
+            return validateTalents(recommended[heroName], hero.layout ?? []);
 
         return validateTalents(initSelectedTalentNodes ?? {}, hero.layout ?? []);
     };
@@ -53,13 +53,13 @@ export default function TalentRenderer({ heroName, allowEdit, isRecommended, ini
     const [selectedTalentNodes, setselectedTalentNodes] = useState(selectedInitialState);
 
     useEffect(() => {
-        if (!allowEdit) 
+        if (!allowEdit)
             return;
 
         const encoded = encodeTalentData(selectedTalentNodes, hero.layout);
         const params = new URLSearchParams();
 
-        if (encoded) 
+        if (encoded)
             params.set("data", encoded);
 
         const newUrl = params.toString() ? `${pathname}?${params}` : pathname;
@@ -97,21 +97,21 @@ export default function TalentRenderer({ heroName, allowEdit, isRecommended, ini
                 <div className="relative float-right mr-3 flex gap-2">
                     {
                         !allowEdit && (
-                        <button
-                            onClick={() => editMode(heroName, selectedTalentNodes)}
-                            className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur">
-                            ✏️
-                        </button>
+                            <button
+                                onClick={() => editMode(heroName, selectedTalentNodes)}
+                                className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur">
+                                ✏️
+                            </button>
                         )
                     }
 
                     {
                         allowEdit && (
-                        <button
-                            onClick={() => setselectedTalentNodes({})}
-                            className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur">
-                            ↩
-                        </button>
+                            <button
+                                onClick={() => setselectedTalentNodes({})}
+                                className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur">
+                                ↩
+                            </button>
                         )
                     }
 
@@ -214,19 +214,20 @@ export default function TalentRenderer({ heroName, allowEdit, isRecommended, ini
                     </div>
                 </div>
             </div>
-
             <div
                 className={`
-                    transition-all duration-300 overflow-auto mt-5
+                    transition-all duration-300 lg:mt-10
                     ${showStats ? "w-full lg:w-[35%] opacity-100" : "w-0 lg:w-0 opacity-0"}
                 `}
             >
-                <div className="rounded-xl p-4 text-white shadow-lg backdrop-blur h-100 mt-2 lg:mt-5 flex flex-col">
+                <div className="overflow-y-auto h-165" >
+                    <div className="rounded-xl p-4 text-white shadow-lg backdrop-blur flex flex-col">
 
-                    <h2 className="text-lg font-bold">Talent Stats</h2>
+                        <h2 className="text-lg font-bold underline">Talent Stats</h2>
 
-                    <div className="flex flex-col gap-3 text-sm">
-                        <WriteStats stats={stats} />
+                        <div className="flex flex-col gap-3 text-sm">
+                            <WriteStats stats={stats} />
+                        </div>
                     </div>
                 </div>
             </div>

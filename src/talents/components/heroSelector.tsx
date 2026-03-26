@@ -21,7 +21,7 @@ export default function HeroSelector({ currentHero }: { currentHero: string }) {
   return (
     <div className="mb-6 flex items-center gap-3">
       <label className="text-white/70 text-sm font-medium">
-        Select Hero:
+        Select Talenttree for:
       </label>
 
       <div className="relative">

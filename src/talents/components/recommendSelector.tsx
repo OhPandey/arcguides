@@ -24,7 +24,7 @@ export default function RecommendedSelector({ currentHero }: { currentHero: stri
   return (
     <div className="mb-6 flex items-center gap-3">
       <label className="text-white/70 text-sm font-medium">
-        Select Recommended Hero:
+        Select recommended build for:
       </label>
 
       <div className="relative">

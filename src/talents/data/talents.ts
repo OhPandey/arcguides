@@ -69,8 +69,8 @@ export const talents: Record<number, Talent> = {
     66: { id: 66, title: "Power of Earth", maxPoints: 4, modifier: 2.5, auraId: 55, image: "power_of_earth.png" },
     67: { id: 67, title: "Earth's Energy", maxPoints: 4, modifier: 2.5, auraId: 55,  image: "power_of_earth.png" },
     68: { id: 68, title: "Great Physical Strength", maxPoints: 3, modifier: 3, auraId: 46, image: "secure_stamina.png" },
-    69: { id: 69, title: "Disarm", maxPoints: 3, modifier: 6, auraId: 68 },
-    70: { id: 70, title: "Madness", maxPoints: 3, modifier: 2, auraId: 12 },
+    69: { id: 69, title: "Disarm", maxPoints: 4, modifier: 6, auraId: 68, image: "disarm.png" },
+    70: { id: 70, title: "Madness", maxPoints: 5, modifier: 2, auraId: 12, image: "madness.png" },
     71: { id: 71, title: "Revenge", maxPoints: 4, modifier: 80, auraId: 59, image: "revenge.png" },
     72: { id: 72, title: "Wind of Victory", maxPoints: 4, modifier: 1.5, auraId: 54, image: "wind_of_victory.png" },
     73: { id: 73, title: "Flow of Air", maxPoints: 4, modifier: 1.5, auraId: 54, image: "wind_of_victory.png" },
@@ -87,4 +87,5 @@ export const talents: Record<number, Talent> = {
     84: { id: 84, title: "Conscription", maxPoints: 4, modifier: 1, auraId: 10, image: "conscription.png" },
     85: { id: 85, title: "Insight", maxPoints: 4, modifier: 1, auraId: 67, image: "insight.png" },
     86: { id: 86, title: "Critical Hit", maxPoints: 3, modifier: 1, auraId: 8, image: "critical_hit.png" },
+    87: { id: 87, title: "Blessing of the Wind", maxPoints: 4, modifier: 1.5, auraId: 16, image: "blessing_of_the_wind.png" },
 }

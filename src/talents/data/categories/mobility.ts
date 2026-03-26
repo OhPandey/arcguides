@@ -7,10 +7,10 @@ export const mobility = createLayout(
         7, 
         9, 
         12, 
-        20, 
+        81, 
         32,
         14,
-        39,
+        87,
         51,
         69,
         70
