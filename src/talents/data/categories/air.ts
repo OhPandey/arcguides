@@ -6,7 +6,7 @@ export const air = createLayout(
     [
         72, 
         75, 
-        58, 
+        73, 
         23, 
         31
     ]

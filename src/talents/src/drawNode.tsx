@@ -14,7 +14,7 @@ type DrawNodeProps = {
     allowEdit: boolean;
 };
 
-export const DrawNode: React.FC<DrawNodeProps> = ( {talentNode, selectedTalentNodes, setSelectedTalentNodes, layout, talentPoints, allowEdit }) => {
+export const DrawNode: React.FC<DrawNodeProps> = ({ talentNode, selectedTalentNodes, setSelectedTalentNodes, layout, talentPoints, allowEdit }) => {
     const { x, y } = getCoordinates(talentNode.pos);
 
     const talent = talents[talentNode.talentId];
@@ -31,8 +31,8 @@ export const DrawNode: React.FC<DrawNodeProps> = ( {talentNode, selectedTalentNo
     const tooltipDescription = aura.effect.replace("{value}", `${value}`);
 
     const nextLevelText = currentPoints > 0 && currentPoints < maxPoints
-            ? `[Next level: ${(currentPoints + 1) * talent.modifier}${aura.unit}]`
-            : null;
+        ? `[Next level: ${(currentPoints + 1) * talent.modifier}${aura.unit}]`
+        : null;
 
     const showTop = y < 80;
 
@@ -83,21 +83,33 @@ export const DrawNode: React.FC<DrawNodeProps> = ( {talentNode, selectedTalentNo
             onContextMenu={handleContextMenu}
         >
             <div className="relative group">
-                {/* NODE */}
-                <div
-                    className={`w-10 h-10 ${shape} border flex items-center justify-center ${isActive ? "animate-pulsate" : ""
-                        }`}
-                    style={{
-                        backgroundColor,
-                        borderColor,
-                        cursor,
-                    }}
-                >
-                    <img
-                        src={`/arcguides/images/icons/${talentImage}`}
-                        alt={talent.title}
-                        className="w-6 h-6"
-                    />
+                <div className="relative w-10 h-10 flex items-center justify-center">
+                    {talentNode.enhanced && (
+                        <div
+                            className={`absolute w-9 h-9 rotate-45 ${isActive ? "animate-pulsate" : ""}`}
+                            style={{
+                                backgroundColor,
+                                border: `2px solid ${borderColor}`,
+                                zIndex: 0,
+                            }}
+                        />
+                    )}
+                    <div
+                        className={`w-10 h-10 ${shape} border flex items-center justify-center ${isActive ? "animate-pulsate" : ""
+                            }`}
+                        style={{
+                            backgroundColor,
+                            borderColor,
+                            cursor,
+                            zIndex: 10,
+                        }}
+                    >
+                        <img
+                            src={`/arcguides/images/icons/${talentImage}`}
+                            alt={talent.title}
+                            className="w-6 h-6"
+                        />
+                    </div>
                 </div>
 
                 {/* TOOLTIP */}
