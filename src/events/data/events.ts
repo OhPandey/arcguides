@@ -179,6 +179,7 @@ export const events: Event[] = [
     description: "Keep trying and strive to surpass your limits!",
     duration: 1,
     repeat: "Unknown",
+    startDate: "2026-04-01",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -211,6 +212,7 @@ export const events: Event[] = [
     description: "What matters is an unyielding determination!",
     duration: 3,
     repeat: "Unknown",
+    startDate: "2026-04-01",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -294,6 +296,7 @@ export const events: Event[] = [
     id: "harvest-season",
     name: "Harvest Season",
     description: "The seasons have turned, and harvest season is upon us.",
+    startDate: "2026-04-02",
     duration: 2,
     repeat: "Unknown",
     tasks: [
@@ -775,6 +778,7 @@ export const events: Event[] = [
     description: "Strengthen your power through building upgrades, research and bender recruiting.",
     duration: 2,
     repeat: "Unknown",
+    startDate: "2026-04-03",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -817,6 +821,7 @@ export const events: Event[] = [
     name: "1st Anniversary",
     description: "Traces of Memory",
     duration: 11,
+    startDate: "2026-04-02",
     repeat: "Unknown",
     tasks: [
       {
@@ -961,7 +966,7 @@ export const events: Event[] = [
     disclaimer: "* Hero Power is excluded.",
     informations: [
       'This is a “mega” event that unlocks over time and features multiple smaller events running simultaneously.',
-      'The Secret Tunnel Ranking is cross-server, regardless if your server has cross-server enabled (eg TGL).'
+      "The Secret Tunnel Ranking is cross-server, regardless of whether cross-server is enabled on your server (e.g., TGL)."
     ]
   },
 

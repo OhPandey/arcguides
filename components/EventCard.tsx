@@ -1,19 +1,32 @@
 import Link from "next/link"
 import { Event } from "@/src/events/type/event"
-import { formatDuration } from "@/src/events/formats/duration"
-import { formatRepeat } from "@/src/events/formats/repeat"
+import { formatDuration } from "@/src/events/utils/duration"
+import { formatRepeat } from "@/src/events/utils/repeat"
+import { getEventStatus } from "@/src/events/utils/eventSchedule"
 
 type EventCardProps = {
   event: Event
 }
 
 export default function EventCard({ event }: EventCardProps) {
+
+  const status = getEventStatus(event)
+  console.log(event)
+
   return (
     <div className="rounded-xl border border-gray-800 bg-gray-900 p-5 hover:border-indigo-500 transition flex flex-col">
 
-      <h3 className="text-lg font-semibold text-white text-center">
-        {event.name}
-      </h3>
+      <div className="flex items-center justify-center gap-2">
+        <h3 className="text-lg font-semibold text-white">
+          {event.name}
+        </h3>
+
+        {status.isActive && (
+          <span className="text-green-400 text-sm font-semibold">
+            Active
+          </span>
+        )}
+      </div>
 
       {event.wip && (
         <div className="text-s text-center">

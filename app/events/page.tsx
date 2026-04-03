@@ -4,12 +4,15 @@ import { useState } from "react"
 import EventCard from "@/components/EventCard"
 import { Event } from "@/src/events/type/event"
 import { events } from "@/src/events/data/events"
+import { sortEvents } from "@/src/events/utils/eventSchedule"
 
 export default function EventsPage() {
   const [search, setSearch] = useState("")
 
-  const filteredEvents: Event[] = events.filter((event) =>
-    event.name.toLowerCase().includes(search.toLowerCase())
+  const filteredEvents: Event[] = sortEvents(
+    events.filter((event) =>
+      event.name.toLowerCase().includes(search.toLowerCase())
+    )
   )
 
   return (

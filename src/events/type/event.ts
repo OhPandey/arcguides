@@ -3,7 +3,8 @@ export type Event = {
   name: string
   description: string
   duration: number | "Always"
-  repeat: number | "Seasonal" | "Unregularly" |"Unknown"
+  repeat: number | "Seasonal" | "Unregularly" | "Unknown"
+  startDate?: string
   tasks?: EventTable[]
   rewards?: EventTable[]
   disclaimer?: string

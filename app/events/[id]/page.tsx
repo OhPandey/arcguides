@@ -1,8 +1,8 @@
 import { EventTable } from "@/components/EventTable"
 import { events } from "@/src/events/data/events"
-import { formatDuration } from "@/src/events/formats/duration"
-import { formatRepeat } from "@/src/events/formats/repeat"
-import { formatText } from "@/src/events/formats/text"
+import { formatDuration } from "@/src/events/utils/duration"
+import { formatRepeat } from "@/src/events/utils/repeat"
+import { formatText } from "@/src/events/utils/text"
 import { Event } from "@/src/events/type/event"
 
 export function generateStaticParams() {
