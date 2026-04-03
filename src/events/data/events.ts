@@ -6,6 +6,7 @@ export const events: Event[] = [
     description: "Do your best to prove that you are the greatest leader!",
     duration: 5,
     repeat: 14,
+    startDate: "2026-04-01",
     tasks: [
       {
         title: "Stage 1: Gathering/Research/Bender Recruitment",
@@ -248,6 +249,7 @@ export const events: Event[] = [
     description: "Predict your fate with Wheel of Fate!",
     duration: 3,
     repeat: 14,
+    startDate: "2026-04-01",
     rewards: [
       {
         title: "Spin drop rates",

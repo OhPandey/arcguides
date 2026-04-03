@@ -11,8 +11,6 @@ type EventCardProps = {
 export default function EventCard({ event }: EventCardProps) {
 
   const status = getEventStatus(event)
-  console.log(event)
-
   return (
     <div className="rounded-xl border border-gray-800 bg-gray-900 p-5 hover:border-indigo-500 transition flex flex-col">
 
@@ -22,8 +20,14 @@ export default function EventCard({ event }: EventCardProps) {
         </h3>
 
         {status.isActive && (
-          <span className="text-green-400 text-sm font-semibold">
+          <span className="px-2 py-0.5 text-xs font-semibold bg-green-500/20 text-green-400 rounded">
             Active
+          </span>
+        )}
+
+        {status.isAllTime && (
+          <span className="px-2 py-0.5 text-xs font-semibold bg-orange-500/20 text-orange-400 rounded">
+            All-Time
           </span>
         )}
       </div>
