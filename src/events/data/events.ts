@@ -833,6 +833,16 @@ export const events: Event[] = [
         ]
       },
       {
+        title: "Firm Faith",
+        headers: ["Task", "Reward"],
+        rows: [
+          ["Defeat Shattered Skulls (Daily Cap: 5)", "1x Supply Box"],
+          ["Harvest Resources (Daily Cap: 5)", "1x Supply Box"],
+          ["Use 480m Speedup (Repeatable)", "1x Supply Box"],
+          ["Use 50 Gems (Repeatable)", "1x Supply Box"],
+        ]
+      },
+      {
         title: "Limited Time Top-Up",
         headers: ["Task", "Reward"],
         rows: [
@@ -889,9 +899,28 @@ export const events: Event[] = [
           ["1000", '"1st Anniversary: Twilight" Town Hall Skin'],
         ]
       },
-    ],
-
-    
+      {
+        title: "Path fo Fate (Start: Day 2, Duration: 5 Days)",
+        headers: ["Task"],
+        rows: [
+          ["Not yet available."]
+        ]
+      },
+      {
+        title: "Harvest of Bonds I (Start: Day 6, Duration: 2 Days)",
+        headers: ["Task"],
+        rows: [
+          ["Not yet available."]
+        ]
+      },
+      {
+        title: "Harvest of Bonds II (Start: Day 8: Duration: 2 Days)",
+        headers: ["Task"],
+        rows: [
+          ["Not yet available."]
+        ]
+      },
+    ], 
     rewards: [
       {
         title: "1st Anniversary Anitques (Lotus Shop)",
