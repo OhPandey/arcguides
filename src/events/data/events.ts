@@ -1077,6 +1077,7 @@ export const events: Event[] = [
         ]
       },
     ],
+    disclaimer: "This is a step-by-step task line. You must complete the previous step to unlock the next one.",
     details: [
       { type: "p", content: "Take down these troublemakers!" },
       { type: "p", content: "Warning: Extremly dangerous!", space: true },
@@ -1093,6 +1094,152 @@ export const events: Event[] = [
       "Before starting this event, you have to select a difficulty. You cannot change the difficulty afterward."
     ],
     wip: true
-    
+  },
+  {
+    id: "temple-war",
+    name: "Temple War",
+    duration: 1,
+    repeat: 14,
+    serverStartDates: {
+      "1001": "2024-04-14"
+    },
+    description: "The event to capture the Temple of Corruption is approaching.",
+    rewards: [
+      {
+        headers: ["Stage", "War Points", "War Reward", "", "Territory Points", "Territory Reward"],
+        dividerAfterColumns: [2, 3, 4],
+        rows: [
+          ["1", "10,000+", "1x Legendary Spirit Shard, 60m Speedup", "→", "0+", "2x Purified Essence, 2,000x Verdant Splinter"],
+          ["2", "50,000+", "1x Legendary Spirit Badge, 120m Speedup", "→", "500+", "4x Purified Essence, 4,000x Verdant Splinter"],
+          ["3", "200,000+", "2x Legendary Spirit Shard, 180m Speedup", "→", "1,000+", "6x Purified Essence, 6,000x Verdant Splinter"],
+          ["4", "500,000+", "2x Legendary Spirit Badge, 240m Speedup", "→", "1,500+", "8x Purified Essence, 8,000x Verdant Splinter"],
+          ["5", "1,200,000+", "3x Legendary Spirit Shard, 300m Speedup", "→", "2,000+", "10x Purified Essence, 10,000x Verdant Splinter"],
+          ["6", "2,500,000+", "3x Legendary Spirit Badge, 360m Speedup", "→", "3,000+", "15x Purified Essence, 15,000x Verdant Splinter"],
+          ["7", "5,000,000+", "4x Legendary Spirit Shard, 420m Speedup", "→", "4,000+", "20x Purified Essence, 20,000x Verdant Splinter"],
+          ["8", "10,000,000+", "4x Legendary Spirit Badge, 480m Speedup", "→", "5,000+", "25x Purified Essence, 25,000x Verdant Splinter"],
+          ["9", "15,000,000+", "5x Legendary Spirit Shard, 520m Speedup", "→", "7,000+", "30x Purified Essence, 30,000x Verdant Splinter"],
+          ["10", "20,500,000+", "5x Legendary Spirit Badge, 600m Speedup", "→", "3,000+", "40x Purified Essence, 40,000x Verdant Splinter"]
+        ]
+      },
+      {
+        title: "Overall Ranking",
+        headers: ["Rank", "Reward"],
+        rows: [
+          ["1", "5,000 Gems, 12,000m Speedup, 30,000,000 Food, 30,000,000 Wood, 30,000,000 Stone"],
+          ["2", "3,000 Gems, 9,000m Speedup, 22,500,000 Food, 22,500,000 Wood, 22,500,000 Stone"],
+          ["3", "2,000 Gems, 6,000m Speedup, 15,000,000 Food, 15,000,000 Wood, 15,000,000 Stone"],
+          ["4-10", "1,000 Gems, 4,800m Speedup, 10,500,000 Food, 10,500,000 Wood, 10,500,000 Stone"],
+          ["11-20", "500 Gems, 3,600m Speedup, 7,500,000 Food, 7,500,000 Wood, 7,500,000 Stone"],
+          ["21-50", "300 Gems, 2,400m Speedup, 4,500,000 Food, 4,500,000 Wood, 4,500,000 Stone"],
+        ]
+      },
+    ],
+    informations: [
+      "This event becomes available 14 days after the last milestone of the Chronicle of Harmony - 'Father Glowworm' has been completed."],
+    details: [
+      { type: "p", content: "The fate of this land is stirring once more.", space: true },
+      { type: "p", content: "Event Schedule" },
+      {
+        type: "ol", items:
+          [
+            "This event takes place every 2 weeks and lasts for 24 hours.",
+            "The first event will start 14 days after the Chronicle ends, and the second event will begin at a certain point at least 7 days afer the first event ends. Subsequent events will occure every 2 weeks.",
+            "The Temple of Corruption can only be captured during the event period after the Chronicle ends."
+          ], space: true
+      },
+      { type: "p", content: "Event Rewards" },
+      {
+        type: "ol", items:
+          [
+            "Rewards are given based on the War Points obtained during the event.",
+            "Additional rewards are given based on the Territory Points of the alliance's territory surrounding the Temple of Corruption.",
+            "Leaders who rank high and score at least 1,000,000 War Points during the event will receive amazing rewards."
+          ], space: true
+      },
+      { type: "p", content: "War Points" },
+      {
+        type: "ol",
+        items: [
+          "War Points are earned after defeating other Leaders' troops in the territory surrounding the Temple of Corruption.",
+          {
+            content: "War Points are earned based on the number of wounded/retired benders inflicted on the enemy troops.",
+            children: [
+              {
+                type: "ul",
+                items: [
+                  "Tier 1 Unit: 2 points",
+                  "Tier 2 Unit: 4 points",
+                  "Tier 3 Unit: 12 points",
+                  "Tier 4 Unit: 32 points",
+                  "Tier 5 Unit: 80 points",
+                  "Tier 6 Unit: 200 points",
+                ]
+              }
+            ]
+          },
+          {
+            content: "War Points are earned based on the number of wounded/retired benders caused by enemies.",
+            children: [
+              {
+                type: "ul",
+                items: [
+                  "Tier 1 Unit: 1 points",
+                  "Tier 2 Unit: 2 points",
+                  "Tier 3 Unit: 6 points",
+                  "Tier 4 Unit: 16 points",
+                  "Tier 5 Unit: 40 points",
+                  "Tier 6 Unit: 100 points",
+                ]
+              }
+            ]
+          },
+          "Event points are earned from the time of login after the event starts."
+        ],
+        space: true
+      },
+      { type: "p", content: "Territories surrounding the Temple of Corruption" },
+      {
+        type: "ol",
+        items: [
+          {
+            content: "War Points can be earned in the following territories:",
+            children: [
+              {
+                type: "ul",
+                items: [
+                  "Lv.4 Gate and surrounding territory",
+                  "Lv.3 Base and surrounding territory",
+                  "Sanctuary and surrounding territory",
+                  "Temple of Corruption and surrounding territory",
+                ]
+              }
+            ]
+          },
+          {
+            content: "At the end of the event, the Territory Points earned by the alliance for the occupied and restored territories are as follows:",
+            children: [
+              {
+                type: "ul",
+                items: [
+                  "Lv4 Gate: 1500 points each",
+                  "Lv3 Base: 300 points each",
+                  "Sanctuary: 1500 points each",
+                  "Temple of Corruption: 10,000 points",
+                ]
+              }
+            ]
+          }
+        ],
+        space: true
+      },
+      { type: "p", content: "Caution" },
+      {
+        type: "ul", items: [
+          "The Guardian of Harmony cannot be used during the Temple War."
+        ], space: true
+      },
+      { type: "quotedate", author: "ANGames", date: "2026-04-03" },
+
+    ]
   }
 ]

@@ -1,4 +1,8 @@
-export function EventTable({ table }: { table: { title?: string; headers: string[]; rows: string[][] } }) {
+import { EventTableData } from "@/src/events/type/event"
+
+export function EventTable({ table }: { table: EventTableData }) {
+    const dividers = table.dividerAfterColumns ?? []
+
     return (
         <div className="mb-6">
             {table.title && (
@@ -11,18 +15,29 @@ export function EventTable({ table }: { table: { title?: string; headers: string
                 <table className="w-full border border-gray-800 text-sm">
                     <thead className="bg-gray-800 text-gray-300">
                         <tr>
-                            {table.headers.map((h) => (
-                                <th key={h} className="px-3 py-2 text-left border-b border-gray-700">
+                            {table.headers.map((h, i) => (
+                                <th
+                                    key={h}
+                                    className={`px-3 py-2 text-left border-b border-gray-700 ${
+                                        dividers.includes(i+1) ? "border-r border-gray-600" : ""
+                                    }`}
+                                >
                                     {h}
                                 </th>
                             ))}
                         </tr>
                     </thead>
+
                     <tbody className="text-gray-300">
                         {table.rows.map((row, i) => (
                             <tr key={i} className="border-t border-gray-800">
                                 {row.map((cell, j) => (
-                                    <td key={j} className="px-3 py-2">
+                                    <td
+                                        key={j}
+                                        className={`px-3 py-2 ${
+                                            dividers.includes(j+1) ? "border-r border-gray-600" : ""
+                                        }`}
+                                    >
                                         {cell}
                                     </td>
                                 ))}
