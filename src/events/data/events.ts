@@ -761,4 +761,47 @@ export const events: Event[] = [
     ],
     wip: true
   },
+  {
+    id: "build-strength",
+    name: "Build Strength",
+    description: "Strengthen your power through building upgrades, research and bender recruiting.",
+    duration: 2,
+    repeat: "Unknown",
+    tasks: [
+      {
+        headers: ["Task", "Reward"],
+        rows: [
+          ["Increase Power by 120,000*", "3 Rare Spirit Shard, 100m Speedup"],
+          ["Increase Power by 240,000*", "1 Epic Spirit Shard, 1 Rare Spirit Shard, 240m Speedup"],
+          ["Increase Power by 360,000*", "2 Epic Spirit Shard, 480m Speedup"],
+          ["Increase Power by 480,000*", "1 Legendary Spirit Shard, 1 Epic Spirit Shard, 720m Speedup"],
+          ["Increase Power by 600,000*", "3 Legendary Spirit Shard, 1200m Speedup"]
+        ]
+      }
+    ],
+    rewards: [
+      {
+        title: "Overall Ranking",
+        headers: ["Rank", "Reward"],
+        rows: [
+          ["1", "30x Legendary Spirit Shard, 1,000 Gems, 1,200m Speedup, 1,500,000 Food, 1,500,000 Wood"],
+          ["2", "20x Legendary Spirit Shard, 500 Gems, 900m Speedup, 1,200,000 Food, 1,200,000 Wood"],
+          ["3", "10x Legendary Spirit Shard, 300 Gems, 600m Speedup, 900,000 Food, 900,000 Wood"],
+          ["4-10", "5x Legendary Spirit Shard, 200 Gems, 300m Speedup, 600,000 Food, 600,000 Wood"],
+          ["11-20", "3x Legendary Spirit Shard, 100 Gems, 180m Speedup, 450,000 Food, 450,000 Wood"],
+          ["21-50", "2x Legendary Spirit Shard, 50 Gems, 120m Speedup, 300,000 Food, 300,000 Wood"],
+          ["51-100", "1x Legendary Spirit Shard, 20 Gems, 60m Speedup, 150,000 Food, 150,000 Wood"],
+        ]
+      }
+    ],
+    disclaimer: "* Hero Power is excluded.",
+    details: [
+      { type: "p", content: "Build your strength and create a magnificent city!", space: true},
+      { type: "ol", items: [
+        "Rankings are based on Power gained during the event period (Hero excluded).",
+        "Leaders who earn at lesat 10,000 points and place in the rankings will receive amazing rewards.",
+      ], space: true},
+      { type:"quotedate", author:"ANGames", date: "2026-04-03"}
+    ]
+  },
 ]
