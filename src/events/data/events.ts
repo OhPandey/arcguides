@@ -812,4 +812,128 @@ export const events: Event[] = [
       { type:"quotedate", author:"ANGames", date: "2026-04-03"}
     ]
   },
+  {
+    id: "first-anniversary",
+    name: "1st Anniversary",
+    description: "Traces of Memory",
+    duration: 11,
+    repeat: "Unknown",
+    tasks: [
+      {
+        title: "First Anniversary Daily Rewards",
+        headers: ["Task", "Reward"],
+        rows: [
+          ["Log in for 1 Day", "10x Lucky Dice"],
+          ["Log in for 2 Days", "5x Golden Scroll"],
+          ["Log in for 3 Days", "10x Sacred Fruit"],
+          ["Log in for 4 Days", "5x Mystic Orb"],
+          ["Log in for 5 Days", "300m Speedup"],
+          ["Log in for 6 Days", "200 Gems"],
+          ["Log in for 7 Days", '"Moment of Memories" Frame Skin'],
+        ]
+      },
+      {
+        title: "Limited Time Top-Up",
+        headers: ["Task", "Reward"],
+        rows: [
+          ["Collect 500 Top-Up Points (by purchasing bundles)", "500 Gems, 240m Speedup"],
+          ["Collect 1,500 Top-Up Points (by purchasing bundles)", "1,500 Gems, 900m Speedup"],
+          ["Collect 2,500 Top-Up Points (by purchasing bundles)", "2,000 Gems, 2x Legendary Spirit Shard, 300m Speedup"],
+          ["Collect 5,000 Top-Up Points (by purchasing bundles)", "5x Legendary Spirit Shard, 50x Scared Fruit, 1,200m Speedup"],
+          ["Collect 10,000 Top-Up Points (by purchasing bundles)", "10x Legendary Spirit Shard, 30x Purified Essence, 2000x Verdant Splinter, 1,200m Speedup"],
+          ["Collect 20,000 Top-Up Points (by purchasing bundles)", "10x Legendary Spirit Badge, 6,000m Speedup"],
+          ["Collect 40,000 Top-Up Points (by purchasing bundles)", "100x Companion Material Custom Chest, 100x Purified Essence, 10,000 Verdant Splinter, 6,000m Speedup"],
+        ]
+      },
+      {
+        title: "Fragments of Life (Board Layout)",
+        headers: ["Board Position", "Task", "Reward"],
+        rows: [
+          ["1-1", "<Unknown, unlocks immediately>", "<Unknown, unlocks immediately>"],
+          ["1-2", "Complete 80 Expditions", "1x Lucky Dice, 1x Epic Spirit Badge, 25,000 EXP"],
+          ["1-3", "Recruit 30,000 Benders", "2x Lucky Dice, 1x Epic Spirit Shard, 50,000 EXP"],
+          ["2-1", "Defeat 80 Shattered Skulls", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
+          ["2-2", "Increase Power by 100,000*", "1x Lucky Dice, 2x Epic Spirit Shard, 50,000 EXP"],
+          ["2-3", "Purchase 80 items at the Trading Post", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
+          ["3-1", "Use 8,0000m of Speedup", "2x Lucky Dice, 1x Epic Spirit Shard, 50,000 EXP"],
+          ["3-2", "Use 100 Scrolls", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
+          ["3-3", "Gather 3,000,000 Resources from the Field", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
+          ["4-1", "Destroy 10 Shattered Skull Fortresses", "2x Lucky Dice, 1x Epic Spirit Shard, 50,000 EXP"],
+          ["4-2", "Use 5,000 Gems", "2x Lucky Dice, 1x Epic Spirit Shard, 50,000 EXP"],
+          ["4-3", "Complete 30 Companion surveys", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
+          ["5-1", "Donate 200 to allinace research", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
+          ["5-2", "Win 25 arena fights", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
+          ["5-3", "Collect 500 Top-Up Points (by purchasing bundles)", "2x Lucky Dice, 1x Epic Spirit Shard, 50,000 EXP"],
+          ["1-4", "Complete 1-1, 1-2 and 1-3", "4x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
+          ["2-4", "Complete 2-1, 2-2 and 2-3", "4x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
+          ["3-4", "Complete 3-1, 3-2 and 3-3", "4x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
+          ["4-4", "Complete 4-1, 4-2 and 4-3", "4x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
+          ["5-4", "Complete 5-1, 5-2 and 5-3", "4x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
+          ["6-1", "Complete 1-1, 2-1, 3-1, 4-1, and 5-1", "5x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
+          ["6-2", "Complete 1-2, 2-2, 3-2, 4-2, and 5-2", "5x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
+          ["6-3", "Complete 1-3, 2-3, 3-3, 4-3, and 5-3", "5x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
+          ["None", "Complete all missions", "20x Lucky Dice, 10x Legendary Spirit Shard, 10x Legendary Spirit Badge, 10x Sacred Fruit, 10x Sacred Dew"],
+        ]
+      },
+      {
+        title: "Secret Tunnel",
+        headers: ["Laps", "Reward"],
+        rows: [
+          ["10", "2x Legendary Spirit Shard, 2x Legendary Spirit Badge, 20x Gear Material Custom Chest, 10x Companion Material Custom Chest"],
+          ["30", "3x Legendary Spirit Shard, 3x Legendary Spirit Badge, 30x Gear Material Custom Chest, 20x Companion Material Custom Chest"],
+          ["60", "5x Legendary Spirit Shard, 5x Legendary Spirit Badge, 40x Gear Material Custom Chest, 30x Companion Material Custom Chest"],
+          ["100", "8x Legendary Spirit Shard, 8x Legendary Spirit Badge, 50x Gear Material Custom Chest, 40x Companion Material Custom Chest"],
+          ["200", "12x Legendary Spirit Shard, 12x Legendary Spirit Badge, 70x Gear Material Custom Chest, 60x Companion Material Custom Chest"],
+          ["400", "20x Legendary Spirit Shard, 20x Legendary Spirit Badge, 90x Gear Material Custom Chest, 100x Companion Material Custom Chest"],
+          ["700", "30x Legendary Spirit Shard, 30x Legendary Spirit Badge, 150x Gear Material Custom Chest, 200x Companion Material Custom Chest"],
+          ["1000", '"1st Anniversary: Twilight" Town Hall Skin'],
+        ]
+      },
+    ],
+
+    
+    rewards: [
+      {
+        title: "1st Anniversary Anitques (Lotus Shop)",
+        headers: ["Lotus", "Item"],
+        rows: [
+          ["10", "1x Legendary Spirit Shard: Cai (Cap: 100)"],
+          ["10", "1x Legendary Spirit Shard: Melon Lord (Cap: 20)"],
+          ["12", "1,500,000 Food/Wood/Stone (Cap: 50)"],
+          ["12", "750,000 Food/Wood/Stone (Cap: 50)"],
+          ["20", "1x Legendary Spirit Badge (Cap: 20)"],
+          ["20", "1x Legendary Spirit Shard (Cap: 20)"],
+          ["20", "10x Purified Essence (Cap: 50)"],
+          ["20", "1000x Verdant Splinter (Cap: 50)"],
+          ["34", "1,440m Speedup (Cap: 50)"],
+          ["150", "1x Epic Gear Custom Chest (Cap: 3)"],
+          ["200", "1x Epic Deco (Cap: 1 - 4 decos)"],
+          ["500", "1x Legendary Gear Custom Chest (Cap: 1)"],
+          ["2,000", "1x Legendary Frame Skin (Cap: 1 - 8 skins)"],
+        ]
+      },
+      {
+        title: "Secret Tunnel (Overall Ranking)",
+        headers: ["Rank", "Reward"],
+        rows: [
+          ["1", "Chibi Aang Portrait, Chibi Katara Portrait, 100x Legendary Spirit Shard, 100x Legendary Spirit Badge, 6,000m Speedup, 100x Gear Material Chest, 100x Companion Material Custom Chest"],
+          ["2", "Chibi Aang Portrait, Chibi Katara Portrait, 80x Legendary Spirit Shard, 80x Legendary Spirit Badge, 4,800m Speedup, 80x Gear Material Chest, 80x Companion Material Custom Chest"],
+          ["3", "Chibi Aang Portrait, Chibi Katara Portrait, 60x Legendary Spirit Shard, 60x Legendary Spirit Badge, 3,600m Speedup, 60x Gear Material Chest, 60x Companion Material Custom Chest"],
+          ["4-5", "Chibi Aang Portrait, Chibi Katara Portrait, 50x Legendary Spirit Shard, 50x Legendary Spirit Badge, 3,000m Speedup, 50x Gear Material Chest, 50x Companion Material Custom Chest"],
+          ["6-10", "Chibi Aang Portrait, Chibi Katara Portrait, 40x Legendary Spirit Shard, 40x Legendary Spirit Badge, 2,400m Speedup, 40x Gear Material Chest, 40x Companion Material Custom Chest"],
+          ["11-20", "30x Legendary Spirit Shard, 30x Legendary Spirit Badge, 1,800m Speedup, 30x Gear Material Chest, 30x Companion Material Custom Chest"],
+          ["21-30", "20x Legendary Spirit Shard, 20x Legendary Spirit Badge, 1,200m Speedup, 20x Gear Material Chest, 20x Companion Material Custom Chest"],
+          ["31-50", "10x Legendary Spirit Shard, 10x Legendary Spirit Badge, 600m Speedup, 10x Gear Material Chest, 10x Companion Material Custom Chest"],
+          ["51-100", "5x Legendary Spirit Shard, 5x Legendary Spirit Badge, 300m Speedup, 5x Gear Material Chest, 5x Companion Material Custom Chest"],
+          ["101-200", "2x Legendary Spirit Shard, 2x Legendary Spirit Badge, 120m Speedup, 2x Gear Material Chest, 2x Companion Material Custom Chest"],
+        ]
+      },
+    ],
+    disclaimer: "* Hero Power is excluded.",
+    informations: [
+      'This is a “mega” event that unlocks over time and features multiple smaller events running simultaneously.',
+      'The Secret Tunnel Ranking is cross-server, regardless if your server has cross-server enabled (eg TGL).'
+    ]
+  },
+
 ]
