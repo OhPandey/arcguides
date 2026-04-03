@@ -33,9 +33,14 @@ export const events: Event[] = [
       },
       {
         title: "Stage 3: Hero Growth",
-        headers: ["Task"],
+        headers: ["Task", "Reward"],
         rows: [
-          ["Waiting for confimation"]
+          ["Use 10 Silver Scrolls", "1x Rare Spirit Shard, 5x Silver Scroll, 1000 EXP, 60m Speedup"],
+          ["Use 10 Golden Scrolls", "1x Epic Spirit Shard, 5x Golden Scroll, 5000 EXP, 120m Speedup"],
+          ["Level Up 1 Hero Skill", "1x Epic Spirit Badge, 1x Silver Scroll, 1000 EXP, 60m Speedup"],
+          ["Level Up 3 Hero Skills", "3x Epic Spirit Shard, 1x Golden Scroll, 5000 EXP, 120m Speedup"],
+          ["Rank Up 1 Hero", "3x Rare Spirit Shard, 1x Silver Scroll, 1000 EXP, 60m Speedup"],
+          ["Rank Up 3 Heros", "3x Epic Spirit Shard, 1x Golden Scroll, 5000 EXP, 120m Speedup"],
         ]
       },
       {
