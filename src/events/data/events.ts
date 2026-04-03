@@ -435,7 +435,10 @@ export const events: Event[] = [
     repeat: "Unregularly",
     disclaimer: "There are no Tasks or Rewards tied to this event.",
     informations: [
-      "This time-limited reminder event notifies you that an important milestone will soon unlock in your Chronicle of Harmony."
+      "This time-limited reminder event notifies you that an important milestone will soon unlock in your Chronicle of Harmony.",
+    ],
+    tips: [
+      "Known Trigger of this event:\n- Level 1 Base\n- Level 2 Base\n- Level  3 Base\n - Level 1 Gate\n- Level 2 Gate\n- Level 3 Gate\n- Level 4 Gate\n- Altar\n- Sanctum\n- Shrine\n- Legacy"
     ]
   },
   {
