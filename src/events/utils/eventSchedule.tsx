@@ -7,7 +7,7 @@ export type EventStatus = {
     nextStart: number | null
 }
 
-export function getEventStatus(event: Event): EventStatus {
+export function getEventStatus(event: Event, serverId?: string): EventStatus {
     if (event.duration === "Always") {
         return {
             isActive: false,
@@ -17,11 +17,18 @@ export function getEventStatus(event: Event): EventStatus {
         }
     }
 
-    if (!event.startDate)
-        return { isActive: false, isAllTime: false, remainingTime: null, nextStart: null }
-
     const now = Date.now()
-    const start = new Date(event.startDate).getTime()
+
+    let start: number | null = null
+
+    if (serverId && event.serverStartDates?.[serverId]) {
+        start = new Date(event.serverStartDates[serverId]).getTime()
+    } else if (event.startDate) {
+        start = new Date(event.startDate).getTime()
+    }
+
+    if (start === null)
+        return { isActive: false, isAllTime: false, remainingTime: null, nextStart: null }
 
     if (typeof event.duration !== "number")
         return { isActive: false, isAllTime: false, remainingTime: null, nextStart: null }
@@ -61,10 +68,10 @@ export function getEventStatus(event: Event): EventStatus {
     }
 }
 
-export function sortEvents(events: Event[]) {
+export function sortEvents(events: Event[], serverId?: string) {
     return [...events].sort((a, b) => {
-        const aStatus = getEventStatus(a)
-        const bStatus = getEventStatus(b)
+        const aStatus = getEventStatus(a, serverId)
+        const bStatus = getEventStatus(b, serverId)
 
         if (aStatus.isActive && !bStatus.isActive)
             return -1

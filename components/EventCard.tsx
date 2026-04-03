@@ -6,11 +6,12 @@ import { getEventStatus } from "@/src/events/utils/eventSchedule"
 
 type EventCardProps = {
   event: Event
+  serverId: string
 }
 
-export default function EventCard({ event }: EventCardProps) {
+export default function EventCard({ event, serverId }: EventCardProps) {
 
-  const status = getEventStatus(event)
+  const status = getEventStatus(event, serverId)
   return (
     <div className="rounded-xl border border-gray-800 bg-gray-900 p-5 hover:border-indigo-500 transition flex flex-col">
 

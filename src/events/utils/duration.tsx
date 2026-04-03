@@ -1,6 +1,6 @@
 export function formatDuration(days: number | "Always"): string {
     if (days === "Always")
-        return "All-time"
+        return "All-Time"
 
     if (days === 1)
         return "1 Day"

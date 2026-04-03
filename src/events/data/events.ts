@@ -7,6 +7,9 @@ export const events: Event[] = [
     duration: 5,
     repeat: 14,
     startDate: "2026-04-01",
+    serverStartDates: {
+      "1001": "2026-04-06"
+    },
     tasks: [
       {
         title: "Stage 1: Gathering/Research/Bender Recruitment",
@@ -104,7 +107,8 @@ export const events: Event[] = [
     details: [
       { type: "p", content: "Determine the greatest leader in the world." },
       { type: "p", content: "Do your best to prove that you are the greatest leader!", space: true },
-      { type: "ol", items: [
+      {
+        type: "ol", items: [
           "The event will take place every two weeks for a duration of 5 days.",
           "Each day during the event period, a different type of mission will be given.",
           "Daily rankings will be determined based on the scores gained according to the scoring rules.",
@@ -114,8 +118,9 @@ export const events: Event[] = [
       },
       { type: "p", content: "Power gained from Construction is only applied while the leader is online.", space: true },
       { type: "p", content: "Event Rules:", space: true },
-      { type: "p", content: "Day 1 - Resource Gathering/Increase Power with Research or Bender Recruitment", space: true},
-      { type: "ul", items: [
+      { type: "p", content: "Day 1 - Resource Gathering/Increase Power with Research or Bender Recruitment", space: true },
+      {
+        type: "ul", items: [
           "Per gathering 100 Food on the field: 3 Points",
           "Per gathering 100 Stones on the field: 3 Points",
           "Per gathering 50 Gold on the field: 3 Points",
@@ -124,7 +129,8 @@ export const events: Event[] = [
         ], space: true
       },
       { type: "p", content: "Day 2 - Bender Recruitment", space: true },
-      { type: "ul", items: [
+      {
+        type: "ul", items: [
           "Per recruiting 1 bender (Tier-1): 25 Points",
           "Per recruiting 1 bender (Tier-2): 50 Points",
           "Per recruiting 1 bender (Tier-3): 75 Points",
@@ -135,7 +141,8 @@ export const events: Event[] = [
         ], space: true
       },
       { type: "p", content: "Day 3 - Hero Growth", space: true },
-      { type: "ul", items: [
+      {
+        type: "ul", items: [
           "Use Silver Scroll: 750 points",
           "use Golden Scroll: 1,500 points",
           "Use Rare Hero Spirit Shard: 250 points",
@@ -148,7 +155,8 @@ export const events: Event[] = [
         ], space: true
       },
       { type: "p", content: "Day 4 - Defeat Shattered Skulls/Increase Power with Construction or Bender Recruitment", space: true },
-      { type: "ul", items: [
+      {
+        type: "ul", items: [
           "Defeat Shattered Skull Levels 1-5: 1,500 Points",
           "Defeat Shattered Skull Levels 6-10: 1,800 Points",
           "Defeat Shattered Skull Levels 11-15: 2,100 Points",
@@ -199,7 +207,8 @@ export const events: Event[] = [
     details: [
       { type: "p", content: "\"If I try, I fail. If I don't try, I'm never going to get it.\" - Aang" },
       { type: "p", content: "Keep trying and strive to surpass your limits!", space: true },
-      { type: "ol", items: [
+      {
+        type: "ol", items: [
           "Increase your Power to recieve higher rewards.",
           "This event will take place for one day.",
         ], space: true
@@ -230,7 +239,8 @@ export const events: Event[] = [
     ],
     details: [
       { type: "p", content: "What matters is an unyielding determination!", space: true },
-      { type: "ol", items: [
+      {
+        type: "ol", items: [
           "You will get points by using AP, bender recruiting, producing resouces in town.",
           "Reach the goals and get rewards.",
           "This event resets at UTC 00:00"
@@ -250,6 +260,9 @@ export const events: Event[] = [
     duration: 3,
     repeat: 14,
     startDate: "2026-04-01",
+    serverStartDates: {
+      "1001": "2026-04-06"
+    },
     rewards: [
       {
         title: "Spin drop rates",
@@ -315,14 +328,14 @@ export const events: Event[] = [
       }
     ],
     details: [
-      { type: "p", content: "The seasons have turned, and harvest season is upon us. Gather abundant resources to build an outstanding city.", space: true},
+      { type: "p", content: "The seasons have turned, and harvest season is upon us. Gather abundant resources to build an outstanding city.", space: true },
       {
         type: "ol", items: [
           "Gather resources, purchase items at the Trading Post during the event period to earn points.",
           "Reach the goals and get rewards."
         ], space: true
       },
-      { type:"quotedate", author:"ANGames", date: "2026-04-02"}
+      { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ]
   },
 
@@ -341,9 +354,9 @@ export const events: Event[] = [
       }
     ],
     details: [
-      { type: "p", content: "Community", space: true},
-      { type: "p", content: "By joining our official community, you can keep up with the latest updates, events, and more inofrmation about the game. Enjoy Avatar Legends. Realms Collide with leaders from around the world!", space: true},
-      { type:"quotedate", author:"ANGames", date: "2026-04-02"}
+      { type: "p", content: "Community", space: true },
+      { type: "p", content: "By joining our official community, you can keep up with the latest updates, events, and more inofrmation about the game. Enjoy Avatar Legends. Realms Collide with leaders from around the world!", space: true },
+      { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
       "This is a special event everyone gets upon unlocking the calendar (Town Hall 5)."
@@ -365,9 +378,9 @@ export const events: Event[] = [
       }
     ],
     details: [
-      { type: "p", content: "Official Website", space: true},
-      { type: "p", content: "Visit our website for the latest game news, exclusive in-game currency, amazing gallery, and 100 free gems!", space: true},
-      { type:"quotedate", author:"ANGames", date: "2026-04-02"}
+      { type: "p", content: "Official Website", space: true },
+      { type: "p", content: "Visit our website for the latest game news, exclusive in-game currency, amazing gallery, and 100 free gems!", space: true },
+      { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
       "This is a special event everyone gets upon unlocking the calendar (Town Hall 5)."
@@ -403,7 +416,7 @@ export const events: Event[] = [
           ["Defeat Shattered Skull - Level 18 Lushan", "250 Gems, 4x Legendary Spirit Badge, 5x Epic Spirit Badge, 120m Speedup, 1x Lv 18. Purification Event Chest"],
           ["Defeat Shattered Skull - Level 19 Amur", "250 Gems, 5x Legendary Spirit Shard, 5x Epic Spirit Shard, 120m Speedup, 1x Lv 19. Purification Event Chest"],
           ["Defeat Shattered Skull - Level 20 <Missing>", "250 Gems, 5x Legendary Spirit Badge, 5x Epic Spirit Badge, 120m Speedup, 1x Lv 20. Purification Event Chest"],
-          ["Defeat Shattered Skull - Level 21 <Missing>",  "300 Gems, 6x Legendary Spirit Shard, 5x Epic Spirit Shard, 120m Speedup, 1x Lv 21, Purification Event Chest"],
+          ["Defeat Shattered Skull - Level 21 <Missing>", "300 Gems, 6x Legendary Spirit Shard, 5x Epic Spirit Shard, 120m Speedup, 1x Lv 21, Purification Event Chest"],
           ["Defeat Shattered Skull - Level 22 Kyro", "300 Gems, 6x Legendary Spirit Badge, 5x Epic Spirit Badge, 120m Speedup, 1x Lv 22. Purification Event Chest"],
           ["Defeat Shattered Skull - Level 23 Kyro", "300 Gems, 7x Legendary Spirit Shard, 5x Epic Spirit Shard, 120m Speedup, 1x Lv 23. Purification Event Chest"],
           ["Defeat Shattered Skull - Level 24 Kyro", "300 Gems, 7x Legendary Spirit Badge, 5x Epic Spirit Badge, 120m Speedup, 1x Lv 24. Purification Event Chest"],
@@ -427,8 +440,8 @@ export const events: Event[] = [
       "This is a special event everyone gets upon unlocking the calendar (Town Hall 5)."
     ],
     details: [
-      { type: "p", content: "The Shattered Skulls who follow Father Glowworm are gradually increasing in Power. You must build your strength, lead your benders and heroes, and defeat the Shattered Skulls step by step to purify the land.", space: true},
-      { type:"quotedate", author:"ANGames", date: "2026-04-02"}
+      { type: "p", content: "The Shattered Skulls who follow Father Glowworm are gradually increasing in Power. You must build your strength, lead your benders and heroes, and defeat the Shattered Skulls step by step to purify the land.", space: true },
+      { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     wip: true
   },
@@ -466,7 +479,7 @@ export const events: Event[] = [
     ],
     details: [
       { type: "p", content: "Raging spirits are crossing over throught he Rift. You must stregthen yourself and collaborate with your alliance members to stop them.", space: true },
-      { type: "quotedate", author: "ANGames", date: "2026-04-02"}
+      { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
       "This is a special event everyone gets upon joining an alliance."
@@ -477,6 +490,9 @@ export const events: Event[] = [
     name: "Avatar Day Festival",
     description: "Complete the missions to earn Aang Cookies!",
     duration: 5,
+    serverStartDates: {
+      "1001": "2026-03-30"
+    },
     repeat: "Unknown",
     tasks: [
       {
@@ -599,14 +615,15 @@ export const events: Event[] = [
     ],
     details: [
       { type: "p", content: "Join the festivites honoring avatars and enjoy amazing rewards!", space: true },
-      { type: "ol", items: 
-        [
-          "Different goals will be presented each day throughout the duration of the festival.",
-          "Upon completing the goals, you will recieve [Aang Cookie].",
-          "Collect [Aang Cookie] and exchange them at the [Avatar Day Festival Exchange] for amazing rewards."
-        ], space: true
+      {
+        type: "ol", items:
+          [
+            "Different goals will be presented each day throughout the duration of the festival.",
+            "Upon completing the goals, you will recieve [Aang Cookie].",
+            "Collect [Aang Cookie] and exchange them at the [Avatar Day Festival Exchange] for amazing rewards."
+          ], space: true
       },
-      { type: "quotedate", author: "ANGames", date: "2026-04-02"}
+      { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     tips: [
       "The event lasts for 5 days, but you can continue purchasing rewards for an additional day.",
@@ -639,7 +656,7 @@ export const events: Event[] = [
     disclaimer: "This is a step-by-step task line. You must complete the previous step to unlock the next one.",
     details: [
       { type: "p", content: "Upgrade the Town Hall and make your city more Powerful!", space: true },
-      { type: "quotedate", author: "ANGames", date: "2026-04-02"}
+      { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
       "This is a special event everyone gets upon unlocking the calendar (Town Hall 5)."
@@ -667,12 +684,14 @@ export const events: Event[] = [
       }
     ],
     details: [
-      { type: "p", content: "Welcome to Avatar Legends: Realms Collide!", space: true},
-      { type: "ol", items: [
-        "Log in every day for 7 days to get amazing rewards!",
-        "This event lasts for 30 days!"
-      ], space: true},
-      { type:"quotedate", author:"ANGames", date: "2026-04-02"}
+      { type: "p", content: "Welcome to Avatar Legends: Realms Collide!", space: true },
+      {
+        type: "ol", items: [
+          "Log in every day for 7 days to get amazing rewards!",
+          "This event lasts for 30 days!"
+        ], space: true
+      },
+      { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
       "This is a special event everyone gets upon unlocking the calendar (Town Hall 5)."
@@ -697,7 +716,7 @@ export const events: Event[] = [
           ["Achieve 300,000 Power", "5x Silver Scroll, 120m Speedup, 50,000 EXP, 150,000 Food"],
           ["Achieve 600,000 Power", "1x Golden Scroll, 3600m Speedup, 100,000 EXP"],
           ["Achieve 1,000,000 Power", "2x Golden Scroll, 3x Epic Spirit Badge, 600m Speedup"],
-          ["Achieve 1,500,000 Power", "3x Golden Scroll, 5x Epic Spirit Badge, 900m Speedup"], 
+          ["Achieve 1,500,000 Power", "3x Golden Scroll, 5x Epic Spirit Badge, 900m Speedup"],
           ["Achieve 2,000,000 Power", "5x Golden Scroll, 7x Epic Spirit Badge, 1500m Speedup"],
           ["Achieve 2,500,000 Power", "Obisidian Palace Hall Skin, 500 Gems, 10x Golden Scroll, 000m Speedup"],
         ]
@@ -719,14 +738,16 @@ export const events: Event[] = [
       }
     ],
     details: [
-      { type: "p", content: "A new world full of endless possibilities awaits!", space: true},
-      { type: "ol", items: [
-        "This event will take place when a new world opens and will last for 8 days.",
-        "Increase your Power and seize amazing rewards.",
-        "Power can be increased with construction, research, recruitment and hero growth.",
-        "This event won’t happen again!"
-      ], space: true},
-      { type:"quotedate", author:"ANGames", date: "2026-04-02"}
+      { type: "p", content: "A new world full of endless possibilities awaits!", space: true },
+      {
+        type: "ol", items: [
+          "This event will take place when a new world opens and will last for 8 days.",
+          "Increase your Power and seize amazing rewards.",
+          "Power can be increased with construction, research, recruitment and hero growth.",
+          "This event won’t happen again!"
+        ], space: true
+      },
+      { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
       "This special event is only available at the start of a new world (server). New servers open every Friday."
@@ -765,12 +786,14 @@ export const events: Event[] = [
       }
     ],
     details: [
-      { type: "p", content: "As time passes, the candle wax melts and drips. Who can melt the candle first?", space: true},
-      { type: "ol", items: [
-        "Ranks are determined based on the time value of speedup items used during the event period.",
-        "Highly ranked leaders who earn a minimum of 1,000 will receive amazing rewards.",
-      ], space: true},
-      { type:"quotedate", author:"ANGames", date: "2026-04-02"}
+      { type: "p", content: "As time passes, the candle wax melts and drips. Who can melt the candle first?", space: true },
+      {
+        type: "ol", items: [
+          "Ranks are determined based on the time value of speedup items used during the event period.",
+          "Highly ranked leaders who earn a minimum of 1,000 will receive amazing rewards.",
+        ], space: true
+      },
+      { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     wip: true
   },
@@ -810,12 +833,14 @@ export const events: Event[] = [
     ],
     disclaimer: "* Hero Power is excluded.",
     details: [
-      { type: "p", content: "Build your strength and create a magnificent city!", space: true},
-      { type: "ol", items: [
-        "Rankings are based on Power gained during the event period (Hero excluded).",
-        "Leaders who earn at lesat 10,000 points and place in the rankings will receive amazing rewards.",
-      ], space: true},
-      { type:"quotedate", author:"ANGames", date: "2026-04-03"}
+      { type: "p", content: "Build your strength and create a magnificent city!", space: true },
+      {
+        type: "ol", items: [
+          "Rankings are based on Power gained during the event period (Hero excluded).",
+          "Leaders who earn at lesat 10,000 points and place in the rankings will receive amazing rewards.",
+        ], space: true
+      },
+      { type: "quotedate", author: "ANGames", date: "2026-04-03" }
     ]
   },
   {
@@ -927,7 +952,7 @@ export const events: Event[] = [
           ["Not yet available."]
         ]
       },
-    ], 
+    ],
     rewards: [
       {
         title: "1st Anniversary Anitques (Lotus Shop)",
@@ -971,5 +996,103 @@ export const events: Event[] = [
       "The Secret Tunnel Ranking is cross-server, regardless of whether cross-server is enabled on your server (e.g., TGL)."
     ]
   },
+  {
+    id: "desert-troublemakers",
+    name: "Desert Troublemakers",
+    description: "Defeat Scorched Skulls!",
+    duration: 2,
+    repeat: "Unknown",
+    serverStartDates: {
+      "1001": "2026-04-03"
+    },
+    tasks: [
+      {
+        title: "Easy Difficulty",
+        headers: ["Level Reward", "Item"],
+        rows: [
+          ["Defeat a Level 1 Scorched Skull", "1x Rare Spirit Shard, 1x Rare Spirit Badge, 30m Speedup, 1x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 2 Scorched Skull", "1x Rare Spirit Shard, 1x Rare Spirit Badge, 60m Speedup, 2x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 3 Scorched Skull", "1x Rare Spirit Shard, 1x Rare Spirit Badge, 90m Speedup, 3x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 4 Scorched Skull", "1x Rare Spirit Shard, 1x Rare Spirit Badge, 120m Speedup, 4x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 5 Scorched Skull", "2x Rare Spirit Shard, 2x Rare Spirit Badge, 150m Speedup, 5x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 6 Scorched Skull", "2x Rare Spirit Shard, 2x Rare Spirit Badge, 180m Speedup, 6x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 7 Scorched Skull", "2x Rare Spirit Shard, 2x Rare Spirit Badge, 210m Speedup, 7x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 8 Scorched Skull", "2x Rare Spirit Shard, 2x Rare Spirit Badge, 240m Speedup, 8x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 9 Scorched Skull", "2x Rare Spirit Shard, 2x Rare Spirit Badge, 270m Speedup, 9x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 10 Scorched Skull", "3x Rare Spirit Shard, 3x Rare Spirit Badge, 300m Speedup, 10x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 11 Scorched Skull", "3x Rare Spirit Shard, 3x Rare Spirit Badge, 330m Speedup, 11x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 12 Scorched Skull", "3x Rare Spirit Shard, 3x Rare Spirit Badge, 360m Speedup, 12x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 13 Scorched Skull", "3x Rare Spirit Shard, 3x Rare Spirit Badge, 390m Speedup, 13x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 14 Scorched Skull", "3x Rare Spirit Shard, 3x Rare Spirit Badge, 420m Speedup, 14x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 15 Scorched Skull", "1x Epic Spirit Shard, 1x Epic Spirit Badge, 450m Speedup, 15x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 16 Scorched Skull", "1x Epic Spirit Shard, 1x Epic Spirit Badge, 480m Speedup, 16x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 17 Scorched Skull", "1x Epic Spirit Shard, 1x Epic Spirit Badge, 510m Speedup, 17x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 18 Scorched Skull", "1x Epic Spirit Shard, 1x Epic Spirit Badge, 540m Speedup, 18x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 19 Scorched Skull", "1x Epic Spirit Shard, 1x Epic Spirit Badge, 570m Speedup, 19x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 20 Scorched Skull", "2x Epic Spirit Shard, 2x Epic Spirit Badge, 600m Speedup, 20x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 21 Scorched Skull", "2x Epic Spirit Shard, 2x Epic Spirit Badge, 630m Speedup, 21x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 22 Scorched Skull", "2x Epic Spirit Shard, 2x Epic Spirit Badge, 660m Speedup, 22x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 23 Scorched Skull", "2x Epic Spirit Shard, 2x Epic Spirit Badge, 690m Speedup, 23x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 24 Scorched Skull", "2x Epic Spirit Shard, 2x Epic Spirit Badge, 720m Speedup, 24x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 25 Scorched Skull", "3x Epic Spirit Shard, 3x Epic Spirit Badge, 750m Speedup, 25x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 26 Scorched Skull", "3x Epic Spirit Shard, 3x Epic Spirit Badge, 780m Speedup, 26x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 27 Scorched Skull", "3x Epic Spirit Shard, 3x Epic Spirit Badge, 810m Speedup, 27x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 28 Scorched Skull", "3x Epic Spirit Shard, 3x Epic Spirit Badge, 840m Speedup, 28x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 29 Scorched Skull", "3x Epic Spirit Shard, 3x Epic Spirit Badge, 870m Speedup, 29x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 30 Scorched Skull", "1x Legendary Spirit Shard, 1x Legendary Spirit Badge, 900m Speedup, 30x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 31 Scorched Skull", "1x Legendary Spirit Shard, 1x Legendary Spirit Badge, 930m Speedup, 31x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 32 Scorched Skull", "1x Legendary Spirit Shard, 1x Legendary Spirit Badge, 960m Speedup, 32x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 33 Scorched Skull", "1x Legendary Spirit Shard, 1x Legendary Spirit Badge, 990m Speedup, 33x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 34 Scorched Skull", "1x Legendary Spirit Shard, 1x Legendary Spirit Badge, 1020m Speedup, 34x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 35 Scorched Skull", "2x Legendary Spirit Shard, 2x Legendary Spirit Badge, 1050m Speedup, 35x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 36 Scorched Skull", "2x Legendary Spirit Shard, 2x Legendary Spirit Badge, 1080m Speedup, 36x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 37 Scorched Skull", "2x Legendary Spirit Shard, 2x Legendary Spirit Badge, 1110m Speedup, 37x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 38 Scorched Skull", "2x Legendary Spirit Shard, 2x Legendary Spirit Badge, 1140m Speedup, 38x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 39 Scorched Skull", "2x Legendary Spirit Shard, 2x Legendary Spirit Badge, 1170m Speedup, 39x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 40 Scorched Skull", "3x Legendary Spirit Shard, 3x Legendary Spirit Badge, 1200m Speedup, 40x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 41 Scorched Skull", "3x Legendary Spirit Shard, 3x Legendary Spirit Badge, 1230m Speedup, 41x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 42 Scorched Skull", "3x Legendary Spirit Shard, 3x Legendary Spirit Badge, 1260m Speedup, 42x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 43 Scorched Skull", "3x Legendary Spirit Shard, 3x Legendary Spirit Badge, 1290m Speedup, 43x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 44 Scorched Skull", "3x Legendary Spirit Shard, 3x Legendary Spirit Badge, 1320m Speedup, 44x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 45 Scorched Skull", "4x Legendary Spirit Shard, 4x Legendary Spirit Badge, 1350m Speedup, 45x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 46 Scorched Skull", "4x Legendary Spirit Shard, 4x Legendary Spirit Badge, 1380m Speedup, 46x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 47 Scorched Skull", "4x Legendary Spirit Shard, 4x Legendary Spirit Badge, 1410m Speedup, 47x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 48 Scorched Skull", "4x Legendary Spirit Shard, 4x Legendary Spirit Badge, 1440m Speedup, 48x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 49 Scorched Skull", "4x Legendary Spirit Shard, 4x Legendary Spirit Badge, 1470m Speedup, 49x Lv.2 Custom Resource Chest"],
+          ["Defeat a Level 50 Scorched Skull", "5x Legendary Spirit Shard, 5x Legendary Spirit Badge, 1500m Speedup, 50x Lv.2 Custom Resource Chest"]
+        ]
+      }
+    ],
+    rewards: [
+      {
+        title: "Easy Difficulty",
+        headers: ["Level", "Item"],
+        rows: [
+          ["10", "1x Epic Spirit Shard, 1x Silver Scroll, 200 AP, 60m Speedup"],
+          ["20", "1x Epic Spirit Badge, 2x Silver Scroll, 200 AP, 60m"],
+          ["30", "1x Legendary Spirit Shard, 1x Golden Scroll, 400 AP, 60m"],
+          ["40", "1x Legendary Spirit Badge, 2x Golden Scroll, 400 AP, 120m"],
+          ["50", "3x Legendary Spirit Shard, 3x Golden Scroll, 600 AP, 180m"],
 
+        ]
+      },
+    ],
+    details: [
+      { type: "p", content: "Take down these troublemakers!" },
+      { type: "p", content: "Warning: Extremly dangerous!", space: true },
+      {
+        type: "ol", items: [
+          "During the event period, you can choose a difficulty and search for Scorched Skulls to attack. Try challenging from the lowest level to the highest!",
+          "You can only challenge one difficulty level during the event. Once selected, it cannot be changed.",
+          "After the event ends, you can claim additional rewards based on the highest level of Scorched defeated during the event. Be sure the claim your rewards before the event period is over!"
+        ], space: true
+      },
+      { type: "quotedate", author: "ANGames", date: "2026-04-03" }
+    ],
+    informations: [
+      "Before starting this event, you have to select a difficulty. You cannot change the difficulty afterward."
+    ],
+    wip: true
+    
+  }
 ]

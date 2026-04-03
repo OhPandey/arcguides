@@ -4,7 +4,8 @@ export type Event = {
   description: string
   duration: number | "Always"
   repeat: number | "Seasonal" | "Unregularly" | "Unknown"
-  startDate?: string
+  startDate?: string //default
+  serverStartDates?: Record<string, string>
   tasks?: EventTable[]
   rewards?: EventTable[]
   disclaimer?: string
