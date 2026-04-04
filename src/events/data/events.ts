@@ -1110,6 +1110,7 @@ export const events: Event[] = [
     description: "Defeat Scorched Skulls!",
     duration: 2,
     repeat: "Unknown",
+    startDate: "2026-04-06",
     serverStartDates: {
       "1001": "2026-04-03"
     },
@@ -1351,5 +1352,32 @@ export const events: Event[] = [
       { type: "quotedate", author: "ANGames", date: "2026-04-03" },
 
     ]
-  }
+  },
+  {
+    id: "united-mind",
+    name: "United Mind",
+    description: "Waiting for it to happen [...]",
+    duration: 1,
+    repeat: "Unknown",
+    startDate: "2026-04-06",
+    wip: true,
+  },
+  {
+    id: "roar-of-battle",
+    name: "Roar of Battle",
+    description: "Waiting for it to happen [...]",
+    duration: 1,
+    repeat: "Unknown",
+    startDate: "2026-04-07",
+    wip: true,
+  },
+  {
+    id: "balance-and-order",
+    name: "Balance and Order",
+    description: "Waiting for it to happen [...]",
+    duration: 1,
+    repeat: "Unknown",
+    startDate: "2026-04-08",
+    wip: true,
+  },
 ]
