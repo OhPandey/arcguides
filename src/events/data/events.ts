@@ -8,7 +8,9 @@ export const events: Event[] = [
     repeat: 14,
     startDate: "2026-04-01",
     serverStartDates: {
-      "1001": "2026-04-06"
+      "1001": "2026-04-06",
+      "1002": "2026-04-06",
+      "1003": "2024-04-14",
     },
     tasks: [
       {
@@ -266,7 +268,9 @@ export const events: Event[] = [
     repeat: 14,
     startDate: "2026-04-01",
     serverStartDates: {
-      "1001": "2026-04-06"
+      "1001": "2026-04-06",
+      "1002": "2026-04-06",
+      "1003": "2024-04-06",
     },
     rewards: [
       {
@@ -364,7 +368,7 @@ export const events: Event[] = [
       { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
-      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4)."
+      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4 and Chapter 4)."
     ]
   },
 
@@ -388,7 +392,7 @@ export const events: Event[] = [
       { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
-      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4)."
+      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4 and Chapter 4)."
     ]
   },
   {
@@ -442,7 +446,7 @@ export const events: Event[] = [
       "You can attack with multiple troops. However, a single maxed-out troop is able to defeat all enemies in this event."
     ],
     informations: [
-      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4)."
+      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4 and Chapter 4)."
     ],
     details: [
       { type: "p", content: "The Shattered Skulls who follow Father Glowworm are gradually increasing in Power. You must build your strength, lead your benders and heroes, and defeat the Shattered Skulls step by step to purify the land.", space: true },
@@ -496,7 +500,8 @@ export const events: Event[] = [
     description: "Complete the missions to earn Aang Cookies!",
     duration: 5,
     serverStartDates: {
-      "1001": "2026-03-30"
+      "1001": "2026-03-30",
+      "1002": "2026-03-30"
     },
     repeat: "Unknown",
     tasks: [
@@ -664,7 +669,7 @@ export const events: Event[] = [
       { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
-      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4)."
+      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4 and Chapter 4)."
     ],
     wip: true
   },
@@ -699,7 +704,7 @@ export const events: Event[] = [
       { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
-      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4)."
+      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4 and Chapter 4)."
     ],
     tips: [
       "You do not need to log in consecutively. You only need to log in 7 times during the month-long event."
@@ -983,7 +988,8 @@ export const events: Event[] = [
           ["Successfully raid 1 other airship", "10 S-coins"],
 
           // Alliance
-          ["Hselp 5 alliance members", "10 S-coin"],
+          ["Help 5 alliance members", "10 S-coin"],
+          ["Help 10 alliance members", "20 S-coin"],
           ["Donate 5 times to alliance research", "10 S-coins"],
           ["Donate 10 times to alliance research", "20 S-coins"],
           ["Donate 20 times to alliance research", "40 S-coins"],
@@ -997,18 +1003,24 @@ export const events: Event[] = [
           // Speedups
           ["Use 200m of Speedup", "10 S-coins"],
           ["Use 600m of Speedup", "20 S-coins"],
+          ["Use 1,200m of Speedup", "40 S-coins"],
+          ["Use 2,500m of Speedup", "100 S-coins"],
 
           // Power Increase
           ["Increase Power by 2,000 (Excluding Hero Power)", "10 S-coins"],
           ["Increase Power by 5,000 (Excluding Hero Power)", "20 S-coins"],
+          ["Increase Power by 10,000 (Excluding Hero Power)", "40 S-coins"],
           ["Increase Power by 20,000 (Excluding Hero Power)", "100 S-coins"],
 
           // Trading Post
           ["Purchase 2 items at the Trading Post", "10 S-coins"],
+          ["Purchase 5 items at the Trading Post", "20 S-coins"],
+          ["Purchase 10 items at the Trading Post", "40 S-coins"],
           ["Purchase 20 items at the Trading Post", "100 S-coins"],
 
           // Hero Upgrades
-          ["Level Up Hero Skills 1 time", "20 S-coins"],
+          ["Level Up Hero Skill 1 time", "20 S-coins"],
+          ["Rank Up Hero 1 time", "20 S-coins"],
           ["Level Up Heroes 3 times", "20 S-coins"],
           ["Enhance gear 1 time", "20 S-coins"],
 
@@ -1016,19 +1028,27 @@ export const events: Event[] = [
           ["Use 5 Scrolls", "10 S-coins"],
           ["Use 10 Scrolls", "20 S-coins"],
           ["Use 20 Scrolls", "40 S-coins"],
+          ["Use 30 Golden Scrolls", "100 S-coins"],
 
           // Mystic Ores
           ["Use 5 Mystic Ores at the Forge", "100 S-coins"],
 
           // Troops
           ["Recruit 1,000 Tier 2 or Higher Benders", "10 S-coins"],
+          ["Recruit 2,500 Tier 2 or Higher Benders", "20 S-coins"],
           ["Recruit 6,000 Tier 2 or Higher Benders", "40 S-coins"],
+          ["Recruit 4,000 Tier 5 or Higher Benders", "100 S-coins"],
 
           // Gems
           ["Use 500 Gems", "20 S-coins"],
+          ["Use 1,000 Gems", "40 S-coins"],
+          ["Use 2,000 Gems", "100 S-coins"],
 
           // Avatar Trail
           ["Complete 1 Avatar Trail", "20 S-coins"],
+
+          // Expedition
+          ["Complete 6 Expedition missions", "40 S-coins"],
 
           // Construction
           ["Construct Upgrade 1 building", "40 S-coins"],
@@ -1117,12 +1137,14 @@ export const events: Event[] = [
     repeat: "Unknown",
     startDate: "2026-04-06",
     serverStartDates: {
-      "1001": "2026-04-03"
+      "1001": "2026-04-03",
+      "1002": "2026-04-03",
+      "1003": "2026-04-03"
     },
     tasks: [
       {
         title: "Easy Difficulty",
-        headers: ["Level Reward", "Item"],
+        headers: ["Task", "Item"],
         rows: [
           ["Defeat a Level 1 Scorched Skull", "1x Rare Spirit Shard, 1x Rare Spirit Badge, 30m Speedup, 1x Lv.2 Custom Resource Chest"],
           ["Defeat a Level 2 Scorched Skull", "1x Rare Spirit Shard, 1x Rare Spirit Badge, 60m Speedup, 2x Lv.2 Custom Resource Chest"],
@@ -1175,6 +1197,34 @@ export const events: Event[] = [
           ["Defeat a Level 49 Scorched Skull", "4x Legendary Spirit Shard, 4x Legendary Spirit Badge, 1470m Speedup, 49x Lv.2 Custom Resource Chest"],
           ["Defeat a Level 50 Scorched Skull", "5x Legendary Spirit Shard, 5x Legendary Spirit Badge, 1500m Speedup, 50x Lv.2 Custom Resource Chest"]
         ]
+      },
+      {
+        title: "Normal Difficulty",
+        headers: ["Task"],
+        rows: [
+          ["Need Data"]
+        ]
+      },
+      {
+        title: "Hard Difficulty",
+        headers: ["Task"],
+        rows: [
+          ["Need Data"]
+        ]
+      },
+      {
+        title: "Nightmare Difficulty",
+        headers: ["Task"],
+        rows: [
+          ["Need Data"]
+        ]
+      },
+      {
+        title: "Hell Difficulty",
+        headers: ["Task"],
+        rows: [
+          ["Need Data"]
+        ]
       }
     ],
     rewards: [
@@ -1190,6 +1240,34 @@ export const events: Event[] = [
 
         ]
       },
+      {
+        title: "Normal Difficulty",
+        headers: ["Level"],
+        rows: [
+          ["Need Data"]
+        ]
+      },
+      {
+        title: "Hard Difficulty",
+        headers: ["Level"],
+        rows: [
+          ["Need Data"]
+        ]
+      },
+      {
+        title: "Nightmare Difficulty",
+        headers: ["Level"],
+        rows: [
+          ["Need Data"]
+        ]
+      },
+      {
+        title: "Hell Difficulty",
+        headers: ["Level"],
+        rows: [
+          ["Need Data"]
+        ]
+      }
     ],
     disclaimer: "This is a step-by-step task line. You must complete the previous step to unlock the next one.",
     details: [
@@ -1215,7 +1293,9 @@ export const events: Event[] = [
     duration: 1,
     repeat: 14,
     serverStartDates: {
-      "1001": "2024-04-14"
+      "1001": "2024-04-14",
+      "1002": "2024-04-14",
+      "1003": "2024-04-14"
     },
     description: "The event to capture the Temple of Corruption is approaching.",
     rewards: [

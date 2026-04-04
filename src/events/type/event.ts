@@ -23,15 +23,15 @@ export type EventTableData  = {
   dividerAfterColumns?: number[]
 }
 
-export type ListItem =
-  | string
+
+
+export type ListItem = string
   | {
       content: string
       children?: Details[]
     }
 
-export type Details =
-  | { type: "p"; content: string; space?: boolean }
+export type Details = { type: "p"; content: string; space?: boolean }
   | { type: "ul"; items: ListItem[]; space?: boolean }
   | { type: "ol"; items: ListItem[]; space?: boolean }
   | { type: "h2"; content: string; space?: boolean }
