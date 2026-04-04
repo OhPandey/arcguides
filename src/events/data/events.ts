@@ -364,7 +364,7 @@ export const events: Event[] = [
       { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
-      "This is a special event everyone gets upon unlocking the calendar (Town Hall 5)."
+      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4)."
     ]
   },
 
@@ -388,7 +388,7 @@ export const events: Event[] = [
       { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
-      "This is a special event everyone gets upon unlocking the calendar (Town Hall 5)."
+      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4)."
     ]
   },
   {
@@ -442,7 +442,7 @@ export const events: Event[] = [
       "You can attack with multiple troops. However, a single maxed-out troop is able to defeat all enemies in this event."
     ],
     informations: [
-      "This is a special event everyone gets upon unlocking the calendar (Town Hall 5)."
+      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4)."
     ],
     details: [
       { type: "p", content: "The Shattered Skulls who follow Father Glowworm are gradually increasing in Power. You must build your strength, lead your benders and heroes, and defeat the Shattered Skulls step by step to purify the land.", space: true },
@@ -664,7 +664,7 @@ export const events: Event[] = [
       { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
-      "This is a special event everyone gets upon unlocking the calendar (Town Hall 5)."
+      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4)."
     ],
     wip: true
   },
@@ -699,7 +699,7 @@ export const events: Event[] = [
       { type: "quotedate", author: "ANGames", date: "2026-04-02" }
     ],
     informations: [
-      "This is a special event everyone gets upon unlocking the calendar (Town Hall 5)."
+      "This is a special event everyone gets upon unlocking the calendar (Town Hall 4)."
     ],
     tips: [
       "You do not need to log in consecutively. You only need to log in 7 times during the month-long event."
