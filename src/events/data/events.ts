@@ -808,11 +808,11 @@ export const events: Event[] = [
       {
         headers: ["Task", "Reward"],
         rows: [
-          ["Increase Power by 120,000*", "3 Rare Spirit Shard, 100m Speedup"],
-          ["Increase Power by 240,000*", "1 Epic Spirit Shard, 1 Rare Spirit Shard, 240m Speedup"],
-          ["Increase Power by 360,000*", "2 Epic Spirit Shard, 480m Speedup"],
-          ["Increase Power by 480,000*", "1 Legendary Spirit Shard, 1 Epic Spirit Shard, 720m Speedup"],
-          ["Increase Power by 600,000*", "3 Legendary Spirit Shard, 1200m Speedup"]
+          ["Increase Power by 120,000*", "3x Rare Spirit Shard, 100m Speedup"],
+          ["Increase Power by 240,000*", "1x Epic Spirit Shard, 1x Rare Spirit Shard, 240m Speedup"],
+          ["Increase Power by 360,000*", "2x Epic Spirit Shard, 480m Speedup"],
+          ["Increase Power by 480,000*", "1x Legendary Spirit Shard, 1x Epic Spirit Shard, 720m Speedup"],
+          ["Increase Power by 600,000*", "3x Legendary Spirit Shard, 1200m Speedup"]
         ]
       }
     ],
@@ -838,6 +838,37 @@ export const events: Event[] = [
         type: "ol", items: [
           "Rankings are based on Power gained during the event period (Hero excluded).",
           "Leaders who earn at lesat 10,000 points and place in the rankings will receive amazing rewards.",
+        ], space: true
+      },
+      { type: "quotedate", author: "ANGames", date: "2026-04-03" }
+    ]
+  },
+  {
+    id: "stay-focused",
+    name: "Stay Focused",
+    description: "Maintain your focus!",
+    duration: 2,
+    repeat: "Unknown",
+    startDate: "2026-04-04",
+    tasks: [
+      {
+        headers: ["Task", "Reward"],
+        rows: [
+          ["Gather 200,000 Resources from the Field", "5,000 EXP, 75m Speedup"],
+          ["Gather 500,000 Resources from the Field", "1x Silver Scroll, 150m Speedup"],
+          ["Gather 1,000,000 Resources from the Field", "1x Golden Scroll, 225m Speedup, 1x Random City Relocation"],
+          ["Complete 5 Expedition missions", "5,000 EXP, 10,000 Food, 10,000 Wood, 10,000 Stone"],
+          ["Complete 10 Expedition missions", "1x Silver Scroll, 30,000 Food, 30,000 Wood, 30,000 Stone"],
+          ["Complete 20 Expedition missions", "1x Golden Scroll, 50,000 Food, 50,000 Wood, 50,000 Stone, 1x ATK Boost (8h)"]
+        ]
+      }
+    ],
+    details: [
+      { type: "p", content: "Maintain your focus!", space: true },
+      {
+        type: "ol", items: [
+          "Gather resources on the field, complete Expedition missions during the event period.",
+          "Reach the goals and get rewards.",
         ], space: true
       },
       { type: "quotedate", author: "ANGames", date: "2026-04-03" }
