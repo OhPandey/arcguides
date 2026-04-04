@@ -3,6 +3,7 @@ import { Event } from "../type/event"
 export type EventStatus = {
     isActive: boolean
     isAllTime: boolean
+    isTomorrow: boolean
     remainingTime: number | null
     nextStart: number | null
 }
@@ -12,12 +13,27 @@ export function getEventStatus(event: Event, serverId?: string): EventStatus {
         return {
             isActive: false,
             isAllTime: true,
+            isTomorrow: false,
             remainingTime: Infinity,
             nextStart: null
         }
     }
 
     const now = Date.now()
+
+    const nowDate = new Date()
+
+    const tomorrowStart = Date.UTC(
+        nowDate.getUTCFullYear(),
+        nowDate.getUTCMonth(),
+        nowDate.getUTCDate() + 1
+    )
+
+    const tomorrowEnd = Date.UTC(
+        nowDate.getUTCFullYear(),
+        nowDate.getUTCMonth(),
+        nowDate.getUTCDate() + 2
+    )
 
     let start: number | null = null
 
@@ -28,10 +44,10 @@ export function getEventStatus(event: Event, serverId?: string): EventStatus {
     }
 
     if (start === null)
-        return { isActive: false, isAllTime: false, remainingTime: null, nextStart: null }
+        return { isActive: false, isAllTime: false, isTomorrow: false, remainingTime: null, nextStart: null }
 
     if (typeof event.duration !== "number")
-        return { isActive: false, isAllTime: false, remainingTime: null, nextStart: null }
+        return { isActive: false, isAllTime: false, isTomorrow: false, remainingTime: null, nextStart: null }
 
     const durationMs = event.duration * 24 * 60 * 60 * 1000
 
@@ -39,9 +55,23 @@ export function getEventStatus(event: Event, serverId?: string): EventStatus {
         const end = start + durationMs
 
         if (now >= start && now <= end)
-            return { isActive: true, isAllTime: false, remainingTime: end - now, nextStart: null }
+            return {
+                isActive: true,
+                isAllTime: false,
+                isTomorrow: false,
+                remainingTime: end - now,
+                nextStart: null
+            }
 
-        return { isActive: false, isAllTime: false, remainingTime: null, nextStart: null }
+        const isTomorrow = start >= tomorrowStart && start < tomorrowEnd
+
+        return {
+            isActive: false,
+            isAllTime: false,
+            isTomorrow,
+            remainingTime: null,
+            nextStart: null
+        }
     }
 
     const repeatMs = event.repeat * 24 * 60 * 60 * 1000
@@ -50,19 +80,25 @@ export function getEventStatus(event: Event, serverId?: string): EventStatus {
     const currentEnd = currentStart + durationMs
 
     if (now >= currentStart && now <= currentEnd) {
+        const nextStart = currentStart + repeatMs
+        const isTomorrow = nextStart >= tomorrowStart && nextStart < tomorrowEnd
+
         return {
             isActive: true,
             isAllTime: false,
+            isTomorrow,
             remainingTime: currentEnd - now,
-            nextStart: currentStart + repeatMs
+            nextStart
         }
     }
 
     const nextStart = now < start ? start : currentStart + repeatMs
+    const isTomorrow = nextStart >= tomorrowStart && nextStart < tomorrowEnd
 
     return {
         isActive: false,
         isAllTime: false,
+        isTomorrow,
         remainingTime: null,
         nextStart
     }

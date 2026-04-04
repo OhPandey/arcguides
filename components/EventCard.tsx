@@ -31,6 +31,11 @@ export default function EventCard({ event, serverId }: EventCardProps) {
             All-Time
           </span>
         )}
+        {status.isTomorrow && (
+          <span className="px-2 py-0.5 text-xs font-semibold bg-red-500/20 text-orange-400 rounded">
+            Tomorrow
+          </span>
+        )}
       </div>
 
       {event.wip && (
