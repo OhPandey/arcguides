@@ -1,18 +1,16 @@
 // I took this from an old project, pretty handy I guess
 export function formatText(text: string) {
-
     const elements: React.ReactNode[] = []
-
     const lines = text.split("\n")
 
-    lines.forEach((line, lineIndex) => {
-
+    const formatInline = (line: string, lineIndex: number) => {
+        const inline: React.ReactNode[] = []
         const parts = line.split(/(\*\*.*?\*\*|\*.*?\*|\[.*?\]\(.*?\))/g)
 
         parts.forEach((part, i) => {
 
             if (/^\*\*.*\*\*$/.test(part)) {
-                elements.push(
+                inline.push(
                     <strong key={`${lineIndex}-${i}`}>
                         {part.slice(2, -2)}
                     </strong>
@@ -21,7 +19,7 @@ export function formatText(text: string) {
             }
 
             if (/^\*.*\*$/.test(part)) {
-                elements.push(
+                inline.push(
                     <em key={`${lineIndex}-${i}`}>
                         {part.slice(1, -1)}
                     </em>
@@ -32,7 +30,7 @@ export function formatText(text: string) {
             const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/)
 
             if (linkMatch) {
-                elements.push(
+                inline.push(
                     <a
                         key={`${lineIndex}-${i}`}
                         href={linkMatch[2]}
@@ -46,12 +44,59 @@ export function formatText(text: string) {
                 return
             }
 
-            elements.push(part)
+            inline.push(part)
         })
 
-        if (lineIndex < lines.length - 1)
-            elements.push(<br key={`br-${lineIndex}`} />)
-    })
+        return inline
+    }
+
+    let i = 0
+
+    while (i < lines.length) {
+        const line = lines[i]
+
+        if (/^[-*]\s+/.test(line)) {
+            const items: React.ReactNode[] = []
+
+            while (i < lines.length && /^[-*]\s+/.test(lines[i])) {
+                const content = lines[i].replace(/^[-*]\s+/, "")
+                items.push(
+                    <li key={`ul-${i}`}>
+                        {formatInline(content, i)}
+                    </li>
+                )
+                i++
+            }
+
+            elements.push(<ul key={`ul-${i}`} className="list-disc ml-6">{items}</ul>)
+            continue
+        }
+
+        if (/^\d+\.\s+/.test(line)) {
+            const items: React.ReactNode[] = []
+
+            while (i < lines.length && /^\d+\.\s+/.test(lines[i])) {
+                const content = lines[i].replace(/^\d+\.\s+/, "")
+                items.push(
+                    <li key={`ol-${i}`}>
+                        {formatInline(content, i)}
+                    </li>
+                )
+                i++
+            }
+
+            elements.push(<ol key={`ol-${i}`} className="list-decimal ml-6">{items}</ol>)
+            continue
+        }
+
+        elements.push(...formatInline(line, i))
+
+        if (i < lines.length - 1) {
+            elements.push(<br key={`br-${i}`} />)
+        }
+
+        i++
+    }
 
     return elements
 }

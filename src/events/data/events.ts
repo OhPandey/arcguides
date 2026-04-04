@@ -920,7 +920,7 @@ export const events: Event[] = [
       },
       {
         title: "Fragments of Life",
-        description: "This has a 5x3 board layout",
+        description: "This has a 5x3 board layout.",
         headers: ["Board Position", "Task", "Reward"],
         rows: [
           ["1-1", "Login in for 1 Day", "1x Lucky Dice, 1x Epic Spirit Shard"],
@@ -1215,6 +1215,8 @@ export const events: Event[] = [
     rewards: [
       {
         headers: ["Stage", "War Points", "War Reward", "", "Territory Points", "Territory Reward"],
+        description: "1. Rewards unlocked at each stage are determined by individual War Points.\n2. To unlock Territory Points Rewards, the corresponding stage's War Points must be reached, and Territory Points must also be satisfied.\n3. After the event ends, the rewards can be claimed through the event page for 48 hours. Don't forget to claim them!",
+
         dividerAfterColumns: [2, 3, 4],
         rows: [
           ["1", "10,000+", "1x Legendary Spirit Shard, 60m Speedup", "→", "0+", "2x Purified Essence, 2,000x Verdant Splinter"],

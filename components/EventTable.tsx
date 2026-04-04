@@ -12,9 +12,9 @@ export function EventTable({ table }: { table: EventTableData }) {
                 </h3>
             )}
             {table.description && (
-                <p className="text-gray-400 mb-2">
+                <div className="text-gray-400 mb-2">
                     {formatText(table.description)}
-                </p>
+                </div>
             )}
 
             <div className="overflow-x-auto">
