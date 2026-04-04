@@ -49,9 +49,14 @@ export const events: Event[] = [
       },
       {
         title: "Stage 4: Defeated Shatered Skulls/Destroy Shattered Skulls' Fortress/Construction/Bender Recruitment",
-        headers: ["Task"],
+        headers: ["Task", "Reward"],
         rows: [
-          ["Waiting for confimation"]
+          ["Defeat 10 Shattered Skulls", "1x Rare Spirit Shard, 1x Silver Scroll, 1000 EXP, 1x Seal of Solidarity"],
+          ["Defeat 20 Shattered Skulls", "1x Epic Spirit Shard, 1x Golden Scroll, 5000 EXP, 3x Seal of Solidarity"],
+          ["Destroy 2 Shattered Skulls' Fortresses", "1x Rare Spirit Badge, 1x Silver Scroll, 1000 EXP, 2x Seal of Solidarity"],
+          ["Destroy 4 Shattered Skulls' Fortresses", "1x Epic Spirit Badge, 1x Golden Scroll, 5000 EXP, 5x Seal of Solidarity"],
+          ["Increase Power by 30,000 with Construction and Bender Recruitment", "50 Gems, 3x Epic Spirit Shard, 1x Silver Scroll, 60m Speedup"],
+          ["Increase Power by 60,000 with Construction and Bender Recruitment", "100 Gems, 1x Legendary Spirit Shard, 1x Golden Scroll, 120m Speedup"],
         ]
       },
       {
