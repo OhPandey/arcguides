@@ -1,4 +1,5 @@
 import { EventTableData } from "@/src/events/type/event"
+import { formatText } from "@/src/events/utils/text"
 
 export function EventTable({ table }: { table: EventTableData }) {
     const dividers = table.dividerAfterColumns ?? []
@@ -9,6 +10,11 @@ export function EventTable({ table }: { table: EventTableData }) {
                 <h3 className="text-lg font-semibold text-white mb-2">
                     {table.title}
                 </h3>
+            )}
+            {table.description && (
+                <p className="text-gray-400 mb-2">
+                    {formatText(table.description)}
+                </p>
             )}
 
             <div className="overflow-x-auto">

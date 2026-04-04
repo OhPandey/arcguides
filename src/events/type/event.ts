@@ -17,6 +17,7 @@ export type Event = {
 
 export type EventTableData  = {
   title?: string
+  description?: string
   headers: string[]
   rows: string[][]
   dividerAfterColumns?: number[]

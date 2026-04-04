@@ -919,10 +919,11 @@ export const events: Event[] = [
         ]
       },
       {
-        title: "Fragments of Life (Board Layout)",
+        title: "Fragments of Life",
+        description: "This has a 5x3 board layout",
         headers: ["Board Position", "Task", "Reward"],
         rows: [
-          ["1-1", "<Unknown, unlocks immediately>", "<Unknown, unlocks immediately>"],
+          ["1-1", "Login in for 1 Day", "1x Lucky Dice, 1x Epic Spirit Shard"],
           ["1-2", "Complete 80 Expditions", "1x Lucky Dice, 1x Epic Spirit Badge, 25,000 EXP"],
           ["1-3", "Recruit 30,000 Benders", "2x Lucky Dice, 1x Epic Spirit Shard, 50,000 EXP"],
           ["2-1", "Defeat 80 Shattered Skulls", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
@@ -963,10 +964,72 @@ export const events: Event[] = [
         ]
       },
       {
-        title: "Path fo Fate (Start: Day 2, Duration: 5 Days)",
-        headers: ["Task"],
+        title: "Paths of Fate (Start: Day 2, Duration: 5 Days)",
+        description: "At any given time, five random tasks are available. These tasks reset automatically once per day. When a task is completed, it is replaced by a new random task.\nAll five tasks can also be manually reset once per day for free. Subsequent resets require Gems, starting at 100 Gems, with the cost doubling for each additional reset.\n\n**This list is incomplete**",
+        headers: ["Task", "Reward"],
         rows: [
-          ["Not yet available."]
+          // Arena
+          ["Win 1 Arena Battle", "10 S-coins"],
+          ["Win 2 Arena Battles", "20 S-coins"],
+          ["Win 4 Arena Battles", "40 S-coins"],
+
+          // Airship
+          ["Send 1 airship", "10 S-coins"],
+          ["Successfully raid 1 other airship", "10 S-coins"],
+
+          // Alliance
+          ["Hselp 5 alliance members", "10 S-coin"],
+          ["Donate 5 times to alliance research", "10 S-coins"],
+          ["Donate 10 times to alliance research", "20 S-coins"],
+          ["Donate 20 times to alliance research", "40 S-coins"],
+
+          // Companion
+          ["Complete 1 Companion survey", "10 S-coins"],
+          ["Bond with Companion 2 times", "10 S-coins"],
+          ["Bond with Companion 4 times", "20 S-coins"],
+          ["Skill Up Companion 1 time", "40 S-coins"],
+
+          // Speedups
+          ["Use 200m of Speedup", "10 S-coins"],
+          ["Use 600m of Speedup", "20 S-coins"],
+
+          // Power Increase
+          ["Increase Power by 2,000 (Excluding Hero Power)", "10 S-coins"],
+          ["Increase Power by 5,000 (Excluding Hero Power)", "20 S-coins"],
+          ["Increase Power by 20,000 (Excluding Hero Power)", "100 S-coins"],
+
+          // Trading Post
+          ["Purchase 2 items at the Trading Post", "10 S-coins"],
+          ["Purchase 20 items at the Trading Post", "100 S-coins"],
+
+          // Hero Upgrades
+          ["Level Up Hero Skills 1 time", "20 S-coins"],
+          ["Level Up Heroes 3 times", "20 S-coins"],
+          ["Enhance gear 1 time", "20 S-coins"],
+
+          // Scrolls
+          ["Use 5 Scrolls", "10 S-coins"],
+          ["Use 10 Scrolls", "20 S-coins"],
+          ["Use 20 Scrolls", "40 S-coins"],
+
+          // Mystic Ores
+          ["Use 5 Mystic Ores at the Forge", "100 S-coins"],
+
+          // Troops
+          ["Recruit 1,000 Tier 2 or Higher Benders", "10 S-coins"],
+          ["Recruit 6,000 Tier 2 or Higher Benders", "40 S-coins"],
+
+          // Gems
+          ["Use 500 Gems", "20 S-coins"],
+
+          // Avatar Trail
+          ["Complete 1 Avatar Trail", "20 S-coins"],
+
+          // Construction
+          ["Construct Upgrade 1 building", "40 S-coins"],
+
+          // Research
+          ["Complete 1 Research", "40 S-coins"],
         ]
       },
       {
@@ -1020,12 +1083,26 @@ export const events: Event[] = [
           ["101-200", "2x Legendary Spirit Shard, 2x Legendary Spirit Badge, 120m Speedup, 2x Gear Material Chest, 2x Companion Material Custom Chest"],
         ]
       },
+      {
+        title: "Paths of Fate",
+        headers: ["S-Coins", "Reward"],
+        rows: [
+          ["20", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 5,000 EXP, 1x Lv.3 Custom Resource Chest"],
+          ["50", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 10,000 EXP, 4x Lv.3 Custom Resource Chest"],
+          ["100", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 20,000 EXP, 8x Lv.3 Custom Resource Chest"],
+          ["170", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 40,000 EXP, 16x Lv.3 Custom Resource Chest"],
+          ["250", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 60,000 EXP, 24x Lv.3 Custom Resource Chest"],
+          ["360", "2x Lucky Dice, 2x Golden Scroll, 2x Mystic Ore, 80,000 EXP, 32x Lv.3 Custom Resource Chest"],
+          ["500", "3x Lucky Dice, 3x Golden Scroll, 3x Mystic Ore, 100,000 EXP, 40x Lv.3 Custom Resource Chest"],
+        ]
+      },
     ],
     disclaimer: "* Hero Power is excluded.",
     informations: [
       'This is a “mega” event that unlocks over time and features multiple smaller events running simultaneously.',
       "The Secret Tunnel Ranking is cross-server, regardless of whether cross-server is enabled on your server (e.g., TGL)."
-    ]
+    ],
+    wip: true
   },
   {
     id: "desert-troublemakers",
