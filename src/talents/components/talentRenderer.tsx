@@ -36,11 +36,12 @@ export default function TalentRenderer({ heroName, allowEdit, isRecommended, ini
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
-    const encodedData = allowEdit ? searchParams.get("data") : null;
 
-    const selectedInitialState = () => {
+    const initialEncodedData = allowEdit ? searchParams.get("data") : null;
+
+    const [selectedTalentNodes, setSelectedTalentNodes] = useState(() => {
         if (allowEdit) {
-            const decoded = decodeTalentData(encodedData, hero.layout);
+            const decoded = decodeTalentData(initialEncodedData, hero.layout);
             return validateTalents(decoded, hero.layout ?? []);
         }
 
@@ -48,25 +49,30 @@ export default function TalentRenderer({ heroName, allowEdit, isRecommended, ini
             return validateTalents(recommended[heroName], hero.layout ?? []);
 
         return validateTalents(initSelectedTalentNodes ?? {}, hero.layout ?? []);
-    };
+    });
 
-    const [selectedTalentNodes, setselectedTalentNodes] = useState(selectedInitialState);
+    const isFirstRender = useRef(true);
 
     useEffect(() => {
-        if (!allowEdit)
+        if (!allowEdit) return;
+
+        // Skip first render to avoid loop
+        if (isFirstRender.current) {
+            isFirstRender.current = false;
             return;
+    }
 
-        const encoded = encodeTalentData(selectedTalentNodes, hero.layout);
-        const params = new URLSearchParams();
+    const encoded = encodeTalentData(selectedTalentNodes, hero.layout);
+    const params = new URLSearchParams();
 
-        if (encoded)
-            params.set("data", encoded);
+    if (encoded) params.set("data", encoded);
 
-        const newUrl = params.toString() ? `${pathname}?${params}` : pathname;
+    const newUrl = params.toString() ? `${pathname}?${params}` : pathname;
 
-        if (window.location.href !== window.location.origin + newUrl)
-            router.replace(newUrl, { scroll: false });
-    }, [selectedTalentNodes, pathname, router, allowEdit, hero.layout]);
+    if (window.location.href !== window.location.origin + newUrl) {
+        router.replace(newUrl, { scroll: false });
+    }
+}, [selectedTalentNodes, pathname, router, allowEdit, hero.layout]);
 
 
     const containerRef = useRef<HTMLDivElement>(null);
@@ -113,7 +119,7 @@ export default function TalentRenderer({ heroName, allowEdit, isRecommended, ini
                     {
                         allowEdit && (
                             <button
-                                onClick={() => setselectedTalentNodes({})}
+                                onClick={() => setSelectedTalentNodes({})}
                                 className="bg-black/70 hover:bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg backdrop-blur">
                                 ↩
                             </button>
@@ -202,7 +208,7 @@ export default function TalentRenderer({ heroName, allowEdit, isRecommended, ini
                                 key={talentNode.id}
                                 talentNode={talentNode}
                                 selectedTalentNodes={selectedTalentNodes}
-                                setSelectedTalentNodes={setselectedTalentNodes}
+                                setSelectedTalentNodes={setSelectedTalentNodes}
                                 layout={hero.layout}
                                 talentPoints={talentPoints}
                                 allowEdit={allowEdit}
