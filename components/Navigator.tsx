@@ -10,7 +10,8 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Events", href: "/events" },
+    { name: "Bundles (Alpha)", href: "/bundles" },
+    { name: "Events (Beta)", href: "/events" },
     { name: "Talent Builder", href: "/talents" },
     { name: "Recommended Builds", href: "/talents/recommended" },
   ];

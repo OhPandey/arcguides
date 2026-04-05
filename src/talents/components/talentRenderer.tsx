@@ -57,17 +57,21 @@ export default function TalentRenderer({ heroName, allowEdit, isRecommended, ini
     }, [allowEdit, selectedTalentNodes, hero.layout]);
 
     useEffect(() => {
-        if (!allowEdit) return;
+        if (!allowEdit) 
+            return;
 
         const currentData = searchParams.get("data") ?? "";
         const nextData = encodedData ?? "";
 
-        if (currentData === nextData) return;
+        if (currentData === nextData)
+             return;
 
         const params = new URLSearchParams(searchParams.toString());
 
-        if (nextData) params.set("data", nextData);
-        else params.delete("data");
+        if (nextData) 
+            params.set("data", nextData);
+        else 
+            params.delete("data");
 
         const nextUrl = params.toString() ? `${pathname}?${params.toString()}` : pathname;
 
