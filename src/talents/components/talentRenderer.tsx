@@ -51,28 +51,28 @@ export default function TalentRenderer({ heroName, allowEdit, isRecommended, ini
         return validateTalents(initSelectedTalentNodes ?? {}, hero.layout ?? []);
     });
 
-    const isFirstRender = useRef(true);
+    const encodedData = useMemo(() => {
+        if (!allowEdit) return null;
+        return encodeTalentData(selectedTalentNodes, hero.layout);
+    }, [allowEdit, selectedTalentNodes, hero.layout]);
 
     useEffect(() => {
         if (!allowEdit) return;
 
-        // Skip first render to avoid loop
-        if (isFirstRender.current) {
-            isFirstRender.current = false;
-            return;
-    }
+        const currentData = searchParams.get("data") ?? "";
+        const nextData = encodedData ?? "";
 
-    const encoded = encodeTalentData(selectedTalentNodes, hero.layout);
-    const params = new URLSearchParams();
+        if (currentData === nextData) return;
 
-    if (encoded) params.set("data", encoded);
+        const params = new URLSearchParams(searchParams.toString());
 
-    const newUrl = params.toString() ? `${pathname}?${params}` : pathname;
+        if (nextData) params.set("data", nextData);
+        else params.delete("data");
 
-    if (window.location.href !== window.location.origin + newUrl) {
-        router.replace(newUrl, { scroll: false });
-    }
-}, [selectedTalentNodes, pathname, router, allowEdit, hero.layout]);
+        const nextUrl = params.toString() ? `${pathname}?${params.toString()}` : pathname;
+
+        router.replace(nextUrl, { scroll: false });
+    }, [allowEdit, encodedData, pathname, router, searchParams]);
 
 
     const containerRef = useRef<HTMLDivElement>(null);
