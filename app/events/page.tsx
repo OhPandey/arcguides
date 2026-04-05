@@ -1,27 +1,36 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useMemo } from "react"
 import EventCard from "@/components/EventCard"
 import { events } from "@/src/events/data/events"
 import { sortEvents } from "@/src/events/utils/eventSchedule"
 import { servers } from "@/src/events/data/servers"
 
 export default function EventsPage() {
-  const [search, setSearch] = useState("")
-  const [serverId, setServer] = useState("1074")
+  const [search, setSearch] = useState(() => localStorage.getItem("eventSearch") || "")
+  const [serverId, setServer] = useState(() => localStorage.getItem("eventServer") || "1074")
+
+  useEffect(() => {
+    localStorage.setItem("eventSearch", search)
+  }, [search])
+
+  useEffect(() => {
+    localStorage.setItem("eventServer", serverId)
+  }, [serverId])
 
   const server = servers.find(s => s.id.toString() === serverId) ?? servers[0]
 
-  const filteredEvents = sortEvents(
-    events.filter(e => e.name.toLowerCase().includes(search.toLowerCase())),
-    server
-  )
+  const filteredEvents = useMemo(() => {
+    const filtered = events.filter(e =>
+      e.name.toLowerCase().includes(search.toLowerCase())
+    )
+    return sortEvents(filtered, server)
+  }, [search, server])
 
   return (
     <main className="mx-auto max-w-6xl p-6">
       <h1 className="text-2xl font-bold text-white mb-6">List of all events</h1>
 
-      {/* Search */}
       <div className="mb-6 flex flex-col sm:flex-row gap-2">
         <input
           type="text"
@@ -30,8 +39,6 @@ export default function EventsPage() {
           onChange={(e) => setSearch(e.target.value)}
           className="flex-1 rounded-lg border border-gray-700 bg-gray-900 px-4 py-2 text-white focus:border-indigo-500 focus:outline-none"
         />
-
-        {/* Server select */}
         <select
           value={serverId}
           onChange={(e) => setServer(e.target.value)}
@@ -45,7 +52,6 @@ export default function EventsPage() {
         </select>
       </div>
 
-      {/* Event Grid */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {filteredEvents.map((event) => (
           <EventCard key={event.id} event={event} server={server} />

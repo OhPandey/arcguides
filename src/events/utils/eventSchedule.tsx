@@ -398,8 +398,10 @@ export function sortEvents(events: Event[], server?: Server): Event[] {
         if (aStatus.nextStart && bStatus.nextStart)
             return aStatus.nextStart - bStatus.nextStart
 
-        if (aStatus.nextStart) return -1
-        if (bStatus.nextStart) return 1
+        if (aStatus.nextStart)
+            return -1
+        if (bStatus.nextStart)
+            return 1
 
         return 0
     })
