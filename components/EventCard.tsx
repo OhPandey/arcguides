@@ -3,15 +3,16 @@ import { Event } from "@/src/events/type/event"
 import { formatDuration } from "@/src/events/utils/duration"
 import { formatRepeat } from "@/src/events/utils/repeat"
 import { getEventStatus } from "@/src/events/utils/eventSchedule"
+import { Server } from "@/src/events/type/server"
 
 type EventCardProps = {
   event: Event
-  serverId: string
+  server: Server
 }
 
-export default function EventCard({ event, serverId }: EventCardProps) {
+export default function EventCard({ event, server }: EventCardProps) {
 
-  const status = getEventStatus(event, serverId)
+  const status = getEventStatus(event, server)
   return (
     <div className="rounded-xl border border-gray-800 bg-gray-900 p-5 hover:border-indigo-500 transition flex flex-col">
 
@@ -27,20 +28,32 @@ export default function EventCard({ event, serverId }: EventCardProps) {
         )}
 
         {status.isAllTime && (
-          <span className="px-2 py-0.5 text-xs font-semibold bg-orange-500/20 text-orange-400 rounded">
+          <span className="px-2 py-0.5 text-xs font-semibold bg-purple-500/20 text-purple-400 rounded">
             All-Time
           </span>
         )}
         {status.isTomorrow && (
-          <span className="px-2 py-0.5 text-xs font-semibold bg-red-500/20 text-orange-400 rounded">
+          <span className="px-2 py-0.5 text-xs font-semibold bg-orange-500/20 text-orange-400 rounded">
             Tomorrow
           </span>
         )}
+        {status.isDisabled && (
+          <span className="px-2 py-0.5 text-xs font-semibold bg-red-700/20 rounded">
+            Not available
+          </span>
+        )}
+
       </div>
 
       {event.wip && (
         <div className="text-s text-center">
           🛠️ Not completed
+        </div>
+      )}
+
+      {status.nextStart && (
+        <div className="text-xs text-gray-500 text-center">
+          Next start: {new Date(status.nextStart).toUTCString()}
         </div>
       )}
 

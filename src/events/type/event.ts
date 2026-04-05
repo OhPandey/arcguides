@@ -1,11 +1,14 @@
+import { SeedType } from "../data/servers"
+
 export type Event = {
   id: string
   name: string
   description: string
   duration: number | "Always"
   repeat: number | "Seasonal" | "Unregularly" | "Unknown"
-  startDate?: string //default
-  serverStartDates?: Record<string, string>
+  startDate?: string
+  seedStartDate?: Record<SeedType, string>
+  type?: ScheduleType
   tasks?: EventTableData []
   rewards?: EventTableData []
   disclaimer?: string
@@ -15,6 +18,19 @@ export type Event = {
   wip?: boolean
 }
 
+// Still WIP - Need more data!
+export type ScheduleType =
+  | "ALL_TIME"
+  | "MINOR"
+  | "TGL"
+  | "TGL_CROSSSERVER"
+  | "WHEEL"
+  | "NEW_WORLD"
+  | "CHRONICLE"
+  | "UNIQUE"
+  | "TEMPLE_WAR"
+  | "UNALAQ_PASS"
+
 export type EventTableData  = {
   title?: string
   description?: string
@@ -22,8 +38,6 @@ export type EventTableData  = {
   rows: string[][]
   dividerAfterColumns?: number[]
 }
-
-
 
 export type ListItem = string
   | {

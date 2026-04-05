@@ -8,7 +8,9 @@ import { servers } from "@/src/events/data/servers"
 
 export default function EventsPage() {
   const [search, setSearch] = useState("")
-  const [server, setServer] = useState("1081")
+  const [serverId, setServer] = useState("1074")
+
+  const server = servers.find(s => s.id.toString() === serverId) ?? servers[0]
 
   const filteredEvents = sortEvents(
     events.filter(e => e.name.toLowerCase().includes(search.toLowerCase())),
@@ -31,7 +33,7 @@ export default function EventsPage() {
 
         {/* Server select */}
         <select
-          value={server}
+          value={serverId}
           onChange={(e) => setServer(e.target.value)}
           className="rounded-lg border border-gray-700 bg-gray-900 px-4 py-2 text-white focus:border-indigo-500 focus:outline-none"
         >
@@ -46,7 +48,7 @@ export default function EventsPage() {
       {/* Event Grid */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {filteredEvents.map((event) => (
-          <EventCard key={event.id} event={event} serverId={server} />
+          <EventCard key={event.id} event={event} server={server} />
         ))}
       </div>
 

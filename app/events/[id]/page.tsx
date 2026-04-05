@@ -3,7 +3,7 @@ import { events } from "@/src/events/data/events"
 import { Event, ListItem } from "@/src/events/type/event"
 import { formatDuration } from "@/src/events/utils/duration"
 import { formatRepeat } from "@/src/events/utils/repeat"
-import { formatText } from "@/src/events/utils/text"
+import { formatTextComplex, formatTextSimple } from "@/src/events/utils/text"
 import Link from "next/link"
 
 export function generateStaticParams() {
@@ -114,7 +114,7 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
                     </div>
 
                     <div className="text-gray-300 leading-relaxed">
-                        {formatText(event.description)}
+                        {formatTextSimple(event.description)}
                     </div>
 
                     {event.wip && (
@@ -136,7 +136,7 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
                                 <div key={i} className="rounded-lg border border-gray-700 bg-gray-600 p-4 text-gray-200">
                                     <div className="flex items-start gap-3">
                                         <span className="text-xl">❕</span>
-                                        <p className="whitespace-pre-line">{formatText(info)}</p>
+                                        <p className="whitespace-pre-line">{formatTextComplex(info)}</p>
                                     </div>
                                 </div>
                             ))}
@@ -171,7 +171,7 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
 
                     {event.disclaimer && (
                         <div className="text-sm text-gray-300 pl-4">
-                            {event.disclaimer}
+                            {formatTextSimple(event.disclaimer)}
                         </div>
                     )}
                 </div>
@@ -184,7 +184,7 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
                         <ul className="space-y-2 text-gray-300">
                             {event.tips.map((t) => (
                                 <li key={t} className="rounded-md bg-gray-800 px-3 py-2">
-                                    {formatText(t)}
+                                    {formatTextComplex(t)}
                                 </li>
                             ))}
                         </ul>

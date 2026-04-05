@@ -1,5 +1,5 @@
 import { EventTableData } from "@/src/events/type/event"
-import { formatText } from "@/src/events/utils/text"
+import { formatTextComplex } from "@/src/events/utils/text"
 
 export function EventTable({ table }: { table: EventTableData }) {
     const dividers = table.dividerAfterColumns ?? []
@@ -13,7 +13,7 @@ export function EventTable({ table }: { table: EventTableData }) {
             )}
             {table.description && (
                 <div className="text-gray-400 mb-2">
-                    {formatText(table.description)}
+                    {formatTextComplex(table.description)}
                 </div>
             )}
 

@@ -6,12 +6,12 @@ export const events: Event[] = [
     description: "Do your best to prove that you are the greatest leader!",
     duration: 5,
     repeat: 14,
-    startDate: "2026-04-01",
-    serverStartDates: {
-      "1001": "2026-04-06",
-      "1002": "2026-04-06",
-      "1003": "2024-04-14",
+    seedStartDate: {
+      SEED_A: "2026-04-06",
+      SEED_B: "2026-04-01",
+      SEED_C: "2026-04-08",
     },
+    type: "TGL",
     tasks: [
       {
         title: "Stage 1: Gathering/Research/Bender Recruitment",
@@ -63,9 +63,14 @@ export const events: Event[] = [
       },
       {
         title: "Stage 5: Increase Total Combat Power",
-        headers: ["Task"],
+        headers: ["Task", "Reward"],
         rows: [
-          ["Waiting for confimation"]
+          ["Increase Power by 40,000**", "50 Gems, 1x Rare Spirit Badge, 1x Silver Scroll, 25m Speedup"],
+          ["Increase Power by 80,000**", "100 Gems, 1x Rare Spirit Shard, 1x Silver Scroll, 50m Speedup"],
+          ["Increase Power by 120,000**", "150 Gems, 1x Epic Spirit Shard, 1x Golden Scroll, 75m Speedup"],
+          ["Increase Power by 180,000**", "200 Gems, 1x Epic Spirit Shard, 1x Golden Scroll, 120m Speedup"],
+          ["Increase Power by 240,000**", "250 Gems, 1x Legendary Spirit Badge, 1x Golden Scroll, 180m Speedup"],
+          ["Increase Power by 300,000**", "300 Gems, 1x Legendary Spirit Shard, 1x Golden Scroll, 300m Speedup"],
         ]
       },
     ],
@@ -103,7 +108,7 @@ export const events: Event[] = [
         ]
       }
     ],
-    disclaimer: "* This is not a generic Legendary Spirit Shard. The Legendary Spirit Shard obtained depends on the current hero rotation (See information box above).",
+    disclaimer: '* This is not a generic Legendary Spirit Shard. The Legendary Spirit Shard obtained depends on the current hero rotation (See information box above).\n** Hero Power is excluded',
     tips: [
       "You can prepare your recruitments, researches, and constructions in advance so that once the event starts, you can immediately gain points.",
       "During the first three days, the [Wheel of Fate](wheel-of-fate) event runs and gives you up to 15M points, which is otherwise very hard to achieve. If you are a top competing player, this is a must-buy.",
@@ -184,10 +189,200 @@ export const events: Event[] = [
       { type: "quotedate", author: "AGN Games", date: "2026-04-01" }
     ],
     informations: [
-      "For the first 7 times, The Greatest Leader (TGL) only takes place on **your server**, after that the event will become [cross-server](tgl-multiple).",
-      "The hero rotates after **every third event**.\nThe rotation for The Greatest Leader (Single Server) is **Aang (3x) → Amon (3x) → Yangchen (1x)**.",
+      "For the first 6 times, The Greatest Leader (TGL) only takes place on **your server**, after that the event will become [cross-server](tgl-crossserver).",
+      "The hero rotates after **every third event**.\nThe rotation for The Greatest Leader (Single Server) is **Aang (3x) → Amon (3x)**.",
+    ]
+  },
+  {
+    id: "tgl-crossserver",
+    name: "The Greatest Leader (Cross Server)",
+    description: "Do your best to prove that you are the greatest leader!",
+    duration: 5,
+    repeat: 14,
+    seedStartDate: {
+      SEED_A: "2026-04-06",
+      SEED_B: "2026-04-01",
+      SEED_C: "2026-04-08",
+    },
+    type: "TGL_CROSSSERVER",
+    tasks: [
+      {
+        title: "Stage 1: Gathering/Research/Bender Recruitment",
+        headers: ["Task", "Reward"],
+        rows: [
+          ["Gather 100,000 Resources from the Field", "1x Rare Spirit Shard, 1x Silver Scroll, 50,000 Food, 50,000 Stone"],
+          ["Gather 300,000 Resources from the Field", "1x Rare Spirit Shard, 1x Golden Scroll, 100,000 Food, 100,000 Stone"],
+          ["Gather 500,000 Resources from the Field", "1x Epic Spirit Shard, 1x Golden Scroll, 150,000 Food, 150,000 Stone"],
+          ["Increase your Power by 30,000 with Research and Bender Recruitment", "50 Gems, 1x Rare Spirit Badge, 1x Silver Scroll, 5m Speedup"],
+          ["Increase your Power by 60,000 with Research and Bender Recruitment", "100 Gems, 1x Epic Spirit Badge, 1x Golden Scroll, 60m Speedup"],
+          ["Increase your Power by 90,000 with Research and Bender Recruitment", "200 Gems, 1x Legendary Spirit Badge, 1x Golden Scroll, 120m Speedup"],
+        ]
+      },
+      {
+        title: "Stage 2: Recruitment",
+        headers: ["Task", "Reward"],
+        rows: [
+          ["Recruit 1,000 Tier 2 or Higher Benders", "30 Gems, 1x Rare Spirit Badge, 1x Silver Scroll, 25m Speedup"],
+          ["Recruit 3,000 Tier 2 or Higher Benders", "60 Gems, 1x Rare Spirit Shard, 1x Silver Scroll, 50m Speedup"],
+          ["Recruit 6,000 Tier 2 or Higher Benders", "90 Gems, 1x Epic Spirit Badge, 1x Silver Scroll, 75m Speedup"],
+          ["Recruit 12,000 Tier 2 or Higher Benders", "120 Gems, 1x Epic Spirit Shard, 1x Golden Scroll, 120m Speedup"],
+          ["Recruit 18,000 Tier 2 or Higher Benders", "150 Gems, 1x Legendary Spirit Badge, 1x Golden Scroll, 180m Speedup"],
+          ["Recruit 25,000 Tier 2 or Higher Benders", "200 Gems, 1x Legendary Spirit Shard, 1x Golden Scroll, 3000m Speedup"],
+        ]
+      },
+      {
+        title: "Stage 3: Hero Growth",
+        headers: ["Task", "Reward"],
+        rows: [
+          ["Use 10 Silver Scrolls", "1x Rare Spirit Shard, 5x Silver Scroll, 1000 EXP, 60m Speedup"],
+          ["Use 10 Golden Scrolls", "1x Epic Spirit Shard, 5x Golden Scroll, 5000 EXP, 120m Speedup"],
+          ["Level Up 1 Hero Skill", "1x Epic Spirit Badge, 1x Silver Scroll, 1000 EXP, 60m Speedup"],
+          ["Level Up 3 Hero Skills", "3x Epic Spirit Shard, 1x Golden Scroll, 5000 EXP, 120m Speedup"],
+          ["Rank Up 1 Hero", "3x Rare Spirit Shard, 1x Silver Scroll, 1000 EXP, 60m Speedup"],
+          ["Rank Up 3 Heros", "3x Epic Spirit Shard, 1x Golden Scroll, 5000 EXP, 120m Speedup"],
+        ]
+      },
+      {
+        title: "Stage 4: Defeated Shatered Skulls/Destroy Shattered Skulls' Fortress/Construction/Bender Recruitment",
+        headers: ["Task", "Reward"],
+        rows: [
+          ["Defeat 10 Shattered Skulls", "1x Rare Spirit Shard, 1x Silver Scroll, 1000 EXP, 1x Seal of Solidarity"],
+          ["Defeat 20 Shattered Skulls", "1x Epic Spirit Shard, 1x Golden Scroll, 5000 EXP, 3x Seal of Solidarity"],
+          ["Destroy 2 Shattered Skulls' Fortresses", "1x Rare Spirit Badge, 1x Silver Scroll, 1000 EXP, 2x Seal of Solidarity"],
+          ["Destroy 4 Shattered Skulls' Fortresses", "1x Epic Spirit Badge, 1x Golden Scroll, 5000 EXP, 5x Seal of Solidarity"],
+          ["Increase Power by 30,000 with Construction and Bender Recruitment", "50 Gems, 3x Epic Spirit Shard, 1x Silver Scroll, 60m Speedup"],
+          ["Increase Power by 60,000 with Construction and Bender Recruitment", "100 Gems, 1x Legendary Spirit Shard, 1x Golden Scroll, 120m Speedup"],
+        ]
+      },
+      {
+        title: "Stage 5: Increase Total Combat Power",
+        headers: ["Task", "Reward"],
+        rows: [
+          ["Increase Power by 40,000**", "50 Gems, 1x Rare Spirit Badge, 1x Silver Scroll, 25m Speedup"],
+          ["Increase Power by 80,000**", "100 Gems, 1x Rare Spirit Shard, 1x Silver Scroll, 50m Speedup"],
+          ["Increase Power by 120,000**", "150 Gems, 1x Epic Spirit Shard, 1x Golden Scroll, 75m Speedup"],
+          ["Increase Power by 180,000**", "200 Gems, 1x Epic Spirit Shard, 1x Golden Scroll, 120m Speedup"],
+          ["Increase Power by 240,000**", "250 Gems, 1x Legendary Spirit Badge, 1x Golden Scroll, 180m Speedup"],
+          ["Increase Power by 300,000**", "300 Gems, 1x Legendary Spirit Shard, 1x Golden Scroll, 300m Speedup"],
+        ]
+      },
     ],
-    wip: true
+    rewards: [
+      {
+        title: "Daily Reward",
+        headers: ["Rank", "Reward"],
+        rows: [
+          ["1", "10 Legendary Spirit Shards*, 500 Gems, 100,000 Experience, 1,500,000 Food, 1,500,000 Wood, 1,500,000 Stone"],
+          ["2", "5 Legendary Spirit Shards*, 300 Gems, 80,000 Experience, 1,250,000 Food, 1,250,000 Wood, 1,250,000 Stone"],
+          ["3", "2 Legendary Spirit Shards*, 200 Gems, 60,000 Experience, 1,000,000 Food, 1,000,000 Wood, 1,000,000 Stone"],
+          ["4-5", "100 Gems, 40,000 Experience, 750,000 Food, 750,000 Wood, 750,000 Stone"],
+          ["6-10", "50 Gems, 30,000 Experience, 500,000 Food, 500,000 Wood, 500,000 Stone"],
+          ["11-15", "40 Gems, 20,000 Experience, 250,000 Food, 250,000 Wood, 250,000 Stone"],
+          ["16-20", "30 Gems, 10,000 Experience, 200,000 Food, 200,000 Wood, 200,000 Stone"],
+          ["21-25", "20 Gems, 5,000 Experience, 150,000 Food, 150,000 Wood, 150,000 Stone"],
+          ["26-50", "10 Gems, 3,000 Experience, 100,000 Food, 100,000 Wood, 100,000 Stone"],
+          ["50-100", "5 Gems, 2,000 Experience, 50,000 Food, 50,000 Wood, 50,000 Stone"],
+        ]
+      },
+      {
+        title: "Overall Reward",
+        headers: ["Rank", "Reward"],
+        rows: [
+          ["1", "200 Legendary Spirit Shards*, 2,000 Gems, 1,800m Speedup, 5,000,000 Food, 5,000,000 Wood, 5,000,000 Stone"],
+          ["2", "150 Legendary Spirit Shards*, 1,500 Gems, 1,500m Speedup, 4,000,000 Food, 4,000,000 Wood, 4,000,000 Stone"],
+          ["3", "100 Legendary Spirit Shards*, 1,000 Gems, 1,200m Speedup, 3,500,000 Food, 3,500,000 Wood, 3,500,000 Stone"],
+          ["4-5", "70 Legendary Spirit Shards*, 700 Gems, 900m Speedup, 3,000,000 Food, 3,000,000 Wood, 3,000,000 Stone"],
+          ["6-10", "50 Legendary Spirit Shards*, 500 Gems, 720m Speedup, 2,500,000 Food, 2,500,000 Wood, 2,500,000 Stone"],
+          ["11-15", "30 Legendary Spirit Shards*, 300 Gems, 600m Speedup, 2,000,000 Food, 2,000,000 Wood, 2,000,000 Stone"],
+          ["16-20", "20 Legendary Spirit Shards*, 200 Gems, 480m Speedup, 1,500,000 Food, 1,500,000 Wood, 1,500,000 Stone"],
+          ["21-25", "10 Legendary Spirit Shards*, 100 Gems, 360m Speedup, 1,000,000 Food, 1,000,000 Wood, 1,000,000 Stone"],
+          ["26-50", "5 Legendary Spirit Shards*, 50 Gems, 240m Speedup, 500,000 Food, 500,000 Wood, 500,000 Stone"],
+          ["50-100", "2 Legendary Spirit Shards*, 20 Gems, 120m Speedup, 250,000 Food, 250,000 Wood, 250,000 Stone"],
+        ]
+      }
+    ],
+    disclaimer: '* This is not a generic Legendary Spirit Shard. The Legendary Spirit Shard obtained depends on the current hero rotation (See information box above).\n** Hero Power is excluded',
+    tips: [
+      "You can prepare your recruitments, researches, and constructions in advance so that once the event starts, you can immediately gain points.",
+      "During the first three days, the [Wheel of Fate](wheel-of-fate) event runs and gives you up to 15M points, which is otherwise very hard to achieve. If you are a top competing player, this is a must-buy.",
+      "This event can be quite competitive. If you're a budget player (or free-to-play), try to focus on reaching at least Rank 50, which will grant you 5 Spirit Shards. After two events, you can obtain the hero.",
+      "Keep in mind that after the event ends, you can still get the hero under *Daily Deals* in the shop. So if you miss out on the event or can't compete, you can still obtain the hero later!\n This **is not** a Fear Of Missing Out (FOMO) event.",
+    ],
+    details: [
+      { type: "p", content: "Determine the greatest leader in the world." },
+      { type: "p", content: "Do your best to prove that you are the greatest leader!", space: true },
+      {
+        type: "ol", items: [
+          "The event will take place every two weeks for a duration of 5 days.",
+          "Each day during the event period, a different type of mission will be given.",
+          "Daily rankings will be determined based on the scores gained according to the scoring rules.",
+          "The strongest leader in the world is selected through the 'Overall Rank' that integrates all points accumulated during the event period.",
+          "Leaders who achieve a ranking position will receive amazing awards."
+        ], space: true
+      },
+      { type: "p", content: "Power gained from Construction is only applied while the leader is online.", space: true },
+      { type: "p", content: "Event Rules:", space: true },
+      { type: "p", content: "Day 1 - Resource Gathering/Increase Power with Research or Bender Recruitment", space: true },
+      {
+        type: "ul", items: [
+          "Per gathering 100 Food on the field: 3 Points",
+          "Per gathering 100 Stones on the field: 3 Points",
+          "Per gathering 50 Gold on the field: 3 Points",
+          "Increase Power by 1 with Research or ebnder Recruitment: 25 Points",
+          "Per 1 Lucky Ticket: 150,000 points"
+        ], space: true
+      },
+      { type: "p", content: "Day 2 - Bender Recruitment", space: true },
+      {
+        type: "ul", items: [
+          "Per recruiting 1 bender (Tier-1): 25 Points",
+          "Per recruiting 1 bender (Tier-2): 50 Points",
+          "Per recruiting 1 bender (Tier-3): 75 Points",
+          "Per recruiting 1 bender (Tier-4): 100 Points",
+          "Per recruiting 1 bender (Tier-5): 150 Points",
+          "Per recruiting 1 bender (Tier-6): 350 Points",
+          "Per 1 Lucky Ticket: 150,000 points"
+        ], space: true
+      },
+      { type: "p", content: "Day 3 - Hero Growth", space: true },
+      {
+        type: "ul", items: [
+          "Use Silver Scroll: 750 points",
+          "use Golden Scroll: 1,500 points",
+          "Use Rare Hero Spirit Shard: 250 points",
+          "Use Epic Hero Spirit Shard: 1,250 points",
+          "Use Legendary Hero Spirit Shard: 50,000 points",
+          "Use Rare Hero Spirit Badge: 250 points",
+          "Use Epic Hero Spirit Badge: 1,250 points",
+          "Use Legendary Hero Spirit Badge: 50,000 points",
+          "Per 1 Lucky Ticket: 150,000 points"
+        ], space: true
+      },
+      { type: "p", content: "Day 4 - Defeat Shattered Skulls/Increase Power with Construction or Bender Recruitment", space: true },
+      {
+        type: "ul", items: [
+          "Defeat Shattered Skull Levels 1-5: 1,500 Points",
+          "Defeat Shattered Skull Levels 6-10: 1,800 Points",
+          "Defeat Shattered Skull Levels 11-15: 2,100 Points",
+          "Defeat Shattered Skull Levels 16-20: 2,400 Points",
+          "Defeat Shattered Skull Levels 21-25: 2,700 Points",
+          "Destroy Shattered Skulls' Fortress Level 1: 10,000 Points",
+          "Destroy Shattered Skulls' Fortress Level 2: 12,000 Points",
+          "Destroy Shattered Skulls' Fortress Level 3: 14,000 Points",
+          "Destroy Shattered Skulls' Fortress Level 4: 16,000 Points",
+          "Destroy Shattered Skulls' Fortress Level 5: 18,000 Points",
+          "Destroy Shattered Skulls' Fortress Level 6: 20,000 Points",
+          "Increase Power by 1 with Construction or Bender Recruitment: 25 Points"
+        ], space: true
+      },
+      { type: "p", content: "Day 5 - Increase Power" },
+      { type: "p", content: "Increase Power by 1: 20 Points", space: true },
+      { type: "p", content: "(Hero Power Excluded)", space: true },
+      { type: "quotedate", author: "AGN Games", date: "2026-04-01" }
+    ],
+    informations: [
+      "The hero rotates after **every third event**.\nThe rotation for The Greatest Leader (Cross Server) is **Yangchen → Roku → Kuruk → Zaheer → Kuivra → Jinora → Desna & Eska → Opal**.",
+    ]
   },
   {
     id: "beyond-limits",
@@ -196,6 +391,7 @@ export const events: Event[] = [
     duration: 1,
     repeat: "Unknown",
     startDate: "2026-04-01",
+    type: "MINOR",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -230,6 +426,7 @@ export const events: Event[] = [
     duration: 3,
     repeat: "Unknown",
     startDate: "2026-04-01",
+    type: "MINOR",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -266,12 +463,12 @@ export const events: Event[] = [
     description: "Predict your fate with Wheel of Fate!",
     duration: 3,
     repeat: 14,
-    startDate: "2026-04-01",
-    serverStartDates: {
-      "1001": "2026-04-06",
-      "1002": "2026-04-06",
-      "1003": "2024-04-06",
+    seedStartDate: {
+      SEED_A: "2026-04-06",
+      SEED_B: "2026-04-01",
+      SEED_C: "2026-04-08",
     },
+    type: "WHEEL",
     rewards: [
       {
         title: "Spin drop rates",
@@ -320,9 +517,10 @@ export const events: Event[] = [
     id: "harvest-season",
     name: "Harvest Season",
     description: "The seasons have turned, and harvest season is upon us.",
-    startDate: "2026-04-02",
     duration: 2,
     repeat: "Unknown",
+    startDate: "2026-04-02",
+    type: "MINOR",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -354,6 +552,7 @@ export const events: Event[] = [
     description: "Join our community.",
     duration: "Always",
     repeat: 0,
+    type: "ALL_TIME",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -378,6 +577,7 @@ export const events: Event[] = [
     description: "Visit our website.",
     duration: "Always",
     repeat: 0,
+    type: "ALL_TIME",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -401,6 +601,7 @@ export const events: Event[] = [
     description: "Defeat the Shattered Skulls step by step to purify the land!",
     duration: "Always",
     repeat: 0,
+    type: "ALL_TIME",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -458,8 +659,9 @@ export const events: Event[] = [
     id: "into-the-fray",
     name: "Into the Fray",
     description: "Get ready!",
-    duration: 1,
+    duration: 2,
     repeat: "Unregularly",
+    type: "CHRONICLE",
     disclaimer: "There are no Tasks or Rewards tied to this event.",
     informations: [
       "This time-limited reminder event notifies you that an important milestone will soon unlock in your Chronicle of Harmony.",
@@ -474,6 +676,7 @@ export const events: Event[] = [
     description: "Build a frontline in the Rift to bring peace to the raging spirits. Alliance members, assemble!",
     duration: 30,
     repeat: 0,
+    type: "MINOR",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -499,10 +702,6 @@ export const events: Event[] = [
     name: "Avatar Day Festival",
     description: "Complete the missions to earn Aang Cookies!",
     duration: 5,
-    serverStartDates: {
-      "1001": "2026-03-30",
-      "1002": "2026-03-30"
-    },
     repeat: "Unknown",
     tasks: [
       {
@@ -646,6 +845,7 @@ export const events: Event[] = [
     description: "Upgrade the Town Hall and make your city more Powerful!",
     duration: "Always",
     repeat: 0,
+    type: "ALL_TIME",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -679,6 +879,7 @@ export const events: Event[] = [
     description: "Log in and get Legendary Airbender hero 'Bumi'!",
     duration: 30,
     repeat: 0,
+    type: "MINOR",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -716,6 +917,7 @@ export const events: Event[] = [
     description: "Boost your Power to receive a limited Town Hall skin!",
     duration: 8,
     repeat: 0,
+    type: "NEW_WORLD",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -814,6 +1016,7 @@ export const events: Event[] = [
     duration: 2,
     repeat: "Unknown",
     startDate: "2026-04-03",
+    type: "MINOR",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -860,6 +1063,7 @@ export const events: Event[] = [
     duration: 2,
     repeat: "Unknown",
     startDate: "2026-04-04",
+    type: "MINOR",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -889,8 +1093,9 @@ export const events: Event[] = [
     name: "1st Anniversary",
     description: "Traces of Memory",
     duration: 11,
-    startDate: "2026-04-02",
     repeat: "Unknown",
+    startDate: "2026-04-02",
+    type: "UNIQUE",
     tasks: [
       {
         title: "First Anniversary Daily Rewards",
@@ -1135,12 +1340,6 @@ export const events: Event[] = [
     description: "Defeat Scorched Skulls!",
     duration: 2,
     repeat: "Unknown",
-    startDate: "2026-04-06",
-    serverStartDates: {
-      "1001": "2026-04-03",
-      "1002": "2026-04-03",
-      "1003": "2026-04-03"
-    },
     tasks: [
       {
         title: "Easy Difficulty",
@@ -1292,12 +1491,9 @@ export const events: Event[] = [
     name: "Temple War",
     duration: 1,
     repeat: 14,
-    serverStartDates: {
-      "1001": "2024-04-14",
-      "1002": "2024-04-14",
-      "1003": "2024-04-14"
-    },
+    startDate: "2026-04-14",
     description: "The event to capture the Temple of Corruption is approaching.",
+    type: "TEMPLE_WAR",
     rewards: [
       {
         headers: ["Stage", "War Points", "War Reward", "", "Territory Points", "Territory Reward"],
@@ -1445,6 +1641,7 @@ export const events: Event[] = [
     duration: 2,
     repeat: "Unknown",
     startDate: "2026-04-04",
+    type: "MINOR",
     tasks: [
       {
         description: "To fight Borte's Berserkers or Elite Borte's Berserkers, you need a Drum or Beads, respectively. These items can be obtained by defeating Shattered Skulls in the Field.",
@@ -1478,6 +1675,7 @@ export const events: Event[] = [
     duration: 1,
     repeat: "Unknown",
     startDate: "2026-04-06",
+    type: "MINOR",
     wip: true,
   },
   {
@@ -1487,6 +1685,7 @@ export const events: Event[] = [
     duration: 1,
     repeat: "Unknown",
     startDate: "2026-04-07",
+    type: "MINOR",
     wip: true,
   },
   {
@@ -1496,6 +1695,16 @@ export const events: Event[] = [
     duration: 1,
     repeat: "Unknown",
     startDate: "2026-04-08",
+    type: "MINOR",
+    wip: true,
+  },
+  {
+    id: "unalaq_pass",
+    name: "Unalaq Pass",
+    description: "Waiting for it to happen [...]",
+    duration: 5,
+    repeat: "Unknown",
+    type: "UNALAQ_PASS",
     wip: true,
   },
 ]

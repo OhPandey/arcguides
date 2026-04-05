@@ -1,5 +1,5 @@
 // I took this from an old project, pretty handy I guess
-export function formatText(text: string) {
+export function formatTextComplex(text: string) {
     const elements: React.ReactNode[] = []
     const lines = text.split("\n")
 
@@ -97,6 +97,22 @@ export function formatText(text: string) {
 
         i++
     }
+
+    return elements
+}
+
+
+// I took this from an old project, pretty handy I guess
+export function formatTextSimple(text: string) {
+    const lines = text.split("\n")
+    const elements: React.ReactNode[] = []
+
+    lines.forEach((line, index) => {
+        elements.push(line)
+        if (index < lines.length - 1) {
+            elements.push(<br key={index} />)
+        }
+    })
 
     return elements
 }
