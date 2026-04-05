@@ -128,7 +128,6 @@ function getUniqueEventStatus(event: Event): EventStatus {
     )
 }
 
-
 /* ---------------- Seeds ---------------- */
 
 function getSeedStart(event: Event, seed: SeedType): number | null {
@@ -193,9 +192,12 @@ function getWheelEventStatus(event: Event, server: Server): EventStatus {
 
     let seed: SeedType
 
-    if (serverAge >= 52) seed = "SEED_A"
-    else if (server.id % 2 === 0) seed = "SEED_B"
-    else seed = "SEED_C"
+    if (serverAge >= 52) 
+        seed = "SEED_A"
+    else if (server.id % 2 === 0) 
+        seed = "SEED_B"
+    else 
+        seed = "SEED_C"
 
     return computeEventStatus(
         getSeedStart(event, seed),
@@ -245,9 +247,9 @@ function getChronicleEventStatus(event: Event, server: Server): EventStatus {
 
     let start: number | null = null
 
-    if (serverAge >= 61) {
+    if (serverAge >= 61)
         return defaultStatus({ isDisabled: true })
-    }
+        
     let id: number | undefined
     let i = 0
 
@@ -262,9 +264,7 @@ function getChronicleEventStatus(event: Event, server: Server): EventStatus {
 
     if (id !== undefined) {
         const targetIndex = id === 11 ? id : id + 1
-        start =
-            serverReleaseDate.getTime() +
-            dayToMs(filteredChronicle[targetIndex].day - duration)
+        start = serverReleaseDate.getTime() + dayToMs(filteredChronicle[targetIndex].day - duration)
     }
 
     return computeEventStatus(start, duration, repeat)
@@ -307,8 +307,6 @@ function getUnalaqPass(event: Event, server: Server): EventStatus {
 
     const serverAge = getServerAgeDays(server)
     const serverReleaseDate = new Date(server.releaseDate)
-
-    let start: number | null
 
     if (serverAge > END)
         return defaultStatus({ isDisabled: true })

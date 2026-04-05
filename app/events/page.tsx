@@ -7,16 +7,29 @@ import { sortEvents } from "@/src/events/utils/eventSchedule"
 import { servers } from "@/src/events/data/servers"
 
 export default function EventsPage() {
-  const [search, setSearch] = useState(() => localStorage.getItem("eventSearch") || "")
-  const [serverId, setServer] = useState(() => localStorage.getItem("eventServer") || "1074")
+  const [search, setSearch] = useState("") 
+  const [serverId, setServer] = useState("1074")
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    localStorage.setItem("eventSearch", search)
-  }, [search])
+    const savedSearch = localStorage.getItem("eventSearch") || ""
+    const savedServer = localStorage.getItem("eventServer") || "1074"
+    setSearch(savedSearch)
+    setServer(savedServer)
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
-    localStorage.setItem("eventServer", serverId)
-  }, [serverId])
+    if (mounted) {
+      localStorage.setItem("eventSearch", search)
+    }
+  }, [search, mounted])
+
+  useEffect(() => {
+    if (mounted) {
+      localStorage.setItem("eventServer", serverId)
+    }
+  }, [serverId, mounted])
 
   const server = servers.find(s => s.id.toString() === serverId) ?? servers[0]
 
@@ -26,6 +39,9 @@ export default function EventsPage() {
     )
     return sortEvents(filtered, server)
   }, [search, server])
+
+  if (!mounted)
+    return null
 
   return (
     <main className="mx-auto max-w-6xl p-6">
