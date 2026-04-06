@@ -51,12 +51,6 @@ export default function EventCard({ event, server }: EventCardProps) {
         </div>
       )}
 
-      {status.nextStart && (
-        <div className="text-xs text-gray-500 text-center">
-          Next start: {new Date(status.nextStart).toUTCString()}
-        </div>
-      )}
-
       <div className="mt-3 text-sm text-gray-400 text-center">
         <p>{event.description}</p>
       </div>

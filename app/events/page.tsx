@@ -47,6 +47,17 @@ export default function EventsPage() {
     <main className="mx-auto max-w-6xl p-6">
       <h1 className="text-2xl font-bold text-white mb-6">List of all events</h1>
 
+      <div className="space-y-4 my-6">
+        <div className="rounded-lg border border-red-700 bg-red-900 p-4 text-gray-200">
+          <div className="flex items-start gap-3">
+            <span className="text-xl">🛠️</span>
+            <p className="whitespace-pre-line">
+              The schedule for <i>Desert Troublemakers, Avatar Day Festival, and Way of Harmony</i> remains under investigation.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="mb-6 flex flex-col sm:flex-row gap-2">
         <input
           type="text"

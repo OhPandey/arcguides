@@ -3,7 +3,7 @@ export const events: Event[] = [
   {
     id: "tgl-single",
     name: "The Greatest Leader (Single Server)",
-    description: "Do your best to prove that you are the greatest leader!",
+    description: "All the leaders in the world wills trive with all their might for rankings.",
     duration: 5,
     repeat: 14,
     seedStartDate: {
@@ -667,7 +667,7 @@ export const events: Event[] = [
       "This time-limited reminder event notifies you that an important milestone will soon unlock in your Chronicle of Harmony.",
     ],
     tips: [
-      "Known Trigger of this event:\n- Level 1 Base\n- Level 2 Base\n- Level  3 Base\n - Level 1 Gate\n- Level 2 Gate\n- Level 3 Gate\n- Level 4 Gate\n- Altar\n- Sanctum\n- Shrine\n- Legacy"
+      "Known Trigger of this event:\n- Level 1 Base\n- Level 2 Base\n- Level  3 Base\n- Level 1 Gate\n- Level 2 Gate\n- Level 3 Gate\n- Level 4 Gate\n- Altar\n- Sanctum\n- Shrine\n- Legacy"
     ]
   },
   {
@@ -930,7 +930,7 @@ export const events: Event[] = [
           ["Achieve 1,000,000 Power", "2x Golden Scroll, 3x Epic Spirit Badge, 600m Speedup"],
           ["Achieve 1,500,000 Power", "3x Golden Scroll, 5x Epic Spirit Badge, 900m Speedup"],
           ["Achieve 2,000,000 Power", "5x Golden Scroll, 7x Epic Spirit Badge, 1500m Speedup"],
-          ["Achieve 2,500,000 Power", "Obisidian Palace Hall Skin, 500 Gems, 10x Golden Scroll, 000m Speedup"],
+          ["Achieve 2,500,000 Power", '"Obisidian Palace" Town Hall Skin, 500 Gems, 10x Golden Scroll, 000m Speedup'],
         ]
       }
     ],
@@ -954,8 +954,8 @@ export const events: Event[] = [
       {
         type: "ol", items: [
           "This event will take place when a new world opens and will last for 8 days.",
-          "Increase your Power and seize amazing rewards.",
-          "Power can be increased with construction, research, recruitment and hero growth.",
+          "Increase your Power and seize amazing rewards. Limited Town Hall skin may be available again int he distant future.",
+          "Power gained from equipped Hero gear is not counted!",
           "This event won’t happen again!"
         ], space: true
       },
@@ -965,7 +965,7 @@ export const events: Event[] = [
       "This special event is only available at the start of a new world (server). New servers open every Friday."
     ],
     tips: [
-      "This is one of the most important events in a server's lifecycle. Currently, the Town Hall skin - which permanently increases all benders' ATK and DEF by 2% - can only be obtained through this event."
+      "This event is among the most significant milestones in a server's lifecycle. At present, the Town Hall skin - which permanently increases all benders' ATK and DEF by 2% - can only be obtained through this event or by purchasing it for an exceptionally high Lotus Tile cost."
     ]
   },
   {
@@ -1669,14 +1669,35 @@ export const events: Event[] = [
     ]
   },
   {
-    id: "united-mind",
+    id: "united_mind",
     name: "United Mind",
-    description: "Waiting for it to happen [...]",
+    description: "Join forces with the alliance to crush the enemies!",
     duration: 2,
-    repeat: "Unknown",
     startDate: "2026-04-06",
+    repeat: "Unknown",
     type: "MINOR",
-    wip: true,
+    tasks: [
+      {
+        headers: ["Test", "Reward"],
+        rows: [
+          ["Help alliance 10 times", "5,000 EXP, 10,000 Food, 10,000 Wood, 10,000 Stone, 1x Seal of Solidarity"],
+          ["Help alliance 20 times", "1x Silver Scroll, 30,000 Food, 30,000 Wood, 30,000 Stone, 2x Seal of Solidarity"],
+          ["Help alliance 30 times", "1x Golden Scroll, 50,000 Food, 50,000 Wood, 50,000 Stone, 3x Seal of Solidarity"],
+          ["Donate 10 times to alliance research", "10,000 EXP, 50m Speedup, 1x Seal of Solidarity"],
+          ["Donate 20 times to alliance research", "1x Silver Scroll, 100m Speedup, 2x Seal of Solidarity"],
+          ["Donate 30 times to alliance research", "1x Golden Scroll, 150m Speedup, 3x Seal of Solidarity"],
+        ]
+      }
+
+    ],
+    details: [
+      { type: "p", content: "Join forces with the alliance to crush the enemies!", space: true},
+      { type: "ol", items: [
+        "Help alliance members and donate to alliance research.",
+        "Reach the goals and get rewards."
+      ], space: true},
+      { type: "quotedate", author: "ANGames", date: "2026-04-06"}
+    ]
   },
   {
     id: "roar-of-battle",
@@ -1700,7 +1721,7 @@ export const events: Event[] = [
   },
   {
     id: "readiness",
-    name: "Readinness",
+    name: "Readiness",
     description: "Waiting for it to happen [...]",
     duration: 2,
     repeat: "Unknown",
