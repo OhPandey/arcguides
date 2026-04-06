@@ -156,7 +156,7 @@ export const events: Event[] = [
       {
         type: "ul", items: [
           "Use Silver Scroll: 750 points",
-          "use Golden Scroll: 1,500 points",
+          "Use Golden Scroll: 1,500 points",
           "Use Rare Hero Spirit Shard: 250 points",
           "Use Epic Hero Spirit Shard: 1,250 points",
           "Use Legendary Hero Spirit Shard: 50,000 points",
