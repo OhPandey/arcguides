@@ -275,6 +275,11 @@ export const FRAME: Resource = {
   gemValue: LOTUS_TILE.gemValue*2000
 };
 
+export const LUCKY_DICE: Resource = {
+  name: "Lucky Dice (Value WIP)",
+  gemValue: 500
+};
+
 export const BUNDLE_SUPPLY_CHEST_LV1: Resource = {
   name: "Level 1 Bundle Supply Chest",
   gemValue: 2.73
@@ -303,4 +308,9 @@ export const BUNDLE_SUPPLY_CHEST_LV5: Resource = {
 export const BUNDLE_SUPPLY_CHEST_LV6: Resource = {
   name: "Level 5 Bundle Supply Chest",
   gemValue: 254.25
+};
+
+export const CUSTOM_RESOURCE_CHEST_LV6: Resource = {
+  name: "Lv.6 Custom Resource Chest",
+  gemValue: FOOD.gemValue*1500000
 };
