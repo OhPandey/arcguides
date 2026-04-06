@@ -61,22 +61,22 @@ export const SPIRIT_BADGE_LEGENDARY: Resource = {
 };
 
 export const BOOK_OF_EXPERIENCE_UNCOMMON: Resource = {
-  name: "Rare Book of Experience (250 Experience)",
+  name: "Book of Experience (250 Experience)",
   gemValue: 1.25
 };
 
 export const BOOK_OF_EXPERIENCE_COMMON: Resource = {
-  name: "Rare Book of Experience (500 Experience)",
+  name: "Book of Experience (500 Experience)",
   gemValue: 2.5
 };
 
 export const BOOK_OF_EXPERIENCE_RARE: Resource = {
-  name: "Rare Book of Experience (1000 Experience)",
+  name: "Book of Experience (1,000 Experience)",
   gemValue: 5
 };
 
 export const BOOK_OF_EXPERIENCE_EPIC: Resource = {
-  name: "Rare Book of Experience (5000 Experience)",
+  name: "Book of Experience (5,000 Experience)",
   gemValue: 25
 };
 
