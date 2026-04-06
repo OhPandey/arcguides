@@ -260,6 +260,11 @@ export const LUCKY_TICKET: Resource = {
   gemValue: 400
 };
 
+export const LUCKY_DICE: Resource = {
+  name: "Lucky Dice (Value WIP)",
+  gemValue: 500 // The Paths of Fate puts the the Lucky Dice at the same level as Golden Scroll and Mystic Ore which both are 500 Gem
+};
+
 export const SEAL_OF_SOLIDARITY: Resource = {
   name: "Seal of Solidarity",
   gemValue: 10
@@ -273,11 +278,6 @@ export const LOTUS_TILE: Resource = {
 export const FRAME: Resource = {
   name: "Frame",
   gemValue: LOTUS_TILE.gemValue*2000
-};
-
-export const LUCKY_DICE: Resource = {
-  name: "Lucky Dice (Value WIP)",
-  gemValue: 500
 };
 
 export const BUNDLE_SUPPLY_CHEST_LV1: Resource = {

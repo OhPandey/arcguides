@@ -1,9 +1,9 @@
 /*
-    EVENT SCHEDULER - Still work in progress
+    EVENT SCHEDULER
 */
 
 import { SeedType } from "../data/servers"
-import { Event } from "../type/event"
+import { Event, ScheduleType } from "../type/event"
 import { Server } from "../type/server"
 import { chronicleOfHarmony } from "./chronicle"
 
@@ -18,12 +18,48 @@ export type EventStatus = {
 
 const DAY_MS = 86400000
 
-function getServerAgeDays(server: Server): number {
-    return Math.floor((Date.now() - new Date(server.releaseDate).getTime()) / DAY_MS)
+/* ---------------- Context ---------------- */
+
+type EventContext = {
+    now: number
+    serverAge: number
+    serverRelease: number
+    server: Server
+}
+
+function createContext(server: Server): EventContext {
+    const now = Date.now()
+    const serverRelease = new Date(server.releaseDate).getTime()
+
+    return {
+        now,
+        serverRelease,
+        server,
+        serverAge: Math.floor((now - serverRelease) / DAY_MS)
+    }
+}
+
+/* ---------------- Helpers ---------------- */
+
+const BASE_STATUS: EventStatus = {
+    isActive: false,
+    isAllTime: false,
+    isDisabled: false,
+    isTomorrow: false,
+    remainingTime: null,
+    nextStart: null
+}
+
+function defaultStatus(overrides?: Partial<EventStatus>): EventStatus {
+    return { ...BASE_STATUS, ...overrides }
 }
 
 function dayToMs(days: number): number {
     return days * DAY_MS
+}
+
+function getTimestamp(date?: string | null): number | null {
+    return date ? new Date(date).getTime() : null
 }
 
 function getDuration(event: Event) {
@@ -34,8 +70,11 @@ function getRepeat(event: Event) {
     return typeof event.repeat === "number" ? event.repeat : 0
 }
 
-function getTimestamp(date?: string | null): number | null {
-    return date ? new Date(date).getTime() : null
+function getTiming(event: Event) {
+    return {
+        duration: getDuration(event),
+        repeat: getRepeat(event)
+    }
 }
 
 function isTomorrow(timestamp: number): boolean {
@@ -47,186 +86,152 @@ function isTomorrow(timestamp: number): boolean {
     tomorrowEnd.setUTCDate(tomorrowEnd.getUTCDate() + 1)
 
     return timestamp >= tomorrowStart.getTime() && timestamp < tomorrowEnd.getTime()
-
 }
 
-function defaultStatus(overrides?: Partial<EventStatus>): EventStatus {
-    return {
-        isActive: false,
-        isAllTime: false,
-        isDisabled: false,
-        isTomorrow: false,
-        remainingTime: null,
-        nextStart: null,
-        ...overrides
-    }
-}
+/* ---------------- Core Engine ---------------- */
 
-function computeEventStatus(
-    start: number | null,
-    durationDays: number,
-    repeatDays: number,
-    transitionStart?: number,
-): EventStatus {
+function computeEventStatus(ctx: EventContext, start: number | null, durationDays: number, repeatDays: number,transitionStart?: number): EventStatus {
 
     if (start === null)
         return defaultStatus()
 
-    const now = Date.now()
     const duration = dayToMs(durationDays)
     const repeat = dayToMs(repeatDays)
 
     const end = start + duration
-    const cycles = repeat > 0 ? Math.floor((now - start) / repeat) : 0
+    const cycles = repeat ? Math.floor((ctx.now - start) / repeat) : 0
     const currentStart = start + cycles * repeat
 
     let nextStart: number | null = null
 
     if (transitionStart) {
-        if (now < transitionStart)
+        if (ctx.now < transitionStart)
             nextStart = transitionStart + repeat
-        else if (repeat > 0)
+        else if (repeat)
             nextStart = currentStart + repeat
     } else {
-        if (repeat > 0 || now < start)
-            nextStart = now < start ? start : currentStart + repeat
+        if (repeat || ctx.now < start)
+            nextStart = ctx.now < start ? start : currentStart + repeat
     }
 
     return {
-        isActive: now >= start && now <= end,
+        isActive: ctx.now >= start && ctx.now <= end,
         isAllTime: false,
         isDisabled: false,
         isTomorrow: isTomorrow(start),
-        remainingTime: end - now,
+        remainingTime: end - ctx.now,
         nextStart
     }
 }
 
-/* ---------------- Minor ---------------- */
-
-function getMinorEventStatus(event: Event): EventStatus {
-    return computeEventStatus(
-        getTimestamp(event.startDate),
-        getDuration(event),
-        getRepeat(event)
-    )
-}
-
-/* ---------------- Minor ---------------- */
-
-function getUniqueEventStatus(event: Event): EventStatus {
-    const duration = getDuration(event)
-    
-    const now = Date.now()
-    if(now >= (getTimestamp(event.startDate) ?? 0) + dayToMs(duration))
-        return defaultStatus({isDisabled: true})
-
-    return computeEventStatus(
-        getTimestamp(event.startDate),
-        getDuration(event),
-        getRepeat(event)
-    )
+function computeFromEvent(ctx: EventContext, event: Event, start: number | null, transition?: number) {
+    const { duration, repeat } = getTiming(event)
+    return computeEventStatus(ctx, start, duration, repeat, transition)
 }
 
 /* ---------------- Seeds ---------------- */
 
-function getSeedStart(event: Event, seed: SeedType): number | null {
+function getSeedStart(event: Event, seed: SeedType) {
     return getTimestamp(event.seedStartDate?.[seed])
 }
 
-function getTransitionSeedStart(event: Event, serverAge: number): number | undefined {
+function getServerSeed(server: Server): SeedType {
+    return server.id % 2 === 0 ? "SEED_B" : "SEED_C"
+}
+
+function getTransitionSeedStart(event: Event, serverAge: number) {
     if (serverAge >= 50 && serverAge < 55 && event.seedStartDate?.SEED_A)
         return new Date(event.seedStartDate.SEED_A).getTime()
 
     return undefined
 }
 
+/* ---------------- Minor ---------------- */
+
+function getMinorEventStatus(event: Event, ctx: EventContext) {
+    return computeFromEvent(ctx, event, getTimestamp(event.startDate))
+}
+
+/* ---------------- Unique ---------------- */
+
+function getUniqueEventStatus(event: Event, ctx: EventContext) {
+
+    const { duration } = getTiming(event)
+    const start = getTimestamp(event.startDate)
+
+    if (ctx.now >= (start ?? 0) + dayToMs(duration))
+        return defaultStatus({ isDisabled: true })
+
+    return computeFromEvent(ctx, event, start)
+}
+
 /* ---------------- TGL ---------------- */
 
-function getTGLSingleEventStatus(event: Event, server: Server, crossserver?: boolean): EventStatus {
+const TGL_END_DAY = 52
 
-    const serverAge = getServerAgeDays(server)
+function getTGLSingleEventStatus(event: Event, ctx: EventContext) {
 
-    let start: number | null = null
+    if (ctx.serverAge > TGL_END_DAY)
+        return defaultStatus({ isDisabled: true })
 
-    if(serverAge > 52)
-        return defaultStatus({isDisabled: true})
+    const seed = getServerSeed(ctx.server)
 
-    if(server.id % 2 === 0 )
-        start = getSeedStart(event, "SEED_B")
-    else
-        start = getSeedStart(event, "SEED_C")
-
-    return computeEventStatus(
-        start,
-        getDuration(event),
-        getRepeat(event),
-        getTransitionSeedStart(event, serverAge)
+    return computeFromEvent(
+        ctx,
+        event,
+        getSeedStart(event, seed),
+        getTransitionSeedStart(event, ctx.serverAge)
     )
 }
 
-function getTGLCrossEventStatus(event: Event, server: Server, crossserver?: boolean): EventStatus {
+function getTGLCrossEventStatus(event: Event, ctx: EventContext) {
 
-    const serverAge = getServerAgeDays(server)
+    if (ctx.serverAge <= TGL_END_DAY)
+        return defaultStatus({ isDisabled: true })
 
-    let start: number | null = null
-
-    if (serverAge <= 52)
-        return defaultStatus({isDisabled: true})
-    
-    start = getSeedStart(event, "SEED_A")
-
-    return computeEventStatus(
-        start,
-        getDuration(event),
-        getRepeat(event),
-        getTransitionSeedStart(event, serverAge)
+    return computeFromEvent(
+        ctx,
+        event,
+        getSeedStart(event, "SEED_A"),
+        getTransitionSeedStart(event, ctx.serverAge)
     )
 }
 
 /* ---------------- Wheel ---------------- */
 
-function getWheelEventStatus(event: Event, server: Server): EventStatus {
-
-    const serverAge = getServerAgeDays(server)
+function getWheelEventStatus(event: Event, ctx: EventContext) {
 
     let seed: SeedType
 
-    if (serverAge >= 52) 
+    if (ctx.serverAge >= 52)
         seed = "SEED_A"
-    else if (server.id % 2 === 0) 
-        seed = "SEED_B"
-    else 
-        seed = "SEED_C"
+    else
+        seed = getServerSeed(ctx.server)
 
-    return computeEventStatus(
+    return computeFromEvent(
+        ctx,
+        event,
         getSeedStart(event, seed),
-        getDuration(event),
-        getRepeat(event),
-        getTransitionSeedStart(event, serverAge)
+        getTransitionSeedStart(event, ctx.serverAge)
     )
 }
 
 /* ---------------- New World ---------------- */
 
-function getNewWorldEventStatus(event: Event, server: Server): EventStatus {
+function getNewWorldEventStatus(event: Event, ctx: EventContext) {
 
-    const duration = getDuration(event)
-    const repeat = getRepeat(event)
-    const serverAge = getServerAgeDays(server)
+    const { duration, repeat } = getTiming(event)
 
-    if(serverAge > duration)
+    if (ctx.serverAge > duration)
         return defaultStatus({ isDisabled: true })
-    
-    return computeEventStatus(new Date(server.releaseDate).getTime(), duration, repeat)
+
+    return computeEventStatus(ctx, ctx.serverRelease, duration, repeat)
 }
 
 /* ---------------- Chronicle ---------------- */
-
-function getChronicleEventStatus(event: Event, server: Server): EventStatus {
+function getChronicleEventStatus(event: Event,ctx: EventContext): EventStatus {
 
     const duration = getDuration(event)
-    const repeat = getRepeat(event)
 
     const confirmedUnlocks = [
         "gate",
@@ -242,141 +247,127 @@ function getChronicleEventStatus(event: Event, server: Server): EventStatus {
         confirmedUnlocks.includes(e.unlock)
     )
 
-    const serverReleaseDate = new Date(server.releaseDate)
-    const serverAge = getServerAgeDays(server)
+    const serverReleaseDate = new Date(ctx.serverRelease)
+    const releaseMs = serverReleaseDate.getTime()
 
-    let start: number | null = null
+    const serverAge = ctx.serverAge
 
     if (serverAge >= 61)
         return defaultStatus({ isDisabled: true })
-        
-    let id: number | undefined
-    let i = 0
 
-    while (i < filteredChronicle.length && id === undefined) {
-        const chronicleEvent = filteredChronicle[i]
+    let id = filteredChronicle.findIndex(e => serverAge <= e.day)
 
-        if (serverAge <= chronicleEvent.day + 1)
-            id = i
+    if (id === -1)
+        return defaultStatus()
 
-        i++
-    }
+    if (filteredChronicle[id].day === serverAge && id + 1 < filteredChronicle.length)
+        id++
+    
+    const currentEvent = filteredChronicle[id]
+    const nextEvent = filteredChronicle[id + 1]
 
-    if (id !== undefined) {
-        const targetIndex = id === 11 ? id : id + 1
-        start = serverReleaseDate.getTime() + dayToMs(filteredChronicle[targetIndex].day - duration)
-    }
+    const start = releaseMs + dayToMs(currentEvent.day - duration)
 
-    return computeEventStatus(start, duration, repeat)
+    const transitionStart = nextEvent ? releaseMs + dayToMs(nextEvent.day - duration): undefined
+
+    return computeEventStatus(ctx, start, duration, 0, transitionStart)
 }
 
 /* ---------------- Temple War ---------------- */
 
-function getTempleEventStatus(event: Event, server: Server): EventStatus {
+function getTempleEventStatus(event: Event, ctx: EventContext) {
 
-    const duration = getDuration(event)
-    const repeat = getRepeat(event)
+    const { duration, repeat } = getTiming(event)
 
-    const FULL_CHRONICE = 67
-    const FIRST_APPEARANCE = FULL_CHRONICE + repeat
-
-    const serverAge = getServerAgeDays(server)
-    const serverReleaseDate = new Date(server.releaseDate)
+    const FULL_CHRONICLE = 67
+    const FIRST_APPEARANCE = FULL_CHRONICLE + repeat
 
     let start: number | null
 
-    if (serverAge <= FULL_CHRONICE)
+    if (ctx.serverAge <= FULL_CHRONICLE)
         start = null
-    else if (serverAge <= FIRST_APPEARANCE)
-        start = serverReleaseDate.getTime() + dayToMs(FIRST_APPEARANCE)
+    else if (ctx.serverAge <= FIRST_APPEARANCE)
+        start = ctx.serverRelease + dayToMs(FIRST_APPEARANCE)
     else
         start = getTimestamp(event.startDate)
 
-    return computeEventStatus(start, duration, repeat)
+    return computeEventStatus(ctx, start, duration, repeat)
 }
 
 /* ---------------- Unalaq Pass ---------------- */
 
-function getUnalaqPass(event: Event, server: Server): EventStatus {
+function getUnalaqPass(event: Event, ctx: EventContext) {
 
-    const duration = getDuration(event)
-    const repeat = getRepeat(event)
+    const { duration, repeat } = getTiming(event)
 
     const START = 25
     const END = START + duration
 
-    const serverAge = getServerAgeDays(server)
-    const serverReleaseDate = new Date(server.releaseDate)
-
-    if (serverAge > END)
+    if (ctx.serverAge > END)
         return defaultStatus({ isDisabled: true })
-    
-    return computeEventStatus(serverReleaseDate.getTime() + dayToMs(START), duration, repeat)
 
+    return computeEventStatus(
+        ctx,
+        ctx.serverRelease + dayToMs(START),
+        duration,
+        repeat
+    )
 }
 
+/* ---------------- Handler Map ---------------- */
+
+type EventHandler = (event: Event, ctx: EventContext) => EventStatus
+
+const EVENT_HANDLERS: Record<string, EventHandler> = {
+    MINOR: getMinorEventStatus,
+    UNIQUE: getUniqueEventStatus,
+    TGL: getTGLSingleEventStatus,
+    TGL_CROSSSERVER: getTGLCrossEventStatus,
+    WHEEL: getWheelEventStatus,
+    NEW_WORLD: getNewWorldEventStatus,
+    CHRONICLE: getChronicleEventStatus,
+    TEMPLE_WAR: getTempleEventStatus,
+    UNALAQ_PASS: getUnalaqPass
+}
 
 /* ---------------- Public API ---------------- */
 
 export function getEventStatus(event: Event, server: Server): EventStatus {
 
-    switch (event.type) {
-        case "ALL_TIME":
-            return {
-                isActive: false,
-                isAllTime: true,
-                isDisabled: false,
-                isTomorrow: false,
-                remainingTime: null,
-                nextStart: null,
-            }
+    const ctx = createContext(server)
 
-        case "MINOR":
-            return getMinorEventStatus(event)
+    if (event.type === "ALL_TIME")
+        return defaultStatus({ isAllTime: true })
 
-        case "UNIQUE":
-            return getUniqueEventStatus(event)
+    const handler = EVENT_HANDLERS[event.type as ScheduleType]
 
-        case "TGL":
-            return getTGLSingleEventStatus(event, server, false)
+    if (!handler)
+        return defaultStatus()
 
-        case "TGL_CROSSSERVER":
-            return getTGLCrossEventStatus(event, server, true)
-
-        case "WHEEL":
-            return getWheelEventStatus(event, server)
-
-        case "NEW_WORLD":
-            return getNewWorldEventStatus(event, server)
-
-        case "CHRONICLE":
-            return getChronicleEventStatus(event, server)
-
-        case "TEMPLE_WAR":
-            return getTempleEventStatus(event, server)
-
-        case "UNALAQ_PASS":
-            return getUnalaqPass(event, server)
-    }
-
-    return {
-        isActive: false,
-        isDisabled: false,
-        isAllTime: false,
-        isTomorrow: false,
-        remainingTime: 500000000,
-        nextStart: 500000000000000000000,
-    }
+    return handler(event, ctx)
 }
+
+/* ---------------- Sorting ---------------- */
 
 export function sortEvents(events: Event[], server?: Server): Event[] {
 
-    if (!server) return [...events]
+    if (!server)
+        return [...events]
+
+    const srv = server
+    const cache = new Map<Event, EventStatus>()
+
+    function getStatus(event: Event) {
+        if (!cache.has(event))
+            cache.set(event, getEventStatus(event, srv))
+
+        return cache.get(event)!
+    }
 
     return [...events].sort((a, b) => {
 
-        const aStatus = getEventStatus(a, server)
-        const bStatus = getEventStatus(b, server)
+        const aStatus = getStatus(a)
+        const bStatus = getStatus(b)
 
         if (aStatus.isDisabled !== bStatus.isDisabled)
             return aStatus.isDisabled ? 1 : -1
@@ -398,6 +389,7 @@ export function sortEvents(events: Event[], server?: Server): Event[] {
 
         if (aStatus.nextStart)
             return -1
+
         if (bStatus.nextStart)
             return 1
 
