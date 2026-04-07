@@ -662,12 +662,11 @@ export const events: Event[] = [
     duration: 1,
     repeat: "Unregularly",
     type: "CHRONICLE",
-    disclaimer: "There are no Tasks or Rewards tied to this event.",
     informations: [
       "This time-limited reminder event notifies you that an important milestone will soon unlock in your Chronicle of Harmony.",
     ],
     tips: [
-      "Known Trigger of this event:\n- Level 1 Base\n- Level 2 Base\n- Level  3 Base\n- Level 1 Gate\n- Level 2 Gate\n- Level 3 Gate\n- Level 4 Gate\n- Altar\n- Sanctum\n- Shrine\n- Legacy"
+      "Known Trigger of this event:\n- Level 1 Base\n- Level 2 Base\n- Level  3 Base\n- Level 1 Gate\n- Level 2 Gate\n- Level 3 Gate\n- Level 4 Gate\n- Altar\n- Sanctum\n- Shrine\n- Legacy\n- Sanctuary\n- Temple"
     ]
   },
   {
@@ -1091,9 +1090,9 @@ export const events: Event[] = [
   {
     id: "first-anniversary",
     name: "1st Anniversary",
-    description: "Traces of Memory",
+    description: "Participate in the 1st Anniversary: Traces of Memory event to earn amazing rewards.",
     duration: 11,
-    repeat: "Unknown",
+    repeat: 0,
     startDate: "2026-04-02",
     type: "UNIQUE",
     tasks: [
@@ -1342,8 +1341,14 @@ export const events: Event[] = [
     id: "desert-troublemakers",
     name: "Desert Troublemakers",
     description: "Defeat Scorched Skulls!",
-    duration: 2,
-    repeat: "Unknown",
+    duration: 3,
+    repeat: 14, // Not sure yet, just a theory!
+    seedStartDate: {
+      SEED_A: "2026-04-03",
+      SEED_B: "2026-04-06",
+      SEED_C: "2026-04-01", // Not sure yet, just a placeholder date
+    },
+    type: "DESERT_TROUBLEMAKERS",
     tasks: [
       {
         title: "Easy Difficulty",

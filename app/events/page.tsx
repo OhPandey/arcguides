@@ -52,7 +52,7 @@ export default function EventsPage() {
           <div className="flex items-start gap-3">
             <span className="text-xl">🛠️</span>
             <p className="whitespace-pre-line">
-              The schedule for <i>Desert Troublemakers, Avatar Day Festival, and Way of Harmony</i> remains under investigation.
+              The schedule for <i>Desert Troublemakers, Avatar Day Festival, and Way of Harmony</i> remains under investigation. They may be wrong.
             </p>
           </div>
         </div>

@@ -152,7 +152,7 @@ function computeEventStatus(
         isDisabled: false,
         isTomorrow: isTomorrow(start),
         remainingTime: currentStart + duration - now,
-        nextStart
+        nextStart: isActive ? null : nextStart
     };
 }
 
@@ -372,7 +372,7 @@ function getTempleEventStatus(event: Event, ctx: EventContext) {
 
 /* ---------------- Unalaq Pass ---------------- */
 
-function getUnalaqPass(event: Event, ctx: EventContext) {
+function getUnalaqPassEventStatus(event: Event, ctx: EventContext) {
 
     const { duration, repeat } = getTiming(event)
 
@@ -390,6 +390,39 @@ function getUnalaqPass(event: Event, ctx: EventContext) {
     )
 }
 
+/* ---------------- Desert Troublemakers ---------------- */
+
+function getDWEventStatus(event: Event, ctx: EventContext) {
+    const currentSeed: SeedType = getServerSeed(ctx.server);
+    
+    const startFromSeed = getSeedStart(event, currentSeed)!;
+    const startFromSeedA = getSeedStart(event, "SEED_A")!;
+
+    const eventCount = completedEventsFromStart(
+        startFromSeed,
+        getRepeat(event),
+        getDuration(event),
+        new Date(ctx.serverRelease),
+        new Date(ctx.now)
+    );
+
+    let start: number;
+    let transition: number | undefined;
+
+    if (eventCount < 5) {
+        start = startFromSeed;
+        transition = undefined;
+    } else if (eventCount === 5) {
+        start = startFromSeed;
+        transition = startFromSeedA;
+    } else {
+        start = startFromSeedA;
+        transition = undefined;
+    }
+
+    return computeFromEvent(ctx, event, start, transition);
+}
+
 /* ---------------- Handler Map ---------------- */
 
 type EventHandler = (event: Event, ctx: EventContext) => EventStatus
@@ -403,7 +436,8 @@ const EVENT_HANDLERS: Record<string, EventHandler> = {
     NEW_WORLD: getNewWorldEventStatus,
     CHRONICLE: getChronicleEventStatus,
     TEMPLE_WAR: getTempleEventStatus,
-    UNALAQ_PASS: getUnalaqPass
+    UNALAQ_PASS: getUnalaqPassEventStatus,
+    DESERT_TROUBLEMAKERS: getDWEventStatus,
 }
 
 /* ---------------- Public API ---------------- */

@@ -30,6 +30,7 @@ export type ScheduleType =
   | "UNIQUE"
   | "TEMPLE_WAR"
   | "UNALAQ_PASS"
+  | "DESERT_TROUBLEMAKERS"
 
 export type EventTableData  = {
   title?: string

@@ -167,7 +167,9 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
                             )}
 
                         </div>
-                    ) : null}
+                    ) : (
+                        <p>There are no Tasks or Rewards tied to this event.</p>
+                    )}
 
                     {event.disclaimer && (
                         <div className="text-sm text-gray-300 pl-4">
