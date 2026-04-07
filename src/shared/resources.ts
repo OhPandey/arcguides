@@ -211,7 +211,7 @@ export const PURIFIED_ESSENCE: Resource = {
 };
 
 export const VERDANT_SPLINTER: Resource = {
-  name: "Purified Essence",
+  name: "Verdant Splinter",
   gemValue: 5/7
 };
 
@@ -246,7 +246,7 @@ export const SACRED_GLYPH: Resource = {
 };
 
 export const SACRED_FRUIT: Resource = {
-  name: "Scared Dew",
+  name: "Scared Fruit",
   gemValue: 50
 };
 
@@ -278,6 +278,16 @@ export const LOTUS_TILE: Resource = {
 export const FRAME: Resource = {
   name: "Frame",
   gemValue: LOTUS_TILE.gemValue*2000
+};
+
+export const TAG: Resource = {
+  name: "Name Tag",
+  gemValue: FRAME.gemValue // Should have the same value as Frame. They give similar buffs
+};
+
+export const PORTRAIT: Resource = {
+  name: "Portrait",
+  gemValue: 0 // Portrait has new real value, just looks cool
 };
 
 export const BUNDLE_SUPPLY_CHEST_LV1: Resource = {

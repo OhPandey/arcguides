@@ -1,8 +1,10 @@
 import { companionBundles } from "./companionBundles";
 import { dailyDealBundles } from "./dailyDealsBundles";
+import { firstAnniversaryBundles } from "./firstAnniversaryBundles";
 import { growthFundBundles } from "./growthFundBundles";
 import { heroGrowthBundles } from "./heroGrowthBundles";
 import { lotusBundles } from "./lotusBundles";
+import { luckyDiceBundles } from "./luckyDiceBundles";
 import { monthlyBundles } from "./monthlyBundles";
 import { passBundles } from "./passBundles";
 import { skillMasterBundles } from "./skillMasterBundles";
@@ -33,5 +35,7 @@ export const bundles = [
   ...skillMasterBundles,
   ...passBundles,
   ...heroGrowthBundles,
-  ...companionBundles
+  ...companionBundles,
+  ...luckyDiceBundles,
+  ...firstAnniversaryBundles
 ];
