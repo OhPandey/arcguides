@@ -4,6 +4,7 @@ import { formatDuration } from "@/src/events/utils/duration"
 import { formatRepeat } from "@/src/events/utils/repeat"
 import { getEventStatus } from "@/src/events/utils/eventSchedule"
 import { Server } from "@/src/events/type/server"
+import { formatUniversalTime } from "@/src/events/utils/time"
 
 type EventCardProps = {
   event: Event
@@ -56,7 +57,11 @@ export default function EventCard({ event, server }: EventCardProps) {
       </div>
 
       <div className="my-3 text-sm text-gray-400 text-center">
-        <p>⏳ {formatDuration(event.duration)} - 🔁 {formatRepeat(event.repeat)}</p>
+        {(true && status.nextStart) ? (
+          <p>📅 Starts {formatUniversalTime(status.nextStart)}</p>
+        ) : (
+          <p>⏳ {formatDuration(event.duration)} - 🔁 {formatRepeat(event.repeat)}</p>
+        )}
       </div>
 
       <Link

@@ -1759,6 +1759,16 @@ export const events: Event[] = [
     ]
   },
   {
+    id: "glorious-victory",
+    name: "Glorious Victory",
+    description: "Waiting for it to happen [...]",
+    duration: 3,
+    repeat: "Unknown",
+    startDate: "2026-04-10",
+    type: "MINOR",
+    wip: true,
+  },
+  {
     id: "balance-and-order",
     name: "Balance and Order",
     description: "Waiting for it to happen [...]",
@@ -1779,12 +1789,104 @@ export const events: Event[] = [
     wip: true,
   },
   {
+    id: "search-and-upgrade",
+    name: "Search & Upgrade",
+    description: "Waiting for it to happen [...]",
+    duration: 2,
+    repeat: "Unknown",
+    startDate: "2026-04-11",
+    type: "MINOR",
+    wip: true,
+  },
+  {
     id: "unalaq_pass",
     name: "Unalaq Pass",
-    description: "Waiting for it to happen [...]",
+    description: "Collect Pass Points to earn Unalaq.",
     duration: 5,
-    repeat: "Unknown",
+    repeat: 0,
     type: "UNALAQ_PASS",
+    tasks: [
+      {
+        title: "Day 1",
+        headers: ["Task", "Reward"],
+        rows: [
+          ["Defeat 20 Shattered Skulls", "30x Unalaq Pass Points"],
+          ["Recruit 8,000 Tier 3 or Higher Benders", "40x Unalaq Pass Points"],
+          ["Donate 30 times to alliance research", "20x Unalaq Pass Points"],
+          ["Use 10 scrolls", "30x Unalaq Pass Points"],
+          ["Complete 10 Expedition missions", "30x Unalaq Pass Points"]
+        ]
+      },
+      {
+        title: "Day 2",
+        headers: ["Task"],
+        rows: [
+          ["TBD"]
+        ]
+      },
+      {
+        title: "Day 3",
+        headers: ["Task"],
+        rows: [
+          ["TBD"]
+        ]
+      },
+      {
+        title: "Day 4",
+        headers: ["Task"],
+        rows: [
+          ["TBD"]
+        ]
+      },
+      {
+        title: "Day 5",
+        headers: ["Task"],
+        rows: [
+          ["TBD"]
+        ]
+      }
+    ],
+    rewards: [
+      {
+        title: "Unalaq Pass",
+        headers: ["Level", "Points Required", "Total Points"],
+        rows: [
+          ["1", "5 Unalaq Pass Points", "5 Unalaq Pass Points"],
+          ["2", "5 Unalaq Pass Points", "10 Unalaq Pass Points"],
+          ["3", "5 Unalaq Pass Points", "15 Unalaq Pass Points"],
+          ["4", "5 Unalaq Pass Points", "20 Unalaq Pass Points"],
+          ["5", "10 Unalaq Pass Points", "30 Unalaq Pass Points"],
+          ["6", "10 Unalaq Pass Points", "40 Unalaq Pass Points"],
+          ["7", "10 Unalaq Pass Points", "50 Unalaq Pass Points"],
+          ["8", "10 Unalaq Pass Points", "60 Unalaq Pass Points"],
+          ["9", "15 Unalaq Pass Points", "75 Unalaq Pass Points"],
+          ["10", "15 Unalaq Pass Points", "90 Unalaq Pass Points"],
+          ["11", "15 Unalaq Pass Points", "105 Unalaq Pass Points"],
+          ["12", "15 Unalaq Pass Points", "120 Unalaq Pass Points"],
+          ["13", "20 Unalaq Pass Points", "140 Unalaq Pass Points"],
+          ["14", "20 Unalaq Pass Points", "160 Unalaq Pass Points"],
+          ["15", "20 Unalaq Pass Points", "180 Unalaq Pass Points"],
+          ["16", "20 Unalaq Pass Points", "200 Unalaq Pass Points"],
+          ["17", "25 Unalaq Pass Points", "225 Unalaq Pass Points"],
+          ["18", "25 Unalaq Pass Points", "250 Unalaq Pass Points"],
+          ["19", "25 Unalaq Pass Points", "275 Unalaq Pass Points"],
+          ["20", "25 Unalaq Pass Points", "300 Unalaq Pass Points"]
+        ]
+      }
+    ],
+    details: [
+      { type: "p", content: "Clear the missions assigned to each day and earn Pass Points to use in the Unalaq Pass!" },
+      { type: "ol", items: [
+        "The event runs for a total of 5 days.",
+        "Missions are limited each day.",
+        "Only missions unlocked on the current day can be completed.",
+        "Missions from previous days cannot be completed.",
+        "Pass Points earned from clearing missions can be used in [Unalaq Pass]"
+      ], space: true}
+    ],
+    informations: [
+      "Unlike most events, tasks must be completed on the same day they become available."
+    ],
     wip: true,
   },
 ]
