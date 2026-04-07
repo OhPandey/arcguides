@@ -1190,11 +1190,14 @@ export const events: Event[] = [
 
           // Airship
           ["Send 1 airship", "10 S-coins"],
+          ["Send 3 airships", "20 S-coins"],
           ["Successfully raid 1 other airship", "10 S-coins"],
+          ["Successfully raid 3 other airship", "20 S-coins"],
 
           // Alliance
           ["Help 5 alliance members", "10 S-coin"],
           ["Help 10 alliance members", "20 S-coin"],
+          ["Help 20 alliance members", "40 S-coin"],
           ["Donate 5 times to alliance research", "10 S-coins"],
           ["Donate 10 times to alliance research", "20 S-coins"],
           ["Donate 20 times to alliance research", "40 S-coins"],
@@ -1224,10 +1227,10 @@ export const events: Event[] = [
           ["Purchase 20 items at the Trading Post", "100 S-coins"],
 
           // Hero Upgrades
-          ["Level Up Hero Skill 1 time", "20 S-coins"],
-          ["Rank Up Hero 1 time", "20 S-coins"],
-          ["Level Up Heroes 3 times", "20 S-coins"],
-          ["Enhance gear 1 time", "20 S-coins"],
+          ["Level Up a Hero Skill", "20 S-coins"],
+          ["Rank Up a Hero", "20 S-coins"],
+          ["Level Up 3 Heroes", "20 S-coins"],
+          ["Enhance Gear", "20 S-coins"],
 
           // Scrolls
           ["Use 5 Scrolls", "10 S-coins"],
@@ -1236,6 +1239,7 @@ export const events: Event[] = [
           ["Use 30 Golden Scrolls", "100 S-coins"],
 
           // Mystic Ores
+          ["Use 1 Mystic Ores at the Forge", "20 S-coins"],
           ["Use 5 Mystic Ores at the Forge", "100 S-coins"],
 
           // Troops
@@ -1678,7 +1682,7 @@ export const events: Event[] = [
     type: "MINOR",
     tasks: [
       {
-        headers: ["Test", "Reward"],
+        headers: ["Task", "Reward"],
         rows: [
           ["Help alliance 10 times", "5,000 EXP, 10,000 Food, 10,000 Wood, 10,000 Stone, 1x Seal of Solidarity"],
           ["Help alliance 20 times", "1x Silver Scroll, 30,000 Food, 30,000 Wood, 30,000 Stone, 2x Seal of Solidarity"],
@@ -1688,7 +1692,6 @@ export const events: Event[] = [
           ["Donate 30 times to alliance research", "1x Golden Scroll, 150m Speedup, 3x Seal of Solidarity"],
         ]
       }
-
     ],
     details: [
       { type: "p", content: "Join forces with the alliance to crush the enemies!", space: true},
@@ -1702,12 +1705,58 @@ export const events: Event[] = [
   {
     id: "roar-of-battle",
     name: "Roar of Battle",
-    description: "Waiting for it to happen [...]",
+    description: "Defeat Shattered Skulls and earn points to receive rewards.",
     duration: 2,
     repeat: "Unknown",
     startDate: "2026-04-07",
     type: "MINOR",
-    wip: true,
+    tasks: [
+      {
+        headers: ["Task", "Reward"],
+        rows: [
+          ["Earn 200 points", "30 Gems, 2x Rare Spirit Shard, 2x Rare Spirit Badge, 60m Speedup"],
+          ["Earn 400 points", "60 Gems, 4x Rare Spirit Shard, 4x Rare Spirit Badge, 120m Speedup"],
+          ["Earn 600 points", "90 Gems, 2x Epic Spirit Shard, 2x Epic Spirit Badge, 180m Speedup"],
+          ["Earn 800 points", "120 Gems, 4x Epic Spirit Shard, 4x Rare Spirit Badge, 300m Speedup"]
+        ]
+      }
+    ],
+    rewards: [
+      {
+        headers: ["Rank", "Reward"],
+        rows: [
+          ["1", "500 Gems, 10x Golden Scroll, 600m Speedup, 500,000 Food, 500,000 Wood"],
+          ["2", "400 Gems, 8x Golden Scroll, 480m Speedup, 400,000 Food, 400,000 Wood"],
+          ["3", "300 Gems, 6x Golden Scroll, 360m Speedup, 300,000 Food, 300,000 Wood"],
+          ["4-10", "200 Gems, 4x Golden Scroll, 240m Speedup, 200,000 Food, 200,000 Wood"],
+          ["11-20", "100 Gems, 3x Golden Scroll, 180m Speedup, 150,000 Food, 150,000 Wood"],
+          ["21-50", "50 Gems, 2x Golden Scroll, 120m Speedup, 100,000 Food, 100,000 Wood"],
+          ["51-100", "20 Gems, 1x Golden Scroll, 60m Speedup, 50,000 Food, 50,000 Wood"],
+        ]
+      }
+    ],
+    details: [
+      { type: "p", content: "To maintain balance and harmony there are times when you must fight.", space: true},
+      { type: "p", content: "Defeat Shattered Skulls on the field to earn points."},
+      { type: "p", content: "Shattered Skulls provide different scores absed on their level."},
+      { type: "p", content: "Highly ranked leaders who earn a minimum of 500 points by defeating Shattered Skulls will recieve amazing rewards", space: true},
+      { type: "p", content: "Scoring Rules"},      
+      { type: "ul", items: [
+        "Levels 1-6: 10 points",
+        "Levels 7-9: 20 points",
+        "Levels 10-12: 30 points",
+        "Levels 13-15: 40 points",
+        "Levels 16-17: 50 points",
+        "Levels 18-19: 60 points",
+        "Levels 20-22: 70 points",
+        "Levels 23-24: 80 points",
+        "Levels 25-26: 90 points",
+        "Levels 27-28: 100 points",
+        "Level 29: 110 points",
+        "Level 30: 120 points",
+      ], space: true},
+      { type: "quotedate", author: "ANGames", date: "2026-04-07"}
+    ]
   },
   {
     id: "balance-and-order",
