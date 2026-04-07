@@ -311,13 +311,14 @@ function getChronicleEventStatus(event: Event,ctx: EventContext): EventStatus {
     const duration = getDuration(event)
 
     const confirmedUnlocks = [
+        "base",
         "gate",
-        "sanctuary",
+        "altar",
+        "sanctum",
         "shrine",
         "legacy",
+        "sanctuary",
         "temple",
-        "altar",
-        "base"
     ]
 
     const filteredChronicle = chronicleOfHarmony.filter(e =>
