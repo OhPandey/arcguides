@@ -11,14 +11,23 @@ export function formatUniversalTime(timestamp: number) {
     const utcTime = `${year}-${month}-${day} ${hours}:${minutes} UTC`
 
     const diffMs = timestamp - Date.now()
-    const diffHours = Math.floor(diffMs / (1000 * 60 * 60))
+    const diffMinutes = Math.floor(diffMs / (1000 * 60))
+    const diffHours = Math.floor(diffMinutes / 60)
 
     let relative = ""
 
-    if (diffHours < 24) {
+    if (diffMinutes < 1) {
+        relative = "In less than a minute"
+    }
+    else if (diffMinutes < 60) {
+        const unit = diffMinutes === 1 ? "Minute" : "Minutes"
+        relative = `In ${diffMinutes} ${unit}`
+    }
+    else if (diffHours < 24) {
         const unit = diffHours === 1 ? "Hour" : "Hours"
         relative = `In ${diffHours} ${unit}`
-    } else {
+    }
+    else {
         const diffDays = Math.floor(diffHours / 24)
         const unit = diffDays === 1 ? "Day" : "Days"
         relative = `In ${diffDays} ${unit}`
