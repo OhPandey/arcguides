@@ -1,3 +1,4 @@
+import { Resource } from "@/src/bundles/type/bundle"
 import { SeedType } from "../data/servers"
 
 export type Event = {
@@ -32,11 +33,13 @@ export type ScheduleType =
   | "UNALAQ_PASS"
   | "DESERT_TROUBLEMAKERS"
 
-export type EventTableData  = {
+export type EventTableCell = string | Reward[]
+
+export type EventTableData = {
   title?: string
   description?: string
   headers: string[]
-  rows: string[][]
+  rows: EventTableCell[][]
   dividerAfterColumns?: number[]
 }
 
@@ -52,3 +55,9 @@ export type Details = { type: "p"; content: string; space?: boolean }
   | { type: "h2"; content: string; space?: boolean }
   | { type: "h3"; content: string; space?: boolean }
   | { type: "quotedate"; author: string; date: string; space?: boolean }
+
+  export type Reward = {
+  resource: Resource
+  amount: number
+  disclaimer?: string
+}

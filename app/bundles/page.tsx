@@ -5,6 +5,20 @@ import { useMemo, useState } from "react";
 import Modal from "@/components/Modal";
 import { bundles } from "@/src/bundles/data/bundles";
 import { computeBundles, ComputedBundle } from "@/src/bundles/utils/computeBundles";
+import { Resource } from "@/src/bundles/type/bundle";
+import { SPEEDUP } from "@/src/shared/resources";
+
+const formatNumber = (n: number) => n.toLocaleString()
+
+export function formatResource(resource: Resource, amount: number) {
+  const formattedAmount = formatNumber(amount)
+
+  if (resource === SPEEDUP) {
+    return `${formattedAmount}min ${resource.name}`
+  }
+
+  return `${formattedAmount}x ${resource.name}`
+}
 
 export default function BundlesPage() {
     const [query, setQuery] = useState("");
@@ -95,12 +109,7 @@ export default function BundlesPage() {
                                     key={i}
                                     className="relative before:content-['-'] before:absolute before:-left-4"
                                 >
-                                    {new Intl.NumberFormat("en").format(item.amount)}x{" "}
-                                    {item.resource.name} [
-                                    {new Intl.NumberFormat("en").format(
-                                        item.amount * item.resource.gemValue
-                                    )}{" "}
-                                    Gems]
+                                    {formatResource(item.resource, item.amount)}
                                 </li>
                             ))}
                         </ul>

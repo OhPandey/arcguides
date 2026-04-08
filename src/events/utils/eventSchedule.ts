@@ -361,7 +361,7 @@ function getTempleEventStatus(event: Event, ctx: EventContext) {
     let start: number | null
 
     if (ctx.serverAge <= FULL_CHRONICLE)
-        start = null
+        return defaultStatus({isDisabled: true})
     else if (ctx.serverAge <= FIRST_APPEARANCE)
         start = ctx.serverRelease + dayToMs(FIRST_APPEARANCE)
     else

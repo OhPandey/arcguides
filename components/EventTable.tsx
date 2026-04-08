@@ -1,5 +1,31 @@
-import { EventTableData } from "@/src/events/type/event"
+import { EventTableCell, EventTableData } from "@/src/events/type/event"
 import { formatTextComplex } from "@/src/events/utils/text"
+import { SPEEDUP } from "@/src/shared/resources"
+
+const formatNumber = (n: number) => n.toLocaleString()
+const formatGems = (n: number) => Math.round(n).toLocaleString()
+
+function renderCell(cell: EventTableCell) {
+  if (typeof cell === "string") return cell
+
+  const gemValue = cell.reduce(
+    (sum, { amount, resource }) => sum + amount * resource.gemValue,
+    0
+  )
+
+  const text = cell
+    .map(({ amount, resource, disclaimer }) => {
+      const formattedAmount =
+        resource === SPEEDUP
+          ? `${formatNumber(amount)}min`
+          : `${formatNumber(amount)}x`
+
+      return `${formattedAmount} ${resource.name}${disclaimer ?? ""}`
+    })
+    .join(", ")
+
+  return `${text}\n→ ${formatGems(gemValue)} Gems`;
+}
 
 export function EventTable({ table }: { table: EventTableData }) {
     const dividers = table.dividerAfterColumns ?? []
@@ -42,9 +68,10 @@ export function EventTable({ table }: { table: EventTableData }) {
                                         key={j}
                                         className={`px-3 py-2 ${
                                             dividers.includes(j+1) ? "border-r border-gray-600" : ""
-                                        }`}
+                                        }
+                                        whitespace-pre-line`}
                                     >
-                                        {cell}
+                                        {renderCell(cell)}
                                     </td>
                                 ))}
                             </tr>

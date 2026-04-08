@@ -276,9 +276,14 @@ export const LOTUS_TILE: Resource = {
 };
 
 export const FRAME: Resource = {
-  name: "Frame",
+  name: "Frame Skin",
   gemValue: LOTUS_TILE.gemValue*2000
 };
+
+export const TOWNHALL = (variant?: string): Resource => ({
+  name: variant ? `"${variant}" Town Hall Skin`: "Town Hall Skin",
+  gemValue: LOTUS_TILE.gemValue*20000
+})
 
 export const TAG: Resource = {
   name: "Name Tag",
