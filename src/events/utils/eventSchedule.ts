@@ -392,7 +392,7 @@ function getUnalaqPassEventStatus(event: Event, ctx: EventContext) {
 
 /* ---------------- Desert Troublemakers ---------------- */
 
-function getDWEventStatus(event: Event, ctx: EventContext) {
+function getDTEventStatus(event: Event, ctx: EventContext) {
     const currentSeed: SeedType = getServerSeed(ctx.server);
     
     const startFromSeed = getSeedStart(event, currentSeed)!;
@@ -437,7 +437,7 @@ const EVENT_HANDLERS: Record<string, EventHandler> = {
     CHRONICLE: getChronicleEventStatus,
     TEMPLE_WAR: getTempleEventStatus,
     UNALAQ_PASS: getUnalaqPassEventStatus,
-    DESERT_TROUBLEMAKERS: getDWEventStatus,
+    DESERT_TROUBLEMAKERS: getDTEventStatus,
 }
 
 /* ---------------- Public API ---------------- */

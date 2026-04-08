@@ -1203,9 +1203,11 @@ export const events: Event[] = [
 
           // Companion
           ["Complete 1 Companion survey", "10 S-coins"],
+          ["Complete 3 Companion surveys", "40 S-coins"],
           ["Bond with Companion 2 times", "10 S-coins"],
           ["Bond with Companion 4 times", "20 S-coins"],
           ["Skill Up Companion 1 time", "40 S-coins"],
+          ["Level Up Companion 1 time", "40 S-coins"],
 
           // Speedups
           ["Use 200m of Speedup", "10 S-coins"],
@@ -1229,7 +1231,9 @@ export const events: Event[] = [
           ["Level Up a Hero Skill", "20 S-coins"],
           ["Rank Up a Hero", "20 S-coins"],
           ["Level Up 3 Heroes", "20 S-coins"],
-          ["Enhance Gear", "20 S-coins"],
+          ["Enhance Gear 1 time", "20 S-coins"],
+          ["Enhance Gear 2 times", "40 S-coins"],
+
 
           // Scrolls
           ["Use 5 Scrolls", "10 S-coins"],
@@ -1245,6 +1249,7 @@ export const events: Event[] = [
           ["Recruit 1,000 Tier 2 or Higher Benders", "10 S-coins"],
           ["Recruit 2,500 Tier 2 or Higher Benders", "20 S-coins"],
           ["Recruit 6,000 Tier 2 or Higher Benders", "40 S-coins"],
+          ["Recruit 2,000 Tier 5 or Higher Benders", "40 S-coins"],
           ["Recruit 4,000 Tier 5 or Higher Benders", "100 S-coins"],
 
           // Gems
@@ -1267,9 +1272,14 @@ export const events: Event[] = [
       },
       {
         title: "Harvest of Bonds I (Start: Day 6, Duration: 2 Days)",
-        headers: ["Task"],
+        headers: ["Task", "Reward"],
         rows: [
-          ["Not yet available."]
+          ["Destroy 5 Shattered Skulls' Fortress", "1x Lucky Dice, 1x Epic Spirit Shard, 1x Epic Spirit Badge, 60m Speedup"],
+          ["Destroy 10 Shattered Skulls' Fortress", "1x Lucky Dice, 3x Epic Spirit Shard, 3x Epic Spirit Badge, 180m Speedup"],
+          ["Destroy 20 Shattered Skulls' Fortress", "2x Lucky Dice, 5x Epic Spirit Shard, 5x Epic Spirit Badge, 300m Speedup"],
+          ["Recruit 5,000 Tier 2 or Higher Benders", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 60m Speedup"],
+          ["Recruit 10,000 Tier 2 or Higher Benders", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 180m Speedup"],
+          ["Recruit 20,000 Tier 2 or Higher Benders", "2x Lucky Dice, 2x Golden Scroll, 2x Mystic Ore, 300m Speedup"],
         ]
       },
       {
@@ -1319,7 +1329,7 @@ export const events: Event[] = [
       },
       {
         title: "Paths of Fate",
-        description: "Rewards reset daily at 00:00 UTC.\nUnclaimed rewaerds expire, so be sure to claim them!",
+        description: "Rewards reset daily at 00:00 UTC.\nUnclaimed rewards expire.",
         headers: ["S-Coins", "Reward"],
         rows: [
           ["20", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 5,000 EXP, 1x Lv.3 Custom Resource Chest"],
@@ -1331,8 +1341,46 @@ export const events: Event[] = [
           ["500", "3x Lucky Dice, 3x Golden Scroll, 3x Mystic Ore, 100,000 EXP, 40x Lv.3 Custom Resource Chest"],
         ]
       },
+      {
+        title: "Harvest of Bonds I",
+        headers: ["Rank", "Reward"],
+        rows: [
+          ["1", "10x Lucky Dice, 300 Gems, 3,000,000 Food, 3,000,000 Wood, 3,000,000 Stone"],
+          ["2", "8x Lucky Dice, 250 Gems, 2,250,000 Food, 2,250,000 Wood, 2,250,000 Stone"],
+          ["3", "6x Lucky Dice, 200 Gems, 1,800,000 Food, 1,800,000 Wood, 1,800,000 Stone"],
+          ["4", "4x Lucky Dice, 150 Gems, 1,500,000 Food, 1,500,000 Wood, 1,500,000 Stone"],
+          ["5", "2x Lucky Dice, 100 Gems, 1,200,000 Food, 1,200,000 Wood, 1,200,000 Stone"],
+          ["6-10", "1x Lucky Dice, 50 Gems, 750,000 Food, 750,000 Wood, 750,000 Stone"],
+        ]
+      },
+      {
+        title: "Harvest of Bonds II (Start: Day 8: Duration: 2 Days)",
+        headers: ["Task"],
+        rows: [
+          ["Not yet available."]
+        ]
+      },
     ],
     disclaimer: "* Hero Power is excluded.",
+    details: [
+      { type: "p", content: "Harvest of Bonds I", space: true },
+      { type: "ul", items: [
+        "Per recruiting 1 bender (Tier-1): 25 Points",
+        "Per recruiting 1 bender (Tier-2): 50 Points",
+        "Per recruiting 1 bender (Tier-3): 75 Points",
+        "Per recruiting 1 bender (Tier-4): 100 Points",
+        "Per recruiting 1 bender (Tier-5): 150 Points",
+        "Per recruiting 1 bender (Tier-6): 350 Points"
+      ], space: true},
+      { type: "ul", items: [
+        "Destroy Shattered Skulls' Fortress Level 1: 10,000 Points",
+        "Destroy Shattered Skulls' Fortress Level 2: 12,000 Points",
+        "Destroy Shattered Skulls' Fortress Level 3: 14,000 Points",
+        "Destroy Shattered Skulls' Fortress Level 4: 16,000 Points",
+        "Destroy Shattered Skulls' Fortress Level 5: 18,000 Points",
+        "Destroy Shattered Skulls' Fortress Level 6: 20,000 Points",
+      ], space: true}
+    ],
     informations: [
       'This is a “mega” event that unlocks over time and features multiple smaller events running simultaneously.',
       "The Secret Tunnel Ranking is cross-server, regardless of whether cross-server is enabled on your server (e.g., TGL)."
@@ -1778,12 +1826,36 @@ export const events: Event[] = [
   {
     id: "balance-and-order",
     name: "Balance and Order",
-    description: "Waiting for it to happen [...]",
+    description: "You are the guardians fo balance and order.",
     duration: 3,
+
     repeat: "Unknown",
     startDate: "2026-04-08",
     type: "MINOR",
-    wip: true,
+    tasks: [
+      {
+        headers: ["Task", "Reward"],
+        rows: [
+          ["Gather 100,000 Resources from the Field", "1x Silver Scroll, 15m Speedup"],
+          ["Gather 300,000 Resources from the Field", "1x Golden Scroll, 75m Speedup"],
+          ["Defeat 3 Shattered Skulls", "1x Rare Spirit Shard, 50,000 Food, 50,000 Wood, 50,00 Stone"],   
+          ["Defeat 10 Shattered Skulls", "1x Epic Spirit Shard, 50,000 Food, 50,000 Wood, 50,00 Stone"],
+          ["Recruit 2,000 benders", "1x Silver Scroll, 10,000 Food, 10,000 Wood, 10,00 Stone"],   
+          ["Recruit 6,000 benders", "1x Golden Scroll, 30,000 Food, 30,000 Wood, 30,00 Stone"],   
+        ]
+      }
+    ],
+    details: [
+      { type: "p", content: "You are the guardians of balance and order.", space: true },
+      { type: "ol", items: [
+        "Gather resources on the field, recruit benders and defeat Shattered Skulls.",
+        "Reach the goals and get rewards.",
+        "This event resets at UTC 00:00."
+      ]}
+    ],
+    informations: [
+      "Balance and Order resets every day at 00:00 UTC, for 3 days.",
+    ]
   },
   {
     id: "readiness",
