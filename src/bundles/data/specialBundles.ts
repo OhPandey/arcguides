@@ -214,8 +214,8 @@ export const specialBundles: Bundle[] = [
         ]
     },
     {
-        name: "Special Bundle > Forge Coin Bundle",
-        image: "special_bundle_forge_coin.png",
+        name: "Special Bundle > Resource Bundle I",
+        image: "special_bundle_resource.png",
         priceUSD: 4.99,
         resources: [
             {
@@ -223,24 +223,20 @@ export const specialBundles: Bundle[] = [
                 amount: 500
             },
             {
-                resource: Resources.FORGE_COIN,
-                amount: 7500
-            },
-            {
                 resource: Resources.FOOD,
-                amount: 1000*350
+                amount: 10000*300+1000*750
             },
             {
                 resource: Resources.WOOD,
-                amount: 1000*350
+                amount: 10000*300+1000*750
             },
             {
                 resource: Resources.STONE,
-                amount: 1000*350
+                amount: 10000*300+1000*750
             },
             {
                 resource: Resources.GOLD,
-                amount: 500*700
+                amount: 5000*300+500*750
             },
             {
                 resource: Resources.VIPPOINT,
@@ -248,6 +244,76 @@ export const specialBundles: Bundle[] = [
             },
             {
                 resource: Resources.BUNDLE_SUPPLY_CHEST_LV2,
+                amount: 1
+            },
+        ]
+    },
+    {
+        name: "Special Bundle > Resource Bundle II",
+        image: "special_bundle_resource.png",
+        priceUSD: 9.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 1050
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 10000*600+1000*1500
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 10000*600+1000*1500
+            },
+            {
+                resource: Resources.STONE,
+                amount: 10000*600+1000*1500
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 5000*600+500*1500
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 1000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV3,
+                amount: 1
+            },
+        ]
+    },
+    {
+        name: "Special Bundle > Resource Bundle III",
+        image: "special_bundle_resource.png",
+        priceUSD: 19.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 2100
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 10000*1200+1000*3000
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 10000*1200+1000*3000
+            },
+            {
+                resource: Resources.STONE,
+                amount: 10000*1200+1000*3000
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 5000*1200+500*3000
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 2000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV4,
                 amount: 1
             },
         ]
@@ -284,6 +350,45 @@ export const specialBundles: Bundle[] = [
             {
                 resource: Resources.STONE,
                 amount: 1000*350
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 500
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV2,
+                amount: 1
+            },
+        ]
+    },
+        {
+        name: "Special Bundle > Forge Coin Bundle",
+        image: "special_bundle_forge_coin.png",
+        priceUSD: 4.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 500
+            },
+            {
+                resource: Resources.FORGE_COIN,
+                amount: 7500
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000*350
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*350
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*350
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500*700
             },
             {
                 resource: Resources.VIPPOINT,

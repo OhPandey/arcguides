@@ -1,16 +1,21 @@
 import { companionBundles } from "./companionBundles";
 import { dailyDealBundles } from "./dailyDealsBundles";
 import { firstAnniversaryBundles } from "./firstAnniversaryBundles";
+import { gearBundles } from "./gearBundles";
 import { growthFundBundles } from "./growthFundBundles";
 import { heroGrowthBundles } from "./heroGrowthBundles";
 import { lotusBundles } from "./lotusBundles";
 import { luckyDiceBundles } from "./luckyDiceBundles";
 import { monthlyBundles } from "./monthlyBundles";
 import { passBundles } from "./passBundles";
+import { rankUpBundles } from "./rankUpBundles";
+import { researchBundles } from "./researchBundles";
 import { skillMasterBundles } from "./skillMasterBundles";
+import { skillUpBundles } from "./skillUpBundles";
 import { specialBundles } from "./specialBundles";
 import { starterBundles } from "./starterBundles";
 import { supplyDepotBundles } from "./supplyDepotBundles";
+import { surpriseLimitedBundles } from "./surpriseLimitedBundles";
 import { tglBundles } from "./tglBundles";
 import { tierBundles } from "./tierBundles";
 import { townHallBundles } from "./townHallBundles";
@@ -37,5 +42,10 @@ export const bundles = [
   ...heroGrowthBundles,
   ...companionBundles,
   ...luckyDiceBundles,
-  ...firstAnniversaryBundles
+  ...firstAnniversaryBundles,
+  ...researchBundles,
+  ...gearBundles,
+  ...skillUpBundles,
+  ...rankUpBundles,
+  ...surpriseLimitedBundles
 ];

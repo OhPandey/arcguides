@@ -1282,7 +1282,7 @@ export const events: Event[] = [
     ],
     rewards: [
       {
-        title: "1st Anniversary Anitques (Lotus Shop)",
+        title: "1st Anniversary Antiques (Lotus Shop)",
         headers: ["Lotus", "Item"],
         rows: [
           ["10", "1x Legendary Spirit Shard: Cai (Cap: 100)"],
@@ -1297,7 +1297,8 @@ export const events: Event[] = [
           ["150", "1x Epic Gear Custom Chest (Cap: 3)"],
           ["200", "1x Epic Deco (Cap: 1 - 4 decos)"],
           ["500", "1x Legendary Gear Custom Chest (Cap: 1)"],
-          ["2,000", "1x Legendary Frame Skin (Cap: 1 - 8 skins)"],
+          ["2,000", "1x Frame Skin (Cap: 1 - 7 skins)"],
+          ["2,000", "1x Town Hall Skin (Cap: 1)"],
         ]
       },
       {
@@ -1318,6 +1319,7 @@ export const events: Event[] = [
       },
       {
         title: "Paths of Fate",
+        description: "Rewards reset daily at 00:00 UTC.\nUnclaimed rewaerds expire, so be sure to claim them!",
         headers: ["S-Coins", "Reward"],
         rows: [
           ["20", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 5,000 EXP, 1x Lv.3 Custom Resource Chest"],
