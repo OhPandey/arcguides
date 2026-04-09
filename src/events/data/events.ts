@@ -19,60 +19,300 @@ export const events: Event[] = [
         title: "Stage 1: Gathering/Research/Bender Recruitment",
         headers: ["Task", "Reward"],
         rows: [
-          ["Gather 100,000 Resources from the Field", "1x Rare Spirit Shard, 1x Silver Scroll, 50,000 Food, 50,000 Stone"],
-          ["Gather 300,000 Resources from the Field", "1x Rare Spirit Shard, 1x Golden Scroll, 100,000 Food, 100,000 Stone"],
-          ["Gather 500,000 Resources from the Field", "1x Epic Spirit Shard, 1x Golden Scroll, 150,000 Food, 150,000 Stone"],
-          ["Increase your Power by 30,000 with Research and Bender Recruitment", "50 Gems, 1x Rare Spirit Badge, 1x Silver Scroll, 5m Speedup"],
-          ["Increase your Power by 60,000 with Research and Bender Recruitment", "100 Gems, 1x Epic Spirit Badge, 1x Golden Scroll, 60m Speedup"],
-          ["Increase your Power by 90,000 with Research and Bender Recruitment", "200 Gems, 1x Legendary Spirit Badge, 1x Golden Scroll, 120m Speedup"],
+          [
+            "Gather 100,000 Resources from the Field",
+            [
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 50000 },
+              { resource: Resources.WOOD, amount: 50000 }
+            ]
+          ],
+          [
+            "Gather 300,000 Resources from the Field",
+            [
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 50000*2 },
+              { resource: Resources.WOOD, amount: 50000*2 }
+            ]
+          ],
+          [
+            "Gather 500,000 Resources from the Field",
+            [
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 50000*3 },
+              { resource: Resources.WOOD, amount: 50000*3 }
+            ]
+          ],
+          [
+            "Increase your Power by 30,000 with Research and Bender Recruitment",
+            [
+              { resource: Resources.GEM, amount: 50 },
+              { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5 }
+            ]
+          ],
+          [
+            "Increase your Power by 60,000 with Research and Bender Recruitment",
+            [
+              { resource: Resources.GEM, amount: 100 },
+              { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Increase your Power by 90,000 with Research and Bender Recruitment",
+            [
+              { resource: Resources.GEM, amount: 200 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 }
+            ]
+          ]
         ]
       },
       {
         title: "Stage 2: Recruitment",
         headers: ["Task", "Reward"],
         rows: [
-          ["Recruit 1,000 Tier 2 or Higher Benders", "30 Gems, 1x Rare Spirit Badge, 1x Silver Scroll, 25m Speedup"],
-          ["Recruit 3,000 Tier 2 or Higher Benders", "60 Gems, 1x Rare Spirit Shard, 1x Silver Scroll, 50m Speedup"],
-          ["Recruit 6,000 Tier 2 or Higher Benders", "90 Gems, 1x Epic Spirit Badge, 1x Silver Scroll, 75m Speedup"],
-          ["Recruit 12,000 Tier 2 or Higher Benders", "120 Gems, 1x Epic Spirit Shard, 1x Golden Scroll, 120m Speedup"],
-          ["Recruit 18,000 Tier 2 or Higher Benders", "150 Gems, 1x Legendary Spirit Badge, 1x Golden Scroll, 180m Speedup"],
-          ["Recruit 25,000 Tier 2 or Higher Benders", "200 Gems, 1x Legendary Spirit Shard, 1x Golden Scroll, 3000m Speedup"],
+          [
+            "Recruit 1,000 Tier 2 or Higher Benders",
+            [
+              { resource: Resources.GEM, amount: 30 },
+              { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5*5 }
+            ]
+          ],
+          [
+            "Recruit 3,000 Tier 2 or Higher Benders",
+            [
+              { resource: Resources.GEM, amount: 60 },
+              { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5*10 }
+            ]
+          ],
+          [
+            "Recruit 6,000 Tier 2 or Higher Benders",
+            [
+              { resource: Resources.GEM, amount: 90 },
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5*15 }
+            ]
+          ],
+          [
+            "Recruit 12,000 Tier 2 or Higher Benders", 
+            [
+              { resource: Resources.GEM, amount: 120 },
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Recruit 18,000 Tier 2 or Higher Benders",
+            [
+              { resource: Resources.GEM, amount: 150 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*3 }
+            ]
+          ],
+          [
+            "Recruit 25,000 Tier 2 or Higher Benders",
+            [
+              { resource: Resources.GEM, amount: 200 },
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*5 }
+            ]
+          ]
         ]
       },
       {
         title: "Stage 3: Hero Growth",
         headers: ["Task", "Reward"],
         rows: [
-          ["Use 10 Silver Scrolls", "1x Rare Spirit Shard, 5x Silver Scroll, 1000 EXP, 60m Speedup"],
-          ["Use 10 Golden Scrolls", "1x Epic Spirit Shard, 5x Golden Scroll, 5000 EXP, 120m Speedup"],
-          ["Level Up 1 Hero Skill", "1x Epic Spirit Badge, 1x Silver Scroll, 1000 EXP, 60m Speedup"],
-          ["Level Up 3 Hero Skills", "3x Epic Spirit Shard, 1x Golden Scroll, 5000 EXP, 120m Speedup"],
-          ["Rank Up 1 Hero", "3x Rare Spirit Shard, 1x Silver Scroll, 1000 EXP, 60m Speedup"],
-          ["Rank Up 3 Heros", "3x Epic Spirit Shard, 1x Golden Scroll, 5000 EXP, 120m Speedup"],
+          [
+            "Use 10 Silver Scrolls",
+            [
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 5 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Use 10 Golden Scrolls",
+            [
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 5 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 }
+            ]
+          ],
+          [
+            "Level Up 1 Hero Skill",
+            [
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Level Up 3 Hero Skills",
+            [
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 3 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 }
+            ]
+          ],
+          [
+            "Rank Up 1 Hero",
+            [
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 3 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Rank Up 3 Heros",
+            [
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 3 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 }
+            ]
+          ],
         ]
       },
       {
         title: "Stage 4: Defeated Shatered Skulls/Destroy Shattered Skulls' Fortress/Construction/Bender Recruitment",
         headers: ["Task", "Reward"],
         rows: [
-          ["Defeat 10 Shattered Skulls", "1x Rare Spirit Shard, 1x Silver Scroll, 1000 EXP, 1x Seal of Solidarity"],
-          ["Defeat 20 Shattered Skulls", "1x Epic Spirit Shard, 1x Golden Scroll, 5000 EXP, 3x Seal of Solidarity"],
-          ["Destroy 2 Shattered Skulls' Fortresses", "1x Rare Spirit Badge, 1x Silver Scroll, 1000 EXP, 2x Seal of Solidarity"],
-          ["Destroy 4 Shattered Skulls' Fortresses", "1x Epic Spirit Badge, 1x Golden Scroll, 5000 EXP, 5x Seal of Solidarity"],
-          ["Increase Power by 30,000 with Construction and Bender Recruitment", "50 Gems, 3x Epic Spirit Shard, 1x Silver Scroll, 60m Speedup"],
-          ["Increase Power by 60,000 with Construction and Bender Recruitment", "100 Gems, 1x Legendary Spirit Shard, 1x Golden Scroll, 120m Speedup"],
+          [
+            "Defeat 10 Shattered Skulls",
+            [
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.SEAL_OF_SOLIDARITY, amount: 1 }
+            ]
+          ],
+          [
+            "Defeat 20 Shattered Skulls",
+            [
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SEAL_OF_SOLIDARITY, amount: 3 }
+            ]
+          ],
+          [
+            "Destroy 2 Shattered Skulls' Fortresses",
+            [
+              { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.SEAL_OF_SOLIDARITY, amount: 2 }
+            ]
+          ],
+          [
+            "Destroy 4 Shattered Skulls' Fortresses",
+            [
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SEAL_OF_SOLIDARITY, amount: 5 }
+            ]
+          ],
+          [
+            "Increase Power by 30,000 with Construction and Bender Recruitment",
+            [
+              { resource: Resources.GEM, amount: 50 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 3 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Increase Power by 60,000 with Construction and Bender Recruitment",
+            [
+              { resource: Resources.GEM, amount: 100 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 }
+            ]
+          ]
         ]
       },
       {
         title: "Stage 5: Increase Total Combat Power",
         headers: ["Task", "Reward"],
         rows: [
-          ["Increase Power by 40,000**", "50 Gems, 1x Rare Spirit Badge, 1x Silver Scroll, 25m Speedup"],
-          ["Increase Power by 80,000**", "100 Gems, 1x Rare Spirit Shard, 1x Silver Scroll, 50m Speedup"],
-          ["Increase Power by 120,000**", "150 Gems, 1x Epic Spirit Shard, 1x Golden Scroll, 75m Speedup"],
-          ["Increase Power by 180,000**", "200 Gems, 1x Epic Spirit Shard, 1x Golden Scroll, 120m Speedup"],
-          ["Increase Power by 240,000**", "250 Gems, 1x Legendary Spirit Badge, 1x Golden Scroll, 180m Speedup"],
-          ["Increase Power by 300,000**", "300 Gems, 1x Legendary Spirit Shard, 1x Golden Scroll, 300m Speedup"],
+          [
+            "Increase Power by 40,000**",
+            [
+              { resource: Resources.GEM, amount: 50 },
+              { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 25 }
+            ]
+          ],
+          [
+            "Increase Power by 80,000**",
+            [
+              { resource: Resources.GEM, amount: 100 },
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 25*2 }
+            ]
+          ],
+          [
+            "Increase Power by 120,000**",
+            [
+              { resource: Resources.GEM, amount: 150 },
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 25*3 }
+            ]
+          ],
+          [
+            "Increase Power by 180,000**",
+            [
+              { resource: Resources.GEM, amount: 200 },
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 }
+            ]
+          ],
+          [
+            "Increase Power by 240,000**",
+            [
+              { resource: Resources.GEM, amount: 250 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2^3 }
+            ]
+          ],
+          [
+            "Increase Power by 300,000**",
+            [
+              { resource: Resources.GEM, amount: 300 },
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*5 }
+            ]
+          ]
         ]
       },
     ],
@@ -81,32 +321,225 @@ export const events: Event[] = [
         title: "Daily Reward",
         headers: ["Rank", "Reward"],
         rows: [
-          ["1", "10 Legendary Spirit Shards*, 500 Gems, 100,000 Experience, 1,500,000 Food, 1,500,000 Wood, 1,500,000 Stone"],
-          ["2", "5 Legendary Spirit Shards*, 300 Gems, 80,000 Experience, 1,250,000 Food, 1,250,000 Wood, 1,250,000 Stone"],
-          ["3", "2 Legendary Spirit Shards*, 200 Gems, 60,000 Experience, 1,000,000 Food, 1,000,000 Wood, 1,000,000 Stone"],
-          ["4-5", "100 Gems, 40,000 Experience, 750,000 Food, 750,000 Wood, 750,000 Stone"],
-          ["6-10", "50 Gems, 30,000 Experience, 500,000 Food, 500,000 Wood, 500,000 Stone"],
-          ["11-15", "40 Gems, 20,000 Experience, 250,000 Food, 250,000 Wood, 250,000 Stone"],
-          ["16-20", "30 Gems, 10,000 Experience, 200,000 Food, 200,000 Wood, 200,000 Stone"],
-          ["21-25", "20 Gems, 5,000 Experience, 150,000 Food, 150,000 Wood, 150,000 Stone"],
-          ["26-50", "10 Gems, 3,000 Experience, 100,000 Food, 100,000 Wood, 100,000 Stone"],
-          ["50-100", "5 Gems, 2,000 Experience, 50,000 Food, 50,000 Wood, 50,000 Stone"],
+          [
+            "1", 
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10, disclaimer: "*" },
+              { resource: Resources.GEM, amount: 500 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 100 },
+              { resource: Resources.FOOD, amount: 50000*30 },
+              { resource: Resources.WOOD, amount: 50000*30 },
+              { resource: Resources.STONE, amount: 50000*30 }
+            ]
+          ],
+          [
+            "2",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5, disclaimer: "*" },
+              { resource: Resources.GEM, amount: 300 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 80 },
+              { resource: Resources.FOOD, amount: 50000*25 },
+              { resource: Resources.WOOD, amount: 50000*25 },
+              { resource: Resources.STONE, amount: 50000*25 }
+            ]
+          ],
+          [
+            "3",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2, disclaimer: "*" },
+              { resource: Resources.GEM, amount: 200 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 60 },
+              { resource: Resources.FOOD, amount: 50000*20 },
+              { resource: Resources.WOOD, amount: 50000*20 },
+              { resource: Resources.STONE, amount: 50000*20 }
+            ]
+          ],
+          [
+            "4-5",
+            [
+              { resource: Resources.GEM, amount: 100 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 40 },
+              { resource: Resources.FOOD, amount: 50000*15 },
+              { resource: Resources.WOOD, amount: 50000*15 },
+              { resource: Resources.STONE, amount: 50000*15 }
+            ]
+          ],
+          [
+            "6-10",
+            [
+              { resource: Resources.GEM, amount: 50 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 30 },
+              { resource: Resources.FOOD, amount: 50000*10 },
+              { resource: Resources.WOOD, amount: 50000*10 },
+              { resource: Resources.STONE, amount: 50000*10 }
+            ]
+          ],
+          [
+            "11-15",
+            [
+              { resource: Resources.GEM, amount: 40 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 20 },
+              { resource: Resources.FOOD, amount: 50000*5 },
+              { resource: Resources.WOOD, amount: 50000*5 },
+              { resource: Resources.STONE, amount: 50000*5 }
+            ]
+          ],
+          [
+            "16-20",
+            [
+              { resource: Resources.GEM, amount: 30 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 10 },
+              { resource: Resources.FOOD, amount: 50000*4 },
+              { resource: Resources.WOOD, amount: 50000*4 },
+              { resource: Resources.STONE, amount: 50000*4 }
+            ]
+          ],
+          [
+            "21-25",
+            [
+              { resource: Resources.GEM, amount: 20 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 5 },
+              { resource: Resources.FOOD, amount: 50000*3 },
+              { resource: Resources.WOOD, amount: 50000*3 },
+              { resource: Resources.STONE, amount: 50000*3 }
+            ]
+          ],
+          [
+            "26-50",
+            [
+              { resource: Resources.GEM, amount: 10 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 3 },
+              { resource: Resources.FOOD, amount: 50000*2 },
+              { resource: Resources.WOOD, amount: 50000*2 },
+              { resource: Resources.STONE, amount: 50000*2 }
+            ]
+          ],
+          [
+            "50-100",
+            [
+              { resource: Resources.GEM, amount: 5 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 2 },
+              { resource: Resources.FOOD, amount: 50000 },
+              { resource: Resources.WOOD, amount: 50000 },
+              { resource: Resources.STONE, amount: 50000 }
+            ]
+          ]
         ]
       },
       {
         title: "Overall Reward",
         headers: ["Rank", "Reward"],
         rows: [
-          ["1", "200 Legendary Spirit Shards*, 2,000 Gems, 1,800m Speedup, 5,000,000 Food, 5,000,000 Wood, 5,000,000 Stone"],
-          ["2", "150 Legendary Spirit Shards*, 1,500 Gems, 1,500m Speedup, 4,000,000 Food, 4,000,000 Wood, 4,000,000 Stone"],
-          ["3", "100 Legendary Spirit Shards*, 1,000 Gems, 1,200m Speedup, 3,500,000 Food, 3,500,000 Wood, 3,500,000 Stone"],
-          ["4-5", "70 Legendary Spirit Shards*, 700 Gems, 900m Speedup, 3,000,000 Food, 3,000,000 Wood, 3,000,000 Stone"],
-          ["6-10", "50 Legendary Spirit Shards*, 500 Gems, 720m Speedup, 2,500,000 Food, 2,500,000 Wood, 2,500,000 Stone"],
-          ["11-15", "30 Legendary Spirit Shards*, 300 Gems, 600m Speedup, 2,000,000 Food, 2,000,000 Wood, 2,000,000 Stone"],
-          ["16-20", "20 Legendary Spirit Shards*, 200 Gems, 480m Speedup, 1,500,000 Food, 1,500,000 Wood, 1,500,000 Stone"],
-          ["21-25", "10 Legendary Spirit Shards*, 100 Gems, 360m Speedup, 1,000,000 Food, 1,000,000 Wood, 1,000,000 Stone"],
-          ["26-50", "5 Legendary Spirit Shards*, 50 Gems, 240m Speedup, 500,000 Food, 500,000 Wood, 500,000 Stone"],
-          ["50-100", "2 Legendary Spirit Shards*, 20 Gems, 120m Speedup, 250,000 Food, 250,000 Wood, 250,000 Stone"],
+          [
+            "1",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 200, disclaimer: "*" },
+              { resource: Resources.GEM, amount: 2000 },
+              { resource: Resources.SPEEDUP, amount: 60*30 },
+              { resource: Resources.FOOD, amount: 50000*100 },
+              { resource: Resources.WOOD, amount: 50000*100 },
+              { resource: Resources.STONE, amount: 50000*100 }
+            ]
+          ],
+          [
+            "2",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 150, disclaimer: "*" },
+              { resource: Resources.GEM, amount: 1500 },
+              { resource: Resources.SPEEDUP, amount: 60*25 },
+              { resource: Resources.FOOD, amount: 50000*80 },
+              { resource: Resources.WOOD, amount: 50000*80 },
+              { resource: Resources.STONE, amount: 50000*80 }
+            ]
+          ],
+          [
+            "3",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 100, disclaimer: "*" },
+              { resource: Resources.GEM, amount: 1000 },
+              { resource: Resources.SPEEDUP, amount: 60*20 },
+              { resource: Resources.FOOD, amount: 50000*70 },
+              { resource: Resources.WOOD, amount: 50000*70 },
+              { resource: Resources.STONE, amount: 50000*70 }
+            ]
+          ],
+          [
+            "4-5",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 70, disclaimer: "*" },
+              { resource: Resources.GEM, amount: 700 },
+              { resource: Resources.SPEEDUP, amount: 60*15 },
+              { resource: Resources.FOOD, amount: 50000*60 },
+              { resource: Resources.WOOD, amount: 50000*60 },
+              { resource: Resources.STONE, amount: 50000*60 }
+            ]
+          ],
+          [
+            "6-10",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 50, disclaimer: "*" },
+              { resource: Resources.GEM, amount: 500 },
+              { resource: Resources.SPEEDUP, amount: 60*12 },
+              { resource: Resources.FOOD, amount: 50000*50 },
+              { resource: Resources.WOOD, amount: 50000*50 },
+              { resource: Resources.STONE, amount: 50000*50 }
+            ]
+          ],
+          [
+            "11-15",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 30, disclaimer: "*" },
+              { resource: Resources.GEM, amount: 300 },
+              { resource: Resources.SPEEDUP, amount: 60*10 },
+              { resource: Resources.FOOD, amount: 50000*40 },
+              { resource: Resources.WOOD, amount: 50000*40 },
+              { resource: Resources.STONE, amount: 50000*40 }
+            ]
+          ],
+          [
+            "16-20",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 20, disclaimer: "*" },
+              { resource: Resources.GEM, amount: 200 },
+              { resource: Resources.SPEEDUP, amount: 60*8 },
+              { resource: Resources.FOOD, amount: 50000*30 },
+              { resource: Resources.WOOD, amount: 50000*30 },
+              { resource: Resources.STONE, amount: 50000*30 }
+            ]
+          ],
+          [
+            "21-25",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10, disclaimer: "*" },
+              { resource: Resources.GEM, amount: 100 },
+              { resource: Resources.SPEEDUP, amount: 60*6 },
+              { resource: Resources.FOOD, amount: 50000*20 },
+              { resource: Resources.WOOD, amount: 50000*20 },
+              { resource: Resources.STONE, amount: 50000*20 }
+            ]
+          ],
+          [
+            "26-50",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5, disclaimer: "*" },
+              { resource: Resources.GEM, amount: 50 },
+              { resource: Resources.SPEEDUP, amount: 60*4 },
+              { resource: Resources.FOOD, amount: 50000*10 },
+              { resource: Resources.WOOD, amount: 50000*10 },
+              { resource: Resources.STONE, amount: 50000*10 }
+            ]
+          ],
+          [
+            "50-100",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2, disclaimer: "*" },
+              { resource: Resources.GEM, amount: 20 },
+              { resource: Resources.SPEEDUP, amount: 60*2 },
+              { resource: Resources.FOOD, amount: 50000*5 },
+              { resource: Resources.WOOD, amount: 50000*5 },
+              { resource: Resources.STONE, amount: 50000*5 }
+            ]
+          ]
         ]
       }
     ],
@@ -121,8 +554,7 @@ export const events: Event[] = [
     details: [
       { type: "p", content: "Determine the greatest leader in the world." },
       { type: "p", content: "Do your best to prove that you are the greatest leader!", space: true },
-      {
-        type: "ol", items: [
+      { type: "ol", items: [
           "The event will take place every two weeks for a duration of 5 days.",
           "Each day during the event period, a different type of mission will be given.",
           "Daily rankings will be determined based on the scores gained according to the scoring rules.",
@@ -133,8 +565,7 @@ export const events: Event[] = [
       { type: "p", content: "Power gained from Construction is only applied while the leader is online.", space: true },
       { type: "p", content: "Event Rules:", space: true },
       { type: "p", content: "Day 1 - Resource Gathering/Increase Power with Research or Bender Recruitment", space: true },
-      {
-        type: "ul", items: [
+      { type: "ul", items: [
           "Per gathering 100 Food on the field: 3 Points",
           "Per gathering 100 Stones on the field: 3 Points",
           "Per gathering 50 Gold on the field: 3 Points",
@@ -143,8 +574,7 @@ export const events: Event[] = [
         ], space: true
       },
       { type: "p", content: "Day 2 - Bender Recruitment", space: true },
-      {
-        type: "ul", items: [
+      { type: "ul", items: [
           "Per recruiting 1 bender (Tier-1): 25 Points",
           "Per recruiting 1 bender (Tier-2): 50 Points",
           "Per recruiting 1 bender (Tier-3): 75 Points",
@@ -155,8 +585,7 @@ export const events: Event[] = [
         ], space: true
       },
       { type: "p", content: "Day 3 - Hero Growth", space: true },
-      {
-        type: "ul", items: [
+      { type: "ul", items: [
           "Use Silver Scroll: 750 points",
           "Use Golden Scroll: 1,500 points",
           "Use Rare Hero Spirit Shard: 250 points",
@@ -169,8 +598,7 @@ export const events: Event[] = [
         ], space: true
       },
       { type: "p", content: "Day 4 - Defeat Shattered Skulls/Increase Power with Construction or Bender Recruitment", space: true },
-      {
-        type: "ul", items: [
+      { type: "ul", items: [
           "Defeat Shattered Skull Levels 1-5: 1,500 Points",
           "Defeat Shattered Skull Levels 6-10: 1,800 Points",
           "Defeat Shattered Skull Levels 11-15: 2,100 Points",
@@ -192,7 +620,7 @@ export const events: Event[] = [
     ],
     informations: [
       "For the first 6 times, The Greatest Leader (TGL) only takes place on **your server**, after that the event will become [cross-server](tgl-crossserver).",
-      "The hero rotates after **every third event**.\nThe rotation for The Greatest Leader (Single Server) is **Aang (3x) → Amon (3x)**.",
+      "The hero rotates after **every third event**.\nThe rotation for The Greatest Leader (Single Server) is **Aang → Amon**.",
     ]
   },
   {
@@ -206,66 +634,305 @@ export const events: Event[] = [
       SEED_B: "2026-04-01",
       SEED_C: "2026-04-08",
     },
-    type: "TGL_CROSSSERVER",
-    tasks: [
+   tasks: [
       {
         title: "Stage 1: Gathering/Research/Bender Recruitment",
         headers: ["Task", "Reward"],
         rows: [
-          ["Gather 100,000 Resources from the Field", "1x Rare Spirit Shard, 1x Silver Scroll, 50,000 Food, 50,000 Stone"],
-          ["Gather 300,000 Resources from the Field", "1x Rare Spirit Shard, 1x Golden Scroll, 100,000 Food, 100,000 Stone"],
-          ["Gather 500,000 Resources from the Field", "1x Epic Spirit Shard, 1x Golden Scroll, 150,000 Food, 150,000 Stone"],
-          ["Increase your Power by 30,000 with Research and Bender Recruitment", "50 Gems, 1x Rare Spirit Badge, 1x Silver Scroll, 5m Speedup"],
-          ["Increase your Power by 60,000 with Research and Bender Recruitment", "100 Gems, 1x Epic Spirit Badge, 1x Golden Scroll, 60m Speedup"],
-          ["Increase your Power by 90,000 with Research and Bender Recruitment", "200 Gems, 1x Legendary Spirit Badge, 1x Golden Scroll, 120m Speedup"],
+          [
+            "Gather 100,000 Resources from the Field",
+            [
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 50000 },
+              { resource: Resources.WOOD, amount: 50000 }
+            ]
+          ],
+          [
+            "Gather 300,000 Resources from the Field",
+            [
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 50000*2 },
+              { resource: Resources.WOOD, amount: 50000*2 }
+            ]
+          ],
+          [
+            "Gather 500,000 Resources from the Field",
+            [
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 50000*3 },
+              { resource: Resources.WOOD, amount: 50000*3 }
+            ]
+          ],
+          [
+            "Increase your Power by 30,000 with Research and Bender Recruitment",
+            [
+              { resource: Resources.GEM, amount: 50 },
+              { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5 }
+            ]
+          ],
+          [
+            "Increase your Power by 60,000 with Research and Bender Recruitment",
+            [
+              { resource: Resources.GEM, amount: 100 },
+              { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Increase your Power by 90,000 with Research and Bender Recruitment",
+            [
+              { resource: Resources.GEM, amount: 200 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 }
+            ]
+          ]
         ]
       },
       {
         title: "Stage 2: Recruitment",
         headers: ["Task", "Reward"],
         rows: [
-          ["Recruit 1,000 Tier 2 or Higher Benders", "30 Gems, 1x Rare Spirit Badge, 1x Silver Scroll, 25m Speedup"],
-          ["Recruit 3,000 Tier 2 or Higher Benders", "60 Gems, 1x Rare Spirit Shard, 1x Silver Scroll, 50m Speedup"],
-          ["Recruit 6,000 Tier 2 or Higher Benders", "90 Gems, 1x Epic Spirit Badge, 1x Silver Scroll, 75m Speedup"],
-          ["Recruit 12,000 Tier 2 or Higher Benders", "120 Gems, 1x Epic Spirit Shard, 1x Golden Scroll, 120m Speedup"],
-          ["Recruit 18,000 Tier 2 or Higher Benders", "150 Gems, 1x Legendary Spirit Badge, 1x Golden Scroll, 180m Speedup"],
-          ["Recruit 25,000 Tier 2 or Higher Benders", "200 Gems, 1x Legendary Spirit Shard, 1x Golden Scroll, 3000m Speedup"],
+          [
+            "Recruit 1,000 Tier 2 or Higher Benders",
+            [
+              { resource: Resources.GEM, amount: 30 },
+              { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5*5 }
+            ]
+          ],
+          [
+            "Recruit 3,000 Tier 2 or Higher Benders",
+            [
+              { resource: Resources.GEM, amount: 60 },
+              { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5*10 }
+            ]
+          ],
+          [
+            "Recruit 6,000 Tier 2 or Higher Benders",
+            [
+              { resource: Resources.GEM, amount: 90 },
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5*15 }
+            ]
+          ],
+          [
+            "Recruit 12,000 Tier 2 or Higher Benders", 
+            [
+              { resource: Resources.GEM, amount: 120 },
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Recruit 18,000 Tier 2 or Higher Benders",
+            [
+              { resource: Resources.GEM, amount: 150 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*3 }
+            ]
+          ],
+          [
+            "Recruit 25,000 Tier 2 or Higher Benders",
+            [
+              { resource: Resources.GEM, amount: 200 },
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*5 }
+            ]
+          ]
         ]
       },
       {
         title: "Stage 3: Hero Growth",
         headers: ["Task", "Reward"],
         rows: [
-          ["Use 10 Silver Scrolls", "1x Rare Spirit Shard, 5x Silver Scroll, 1000 EXP, 60m Speedup"],
-          ["Use 10 Golden Scrolls", "1x Epic Spirit Shard, 5x Golden Scroll, 5000 EXP, 120m Speedup"],
-          ["Level Up 1 Hero Skill", "1x Epic Spirit Badge, 1x Silver Scroll, 1000 EXP, 60m Speedup"],
-          ["Level Up 3 Hero Skills", "3x Epic Spirit Shard, 1x Golden Scroll, 5000 EXP, 120m Speedup"],
-          ["Rank Up 1 Hero", "3x Rare Spirit Shard, 1x Silver Scroll, 1000 EXP, 60m Speedup"],
-          ["Rank Up 3 Heros", "3x Epic Spirit Shard, 1x Golden Scroll, 5000 EXP, 120m Speedup"],
+          [
+            "Use 10 Silver Scrolls",
+            [
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 5 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Use 10 Golden Scrolls",
+            [
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 5 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 }
+            ]
+          ],
+          [
+            "Level Up 1 Hero Skill",
+            [
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Level Up 3 Hero Skills",
+            [
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 3 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 }
+            ]
+          ],
+          [
+            "Rank Up 1 Hero",
+            [
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 3 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Rank Up 3 Heros",
+            [
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 3 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 }
+            ]
+          ],
         ]
       },
       {
         title: "Stage 4: Defeated Shatered Skulls/Destroy Shattered Skulls' Fortress/Construction/Bender Recruitment",
         headers: ["Task", "Reward"],
         rows: [
-          ["Defeat 10 Shattered Skulls", "1x Rare Spirit Shard, 1x Silver Scroll, 1000 EXP, 1x Seal of Solidarity"],
-          ["Defeat 20 Shattered Skulls", "1x Epic Spirit Shard, 1x Golden Scroll, 5000 EXP, 3x Seal of Solidarity"],
-          ["Destroy 2 Shattered Skulls' Fortresses", "1x Rare Spirit Badge, 1x Silver Scroll, 1000 EXP, 2x Seal of Solidarity"],
-          ["Destroy 4 Shattered Skulls' Fortresses", "1x Epic Spirit Badge, 1x Golden Scroll, 5000 EXP, 5x Seal of Solidarity"],
-          ["Increase Power by 30,000 with Construction and Bender Recruitment", "50 Gems, 3x Epic Spirit Shard, 1x Silver Scroll, 60m Speedup"],
-          ["Increase Power by 60,000 with Construction and Bender Recruitment", "100 Gems, 1x Legendary Spirit Shard, 1x Golden Scroll, 120m Speedup"],
+          [
+            "Defeat 10 Shattered Skulls",
+            [
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.SEAL_OF_SOLIDARITY, amount: 1 }
+            ]
+          ],
+          [
+            "Defeat 20 Shattered Skulls",
+            [
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SEAL_OF_SOLIDARITY, amount: 3 }
+            ]
+          ],
+          [
+            "Destroy 2 Shattered Skulls' Fortresses",
+            [
+              { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.SEAL_OF_SOLIDARITY, amount: 2 }
+            ]
+          ],
+          [
+            "Destroy 4 Shattered Skulls' Fortresses",
+            [
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SEAL_OF_SOLIDARITY, amount: 5 }
+            ]
+          ],
+          [
+            "Increase Power by 30,000 with Construction and Bender Recruitment",
+            [
+              { resource: Resources.GEM, amount: 50 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 3 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Increase Power by 60,000 with Construction and Bender Recruitment",
+            [
+              { resource: Resources.GEM, amount: 100 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 }
+            ]
+          ]
         ]
       },
       {
         title: "Stage 5: Increase Total Combat Power",
         headers: ["Task", "Reward"],
         rows: [
-          ["Increase Power by 40,000**", "50 Gems, 1x Rare Spirit Badge, 1x Silver Scroll, 25m Speedup"],
-          ["Increase Power by 80,000**", "100 Gems, 1x Rare Spirit Shard, 1x Silver Scroll, 50m Speedup"],
-          ["Increase Power by 120,000**", "150 Gems, 1x Epic Spirit Shard, 1x Golden Scroll, 75m Speedup"],
-          ["Increase Power by 180,000**", "200 Gems, 1x Epic Spirit Shard, 1x Golden Scroll, 120m Speedup"],
-          ["Increase Power by 240,000**", "250 Gems, 1x Legendary Spirit Badge, 1x Golden Scroll, 180m Speedup"],
-          ["Increase Power by 300,000**", "300 Gems, 1x Legendary Spirit Shard, 1x Golden Scroll, 300m Speedup"],
+          [
+            "Increase Power by 40,000**",
+            [
+              { resource: Resources.GEM, amount: 50 },
+              { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 25 }
+            ]
+          ],
+          [
+            "Increase Power by 80,000**",
+            [
+              { resource: Resources.GEM, amount: 100 },
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 25*2 }
+            ]
+          ],
+          [
+            "Increase Power by 120,000**",
+            [
+              { resource: Resources.GEM, amount: 150 },
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 25*3 }
+            ]
+          ],
+          [
+            "Increase Power by 180,000**",
+            [
+              { resource: Resources.GEM, amount: 200 },
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 }
+            ]
+          ],
+          [
+            "Increase Power by 240,000**",
+            [
+              { resource: Resources.GEM, amount: 250 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2^3 }
+            ]
+          ],
+          [
+            "Increase Power by 300,000**",
+            [
+              { resource: Resources.GEM, amount: 300 },
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*5 }
+            ]
+          ]
         ]
       },
     ],
@@ -398,12 +1065,66 @@ export const events: Event[] = [
       {
         headers: ["Task", "Reward"],
         rows: [
-          ["Increase your Power by 60,000*", "100 Gems, 25m Speedup, 150,000 Food, 150,000 Wood, 150,000 Stone"],
-          ["Increase your Power by 120,000*", "150 Gems, 50m Speedup, 300,000 Food, 300,000 Wood, 300,000 Stone"],
-          ["Increase your Power by 240,000*", "200 Gems, 120m Speedup, 450,000 Food, 450,000 Wood, 450,000 Stone"],
-          ["Increase your Power by 360,000*", "250 Gems, 180m Speedup, 600,000 Food, 600,000 Wood, 600,000 Stone"],
-          ["Increase your Power by 480,000*", "300 Gems, 240m Speedup, 750,000 Food, 750,000 Wood, 750,000 Stone"],
-          ["Increase your Power by 600,000*", "500 Gems, 300m Speedup, 1,500,000 Food, 1,500,000 Wood, 1,500,000 Stone"],
+          [
+            "Increase your Power by 60,000*",
+            [
+              { resource: Resources.GEM, amount: 100 },
+              { resource: Resources.SPEEDUP, amount: 25},
+              { resource: Resources.FOOD, amount: 150000 },
+              { resource: Resources.WOOD, amount: 150000 },
+              { resource: Resources.STONE, amount: 150000 }
+            ]
+          ],
+          [
+            "Increase your Power by 120,000*",
+            [
+              { resource: Resources.GEM, amount: 150 },
+              { resource: Resources.SPEEDUP, amount: 25*2 },
+              { resource: Resources.FOOD, amount: 150000*2 },
+              { resource: Resources.WOOD, amount: 150000*2 },
+              { resource: Resources.STONE, amount: 150000*2 }
+            ]
+          ],
+          [
+            "Increase your Power by 240,000*",
+            [
+              { resource: Resources.GEM, amount: 200 },
+              { resource: Resources.SPEEDUP, amount: 60*2 },
+              { resource: Resources.FOOD, amount: 150000*3 },
+              { resource: Resources.WOOD, amount: 150000*3 },
+              { resource: Resources.STONE, amount: 150000*3 }
+            ]
+          ],
+          [
+            "Increase your Power by 360,000*",
+            [
+              { resource: Resources.GEM, amount: 250 },
+              { resource: Resources.SPEEDUP, amount: 60*3 },
+              { resource: Resources.FOOD, amount: 150000*4 },
+              { resource: Resources.WOOD, amount: 150000*4 },
+              { resource: Resources.STONE, amount: 150000*4 }
+            ]
+          ],
+          [
+            "Increase your Power by 480,000*",
+            [
+              { resource: Resources.GEM, amount: 300 },
+              { resource: Resources.SPEEDUP, amount: 60*4 },
+              { resource: Resources.FOOD, amount: 150000*5 },
+              { resource: Resources.WOOD, amount: 150000*5 },
+              { resource: Resources.STONE, amount: 150000*5 }
+            ]
+          ],
+          [
+            "Increase your Power by 600,000*",
+            [
+              { resource: Resources.GEM, amount: 500 },
+              { resource: Resources.SPEEDUP, amount: 60*5 },
+              { resource: Resources.FOOD, amount: 150000*10 },
+              { resource: Resources.WOOD, amount: 150000*10 },
+              { resource: Resources.STONE, amount: 150000*10 }
+            ]
+          ]
         ]
       }
     ],
@@ -433,13 +1154,65 @@ export const events: Event[] = [
       {
         headers: ["Task", "Reward"],
         rows: [
-          ["Use 300 AP", "60m Speedup, 10,000 Food, 10,000 Wood, 10,000 Stone"],
-          ["Use 1,000 AP", "300m Speedup, 30,000 Food, 30,000 Wood, 30,000 Stone"],
-          ["Gather 20,000 Resources in the City", "1x Silver Scroll, 15m Speedup"],
-          ["Gather 100,000 Resources in the City", "1x Golden Scroll, 45m Speedup"],
-          ["Recruit 1,000 Benders", "5,000 EXP, 10,000 Food, 10,000 Wood, 10,000 Stone"],
-          ["Recruit 2,000 Benders", "1x Rare Spirit Shard, 30,000 Food, 30,000 Wood, 30,000 Stone"],
-          ["Recruit 6,000 Benders", "1x Epic Spirit Shard, 50,000 Food, 50,000 Wood, 50,000 Stone"],
+          [
+            "Use 300 AP",
+            [
+              { resource: Resources.SPEEDUP, amount: 60 },
+              { resource: Resources.FOOD, amount: 10000 },
+              { resource: Resources.WOOD, amount: 10000 },
+              { resource: Resources.STONE, amount: 10000 }
+            ]
+          ],
+          [
+            "Use 1,000 AP",
+            [
+              { resource: Resources.SPEEDUP, amount: 60*5 },
+              { resource: Resources.FOOD, amount: 10000*3 },
+              { resource: Resources.WOOD, amount: 10000*3 },
+              { resource: Resources.STONE, amount: 10000*3 }
+            ]
+          ],
+          [
+            "Gather 20,000 Resources in the City",
+            [
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5+5+5 }
+            ]
+          ],
+          [
+            "Gather 100,000 Resources in the City",
+            [
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5*3+5*3+5*3 }
+            ]
+          ],
+          [
+            "Recruit 1,000 Benders",
+            [
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000 },
+              { resource: Resources.WOOD, amount: 10000 },
+              { resource: Resources.STONE, amount: 10000 }
+            ]
+          ],
+          [
+            "Recruit 2,000 Benders",
+            [
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000*3 },
+              { resource: Resources.WOOD, amount: 10000*3 },
+              { resource: Resources.STONE, amount: 10000*3 }
+            ]
+          ],
+          [
+            "Recruit 6,000 Benders",
+            [
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.FOOD, amount: 50000 },
+              { resource: Resources.WOOD, amount: 50000 },
+              { resource: Resources.STONE, amount: 50000 }
+            ]
+          ],
         ]
       }
     ],
@@ -476,27 +1249,46 @@ export const events: Event[] = [
         title: "Spin drop rates",
         headers: ["Item", "Rate"],
         rows: [
-          ["5x Legendary Spirit Shard*", "2%"],
-          ["1x Legendary Spirit Shard", "5%"],
-          ["2,500,000 Food", "6%"],
-          ["2,500,000 Wood", "6%"],
-          ["2,500,000 Stone", "6%"],
-          ["1,250,000 Food", "6%"],
-          ["2,400m Speedup", "10%"],
-          ["2x Legendary Spirit Badge", "12%"],
-          ["1,200m Speedup", "22%"],
-          ["1x Legendary Spirit Shard*", "25%"],
+          [[{ resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5, disclaimer: "*" }], "2%"],
+          [[{ resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 }], "5%"],
+          [[{ resource: Resources.FOOD, amount: 2500000 }], "6%"],
+          [[{ resource: Resources.WOOD, amount: 2500000 }], "6%"],
+          [[{ resource: Resources.STONE, amount: 2500000 }], "6%"],
+          [[{ resource: Resources.GOLD, amount: 1250000 }], "6%"],
+          [[{ resource: Resources.SPEEDUP, amount: 2400 }], "10%"],
+          [[{ resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 2 }], "12%"],
+          [[{ resource: Resources.SPEEDUP, amount: 1200 }], "22%"],
+          [[{ resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1, disclaimer: "*" }], "25%"],
         ]
       },
       {
         title: "Spin rewards",
+        description: "Only available once every Wheel event.",
         headers: ["Requirement", "Reward"],
         rows: [
-          ["Use 10 Spins", "5x Legendary Spirit Shard*"],
-          ["Use 25 Spins", "10x Legendary Spirit Shard*"],
-          ["Use 45 Spins", "15x Legendary Spirit Shard*, 10x Legendary Spirit Badge"],
-          ["Use 75 Spins", "20x Legendary Spirit Shard*, 15x Legendary Spirit Badge"],
-          ["Use 100 Spins", "30x Legendary Spirit Shard*, 20x Legendary Spirit Badge"],
+          ["Use 10 Spins", [{ resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5, disclaimer: "*" }]],
+          ["Use 25 Spins",[{ resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10, disclaimer: "*" }]],
+          [
+            "Use 45 Spins",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 15, disclaimer: "*" },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 10 }
+            ]
+          ],
+          [
+            "Use 75 Spins",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 20, disclaimer: "*" },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 15 }
+            ]
+          ],
+          [
+            "Use 100 Spins",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 30, disclaimer: "*" },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 20 }
+            ]
+          ]
         ]
       }
     ],
@@ -527,12 +1319,60 @@ export const events: Event[] = [
       {
         headers: ["Task", "Reward"],
         rows: [
-          ["Gather 200,000 Resources from the Field", "5,000 EXP, 10,000 Food, 10,000 Wood, 10,000 Stone"],
-          ["Gather 500,000 Resources from the Field", "1x Silver Scroll, 30,000 Food, 30,000 Wood, 30,000 Stone"],
-          ["Gather 1,000,000 Resources from the Field", "1x Golden Scroll, 50,000 Food, 50,000 Wood, 50,000 Stone"],
-          ["Purchase 5 items at the Trading Post", "5,000 EXP, 5m Speedup, 100 AP, 1x Seal of Solidarity"],
-          ["Purchase 15 items at the Trading Post", "1x Silver Scroll, 60m Speedup, 300 AP, 2x Seal of Solidarity"],
-          ["Purchase 300 items at the Trading Post", "1x Golden Scroll, 120m Speedup, 500 AP, 3x Seal of Solidarity"],
+          [
+            "Gather 200,000 Resources from the Field",
+            [
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000 },
+              { resource: Resources.WOOD, amount: 10000 },
+              { resource: Resources.STONE, amount: 10000 }
+            ]
+          ],
+          [
+            "Gather 500,000 Resources from the Field",
+            [
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000*3 },
+              { resource: Resources.WOOD, amount: 10000*3 },
+              { resource: Resources.STONE, amount: 10000*3 }
+            ]
+          ],
+          [
+            "Gather 1,000,000 Resources from the Field",
+            [
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000*5 },
+              { resource: Resources.WOOD, amount: 10000*5 },
+              { resource: Resources.STONE, amount: 10000*5 }
+            ]
+          ],
+          [
+            "Purchase 5 items at the Trading Post",
+            [
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5 },
+              { resource: Resources.AP, amount: 100 },
+              { resource: Resources.SEAL_OF_SOLIDARITY, amount: 1 }
+            ]
+          ],
+          [
+            "Purchase 15 items at the Trading Post",
+            [
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 },
+              { resource: Resources.AP, amount: 300 },
+              { resource: Resources.SEAL_OF_SOLIDARITY, amount: 2 }
+            ]
+          ],
+          [
+            "Purchase 30 items at the Trading Post",
+            [
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 },
+              { resource: Resources.AP, amount: 500 },
+              { resource: Resources.SEAL_OF_SOLIDARITY, amount: 3 }
+            ]
+          ]
         ]
       }
     ],
@@ -559,7 +1399,7 @@ export const events: Event[] = [
       {
         headers: ["Task", "Reward"],
         rows: [
-          ["Visit either Discord, X, Facebook, Instgram or TikTok", "100 Gems"],
+          ["Visit either Discord, X, Facebook, Instgram or TikTok", [{ resource: Resources.GEM, amount: 100 }]],
         ]
       }
     ],
@@ -584,7 +1424,7 @@ export const events: Event[] = [
       {
         headers: ["Task", "Reward"],
         rows: [
-          ["Visit avatarrealmscollide.com", "100 Gems"],
+          ["Visit avatarrealmscollide.com", [{ resource: Resources.GEM, amount: 100 }]],
         ]
       }
     ],
@@ -608,7 +1448,10 @@ export const events: Event[] = [
       {
         headers: ["Task", "Reward"],
         rows: [
-          ["Defeat Shattered Skull - Level 1 Fuzhi", "100 Gems, 1x Epic Spirit Shard, 5x Rare Spirit Shard, 30m Speedup, 1x Lv 1. Purification Event Chest"],
+          [
+            "Defeat Shattered Skull - Level 1 Fuzhi",
+            
+            "100 Gems, 1x Epic Spirit Shard, 5x Rare Spirit Shard, 30m Speedup, 1x Lv 1. Purification Event Chest"],
           ["Defeat Shattered Skull - Level 2 Toghrul", "100 Gems, 2x Epic Spirit Shard, 5x Rare Spirit Shard, 30m Speedup, 1x Lv 2. Purification Event Chest"],
           ["Defeat Shattered Skull - Level 3 Fuzhi", "100 Gems, 3x Epic Spirit Shard, 5x Rare Spirit Shard, 30m Speedup, 1x Lv 3. Purification Event Chest"],
           ["Defeat Shattered Skull - Level 4 Toghrul", "100 Gems, 4x Epic Spirit Shard, 5x Rare Spirit Shard, 30m Speedup, 1x Lv 4. Purification Event Chest"],
@@ -682,11 +1525,33 @@ export const events: Event[] = [
       {
         headers: ["Task", "Reward"],
         rows: [
-          ["Participate in 1 Invasion", "100 Gems, 2,000x Forge Coin, 2x Purified Essence, 200x Verdant Splinter"],
-          ["Participate in 3 Invasions", "200 Gems, 3,000x Forge Coin, 5x Purified Essence, 500x Verdant Splinter"],
-          ["Participate in 5 Invasions", "300 Gems, 5,000x Forge Coin, 10x Purified Essence, 1,000x Verdant Splinter"],
-
-
+          [
+            "Participate in 1 Invasion",
+            [
+              { resource: Resources.GEM, amount: 100 },
+              { resource: Resources.FORGE_COIN, amount: 2000 },
+              { resource: Resources.PURIFIED_ESSENCE, amount: 2 },
+              { resource: Resources.VERDANT_SPLINTER, amount: 200 }
+            ]
+          ],
+          [
+            "Participate in 3 Invasions",
+            [
+              { resource: Resources.GEM, amount: 200 },
+              { resource: Resources.FORGE_COIN, amount: 3000 },
+              { resource: Resources.PURIFIED_ESSENCE, amount: 5 },
+              { resource: Resources.VERDANT_SPLINTER, amount: 500 }
+            ]
+          ],
+          [
+            "Participate in 5 Invasions",
+            [
+              { resource: Resources.GEM, amount: 300 },
+              { resource: Resources.FORGE_COIN, amount: 5000 },
+              { resource: Resources.PURIFIED_ESSENCE, amount: 10 },
+              { resource: Resources.VERDANT_SPLINTER, amount: 1000 }
+            ]
+            ],
         ]
       }
     ],
@@ -809,17 +1674,19 @@ export const events: Event[] = [
         title: "Avatar Day Festival Exchange",
         headers: ["Aang Cookie", "Reward"],
         rows: [
-          ["1", "50,000 Food/Wood/Stone"],
-          ["1", "25,000 Gold"],
-          ["1", "60m Speedup"],
-          ["2", "1x Rare Spirit Shard"],
-          ["2", "1x Rare Spirit Badge"],
-          ["2", "1x Silver Scroll"],
-          ["8", "1x Epic Spirit Shard (Tenzin/Toph/Zuko/Katara)"],
-          ["10", "1x Reset Talents"],
-          ["10", "1x Golden Scroll"],
-          ["30", "1x Legendary Spirit Shard"],
-          ["30", "1x Legendary Spirit Badge"],
+          ["1", [{ resource: Resources.FOOD, amount: 50000 }]],
+          ["1", [{ resource: Resources.WOOD, amount: 50000 }]],
+          ["1", [{ resource: Resources.STONE, amount: 50000 }]],
+          ["1", [{ resource: Resources.GOLD, amount: 25000 }]],
+          ["1", [{ resource: Resources.SPEEDUP, amount: 60 }]],
+          ["2", [{ resource: Resources.SPIRIT_SHARD_RARE, amount: 1 }]],
+          ["2", [{ resource: Resources.SPIRIT_BADGE_RARE, amount: 1 }]],
+          ["2", [{ resource: Resources.SILVER_SCROLL, amount: 1 }]],
+          ["8", [{ resource: Resources.SPIRIT_SHARD_EPIC, amount: 25000 }]],
+          ["10", [{ resource: Resources.RESET_TALENT, amount: 1 }]],
+          ["10", [{ resource: Resources.GOLDEN_SCROLL, amount: 1 }]],
+          ["30", [{ resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 }]],
+          ["30", [{ resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 }]]
         ]
       }
     ],
@@ -1211,7 +2078,9 @@ export const events: Event[] = [
     name: "Melt the Candle",
     description: "Who can melt the candle first?",
     duration: 2,
+    startDate: "2026-04-10",
     repeat: "Unknown",
+    type: "MINOR",
     tasks: [
       {
         headers: ["Task", "Reward"],
@@ -1868,11 +2737,11 @@ export const events: Event[] = [
     name: "Desert Troublemakers",
     description: "Defeat Scorched Skulls!",
     duration: 3,
-    repeat: 14, // Not sure yet, just a theory!
+    repeat: 14,
     seedStartDate: {
       SEED_A: "2026-04-03",
       SEED_B: "2026-04-06",
-      SEED_C: "2026-04-01", // Not sure yet, just a placeholder date
+      SEED_C: "2026-03-30",
     },
     type: "DESERT_TROUBLEMAKERS",
     tasks: [
@@ -2583,7 +3452,7 @@ export const events: Event[] = [
         "Level 29: 110 points",
         "Level 30: 120 points",
       ], space: true},
-      { type: "quotedate", author: "ANGames", date: "2026-04-07"}
+      { type: "quotedate", author: "ANGames", date: "2026-04-07" }
     ]
   },
   {
@@ -2662,7 +3531,8 @@ export const events: Event[] = [
         "Gather resources on the field, recruit benders and defeat Shattered Skulls.",
         "Reach the goals and get rewards.",
         "This event resets at UTC 00:00."
-      ]}
+      ], space: true},
+      { type: "quotedate", author: "ANGames", date: "2026-04-08" }
     ],
     informations: [
       "Balance and Order resets every day at 00:00 UTC, for 3 days.",
@@ -2671,10 +3541,101 @@ export const events: Event[] = [
   {
     id: "readiness",
     name: "Readiness",
-    description: "Waiting for it to happen [...]",
+    description: '"Failure is only the opportunity to begin again. Only this time, more wisely." - Uncle Iroh',
     duration: 2,
     repeat: "Unknown",
     startDate: "2026-04-09",
+    type: "MINOR",
+    tasks: [
+      {
+        headers: ["Task", "Reward"],
+        rows: [
+          [
+            "Use 5 Silver Scrolls", 
+            [
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5*5+5*5+5*5 }
+            ]
+          ],
+          [
+            "Use 15 Silver Scrolls", 
+            [
+              { resource: Resources.SILVER_SCROLL, amount: 3 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60+60+60 }
+            ]
+          ],
+          [
+            "Use 5 Golden Scrolls", 
+            [
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5*5+5*5+5*5 }
+            ]
+          ],
+          [
+            "Use 15 Golden Scrolls", 
+            [
+              { resource: Resources.GOLDEN_SCROLL, amount: 3 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60+60+60 }
+            ]
+          ],
+          [
+            "Gather 200,000 Resources from the Field",
+            [
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.AP, amount: 100 },
+              { resource: Resources.SPEEDUP, amount: 5*5+5*5 }
+            ]
+          ],
+          [
+            "Gather 500,000 Resources from the Field",
+            [
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.AP, amount: 100*2 },
+              { resource: Resources.SPEEDUP, amount: 60+5*5 }
+            ]
+          ],
+          [
+            "Gather 1,000,000 Resources from the Field",
+            [
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.AP, amount: 500 },
+              { resource: Resources.SPEEDUP, amount: 60*2+5*5 },
+              { resource: Resources.POWER_BOOST_RARE, amount: 1 }
+            ]
+          ],
+        ]
+      }
+    ],
+    details: [
+      { type: "p", content: '"Failure is only the opportunity to begin again. Only this time, more wisely." - Uncle Iroh', space: true },
+      { type: "ol", items: [
+        "Use Scrolls and gather resources during the event period.",
+        "Reach the goals and get rewards."
+      ], space: true },
+      { type: "quotedate", author: "ANGames", date: "2026-04-09" }
+    ],
+  },
+  {
+    id: "supply-quest",
+    name: "Supply Quest",
+    description: "Waiting for it to happen [...]",
+    duration: 2,
+    repeat: 14,
+    startDate: "2026-03-30",
+    type: "MINOR",
+    wip: true,
+  },
+  {
+    id: "journey-of-us",
+    name: "Journey of Us",
+    description: "Waiting for it to happen [...]",
+    duration: 2,
+    repeat: 14,
+    startDate: "2026-03-30",
     type: "MINOR",
     wip: true,
   },
