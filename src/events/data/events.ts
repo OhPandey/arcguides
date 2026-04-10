@@ -1568,7 +1568,15 @@ export const events: Event[] = [
     name: "Avatar Day Festival",
     description: "Complete the missions to earn Aang Cookies!",
     duration: 5,
-    repeat: "Unknown",
+    repeat: 28,
+    seedStartDate: {
+      SEED_A: "2026-03-30",
+      SEED_B: "2026-04-01",
+      SEED_B2: "2026-04-15",
+      SEED_C: "2026-04-08",
+      SEED_C2: "2026-04-21",
+    },
+    type: "BIWEEKLY",
     tasks: [
       {
         title: "Day 1 - I (Login)",
@@ -1706,6 +1714,22 @@ export const events: Event[] = [
       "The event lasts for 5 days, but you can continue purchasing rewards for an additional day.",
       "You can receive a total of 117 Avatar Cookies throughout the event."
     ]
+  },
+  {
+    id: "way-of-harmony",
+    name: "Way of Harmony",
+    description: "Waiting for it to happen [...]",
+    duration: 5,
+    repeat: 28,
+    seedStartDate: {
+      SEED_A: "2026-04-13",
+      SEED_B: "2026-04-15",
+      SEED_B2: "2026-04-01",
+      SEED_C: "2026-04-21",
+      SEED_C2: "2026-04-08",
+    },
+    type: "BIWEEKLY",
+    wip: true
   },
   {
     id: "path-to-development",
@@ -2445,36 +2469,84 @@ export const events: Event[] = [
         title: "First Anniversary Daily Rewards",
         headers: ["Task", "Reward"],
         rows: [
-          ["Log in for 1 Day", "10x Lucky Dice"],
-          ["Log in for 2 Days", "5x Golden Scroll"],
-          ["Log in for 3 Days", "10x Sacred Fruit"],
-          ["Log in for 4 Days", "5x Mystic Orb"],
-          ["Log in for 5 Days", "300m Speedup"],
-          ["Log in for 6 Days", "200 Gems"],
-          ["Log in for 7 Days", '"Moment of Memories" Frame Skin'],
+          ["Log in for 1 Day", [{ resource: Resources.LUCKY_DICE, amount: 10 }]],
+          ["Log in for 2 Days", [{ resource: Resources.GOLDEN_SCROLL, amount: 5 }]],
+          ["Log in for 3 Days", [{ resource: Resources.SACRED_FRUIT, amount: 10 }]],
+          ["Log in for 4 Days", [{ resource: Resources.MYSTIC_ORB, amount: 5 }]],
+          ["Log in for 5 Days", [{ resource: Resources.SPEEDUP, amount: 60*5 }]],
+          ["Log in for 6 Days", [{ resource: Resources.GEM, amount: 200 }]],
+          ["Log in for 7 Days", [{ resource: Resources.FRAME("Moment of Memories"), amount: 1 }]],
         ]
       },
       {
         title: "Firm Faith",
         headers: ["Task", "Reward"],
         rows: [
-          ["Defeat Shattered Skulls (Daily Cap: 5)", "1x Supply Box"],
-          ["Harvest Resources (Daily Cap: 5)", "1x Supply Box"],
-          ["Use 480m Speedup (Repeatable)", "1x Supply Box"],
-          ["Use 50 Gems (Repeatable)", "1x Supply Box"],
+          ["Defeat Shattered Skulls (Daily Cap: 5)", [{ resource: Resources.SPECIAL_SUPPLY_BOX, amount:1}]],
+          ["Harvest Resources (Daily Cap: 5)", [{ resource: Resources.SPECIAL_SUPPLY_BOX, amount:1}]],
+          ["Use 480m Speedup (Repeatable)", [{ resource: Resources.SPECIAL_SUPPLY_BOX, amount:1}]],
+          ["Use 50 Gems (Repeatable)", [{ resource: Resources.SPECIAL_SUPPLY_BOX, amount:1}]],
         ]
       },
       {
         title: "Limited Time Top-Up",
         headers: ["Task", "Reward"],
         rows: [
-          ["Collect 500 Top-Up Points (by purchasing bundles)", "500 Gems, 240m Speedup"],
-          ["Collect 1,500 Top-Up Points (by purchasing bundles)", "1,500 Gems, 900m Speedup"],
-          ["Collect 2,500 Top-Up Points (by purchasing bundles)", "2,000 Gems, 2x Legendary Spirit Shard, 300m Speedup"],
-          ["Collect 5,000 Top-Up Points (by purchasing bundles)", "5x Legendary Spirit Shard, 50x Scared Fruit, 1,200m Speedup"],
-          ["Collect 10,000 Top-Up Points (by purchasing bundles)", "10x Legendary Spirit Shard, 30x Purified Essence, 2000x Verdant Splinter, 1,200m Speedup"],
-          ["Collect 20,000 Top-Up Points (by purchasing bundles)", "10x Legendary Spirit Badge, 6,000m Speedup"],
-          ["Collect 40,000 Top-Up Points (by purchasing bundles)", "100x Companion Material Custom Chest, 100x Purified Essence, 10,000 Verdant Splinter, 6,000m Speedup"],
+          [
+            "Collect 500 Top-Up Points (by purchasing bundles)",
+            [
+              { resource: Resources.GEM, amount: 500 },
+              { resource: Resources.SPEEDUP, amount: 60*4 },
+            ]
+          ],
+          [
+            "Collect 1,500 Top-Up Points (by purchasing bundles)",
+            [
+              { resource: Resources.GEM, amount: 1500 },
+              { resource: Resources.SPEEDUP, amount: 60*5+60*5+60*5 },
+            ]
+          ],
+          [
+            "Collect 2,500 Top-Up Points (by purchasing bundles)",
+            [
+              { resource: Resources.GEM, amount: 2000 },
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2 },
+              { resource: Resources.SPEEDUP, amount: 60*5 },
+            ]
+          ],
+          [
+            "Collect 5,000 Top-Up Points (by purchasing bundles)",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5 },
+              { resource: Resources.SACRED_FRUIT, amount: 50 },
+              { resource: Resources.SPEEDUP, amount: 60*20 },
+            ]
+          ],
+          [
+            "Collect 10,000 Top-Up Points (by purchasing bundles)",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10 },
+              { resource: Resources.PURIFIED_ESSENCE, amount: 30 },
+              { resource: Resources.VERDANT_SPLINTER, amount: 2000 },
+              { resource: Resources.SPEEDUP, amount: 60*20 },
+            ]
+          ],
+          [
+            "Collect 20,000 Top-Up Points (by purchasing bundles)",
+            [
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 20 },
+              { resource: Resources.SPEEDUP, amount: 60*60+60*20+60*20 },
+            ]
+          ],
+          [
+            "Collect 40,000 Top-Up Points (by purchasing bundles)",
+            [
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 100 },
+              { resource: Resources.PURIFIED_ESSENCE, amount: 100 },
+              { resource: Resources.VERDANT_SPLINTER, amount: 10000 },
+              { resource: Resources.SPEEDUP, amount: 60*100 },
+            ]
+          ],
         ]
       },
       {
@@ -2617,21 +2689,124 @@ export const events: Event[] = [
       },
       {
         title: "Harvest of Bonds I (Start: Day 6, Duration: 2 Days)",
+        description: "Tasks reset daily at 00:00 UTC.\nUnclaimed rewards expire.",
         headers: ["Task", "Reward"],
         rows: [
-          ["Destroy 5 Shattered Skulls' Fortress", "1x Lucky Dice, 1x Epic Spirit Shard, 1x Epic Spirit Badge, 60m Speedup"],
-          ["Destroy 10 Shattered Skulls' Fortress", "1x Lucky Dice, 3x Epic Spirit Shard, 3x Epic Spirit Badge, 180m Speedup"],
-          ["Destroy 20 Shattered Skulls' Fortress", "2x Lucky Dice, 5x Epic Spirit Shard, 5x Epic Spirit Badge, 300m Speedup"],
-          ["Recruit 5,000 Tier 2 or Higher Benders", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 60m Speedup"],
-          ["Recruit 10,000 Tier 2 or Higher Benders", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 180m Speedup"],
-          ["Recruit 20,000 Tier 2 or Higher Benders", "2x Lucky Dice, 2x Golden Scroll, 2x Mystic Ore, 300m Speedup"],
+          [
+            "Destroy 5 Shattered Skulls' Fortress", 
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Destroy 10 Shattered Skulls' Fortress",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 3 },
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 3 },
+              { resource: Resources.SPEEDUP, amount: 60*3 }
+            ]
+          ],
+          [
+            "Destroy 20 Shattered Skulls' Fortress",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 2 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 5 },
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 5 },
+              { resource: Resources.SPEEDUP, amount: 60*5 }
+            ]
+          ],
+          [
+            "Recruit 5,000 Tier 2 or Higher Benders",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.MYSTIC_ORB, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "Recruit 10,000 Tier 2 or Higher Benders",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.MYSTIC_ORB, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*3 }
+            ]
+          ],
+          [
+            "Recruit 20,000 Tier 2 or Higher Benders",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 2 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 2 },
+              { resource: Resources.MYSTIC_ORB, amount: 2 },
+              { resource: Resources.SPEEDUP, amount: 60*5 }
+            ]
+          ],
         ]
       },
       {
         title: "Harvest of Bonds II (Start: Day 8: Duration: 2 Days)",
-        headers: ["Task"],
+        description: "Tasks reset daily at 00:00 UTC.\nUnclaimed rewards expire.",
+        headers: ["Task", "Reward"],
         rows: [
-          ["Not yet available."]
+          [
+            "Defeat 10 Shattered Skulls",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV4, amount: 1 }
+            ]
+          ],
+          [
+            "Defeat 30 Shattered Skulls",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 2 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 2 },
+              { resource: Resources.SPEEDUP, amount: 60*3 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV4, amount: 3 }
+            ]
+          ],
+          [
+            "Donate 20 times to alliance research",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 5 },
+              { resource: Resources.SPEEDUP, amount: 60 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV4, amount: 1 }
+            ]
+          ],
+          [
+            "Donate 50 times to alliance research",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 2 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 10 },
+              { resource: Resources.SPEEDUP, amount: 60*3 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV4, amount: 3 }
+            ]
+          ],
+          [
+            "Increase Power by 20,000*",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.MYSTIC_ORB, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV4, amount: 1 }
+            ]
+          ],
+          [
+            "Increase Power by 50,000*",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 2 },
+              { resource: Resources.MYSTIC_ORB, amount: 2 },
+              { resource: Resources.SPEEDUP, amount: 60*3 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV4, amount: 3 }
+            ]
+          ],
         ]
       },
     ],
@@ -2690,19 +2865,132 @@ export const events: Event[] = [
         title: "Harvest of Bonds I",
         headers: ["Rank", "Reward"],
         rows: [
-          ["1", "10x Lucky Dice, 300 Gems, 3,000,000 Food, 3,000,000 Wood, 3,000,000 Stone"],
-          ["2", "8x Lucky Dice, 250 Gems, 2,250,000 Food, 2,250,000 Wood, 2,250,000 Stone"],
-          ["3", "6x Lucky Dice, 200 Gems, 1,800,000 Food, 1,800,000 Wood, 1,800,000 Stone"],
-          ["4", "4x Lucky Dice, 150 Gems, 1,500,000 Food, 1,500,000 Wood, 1,500,000 Stone"],
-          ["5", "2x Lucky Dice, 100 Gems, 1,200,000 Food, 1,200,000 Wood, 1,200,000 Stone"],
-          ["6-10", "1x Lucky Dice, 50 Gems, 750,000 Food, 750,000 Wood, 750,000 Stone"],
+          [
+            "1",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 10 },
+              { resource: Resources.GEM, amount: 300 },
+              { resource: Resources.FOOD, amount: 150000*20 },
+              { resource: Resources.WOOD, amount: 150000*20 },
+              { resource: Resources.STONE, amount: 150000*20 },
+            ]
+          ],
+          [
+            "2",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 8 },
+              { resource: Resources.GEM, amount: 250 },
+              { resource: Resources.FOOD, amount: 150000*15 },
+              { resource: Resources.WOOD, amount: 150000*15 },
+              { resource: Resources.STONE, amount: 150000*15 },
+            ]
+          ],
+          [
+            "3",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 6 },
+              { resource: Resources.GEM, amount: 200 },
+              { resource: Resources.FOOD, amount: 150000*12 },
+              { resource: Resources.WOOD, amount: 150000*12 },
+              { resource: Resources.STONE, amount: 150000*12 },
+            ]
+          ],
+          [
+            "4",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 4 },
+              { resource: Resources.GEM, amount: 150 },
+              { resource: Resources.FOOD, amount: 150000*10 },
+              { resource: Resources.WOOD, amount: 150000*10 },
+              { resource: Resources.STONE, amount: 150000*10 },
+            ]
+          ],
+          [
+            "5",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 2 },
+              { resource: Resources.GEM, amount: 100 },
+              { resource: Resources.FOOD, amount: 150000*8 },
+              { resource: Resources.WOOD, amount: 150000*8 },
+              { resource: Resources.STONE, amount: 150000*8 },
+            ]
+          ],
+          [
+            "6-10",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.GEM, amount: 50 },
+              { resource: Resources.FOOD, amount: 150000*5 },
+              { resource: Resources.WOOD, amount: 150000*5 },
+              { resource: Resources.STONE, amount: 150000*5 },
+            ]
+          ]
         ]
       },
       {
         title: "Harvest of Bonds II (Start: Day 8: Duration: 2 Days)",
-        headers: ["Task"],
+        headers: ["Task", "Rewards"],
         rows: [
-          ["Not yet available."]
+          [
+            "1",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 10 },
+              { resource: Resources.GEM, amount: 300 },
+              { resource: Resources.FOOD, amount: 150000*20 },
+              { resource: Resources.WOOD, amount: 150000*20 },
+              { resource: Resources.STONE, amount: 150000*20 },
+            ]
+          ],
+          [
+            "2",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 8 },
+              { resource: Resources.GEM, amount: 250 },
+              { resource: Resources.FOOD, amount: 150000*15 },
+              { resource: Resources.WOOD, amount: 150000*15 },
+              { resource: Resources.STONE, amount: 150000*15 },
+            ]
+          ],
+          [
+            "3",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 6 },
+              { resource: Resources.GEM, amount: 200 },
+              { resource: Resources.FOOD, amount: 150000*12 },
+              { resource: Resources.WOOD, amount: 150000*12 },
+              { resource: Resources.STONE, amount: 150000*12 },
+            ]
+          ],
+          [
+            "4",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 4 },
+              { resource: Resources.GEM, amount: 150 },
+              { resource: Resources.FOOD, amount: 150000*10 },
+              { resource: Resources.WOOD, amount: 150000*10 },
+              { resource: Resources.STONE, amount: 150000*10 },
+            ]
+          ],
+          [
+            "5",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 2 },
+              { resource: Resources.GEM, amount: 100 },
+              { resource: Resources.FOOD, amount: 150000*8 },
+              { resource: Resources.WOOD, amount: 150000*8 },
+              { resource: Resources.STONE, amount: 150000*8 },
+            ]
+          ],
+          [
+            "6-10",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.GEM, amount: 50 },
+              { resource: Resources.FOOD, amount: 150000*5 },
+              { resource: Resources.WOOD, amount: 150000*5 },
+              { resource: Resources.STONE, amount: 150000*5 },
+            ]
+          ]
         ]
       },
     ],
@@ -2728,9 +3016,8 @@ export const events: Event[] = [
     ],
     informations: [
       'This is a “mega” event that unlocks over time and features multiple smaller events running simultaneously.',
-      "The Secret Tunnel Ranking is cross-server, regardless of whether cross-server is enabled on your server (e.g., TGL)."
-    ],
-    wip: true
+      "The Secret Tunnel and Harvest of Bonds I and II rankings are cross-server, regardless of whether the server has reached the cross-server milestone (approximately 60 days)."
+    ]
   },
   {
     id: "desert-troublemakers",
@@ -3459,7 +3746,7 @@ export const events: Event[] = [
     id: "glorious-victory",
     name: "Glorious Victory",
     description: "Waiting for it to happen [...]",
-    duration: 3,
+    duration: 2,
     repeat: "Unknown",
     startDate: "2026-04-10",
     type: "MINOR",

@@ -5,6 +5,7 @@ import EventCard from "@/components/EventCard"
 import { events } from "@/src/events/data/events"
 import { sortEvents } from "@/src/events/utils/eventSchedule"
 import { servers } from "@/src/events/data/servers"
+import EventTimeLine from "@/components/EventTimeLine"
 
 export default function EventsPage() {
   const [search, setSearch] = useState("") 
@@ -40,23 +41,12 @@ export default function EventsPage() {
     return sortEvents(filtered, server)
   }, [search, server])
 
-  if (!mounted)
-    return null
-
   return (
     <main className="mx-auto max-w-6xl p-6">
       <h1 className="text-2xl font-bold text-white mb-6">List of all events</h1>
 
-      <div className="space-y-4 my-6">
-        <div className="rounded-lg border border-red-700 bg-red-900 p-4 text-gray-200">
-          <div className="flex items-start gap-3">
-            <span className="text-xl">🛠️</span>
-            <p className="whitespace-pre-line">
-              The schedule for <i>Desert Troublemakers, Avatar Day Festival, and Way of Harmony</i> remains under investigation. They may be wrong.
-            </p>
-          </div>
-        </div>
-      </div>
+
+      <EventTimeLine events={filteredEvents} server={server} />
 
       <div className="mb-6 flex flex-col sm:flex-row gap-2">
         <input

@@ -8,7 +8,7 @@ export type Event = {
   duration: number | "Always"
   repeat: number | "Seasonal" | "Unregularly" | "Unknown"
   startDate?: string
-  seedStartDate?: Record<SeedType, string>
+  seedStartDate?: Partial<Record<SeedType, string>>
   type?: ScheduleType
   tasks?: EventTableData []
   rewards?: EventTableData []
@@ -32,6 +32,7 @@ export type ScheduleType =
   | "TEMPLE_WAR"
   | "UNALAQ_PASS"
   | "DESERT_TROUBLEMAKERS"
+  | "BIWEEKLY"
 
 export type EventTableCell = string | Reward[]
 

@@ -84,5 +84,5 @@ export const servers: Server[] = [
     { id: 1081, name: "World 1081", releaseDate: "2026-04-03", wip: true }
 ]
 
-export const Seed = ["SEED_A", "SEED_B", "SEED_C"] as const
+export const Seed = ["SEED_A", "SEED_B", "SEED_C", "SEED_B2", "SEED_C2"] as const
 export type SeedType = typeof Seed[number]

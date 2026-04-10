@@ -275,10 +275,10 @@ export const LOTUS_TILE: Resource = {
   gemValue: 67.9
 };
 
-export const FRAME: Resource = {
-  name: "Frame Skin",
-  gemValue: LOTUS_TILE.gemValue*2000
-};
+export const FRAME = (variant?: string): Resource => ({
+  name: variant ? `"${variant}" Frame Skin`: "Frame Skin",
+  gemValue: LOTUS_TILE.gemValue*20000
+})
 
 export const TOWNHALL = (variant?: string): Resource => ({
   name: variant ? `"${variant}" Town Hall Skin`: "Town Hall Skin",
@@ -287,7 +287,7 @@ export const TOWNHALL = (variant?: string): Resource => ({
 
 export const TAG: Resource = {
   name: "Name Tag",
-  gemValue: FRAME.gemValue // Should have the same value as Frame. They give similar buffs
+  gemValue: FRAME().gemValue // Should have the same value as Frame. They give similar buffs
 };
 
 export const PORTRAIT: Resource = {
@@ -325,7 +325,18 @@ export const BUNDLE_SUPPLY_CHEST_LV6: Resource = {
   gemValue: 254.25
 };
 
+export const CUSTOM_RESOURCE_CHEST_LV4: Resource = {
+  name: "Lv.4 Custom Resource Chest",
+  gemValue: FOOD.gemValue*150000
+};
+
 export const CUSTOM_RESOURCE_CHEST_LV6: Resource = {
   name: "Lv.6 Custom Resource Chest",
   gemValue: FOOD.gemValue*1500000
 };
+
+export const SPECIAL_SUPPLY_BOX: Resource = {
+  name: "Special Supply Box (1st Anniversary)",
+  gemValue: 20 // Average reward
+
+}

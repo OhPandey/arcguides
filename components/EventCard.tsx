@@ -11,6 +11,16 @@ type EventCardProps = {
   server: Server
 }
 
+const now = new Date()
+const DAY_MS = 86400000
+const tomorrowStart = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1)
+
+function isTomorrow(nextStart: number) {
+  const tomorrowEnd = tomorrowStart + DAY_MS
+
+  return nextStart >= tomorrowStart && nextStart < tomorrowEnd
+}
+
 export default function EventCard({ event, server }: EventCardProps) {
 
   const status = getEventStatus(event, server)
@@ -33,11 +43,12 @@ export default function EventCard({ event, server }: EventCardProps) {
             All-Time
           </span>
         )}
-        {status.isTomorrow && (
+        {isTomorrow(status.nextStart!) && (
           <span className="px-2 py-0.5 text-xs font-semibold bg-orange-500/20 text-orange-400 rounded">
             Tomorrow
           </span>
         )}
+
         {status.isDisabled && (
           <span className="px-2 py-0.5 text-xs font-semibold bg-red-700/20 rounded">
             Not available

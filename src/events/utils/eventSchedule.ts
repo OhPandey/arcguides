@@ -11,12 +11,31 @@ export type EventStatus = {
     isActive: boolean
     isAllTime: boolean
     isDisabled: boolean
-    isTomorrow: boolean
     remainingTime: number | null
     nextStart: number | null
 }
 
+const BASE_STATUS: EventStatus = {
+    isActive: false,
+    isAllTime: false,
+    isDisabled: false,
+    remainingTime: null,
+    nextStart: null,
+}
+
+
 const DAY_MS = 86400000
+
+const CHRONICLE_UNLOCKS = [
+    "base",
+    "gate",
+    "altar",
+    "sanctum",
+    "shrine",
+    "legacy",
+    "sanctuary",
+    "temple",
+]
 
 /* ---------------- Context ---------------- */
 
@@ -40,15 +59,6 @@ function createContext(server: Server): EventContext {
 }
 
 /* ---------------- Helpers ---------------- */
-
-const BASE_STATUS: EventStatus = {
-    isActive: false,
-    isAllTime: false,
-    isDisabled: false,
-    isTomorrow: false,
-    remainingTime: null,
-    nextStart: null,
-}
 
 function defaultStatus(overrides?: Partial<EventStatus>): EventStatus {
     return { ...BASE_STATUS, ...overrides }
@@ -77,43 +87,27 @@ function getTiming(event: Event) {
     }
 }
 
-function isTomorrow(timestamp: number): boolean {
-    const tomorrowStart = new Date()
-    tomorrowStart.setUTCDate(tomorrowStart.getUTCDate() + 1)
-    tomorrowStart.setUTCHours(0, 0, 0, 0)
+function completedEventsFromStart(eventStart: number, repeatDays: number, durationDays: number, serverReleaseMs: number, referenceMs: number): number {
+    if (repeatDays <= 0) 
+        return 0
 
-    const tomorrowEnd = new Date(tomorrowStart)
-    tomorrowEnd.setUTCDate(tomorrowEnd.getUTCDate() + 1)
+    const serverDay = Math.floor(serverReleaseMs / DAY_MS)
+    const referenceDay = Math.floor(referenceMs / DAY_MS)
+    const eventEndDay = Math.floor(eventStart / DAY_MS) + (durationDays - 1)
 
-    return timestamp >= tomorrowStart.getTime() && timestamp < tomorrowEnd.getTime()
-}
+    const daysBetween = eventEndDay - serverDay
+    if (daysBetween < 0) 
+        return 0
 
-function completedEventsFromStart(eventStart: number, repeat: number, duration: number, serverRelease: Date, referenceDate: Date): number {
-    const msPerDay = 24 * 60 * 60 * 1000;
+    const totalEvents = Math.floor(daysBetween / repeatDays) + 1
+    const maxPossibleEvents = Math.floor((referenceDay - serverDay) / repeatDays) + 1
 
-    const serverDay = Math.floor(serverRelease.getTime() / msPerDay);
-    const referenceDay = Math.floor(referenceDate.getTime() / msPerDay);
-    const eventEndDay = Math.floor(eventStart / msPerDay) + (duration - 1);
-
-    const daysBetween = eventEndDay - serverDay;
-    if (daysBetween < 0)
-         return 0;
-
-    const totalEvents = Math.floor(daysBetween / repeat) + 1;
-    const maxPossibleEvents = Math.floor((referenceDay - serverDay) / repeat) + 1;
-
-    return Math.min(totalEvents, maxPossibleEvents);
+    return Math.min(totalEvents, maxPossibleEvents)
 }
 
 /* ---------------- Scheduler ---------------- */
 
-function computeEventStatus(
-    ctx: EventContext,
-    start: number | null,
-    durationDays: number,
-    repeatDays: number,
-    transitionStart?: number
-): EventStatus {
+function computeEventStatus(ctx: EventContext, start: number | null, durationDays: number, repeatDays: number, transitionStart?: number): EventStatus {
 
     if (start === null)
         return defaultStatus();
@@ -125,34 +119,23 @@ function computeEventStatus(
     const hasRepeat = repeat > 0;
     const baseStart = transitionStart ?? start;
 
-    const cycles = hasRepeat
-        ? Math.floor((now - baseStart) / repeat)
-        : 0;
+    const cycles = hasRepeat ? Math.floor((now - baseStart) / repeat) : 0;
 
-    const currentStart = transitionStart
-        ? baseStart + (cycles + 1) * repeat
-        : baseStart + cycles * repeat;
+    const currentStart = transitionStart ? baseStart + (cycles + 1) * repeat : baseStart + cycles * repeat;
 
     let nextStart: number | null = null;
 
-    if (hasRepeat || now < start) {
-        nextStart = now < start
-            ? start
-            : currentStart + (transitionStart ? 0 : repeat);
-    }
+    if (hasRepeat || now < start)
+        nextStart = now < start ? start : currentStart + (transitionStart ? 0 : repeat);
 
-    const isActive =
-        !transitionStart &&
-        now >= currentStart &&
-        now <= currentStart + duration;
+    const isActive = !transitionStart && now >= currentStart && now <= currentStart + duration;
 
     return {
         isActive,
         isAllTime: false,
         isDisabled: false,
-        isTomorrow: isTomorrow(start),
-        remainingTime: currentStart + duration - now,
-        nextStart: isActive ? null : nextStart
+        remainingTime: isActive ? currentStart + duration - now: null,
+        nextStart: !isActive ? nextStart : null
     };
 }
 
@@ -201,8 +184,8 @@ function getTGLSingleEventStatus(event: Event, ctx: EventContext) {
         startFromSeed,
         getRepeat(event),
         getDuration(event),
-        new Date(ctx.serverRelease),
-        new Date(ctx.now)
+        ctx.serverRelease,
+        ctx.now
     );
 
     let start: number;
@@ -219,24 +202,26 @@ function getTGLSingleEventStatus(event: Event, ctx: EventContext) {
         transition = undefined;
     }
 
-    if (eventCount >= 6) {
+    if (eventCount > 6)
         return defaultStatus({ isDisabled: true });
-    }
 
     return computeFromEvent(ctx, event, start, transition);
 }
 
 function getTGLCrossEventStatus(event: Event, ctx: EventContext) {
+    const { duration, repeat } = getTiming(event)
+
     const currentSeed: SeedType = getServerSeed(ctx.server);
+
     const startFromSeed = getSeedStart(event, currentSeed)!;
     const startFromSeedA = getSeedStart(event, "SEED_A")!;
 
     const eventCount = completedEventsFromStart(
         startFromSeed,
-        getRepeat(event),
-        getDuration(event),
-        new Date(ctx.serverRelease),
-        new Date(ctx.now)
+        repeat,
+        duration,
+        ctx.serverRelease,
+        ctx.now
     );
 
     let start: number;
@@ -253,9 +238,8 @@ function getTGLCrossEventStatus(event: Event, ctx: EventContext) {
         transition = undefined;
     }
 
-    if (eventCount < 6) {
+    if (eventCount <= 6)
         return defaultStatus({ isDisabled: true });
-    }
 
     return computeFromEvent(ctx, event, start, transition);
 }
@@ -263,6 +247,8 @@ function getTGLCrossEventStatus(event: Event, ctx: EventContext) {
 /* ---------------- Wheel ---------------- */
 
 function getWheelEventStatus(event: Event, ctx: EventContext) {
+    const { duration, repeat } = getTiming(event)
+
     const currentSeed: SeedType = getServerSeed(ctx.server);
     
     const startFromSeed = getSeedStart(event, currentSeed)!;
@@ -270,10 +256,10 @@ function getWheelEventStatus(event: Event, ctx: EventContext) {
 
     const eventCount = completedEventsFromStart(
         startFromSeed,
-        getRepeat(event),
-        getDuration(event),
-        new Date(ctx.serverRelease),
-        new Date(ctx.now)
+        repeat,
+        duration,
+        ctx.serverRelease,
+        ctx.now
     );
 
     let start: number;
@@ -310,20 +296,7 @@ function getChronicleEventStatus(event: Event,ctx: EventContext): EventStatus {
 
     const duration = getDuration(event)
 
-    const confirmedUnlocks = [
-        "base",
-        "gate",
-        "altar",
-        "sanctum",
-        "shrine",
-        "legacy",
-        "sanctuary",
-        "temple",
-    ]
-
-    const filteredChronicle = chronicleOfHarmony.filter(e =>
-        confirmedUnlocks.includes(e.unlock)
-    )
+    const MILESTONE_EVENTS = chronicleOfHarmony.filter(e => CHRONICLE_UNLOCKS.includes(e.unlock))
 
     const serverReleaseDate = new Date(ctx.serverRelease)
     const releaseMs = serverReleaseDate.getTime()
@@ -333,16 +306,15 @@ function getChronicleEventStatus(event: Event,ctx: EventContext): EventStatus {
     if (serverAge >= 61)
         return defaultStatus({ isDisabled: true })
 
-    let id = filteredChronicle.findIndex(e => serverAge <= e.day)
+    let id = MILESTONE_EVENTS.findIndex(e => serverAge <= e.day)
 
     if (id === -1)
         return defaultStatus()
 
-    if (filteredChronicle[id].day === serverAge && id + 1 < filteredChronicle.length)
+    if (MILESTONE_EVENTS[id].day === serverAge && id + 1 < MILESTONE_EVENTS.length)
         id++
 
-    const currentEvent = filteredChronicle[id]
-    const nextEvent = filteredChronicle[id + 1]
+    const currentEvent = MILESTONE_EVENTS[id]
 
     const start = releaseMs + dayToMs(currentEvent.day - duration)
 
@@ -392,7 +364,10 @@ function getUnalaqPassEventStatus(event: Event, ctx: EventContext) {
 
 /* ---------------- Desert Troublemakers ---------------- */
 
-function getDTEventStatus(event: Event, ctx: EventContext) {
+function getTWEventStatus(event: Event, ctx: EventContext) {
+
+    const { duration, repeat } = getTiming(event)
+
     const currentSeed: SeedType = getServerSeed(ctx.server);
     
     const startFromSeed = getSeedStart(event, currentSeed)!;
@@ -400,10 +375,10 @@ function getDTEventStatus(event: Event, ctx: EventContext) {
 
     const eventCount = completedEventsFromStart(
         startFromSeed,
-        getRepeat(event),
-        getDuration(event),
-        new Date(ctx.serverRelease),
-        new Date(ctx.now)
+        repeat,
+        duration,
+        ctx.serverRelease,
+        ctx.now
     );
 
     let start: number;
@@ -413,6 +388,49 @@ function getDTEventStatus(event: Event, ctx: EventContext) {
         start = startFromSeed;
         transition = undefined;
     } else if (eventCount === 5) {
+        start = startFromSeed;
+        transition = startFromSeedA;
+    } else {
+        start = startFromSeedA;
+        transition = undefined;
+    }
+
+    return computeFromEvent(ctx, event, start, transition);
+}
+
+function getBiWeeklyEventStatus(event: Event, ctx: EventContext) {
+
+    let currentSeed: SeedType = getServerSeed(ctx.server);
+    
+    const pairParityEven = Math.floor(ctx.server.id / 2) % 2 === 0;
+
+    switch (currentSeed) {
+        case "SEED_A":
+        currentSeed = "SEED_A";
+        case "SEED_B":
+        currentSeed = pairParityEven ? "SEED_B2" : "SEED_B";
+        case "SEED_C":
+        currentSeed = pairParityEven ? "SEED_C" : "SEED_C2";
+    }
+    
+    const startFromSeed = getSeedStart(event, currentSeed)!;
+    const startFromSeedA = getSeedStart(event, "SEED_A")!;
+
+    const eventCount = completedEventsFromStart(
+        startFromSeed,
+        14,
+        getDuration(event),
+        ctx.serverRelease,
+        ctx.now
+    );
+
+    let start: number;
+    let transition: number | undefined;
+
+    if (eventCount < 4) {
+        start = startFromSeed;
+        transition = undefined;
+    } else if (eventCount === 4) {
         start = startFromSeed;
         transition = startFromSeedA;
     } else {
@@ -437,7 +455,8 @@ const EVENT_HANDLERS: Record<string, EventHandler> = {
     CHRONICLE: getChronicleEventStatus,
     TEMPLE_WAR: getTempleEventStatus,
     UNALAQ_PASS: getUnalaqPassEventStatus,
-    DESERT_TROUBLEMAKERS: getDTEventStatus,
+    DESERT_TROUBLEMAKERS: getTWEventStatus,
+    BIWEEKLY: getBiWeeklyEventStatus,
 }
 
 /* ---------------- Public API ---------------- */
@@ -490,9 +509,6 @@ export function sortEvents(events: Event[], server?: Server): Event[] {
 
         if (aStatus.isActive && bStatus.isActive)
             return (aStatus.remainingTime ?? Infinity) - (bStatus.remainingTime ?? Infinity)
-
-        if (aStatus.isTomorrow !== bStatus.isTomorrow)
-            return aStatus.isTomorrow ? -1 : 1
 
         if (aStatus.nextStart && bStatus.nextStart)
             return aStatus.nextStart - bStatus.nextStart

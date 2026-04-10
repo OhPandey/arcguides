@@ -102,7 +102,7 @@ export const firstAnniversaryBundles: Bundle[] = [
                 amount: 500
             },
             {
-                resource: Resources.FRAME,
+                resource: Resources.FRAME(),
                 amount: 1
             },
             {
