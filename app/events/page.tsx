@@ -41,6 +41,9 @@ export default function EventsPage() {
     return sortEvents(filtered, server)
   }, [search, server])
 
+  if (!mounted)
+    return null
+
   return (
     <main className="mx-auto max-w-6xl p-6">
       <h1 className="text-2xl font-bold text-white mb-6">List of all events</h1>
