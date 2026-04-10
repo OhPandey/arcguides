@@ -507,7 +507,7 @@ export const passBundles: Bundle[] = [
                 amount: 1
             },
             {
-                resource: Resources.FRAME,
+                resource: Resources.FRAME(),
                 amount: 1
             },
             {

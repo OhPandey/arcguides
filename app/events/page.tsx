@@ -40,9 +40,7 @@ export default function EventsPage() {
     )
     return sortEvents(filtered, server)
   }, [search, server])
-
-  if (!mounted)
-    return null
+  
 
   return (
     <main className="mx-auto max-w-6xl p-6">
