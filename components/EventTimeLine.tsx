@@ -88,6 +88,7 @@ function computeEventSegments(events: any[], server: Server, days: Date[]) {
 
         const clampedStart = Math.max(startKey, firstKey);
         const clampedEnd = Math.min(endKey, lastKey);
+        console.log(event.name, new Date(endKey).toDateString(), new Date(lastKey).toDateString())
 
         const startDay = dayIndex[clampedStart];
         const endDay = dayIndex[clampedEnd];
@@ -151,11 +152,8 @@ function buildTimeline(events: any[], server: Server, days: Date[]) {
 }
 
 function TimelineEventBox({ event }: { event: TimelineEvent }) {
-    const nowKey = getDayKey(new Date());
     const isLastDay = event.endDay === 0;
     const isMultiDay = event.startDay !== event.endDay;
-
-    console.log(event, event.endDay, nowKey, "test")
 
     const compact = !isMultiDay && isLastDay;
 

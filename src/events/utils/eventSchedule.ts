@@ -342,6 +342,22 @@ function getTempleEventStatus(event: Event, ctx: EventContext) {
     return computeEventStatus(ctx, start, duration, repeat)
 }
 
+/* ---------------- Vault ---------------- */
+
+function getVaultEventStatus(event: Event, ctx: EventContext) {
+
+    const { duration, repeat } = getTiming(event)
+
+    const FULL_CHRONICLE = 61
+
+    if (ctx.serverAge >= FULL_CHRONICLE)
+        return defaultStatus({isDisabled: true})
+
+    let start = getTimestamp(event.startDate)
+
+    return computeEventStatus(ctx, start, duration, repeat)
+}
+
 /* ---------------- Unalaq Pass ---------------- */
 
 function getUnalaqPassEventStatus(event: Event, ctx: EventContext) {
@@ -457,6 +473,7 @@ const EVENT_HANDLERS: Record<string, EventHandler> = {
     UNALAQ_PASS: getUnalaqPassEventStatus,
     DESERT_TROUBLEMAKERS: getTWEventStatus,
     BIWEEKLY: getBiWeeklyEventStatus,
+    VAULT: getVaultEventStatus
 }
 
 /* ---------------- Public API ---------------- */

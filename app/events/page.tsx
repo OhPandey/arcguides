@@ -47,7 +47,7 @@ export default function EventsPage() {
       <h1 className="text-2xl font-bold text-white mb-6">List of all events</h1>
 
 
-      <EventTimeLine events={filteredEvents} server={server} />
+      <EventTimeLine events={events} server={server} />
 
       <div className="mb-6 flex flex-col sm:flex-row gap-2">
         <input

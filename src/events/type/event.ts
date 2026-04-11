@@ -33,6 +33,7 @@ export type ScheduleType =
   | "UNALAQ_PASS"
   | "DESERT_TROUBLEMAKERS"
   | "BIWEEKLY"
+  | "VAULT"
 
 export type EventTableCell = string | Reward[]
 
