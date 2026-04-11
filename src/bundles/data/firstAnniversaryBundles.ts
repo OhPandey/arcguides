@@ -12,7 +12,7 @@ export const firstAnniversaryBundles: Bundle[] = [
                 amount: 2100
             },
             {
-                resource: Resources.TAG,
+                resource: Resources.TAG("Reminiscent Pages"),
                 amount: 1
             },
             {
@@ -102,7 +102,7 @@ export const firstAnniversaryBundles: Bundle[] = [
                 amount: 500
             },
             {
-                resource: Resources.FRAME(),
+                resource: Resources.FRAME("1st Anniversairy: Glow"),
                 amount: 1
             },
             {
@@ -141,7 +141,7 @@ export const firstAnniversaryBundles: Bundle[] = [
                 amount: 300
             },
             {
-                resource: Resources.PORTRAIT,
+                resource: Resources.PORTRAIT("Chibi Aang"),
                 amount: 1
             },
             {

@@ -188,6 +188,9 @@ function getTGLSingleEventStatus(event: Event, ctx: EventContext) {
         ctx.now
     );
 
+    if (eventCount > 6)
+        return defaultStatus({ isDisabled: true });
+
     let start: number;
     let transition: number | undefined;
 
@@ -201,9 +204,6 @@ function getTGLSingleEventStatus(event: Event, ctx: EventContext) {
         start = startFromSeedA;
         transition = undefined;
     }
-
-    if (eventCount > 6)
-        return defaultStatus({ isDisabled: true });
 
     return computeFromEvent(ctx, event, start, transition);
 }
@@ -224,24 +224,12 @@ function getTGLCrossEventStatus(event: Event, ctx: EventContext) {
         ctx.now
     );
 
-    let start: number;
-    let transition: number | undefined;
-
-    if (eventCount < 4) {
-        start = startFromSeed;
-        transition = undefined;
-    } else if (eventCount === 4) {
-        start = startFromSeed;
-        transition = startFromSeedA;
-    } else {
-        start = startFromSeedA;
-        transition = undefined;
-    }
-
     if (eventCount <= 6)
         return defaultStatus({ isDisabled: true });
 
-    return computeFromEvent(ctx, event, start, transition);
+    const start: number = startFromSeedA;
+
+    return computeFromEvent(ctx, event, start);
 }
 
 /* ---------------- Wheel ---------------- */
@@ -327,15 +315,16 @@ function getTempleEventStatus(event: Event, ctx: EventContext) {
 
     const { duration, repeat } = getTiming(event)
 
-    const FULL_CHRONICLE = 67
-    const FIRST_APPEARANCE = FULL_CHRONICLE + repeat
+    const TEMPLE_UNLOCK = 61
+    const CHRONICLE_END = 67
+    const FIRST_APPEARENCE = CHRONICLE_END+14 // 2 weeks later
 
     let start: number | null
 
-    if (ctx.serverAge <= FULL_CHRONICLE)
-        return defaultStatus({isDisabled: true})
-    else if (ctx.serverAge <= FIRST_APPEARANCE)
-        start = ctx.serverRelease + dayToMs(FIRST_APPEARANCE)
+    if (ctx.serverAge <= TEMPLE_UNLOCK)
+        return defaultStatus({ isDisabled: true })
+    else if(ctx.serverAge < FIRST_APPEARENCE+1) // stays for one more day
+        start = ctx.serverRelease + dayToMs(FIRST_APPEARENCE)
     else
         start = getTimestamp(event.startDate)
 

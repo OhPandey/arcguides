@@ -220,6 +220,11 @@ export const GEAR_MATERIAL_CHEST: Resource = {
   gemValue: PURIFIED_ESSENCE.gemValue+125*VERDANT_SPLINTER.gemValue
 };
 
+export const GEAR_MATERIAL_CUSTOM_CHEST: Resource = {
+  name: "Gear Material Custom Chest",
+  gemValue: (PURIFIED_ESSENCE.gemValue+100*VERDANT_SPLINTER.gemValue)/2
+};
+
 export const GEAR_CUSTOM_CHEST_EPIC: Resource = {
   name: "Epic Gear Custom Chest",
   gemValue: FORGE_COIN.gemValue*15000
@@ -261,7 +266,7 @@ export const LUCKY_TICKET: Resource = {
 };
 
 export const LUCKY_DICE: Resource = {
-  name: "Lucky Dice (Value WIP)",
+  name: "Lucky Dice",
   gemValue: 500 // The Paths of Fate puts the the Lucky Dice at the same level as Golden Scroll and Mystic Ore which both are 500 Gem
 };
 
@@ -285,15 +290,16 @@ export const TOWNHALL = (variant?: string): Resource => ({
   gemValue: LOTUS_TILE.gemValue*20000
 })
 
-export const TAG: Resource = {
-  name: "Name Tag",
+export const TAG = (variant?: string): Resource => ({
+  name: variant ? `"${variant}" Name Tag`: "Name Tag",
   gemValue: FRAME().gemValue // Should have the same value as Frame. They give similar buffs
-};
+})
 
-export const PORTRAIT: Resource = {
-  name: "Portrait",
-  gemValue: 0 // Portrait has new real value, just looks cool
-};
+
+export const PORTRAIT = (variant?: string): Resource => ({
+  name: variant ? `"${variant}" Portrait`: "Portrait",
+  gemValue:  0 // Portrait has new real value, just looks cool
+})
 
 export const BUNDLE_SUPPLY_CHEST_LV1: Resource = {
   name: "Level 1 Bundle Supply Chest",
@@ -325,9 +331,19 @@ export const BUNDLE_SUPPLY_CHEST_LV6: Resource = {
   gemValue: 254.25
 };
 
+export const CUSTOM_RESOURCE_CHEST_LV3: Resource = {
+  name: "Lv.4 Custom Resource Chest",
+  gemValue: FOOD.gemValue*50000
+};
+
 export const CUSTOM_RESOURCE_CHEST_LV4: Resource = {
   name: "Lv.4 Custom Resource Chest",
   gemValue: FOOD.gemValue*150000
+};
+
+export const CUSTOM_RESOURCE_CHEST_LV5: Resource = {
+  name: "Lv.6 Custom Resource Chest",
+  gemValue: FOOD.gemValue*750000
 };
 
 export const CUSTOM_RESOURCE_CHEST_LV6: Resource = {
@@ -339,4 +355,9 @@ export const SPECIAL_SUPPLY_BOX: Resource = {
   name: "Special Supply Box (1st Anniversary)",
   gemValue: 20 // Average reward
 
+}
+
+export const EPIC_DECO: Resource = {
+  name: "Epic Deco",
+  gemValue: 0  // has no value
 }

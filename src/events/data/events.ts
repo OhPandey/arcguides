@@ -33,8 +33,8 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.FOOD, amount: 50000*2 },
-              { resource: Resources.WOOD, amount: 50000*2 }
+              { resource: Resources.FOOD, amount: 50000 * 2 },
+              { resource: Resources.WOOD, amount: 50000 * 2 }
             ]
           ],
           [
@@ -42,8 +42,8 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.FOOD, amount: 50000*3 },
-              { resource: Resources.WOOD, amount: 50000*3 }
+              { resource: Resources.FOOD, amount: 50000 * 3 },
+              { resource: Resources.WOOD, amount: 50000 * 3 }
             ]
           ],
           [
@@ -70,7 +70,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 200 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 }
             ]
           ]
         ]
@@ -85,7 +85,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 30 },
               { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5*5 }
+              { resource: Resources.SPEEDUP, amount: 5 * 5 }
             ]
           ],
           [
@@ -94,7 +94,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 60 },
               { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5*10 }
+              { resource: Resources.SPEEDUP, amount: 5 * 10 }
             ]
           ],
           [
@@ -103,11 +103,11 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 90 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5*15 }
+              { resource: Resources.SPEEDUP, amount: 5 * 15 }
             ]
           ],
           [
-            "Recruit 12,000 Tier 2 or Higher Benders", 
+            "Recruit 12,000 Tier 2 or Higher Benders",
             [
               { resource: Resources.GEM, amount: 120 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
@@ -121,7 +121,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 150 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*3 }
+              { resource: Resources.SPEEDUP, amount: 60 * 3 }
             ]
           ],
           [
@@ -130,7 +130,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 200 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*5 }
+              { resource: Resources.SPEEDUP, amount: 60 * 5 }
             ]
           ]
         ]
@@ -154,7 +154,7 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 5 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 }
             ]
           ],
           [
@@ -172,7 +172,7 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 3 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 }
             ]
           ],
           [
@@ -190,7 +190,7 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 3 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 }
             ]
           ],
         ]
@@ -250,7 +250,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 100 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 }
             ]
           ]
         ]
@@ -274,7 +274,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 100 },
               { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 25*2 }
+              { resource: Resources.SPEEDUP, amount: 25 * 2 }
             ]
           ],
           [
@@ -283,7 +283,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 150 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 25*3 }
+              { resource: Resources.SPEEDUP, amount: 25 * 3 }
             ]
           ],
           [
@@ -292,7 +292,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 200 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 }
             ]
           ],
           [
@@ -301,7 +301,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 250 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2^3 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 ^ 3 }
             ]
           ],
           [
@@ -310,7 +310,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 300 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*5 }
+              { resource: Resources.SPEEDUP, amount: 60 * 5 }
             ]
           ]
         ]
@@ -322,14 +322,14 @@ export const events: Event[] = [
         headers: ["Rank", "Reward"],
         rows: [
           [
-            "1", 
+            "1",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10, disclaimer: "*" },
               { resource: Resources.GEM, amount: 500 },
               { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 100 },
-              { resource: Resources.FOOD, amount: 50000*30 },
-              { resource: Resources.WOOD, amount: 50000*30 },
-              { resource: Resources.STONE, amount: 50000*30 }
+              { resource: Resources.FOOD, amount: 50000 * 30 },
+              { resource: Resources.WOOD, amount: 50000 * 30 },
+              { resource: Resources.STONE, amount: 50000 * 30 }
             ]
           ],
           [
@@ -338,9 +338,9 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5, disclaimer: "*" },
               { resource: Resources.GEM, amount: 300 },
               { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 80 },
-              { resource: Resources.FOOD, amount: 50000*25 },
-              { resource: Resources.WOOD, amount: 50000*25 },
-              { resource: Resources.STONE, amount: 50000*25 }
+              { resource: Resources.FOOD, amount: 50000 * 25 },
+              { resource: Resources.WOOD, amount: 50000 * 25 },
+              { resource: Resources.STONE, amount: 50000 * 25 }
             ]
           ],
           [
@@ -349,9 +349,9 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2, disclaimer: "*" },
               { resource: Resources.GEM, amount: 200 },
               { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 60 },
-              { resource: Resources.FOOD, amount: 50000*20 },
-              { resource: Resources.WOOD, amount: 50000*20 },
-              { resource: Resources.STONE, amount: 50000*20 }
+              { resource: Resources.FOOD, amount: 50000 * 20 },
+              { resource: Resources.WOOD, amount: 50000 * 20 },
+              { resource: Resources.STONE, amount: 50000 * 20 }
             ]
           ],
           [
@@ -359,9 +359,9 @@ export const events: Event[] = [
             [
               { resource: Resources.GEM, amount: 100 },
               { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 40 },
-              { resource: Resources.FOOD, amount: 50000*15 },
-              { resource: Resources.WOOD, amount: 50000*15 },
-              { resource: Resources.STONE, amount: 50000*15 }
+              { resource: Resources.FOOD, amount: 50000 * 15 },
+              { resource: Resources.WOOD, amount: 50000 * 15 },
+              { resource: Resources.STONE, amount: 50000 * 15 }
             ]
           ],
           [
@@ -369,9 +369,9 @@ export const events: Event[] = [
             [
               { resource: Resources.GEM, amount: 50 },
               { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 30 },
-              { resource: Resources.FOOD, amount: 50000*10 },
-              { resource: Resources.WOOD, amount: 50000*10 },
-              { resource: Resources.STONE, amount: 50000*10 }
+              { resource: Resources.FOOD, amount: 50000 * 10 },
+              { resource: Resources.WOOD, amount: 50000 * 10 },
+              { resource: Resources.STONE, amount: 50000 * 10 }
             ]
           ],
           [
@@ -379,9 +379,9 @@ export const events: Event[] = [
             [
               { resource: Resources.GEM, amount: 40 },
               { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 20 },
-              { resource: Resources.FOOD, amount: 50000*5 },
-              { resource: Resources.WOOD, amount: 50000*5 },
-              { resource: Resources.STONE, amount: 50000*5 }
+              { resource: Resources.FOOD, amount: 50000 * 5 },
+              { resource: Resources.WOOD, amount: 50000 * 5 },
+              { resource: Resources.STONE, amount: 50000 * 5 }
             ]
           ],
           [
@@ -389,9 +389,9 @@ export const events: Event[] = [
             [
               { resource: Resources.GEM, amount: 30 },
               { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 10 },
-              { resource: Resources.FOOD, amount: 50000*4 },
-              { resource: Resources.WOOD, amount: 50000*4 },
-              { resource: Resources.STONE, amount: 50000*4 }
+              { resource: Resources.FOOD, amount: 50000 * 4 },
+              { resource: Resources.WOOD, amount: 50000 * 4 },
+              { resource: Resources.STONE, amount: 50000 * 4 }
             ]
           ],
           [
@@ -399,9 +399,9 @@ export const events: Event[] = [
             [
               { resource: Resources.GEM, amount: 20 },
               { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 5 },
-              { resource: Resources.FOOD, amount: 50000*3 },
-              { resource: Resources.WOOD, amount: 50000*3 },
-              { resource: Resources.STONE, amount: 50000*3 }
+              { resource: Resources.FOOD, amount: 50000 * 3 },
+              { resource: Resources.WOOD, amount: 50000 * 3 },
+              { resource: Resources.STONE, amount: 50000 * 3 }
             ]
           ],
           [
@@ -409,9 +409,9 @@ export const events: Event[] = [
             [
               { resource: Resources.GEM, amount: 10 },
               { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 3 },
-              { resource: Resources.FOOD, amount: 50000*2 },
-              { resource: Resources.WOOD, amount: 50000*2 },
-              { resource: Resources.STONE, amount: 50000*2 }
+              { resource: Resources.FOOD, amount: 50000 * 2 },
+              { resource: Resources.WOOD, amount: 50000 * 2 },
+              { resource: Resources.STONE, amount: 50000 * 2 }
             ]
           ],
           [
@@ -435,10 +435,10 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 200, disclaimer: "*" },
               { resource: Resources.GEM, amount: 2000 },
-              { resource: Resources.SPEEDUP, amount: 60*30 },
-              { resource: Resources.FOOD, amount: 50000*100 },
-              { resource: Resources.WOOD, amount: 50000*100 },
-              { resource: Resources.STONE, amount: 50000*100 }
+              { resource: Resources.SPEEDUP, amount: 60 * 30 },
+              { resource: Resources.FOOD, amount: 50000 * 100 },
+              { resource: Resources.WOOD, amount: 50000 * 100 },
+              { resource: Resources.STONE, amount: 50000 * 100 }
             ]
           ],
           [
@@ -446,10 +446,10 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 150, disclaimer: "*" },
               { resource: Resources.GEM, amount: 1500 },
-              { resource: Resources.SPEEDUP, amount: 60*25 },
-              { resource: Resources.FOOD, amount: 50000*80 },
-              { resource: Resources.WOOD, amount: 50000*80 },
-              { resource: Resources.STONE, amount: 50000*80 }
+              { resource: Resources.SPEEDUP, amount: 60 * 25 },
+              { resource: Resources.FOOD, amount: 50000 * 80 },
+              { resource: Resources.WOOD, amount: 50000 * 80 },
+              { resource: Resources.STONE, amount: 50000 * 80 }
             ]
           ],
           [
@@ -457,10 +457,10 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 100, disclaimer: "*" },
               { resource: Resources.GEM, amount: 1000 },
-              { resource: Resources.SPEEDUP, amount: 60*20 },
-              { resource: Resources.FOOD, amount: 50000*70 },
-              { resource: Resources.WOOD, amount: 50000*70 },
-              { resource: Resources.STONE, amount: 50000*70 }
+              { resource: Resources.SPEEDUP, amount: 60 * 20 },
+              { resource: Resources.FOOD, amount: 50000 * 70 },
+              { resource: Resources.WOOD, amount: 50000 * 70 },
+              { resource: Resources.STONE, amount: 50000 * 70 }
             ]
           ],
           [
@@ -468,10 +468,10 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 70, disclaimer: "*" },
               { resource: Resources.GEM, amount: 700 },
-              { resource: Resources.SPEEDUP, amount: 60*15 },
-              { resource: Resources.FOOD, amount: 50000*60 },
-              { resource: Resources.WOOD, amount: 50000*60 },
-              { resource: Resources.STONE, amount: 50000*60 }
+              { resource: Resources.SPEEDUP, amount: 60 * 15 },
+              { resource: Resources.FOOD, amount: 50000 * 60 },
+              { resource: Resources.WOOD, amount: 50000 * 60 },
+              { resource: Resources.STONE, amount: 50000 * 60 }
             ]
           ],
           [
@@ -479,10 +479,10 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 50, disclaimer: "*" },
               { resource: Resources.GEM, amount: 500 },
-              { resource: Resources.SPEEDUP, amount: 60*12 },
-              { resource: Resources.FOOD, amount: 50000*50 },
-              { resource: Resources.WOOD, amount: 50000*50 },
-              { resource: Resources.STONE, amount: 50000*50 }
+              { resource: Resources.SPEEDUP, amount: 60 * 12 },
+              { resource: Resources.FOOD, amount: 50000 * 50 },
+              { resource: Resources.WOOD, amount: 50000 * 50 },
+              { resource: Resources.STONE, amount: 50000 * 50 }
             ]
           ],
           [
@@ -490,10 +490,10 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 30, disclaimer: "*" },
               { resource: Resources.GEM, amount: 300 },
-              { resource: Resources.SPEEDUP, amount: 60*10 },
-              { resource: Resources.FOOD, amount: 50000*40 },
-              { resource: Resources.WOOD, amount: 50000*40 },
-              { resource: Resources.STONE, amount: 50000*40 }
+              { resource: Resources.SPEEDUP, amount: 60 * 10 },
+              { resource: Resources.FOOD, amount: 50000 * 40 },
+              { resource: Resources.WOOD, amount: 50000 * 40 },
+              { resource: Resources.STONE, amount: 50000 * 40 }
             ]
           ],
           [
@@ -501,10 +501,10 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 20, disclaimer: "*" },
               { resource: Resources.GEM, amount: 200 },
-              { resource: Resources.SPEEDUP, amount: 60*8 },
-              { resource: Resources.FOOD, amount: 50000*30 },
-              { resource: Resources.WOOD, amount: 50000*30 },
-              { resource: Resources.STONE, amount: 50000*30 }
+              { resource: Resources.SPEEDUP, amount: 60 * 8 },
+              { resource: Resources.FOOD, amount: 50000 * 30 },
+              { resource: Resources.WOOD, amount: 50000 * 30 },
+              { resource: Resources.STONE, amount: 50000 * 30 }
             ]
           ],
           [
@@ -512,10 +512,10 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10, disclaimer: "*" },
               { resource: Resources.GEM, amount: 100 },
-              { resource: Resources.SPEEDUP, amount: 60*6 },
-              { resource: Resources.FOOD, amount: 50000*20 },
-              { resource: Resources.WOOD, amount: 50000*20 },
-              { resource: Resources.STONE, amount: 50000*20 }
+              { resource: Resources.SPEEDUP, amount: 60 * 6 },
+              { resource: Resources.FOOD, amount: 50000 * 20 },
+              { resource: Resources.WOOD, amount: 50000 * 20 },
+              { resource: Resources.STONE, amount: 50000 * 20 }
             ]
           ],
           [
@@ -523,10 +523,10 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5, disclaimer: "*" },
               { resource: Resources.GEM, amount: 50 },
-              { resource: Resources.SPEEDUP, amount: 60*4 },
-              { resource: Resources.FOOD, amount: 50000*10 },
-              { resource: Resources.WOOD, amount: 50000*10 },
-              { resource: Resources.STONE, amount: 50000*10 }
+              { resource: Resources.SPEEDUP, amount: 60 * 4 },
+              { resource: Resources.FOOD, amount: 50000 * 10 },
+              { resource: Resources.WOOD, amount: 50000 * 10 },
+              { resource: Resources.STONE, amount: 50000 * 10 }
             ]
           ],
           [
@@ -534,10 +534,10 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2, disclaimer: "*" },
               { resource: Resources.GEM, amount: 20 },
-              { resource: Resources.SPEEDUP, amount: 60*2 },
-              { resource: Resources.FOOD, amount: 50000*5 },
-              { resource: Resources.WOOD, amount: 50000*5 },
-              { resource: Resources.STONE, amount: 50000*5 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 },
+              { resource: Resources.FOOD, amount: 50000 * 5 },
+              { resource: Resources.WOOD, amount: 50000 * 5 },
+              { resource: Resources.STONE, amount: 50000 * 5 }
             ]
           ]
         ]
@@ -554,7 +554,8 @@ export const events: Event[] = [
     details: [
       { type: "p", content: "Determine the greatest leader in the world." },
       { type: "p", content: "Do your best to prove that you are the greatest leader!", space: true },
-      { type: "ol", items: [
+      {
+        type: "ol", items: [
           "The event will take place every two weeks for a duration of 5 days.",
           "Each day during the event period, a different type of mission will be given.",
           "Daily rankings will be determined based on the scores gained according to the scoring rules.",
@@ -565,7 +566,8 @@ export const events: Event[] = [
       { type: "p", content: "Power gained from Construction is only applied while the leader is online.", space: true },
       { type: "p", content: "Event Rules:", space: true },
       { type: "p", content: "Day 1 - Resource Gathering/Increase Power with Research or Bender Recruitment", space: true },
-      { type: "ul", items: [
+      {
+        type: "ul", items: [
           "Per gathering 100 Food on the field: 3 Points",
           "Per gathering 100 Stones on the field: 3 Points",
           "Per gathering 50 Gold on the field: 3 Points",
@@ -574,7 +576,8 @@ export const events: Event[] = [
         ], space: true
       },
       { type: "p", content: "Day 2 - Bender Recruitment", space: true },
-      { type: "ul", items: [
+      {
+        type: "ul", items: [
           "Per recruiting 1 bender (Tier-1): 25 Points",
           "Per recruiting 1 bender (Tier-2): 50 Points",
           "Per recruiting 1 bender (Tier-3): 75 Points",
@@ -585,7 +588,8 @@ export const events: Event[] = [
         ], space: true
       },
       { type: "p", content: "Day 3 - Hero Growth", space: true },
-      { type: "ul", items: [
+      {
+        type: "ul", items: [
           "Use Silver Scroll: 750 points",
           "Use Golden Scroll: 1,500 points",
           "Use Rare Hero Spirit Shard: 250 points",
@@ -598,7 +602,8 @@ export const events: Event[] = [
         ], space: true
       },
       { type: "p", content: "Day 4 - Defeat Shattered Skulls/Increase Power with Construction or Bender Recruitment", space: true },
-      { type: "ul", items: [
+      {
+        type: "ul", items: [
           "Defeat Shattered Skull Levels 1-5: 1,500 Points",
           "Defeat Shattered Skull Levels 6-10: 1,800 Points",
           "Defeat Shattered Skull Levels 11-15: 2,100 Points",
@@ -634,7 +639,8 @@ export const events: Event[] = [
       SEED_B: "2026-04-01",
       SEED_C: "2026-04-08",
     },
-   tasks: [
+    type: "TGL_CROSSSERVER",
+    tasks: [
       {
         title: "Stage 1: Gathering/Research/Bender Recruitment",
         headers: ["Task", "Reward"],
@@ -653,8 +659,8 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.FOOD, amount: 50000*2 },
-              { resource: Resources.WOOD, amount: 50000*2 }
+              { resource: Resources.FOOD, amount: 50000 * 2 },
+              { resource: Resources.WOOD, amount: 50000 * 2 }
             ]
           ],
           [
@@ -662,8 +668,8 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.FOOD, amount: 50000*3 },
-              { resource: Resources.WOOD, amount: 50000*3 }
+              { resource: Resources.FOOD, amount: 50000 * 3 },
+              { resource: Resources.WOOD, amount: 50000 * 3 }
             ]
           ],
           [
@@ -690,7 +696,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 200 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 }
             ]
           ]
         ]
@@ -705,7 +711,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 30 },
               { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5*5 }
+              { resource: Resources.SPEEDUP, amount: 5 * 5 }
             ]
           ],
           [
@@ -714,7 +720,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 60 },
               { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 },
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5*10 }
+              { resource: Resources.SPEEDUP, amount: 5 * 10 }
             ]
           ],
           [
@@ -723,11 +729,11 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 90 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5*15 }
+              { resource: Resources.SPEEDUP, amount: 5 * 15 }
             ]
           ],
           [
-            "Recruit 12,000 Tier 2 or Higher Benders", 
+            "Recruit 12,000 Tier 2 or Higher Benders",
             [
               { resource: Resources.GEM, amount: 120 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
@@ -741,7 +747,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 150 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*3 }
+              { resource: Resources.SPEEDUP, amount: 60 * 3 }
             ]
           ],
           [
@@ -750,7 +756,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 200 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*5 }
+              { resource: Resources.SPEEDUP, amount: 60 * 5 }
             ]
           ]
         ]
@@ -774,7 +780,7 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 5 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 }
             ]
           ],
           [
@@ -792,7 +798,7 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 3 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 }
             ]
           ],
           [
@@ -810,7 +816,7 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 3 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 }
             ]
           ],
         ]
@@ -870,7 +876,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 100 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 }
             ]
           ]
         ]
@@ -894,7 +900,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 100 },
               { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 25*2 }
+              { resource: Resources.SPEEDUP, amount: 25 * 2 }
             ]
           ],
           [
@@ -903,7 +909,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 150 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 25*3 }
+              { resource: Resources.SPEEDUP, amount: 25 * 3 }
             ]
           ],
           [
@@ -912,7 +918,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 200 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 }
             ]
           ],
           [
@@ -921,7 +927,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 250 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2^3 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 ^ 3 }
             ]
           ],
           [
@@ -930,7 +936,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 300 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*5 }
+              { resource: Resources.SPEEDUP, amount: 60 * 5 }
             ]
           ]
         ]
@@ -1069,7 +1075,7 @@ export const events: Event[] = [
             "Increase your Power by 60,000*",
             [
               { resource: Resources.GEM, amount: 100 },
-              { resource: Resources.SPEEDUP, amount: 25},
+              { resource: Resources.SPEEDUP, amount: 25 },
               { resource: Resources.FOOD, amount: 150000 },
               { resource: Resources.WOOD, amount: 150000 },
               { resource: Resources.STONE, amount: 150000 }
@@ -1079,50 +1085,50 @@ export const events: Event[] = [
             "Increase your Power by 120,000*",
             [
               { resource: Resources.GEM, amount: 150 },
-              { resource: Resources.SPEEDUP, amount: 25*2 },
-              { resource: Resources.FOOD, amount: 150000*2 },
-              { resource: Resources.WOOD, amount: 150000*2 },
-              { resource: Resources.STONE, amount: 150000*2 }
+              { resource: Resources.SPEEDUP, amount: 25 * 2 },
+              { resource: Resources.FOOD, amount: 150000 * 2 },
+              { resource: Resources.WOOD, amount: 150000 * 2 },
+              { resource: Resources.STONE, amount: 150000 * 2 }
             ]
           ],
           [
             "Increase your Power by 240,000*",
             [
               { resource: Resources.GEM, amount: 200 },
-              { resource: Resources.SPEEDUP, amount: 60*2 },
-              { resource: Resources.FOOD, amount: 150000*3 },
-              { resource: Resources.WOOD, amount: 150000*3 },
-              { resource: Resources.STONE, amount: 150000*3 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 },
+              { resource: Resources.FOOD, amount: 150000 * 3 },
+              { resource: Resources.WOOD, amount: 150000 * 3 },
+              { resource: Resources.STONE, amount: 150000 * 3 }
             ]
           ],
           [
             "Increase your Power by 360,000*",
             [
               { resource: Resources.GEM, amount: 250 },
-              { resource: Resources.SPEEDUP, amount: 60*3 },
-              { resource: Resources.FOOD, amount: 150000*4 },
-              { resource: Resources.WOOD, amount: 150000*4 },
-              { resource: Resources.STONE, amount: 150000*4 }
+              { resource: Resources.SPEEDUP, amount: 60 * 3 },
+              { resource: Resources.FOOD, amount: 150000 * 4 },
+              { resource: Resources.WOOD, amount: 150000 * 4 },
+              { resource: Resources.STONE, amount: 150000 * 4 }
             ]
           ],
           [
             "Increase your Power by 480,000*",
             [
               { resource: Resources.GEM, amount: 300 },
-              { resource: Resources.SPEEDUP, amount: 60*4 },
-              { resource: Resources.FOOD, amount: 150000*5 },
-              { resource: Resources.WOOD, amount: 150000*5 },
-              { resource: Resources.STONE, amount: 150000*5 }
+              { resource: Resources.SPEEDUP, amount: 60 * 4 },
+              { resource: Resources.FOOD, amount: 150000 * 5 },
+              { resource: Resources.WOOD, amount: 150000 * 5 },
+              { resource: Resources.STONE, amount: 150000 * 5 }
             ]
           ],
           [
             "Increase your Power by 600,000*",
             [
               { resource: Resources.GEM, amount: 500 },
-              { resource: Resources.SPEEDUP, amount: 60*5 },
-              { resource: Resources.FOOD, amount: 150000*10 },
-              { resource: Resources.WOOD, amount: 150000*10 },
-              { resource: Resources.STONE, amount: 150000*10 }
+              { resource: Resources.SPEEDUP, amount: 60 * 5 },
+              { resource: Resources.FOOD, amount: 150000 * 10 },
+              { resource: Resources.WOOD, amount: 150000 * 10 },
+              { resource: Resources.STONE, amount: 150000 * 10 }
             ]
           ]
         ]
@@ -1166,24 +1172,24 @@ export const events: Event[] = [
           [
             "Use 1,000 AP",
             [
-              { resource: Resources.SPEEDUP, amount: 60*5 },
-              { resource: Resources.FOOD, amount: 10000*3 },
-              { resource: Resources.WOOD, amount: 10000*3 },
-              { resource: Resources.STONE, amount: 10000*3 }
+              { resource: Resources.SPEEDUP, amount: 60 * 5 },
+              { resource: Resources.FOOD, amount: 10000 * 3 },
+              { resource: Resources.WOOD, amount: 10000 * 3 },
+              { resource: Resources.STONE, amount: 10000 * 3 }
             ]
           ],
           [
             "Gather 20,000 Resources in the City",
             [
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5+5+5 }
+              { resource: Resources.SPEEDUP, amount: 5 + 5 + 5 }
             ]
           ],
           [
             "Gather 100,000 Resources in the City",
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5*3+5*3+5*3 }
+              { resource: Resources.SPEEDUP, amount: 5 * 3 + 5 * 3 + 5 * 3 }
             ]
           ],
           [
@@ -1199,9 +1205,9 @@ export const events: Event[] = [
             "Recruit 2,000 Benders",
             [
               { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
-              { resource: Resources.FOOD, amount: 10000*3 },
-              { resource: Resources.WOOD, amount: 10000*3 },
-              { resource: Resources.STONE, amount: 10000*3 }
+              { resource: Resources.FOOD, amount: 10000 * 3 },
+              { resource: Resources.WOOD, amount: 10000 * 3 },
+              { resource: Resources.STONE, amount: 10000 * 3 }
             ]
           ],
           [
@@ -1267,7 +1273,7 @@ export const events: Event[] = [
         headers: ["Requirement", "Reward"],
         rows: [
           ["Use 10 Spins", [{ resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5, disclaimer: "*" }]],
-          ["Use 25 Spins",[{ resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10, disclaimer: "*" }]],
+          ["Use 25 Spins", [{ resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10, disclaimer: "*" }]],
           [
             "Use 45 Spins",
             [
@@ -1332,18 +1338,18 @@ export const events: Event[] = [
             "Gather 500,000 Resources from the Field",
             [
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.FOOD, amount: 10000*3 },
-              { resource: Resources.WOOD, amount: 10000*3 },
-              { resource: Resources.STONE, amount: 10000*3 }
+              { resource: Resources.FOOD, amount: 10000 * 3 },
+              { resource: Resources.WOOD, amount: 10000 * 3 },
+              { resource: Resources.STONE, amount: 10000 * 3 }
             ]
           ],
           [
             "Gather 1,000,000 Resources from the Field",
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.FOOD, amount: 10000*5 },
-              { resource: Resources.WOOD, amount: 10000*5 },
-              { resource: Resources.STONE, amount: 10000*5 }
+              { resource: Resources.FOOD, amount: 10000 * 5 },
+              { resource: Resources.WOOD, amount: 10000 * 5 },
+              { resource: Resources.STONE, amount: 10000 * 5 }
             ]
           ],
           [
@@ -1368,7 +1374,7 @@ export const events: Event[] = [
             "Purchase 30 items at the Trading Post",
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 },
+              { resource: Resources.SPEEDUP, amount: 60 * 2 },
               { resource: Resources.AP, amount: 500 },
               { resource: Resources.SEAL_OF_SOLIDARITY, amount: 3 }
             ]
@@ -1450,7 +1456,7 @@ export const events: Event[] = [
         rows: [
           [
             "Defeat Shattered Skull - Level 1 Fuzhi",
-            
+
             "100 Gems, 1x Epic Spirit Shard, 5x Rare Spirit Shard, 30m Speedup, 1x Lv 1. Purification Event Chest"],
           ["Defeat Shattered Skull - Level 2 Toghrul", "100 Gems, 2x Epic Spirit Shard, 5x Rare Spirit Shard, 30m Speedup, 1x Lv 2. Purification Event Chest"],
           ["Defeat Shattered Skull - Level 3 Fuzhi", "100 Gems, 3x Epic Spirit Shard, 5x Rare Spirit Shard, 30m Speedup, 1x Lv 3. Purification Event Chest"],
@@ -1551,7 +1557,7 @@ export const events: Event[] = [
               { resource: Resources.PURIFIED_ESSENCE, amount: 10 },
               { resource: Resources.VERDANT_SPLINTER, amount: 1000 }
             ]
-            ],
+          ],
         ]
       }
     ],
@@ -1743,7 +1749,7 @@ export const events: Event[] = [
         headers: ["Task", "Reward"],
         rows: [
           [
-            "Achieve Town Hall Level 5", 
+            "Achieve Town Hall Level 5",
             [
               { resource: Resources.GEM, amount: 100 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 },
@@ -1757,7 +1763,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 200 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 2 },
-              { resource: Resources.SPEEDUP, amount: 60*3 }
+              { resource: Resources.SPEEDUP, amount: 60 * 3 }
             ]
           ],
           [
@@ -1766,7 +1772,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 300 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 3 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 3 },
-              { resource: Resources.SPEEDUP, amount: 60*5 }
+              { resource: Resources.SPEEDUP, amount: 60 * 5 }
             ]
           ],
           [
@@ -1775,7 +1781,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 400 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 4 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 4 },
-              { resource: Resources.SPEEDUP, amount: 60*10 }
+              { resource: Resources.SPEEDUP, amount: 60 * 10 }
             ]
           ],
           [
@@ -1784,7 +1790,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 500 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 5 },
-              { resource: Resources.SPEEDUP, amount: 60*15 }
+              { resource: Resources.SPEEDUP, amount: 60 * 15 }
             ]
           ],
           [
@@ -1793,7 +1799,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 600 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 6 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 6 },
-              { resource: Resources.SPEEDUP, amount: 60*20 }
+              { resource: Resources.SPEEDUP, amount: 60 * 20 }
             ]
           ],
           [
@@ -1802,7 +1808,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 700 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 7 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 7 },
-              { resource: Resources.SPEEDUP, amount: 60*40 }
+              { resource: Resources.SPEEDUP, amount: 60 * 40 }
             ]
           ],
           [
@@ -1811,7 +1817,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 800 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 8 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 8 },
-              { resource: Resources.SPEEDUP, amount: 60*60 }
+              { resource: Resources.SPEEDUP, amount: 60 * 60 }
             ]
           ],
           [
@@ -1820,7 +1826,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 900 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 9 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 9 },
-              { resource: Resources.SPEEDUP, amount: 60*80 }
+              { resource: Resources.SPEEDUP, amount: 60 * 80 }
             ]
           ],
           [
@@ -1829,7 +1835,7 @@ export const events: Event[] = [
               { resource: Resources.GEM, amount: 1000 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 10 },
-              { resource: Resources.SPEEDUP, amount: 60*100 }
+              { resource: Resources.SPEEDUP, amount: 60 * 100 }
             ]
           ],
         ]
@@ -1934,7 +1940,7 @@ export const events: Event[] = [
             "Achieve 30,000 Power",
             [
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 25+25 },
+              { resource: Resources.SPEEDUP, amount: 25 + 25 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 }
             ]
           ],
@@ -1943,14 +1949,14 @@ export const events: Event[] = [
             [
               { resource: Resources.SILVER_SCROLL, amount: 2 },
               { resource: Resources.SPEEDUP, amount: 5 },
-              { resource: Resources.FOOD, amount: 2*50000 }
+              { resource: Resources.FOOD, amount: 2 * 50000 }
             ]
           ],
           [
             "Achieve 150,000 Power",
             [
               { resource: Resources.SILVER_SCROLL, amount: 3 },
-              { resource: Resources.SPEEDUP, amount: 100+100 },
+              { resource: Resources.SPEEDUP, amount: 100 + 100 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 3 }
             ]
           ],
@@ -1958,7 +1964,7 @@ export const events: Event[] = [
             "Achieve 300,000 Power",
             [
               { resource: Resources.SILVER_SCROLL, amount: 5 },
-              { resource: Resources.SPEEDUP, amount: 24*5 },
+              { resource: Resources.SPEEDUP, amount: 24 * 5 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 10 },
               { resource: Resources.FOOD, amount: 150000 }
             ]
@@ -1967,7 +1973,7 @@ export const events: Event[] = [
             "Achieve 600,000 Power",
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 36*5+36+5 },
+              { resource: Resources.SPEEDUP, amount: 36 * 5 + 36 + 5 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 20 }
             ]
           ],
@@ -1976,7 +1982,7 @@ export const events: Event[] = [
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 2 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 3 },
-              { resource: Resources.SPEEDUP, amount: 120*5 }
+              { resource: Resources.SPEEDUP, amount: 120 * 5 }
             ]
           ],
           [
@@ -1984,7 +1990,7 @@ export const events: Event[] = [
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 3 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 5 },
-              { resource: Resources.SPEEDUP, amount: 180*5 }
+              { resource: Resources.SPEEDUP, amount: 180 * 5 }
             ]
           ],
           [
@@ -1992,7 +1998,7 @@ export const events: Event[] = [
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 5 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 7 },
-              { resource: Resources.SPEEDUP, amount: 300*5 },
+              { resource: Resources.SPEEDUP, amount: 300 * 5 },
             ]
           ],
           [
@@ -2001,7 +2007,7 @@ export const events: Event[] = [
               { resource: Resources.TOWNHALL("Obisidian Palace"), amount: 1 },
               { resource: Resources.GEM, amount: 500 },
               { resource: Resources.GOLDEN_SCROLL, amount: 10 },
-              { resource: Resources.SPEEDUP, amount: 600*5 },
+              { resource: Resources.SPEEDUP, amount: 600 * 5 },
             ]
           ]
         ]
@@ -2018,7 +2024,7 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 50 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 100 },
               { resource: Resources.GOLDEN_SCROLL, amount: 20 },
-              { resource: Resources.SPEEDUP, amount: 60*20 },
+              { resource: Resources.SPEEDUP, amount: 60 * 20 },
             ]
           ],
           [
@@ -2027,7 +2033,7 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 30 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 80 },
               { resource: Resources.GOLDEN_SCROLL, amount: 15 },
-              { resource: Resources.SPEEDUP, amount: 60*15 },
+              { resource: Resources.SPEEDUP, amount: 60 * 15 },
             ]
           ],
           [
@@ -2036,7 +2042,7 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 20 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 60 },
               { resource: Resources.GOLDEN_SCROLL, amount: 10 },
-              { resource: Resources.SPEEDUP, amount: 60*10 },
+              { resource: Resources.SPEEDUP, amount: 60 * 10 },
             ]
           ],
           [
@@ -2045,7 +2051,7 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 40 },
               { resource: Resources.GOLDEN_SCROLL, amount: 5 },
-              { resource: Resources.SPEEDUP, amount: 60*5 },
+              { resource: Resources.SPEEDUP, amount: 60 * 5 },
             ]
           ],
           [
@@ -2054,7 +2060,7 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 30 },
               { resource: Resources.GOLDEN_SCROLL, amount: 3 },
-              { resource: Resources.SPEEDUP, amount: 60*5 },
+              { resource: Resources.SPEEDUP, amount: 60 * 5 },
             ]
           ],
           [
@@ -2063,9 +2069,9 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 3 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 20 },
               { resource: Resources.GOLDEN_SCROLL, amount: 2 },
-              { resource: Resources.SPEEDUP, amount: 60*2 },
+              { resource: Resources.SPEEDUP, amount: 60 * 2 },
             ]
-            ],
+          ],
           [
             "51-100",
             [
@@ -2110,40 +2116,40 @@ export const events: Event[] = [
         headers: ["Task", "Reward"],
         rows: [
           [
-            "Use 200min of Speedup items", 
+            "Use 200min of Speedup items",
             [
               { resource: Resources.SPIRIT_SHARD_RARE, amount: 3 },
-              { resource: Resources.SPEEDUP, amount: 5*5+5*5+5*5+5*5 },
+              { resource: Resources.SPEEDUP, amount: 5 * 5 + 5 * 5 + 5 * 5 + 5 * 5 },
             ]
           ],
           [
-            "Use 1,000min of Speedup items", 
+            "Use 1,000min of Speedup items",
             [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
               { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60+60+60+60 },
+              { resource: Resources.SPEEDUP, amount: 60 + 60 + 60 + 60 },
             ]
           ],
           [
-            "Use 3,000min of Speedup items", 
+            "Use 3,000min of Speedup items",
             [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 2 },
-              { resource: Resources.SPEEDUP, amount: 2*60+2*60+2*60+2*60 },
+              { resource: Resources.SPEEDUP, amount: 2 * 60 + 2 * 60 + 2 * 60 + 2 * 60 },
             ]
           ],
           [
-            "Use 6,000min of Speedup items", 
+            "Use 6,000min of Speedup items",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 3*60+3*60+3*60+3*60 },
+              { resource: Resources.SPEEDUP, amount: 3 * 60 + 3 * 60 + 3 * 60 + 3 * 60 },
             ]
           ],
           [
-            "Use 12,000min of Speedup items", 
+            "Use 12,000min of Speedup items",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 3 },
-              { resource: Resources.SPEEDUP, amount: 5*60+5*60+5*60+5*60 },
+              { resource: Resources.SPEEDUP, amount: 5 * 60 + 5 * 60 + 5 * 60 + 5 * 60 },
             ]
           ]
         ]
@@ -2155,13 +2161,13 @@ export const events: Event[] = [
         headers: ["Rank", "Reward"],
         rows: [
           [
-            "1", 
+            "1",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 30 },
               { resource: Resources.GEM, amount: 1000 },
-              { resource: Resources.SPEEDUP, amount: 60*20 },
-              { resource: Resources.FOOD, amount: 150000*10 },
-              { resource: Resources.WOOD, amount: 150000*10 },
+              { resource: Resources.SPEEDUP, amount: 60 * 20 },
+              { resource: Resources.FOOD, amount: 150000 * 10 },
+              { resource: Resources.WOOD, amount: 150000 * 10 },
             ]
           ],
           [
@@ -2169,9 +2175,9 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 20 },
               { resource: Resources.GEM, amount: 500 },
-              { resource: Resources.SPEEDUP, amount: 60*15 },
-              { resource: Resources.FOOD, amount: 150000*8 },
-              { resource: Resources.WOOD, amount: 150000*8 },
+              { resource: Resources.SPEEDUP, amount: 60 * 15 },
+              { resource: Resources.FOOD, amount: 150000 * 8 },
+              { resource: Resources.WOOD, amount: 150000 * 8 },
             ]
           ],
           [
@@ -2179,9 +2185,9 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10 },
               { resource: Resources.GEM, amount: 300 },
-              { resource: Resources.SPEEDUP, amount: 60*10 },
-              { resource: Resources.FOOD, amount: 150000*6 },
-              { resource: Resources.WOOD, amount: 150000*6 },
+              { resource: Resources.SPEEDUP, amount: 60 * 10 },
+              { resource: Resources.FOOD, amount: 150000 * 6 },
+              { resource: Resources.WOOD, amount: 150000 * 6 },
             ]
           ],
           [
@@ -2189,9 +2195,9 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5 },
               { resource: Resources.GEM, amount: 200 },
-              { resource: Resources.SPEEDUP, amount: 60*5 },
-              { resource: Resources.FOOD, amount: 150000*4 },
-              { resource: Resources.WOOD, amount: 150000*4 },
+              { resource: Resources.SPEEDUP, amount: 60 * 5 },
+              { resource: Resources.FOOD, amount: 150000 * 4 },
+              { resource: Resources.WOOD, amount: 150000 * 4 },
             ]
           ],
           [
@@ -2199,9 +2205,9 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 3 },
               { resource: Resources.GEM, amount: 100 },
-              { resource: Resources.SPEEDUP, amount: 60*3 },
-              { resource: Resources.FOOD, amount: 150000*3 },
-              { resource: Resources.WOOD, amount: 150000*3 },
+              { resource: Resources.SPEEDUP, amount: 60 * 3 },
+              { resource: Resources.FOOD, amount: 150000 * 3 },
+              { resource: Resources.WOOD, amount: 150000 * 3 },
             ]
           ],
           [
@@ -2209,9 +2215,9 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2 },
               { resource: Resources.GEM, amount: 50 },
-              { resource: Resources.SPEEDUP, amount: 60*2 },
-              { resource: Resources.FOOD, amount: 150000*2 },
-              { resource: Resources.WOOD, amount: 150000*2 },
+              { resource: Resources.SPEEDUP, amount: 60 * 2 },
+              { resource: Resources.FOOD, amount: 150000 * 2 },
+              { resource: Resources.WOOD, amount: 150000 * 2 },
             ]
           ],
           [
@@ -2296,13 +2302,13 @@ export const events: Event[] = [
         headers: ["Rank", "Reward"],
         rows: [
           [
-            "1", 
+            "1",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 30 },
               { resource: Resources.GEM, amount: 1000 },
-              { resource: Resources.SPEEDUP, amount: 60*20 },
-              { resource: Resources.FOOD, amount: 150000*10 },
-              { resource: Resources.WOOD, amount: 150000*10 },
+              { resource: Resources.SPEEDUP, amount: 60 * 20 },
+              { resource: Resources.FOOD, amount: 150000 * 10 },
+              { resource: Resources.WOOD, amount: 150000 * 10 },
             ]
           ],
           [
@@ -2310,9 +2316,9 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 20 },
               { resource: Resources.GEM, amount: 500 },
-              { resource: Resources.SPEEDUP, amount: 60*15 },
-              { resource: Resources.FOOD, amount: 150000*8 },
-              { resource: Resources.WOOD, amount: 150000*8 },
+              { resource: Resources.SPEEDUP, amount: 60 * 15 },
+              { resource: Resources.FOOD, amount: 150000 * 8 },
+              { resource: Resources.WOOD, amount: 150000 * 8 },
             ]
           ],
           [
@@ -2320,9 +2326,9 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10 },
               { resource: Resources.GEM, amount: 300 },
-              { resource: Resources.SPEEDUP, amount: 60*10 },
-              { resource: Resources.FOOD, amount: 150000*6 },
-              { resource: Resources.WOOD, amount: 150000*6 },
+              { resource: Resources.SPEEDUP, amount: 60 * 10 },
+              { resource: Resources.FOOD, amount: 150000 * 6 },
+              { resource: Resources.WOOD, amount: 150000 * 6 },
             ]
           ],
           [
@@ -2330,9 +2336,9 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5 },
               { resource: Resources.GEM, amount: 200 },
-              { resource: Resources.SPEEDUP, amount: 60*5 },
-              { resource: Resources.FOOD, amount: 150000*4 },
-              { resource: Resources.WOOD, amount: 150000*4 },
+              { resource: Resources.SPEEDUP, amount: 60 * 5 },
+              { resource: Resources.FOOD, amount: 150000 * 4 },
+              { resource: Resources.WOOD, amount: 150000 * 4 },
             ]
           ],
           [
@@ -2340,9 +2346,9 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 3 },
               { resource: Resources.GEM, amount: 100 },
-              { resource: Resources.SPEEDUP, amount: 60*3 },
-              { resource: Resources.FOOD, amount: 150000*3 },
-              { resource: Resources.WOOD, amount: 150000*3 },
+              { resource: Resources.SPEEDUP, amount: 60 * 3 },
+              { resource: Resources.FOOD, amount: 150000 * 3 },
+              { resource: Resources.WOOD, amount: 150000 * 3 },
             ]
           ],
           [
@@ -2350,9 +2356,9 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2 },
               { resource: Resources.GEM, amount: 50 },
-              { resource: Resources.SPEEDUP, amount: 60*2 },
-              { resource: Resources.FOOD, amount: 150000*2 },
-              { resource: Resources.WOOD, amount: 150000*2 },
+              { resource: Resources.SPEEDUP, amount: 60 * 2 },
+              { resource: Resources.FOOD, amount: 150000 * 2 },
+              { resource: Resources.WOOD, amount: 150000 * 2 },
             ]
           ],
           [
@@ -2427,18 +2433,18 @@ export const events: Event[] = [
             "Complete 10 Expedition missions",
             [
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.FOOD, amount: 3*10000 },
-              { resource: Resources.WOOD, amount: 3*10000 },
-              { resource: Resources.STONE, amount: 3*10000 },
+              { resource: Resources.FOOD, amount: 3 * 10000 },
+              { resource: Resources.WOOD, amount: 3 * 10000 },
+              { resource: Resources.STONE, amount: 3 * 10000 },
             ]
           ],
           [
-            "Complete 20 Expedition missions", 
+            "Complete 20 Expedition missions",
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.FOOD, amount: 5*10000 },
-              { resource: Resources.WOOD, amount: 5*10000 },
-              { resource: Resources.STONE, amount: 5*10000 },
+              { resource: Resources.FOOD, amount: 5 * 10000 },
+              { resource: Resources.WOOD, amount: 5 * 10000 },
+              { resource: Resources.STONE, amount: 5 * 10000 },
               { resource: Resources.POWER_BOOST_RARE, amount: 1 },
             ]
           ]
@@ -2473,7 +2479,7 @@ export const events: Event[] = [
           ["Log in for 2 Days", [{ resource: Resources.GOLDEN_SCROLL, amount: 5 }]],
           ["Log in for 3 Days", [{ resource: Resources.SACRED_FRUIT, amount: 10 }]],
           ["Log in for 4 Days", [{ resource: Resources.MYSTIC_ORB, amount: 5 }]],
-          ["Log in for 5 Days", [{ resource: Resources.SPEEDUP, amount: 60*5 }]],
+          ["Log in for 5 Days", [{ resource: Resources.SPEEDUP, amount: 60 * 5 }]],
           ["Log in for 6 Days", [{ resource: Resources.GEM, amount: 200 }]],
           ["Log in for 7 Days", [{ resource: Resources.FRAME("Moment of Memories"), amount: 1 }]],
         ]
@@ -2482,10 +2488,10 @@ export const events: Event[] = [
         title: "Firm Faith",
         headers: ["Task", "Reward"],
         rows: [
-          ["Defeat Shattered Skulls (Daily Cap: 5)", [{ resource: Resources.SPECIAL_SUPPLY_BOX, amount:1}]],
-          ["Harvest Resources (Daily Cap: 5)", [{ resource: Resources.SPECIAL_SUPPLY_BOX, amount:1}]],
-          ["Use 480m Speedup (Repeatable)", [{ resource: Resources.SPECIAL_SUPPLY_BOX, amount:1}]],
-          ["Use 50 Gems (Repeatable)", [{ resource: Resources.SPECIAL_SUPPLY_BOX, amount:1}]],
+          ["Defeat Shattered Skulls (Daily Cap: 5)", [{ resource: Resources.SPECIAL_SUPPLY_BOX, amount: 1 }]],
+          ["Harvest Resources (Daily Cap: 5)", [{ resource: Resources.SPECIAL_SUPPLY_BOX, amount: 1 }]],
+          ["Use 480m Speedup (Repeatable)", [{ resource: Resources.SPECIAL_SUPPLY_BOX, amount: 1 }]],
+          ["Use 50 Gems (Repeatable)", [{ resource: Resources.SPECIAL_SUPPLY_BOX, amount: 1 }]],
         ]
       },
       {
@@ -2496,14 +2502,14 @@ export const events: Event[] = [
             "Collect 500 Top-Up Points (by purchasing bundles)",
             [
               { resource: Resources.GEM, amount: 500 },
-              { resource: Resources.SPEEDUP, amount: 60*4 },
+              { resource: Resources.SPEEDUP, amount: 60 * 4 },
             ]
           ],
           [
             "Collect 1,500 Top-Up Points (by purchasing bundles)",
             [
               { resource: Resources.GEM, amount: 1500 },
-              { resource: Resources.SPEEDUP, amount: 60*5+60*5+60*5 },
+              { resource: Resources.SPEEDUP, amount: 60 * 5 + 60 * 5 + 60 * 5 },
             ]
           ],
           [
@@ -2511,7 +2517,7 @@ export const events: Event[] = [
             [
               { resource: Resources.GEM, amount: 2000 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2 },
-              { resource: Resources.SPEEDUP, amount: 60*5 },
+              { resource: Resources.SPEEDUP, amount: 60 * 5 },
             ]
           ],
           [
@@ -2519,7 +2525,7 @@ export const events: Event[] = [
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5 },
               { resource: Resources.SACRED_FRUIT, amount: 50 },
-              { resource: Resources.SPEEDUP, amount: 60*20 },
+              { resource: Resources.SPEEDUP, amount: 60 * 20 },
             ]
           ],
           [
@@ -2528,14 +2534,14 @@ export const events: Event[] = [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10 },
               { resource: Resources.PURIFIED_ESSENCE, amount: 30 },
               { resource: Resources.VERDANT_SPLINTER, amount: 2000 },
-              { resource: Resources.SPEEDUP, amount: 60*20 },
+              { resource: Resources.SPEEDUP, amount: 60 * 20 },
             ]
           ],
           [
             "Collect 20,000 Top-Up Points (by purchasing bundles)",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 20 },
-              { resource: Resources.SPEEDUP, amount: 60*60+60*20+60*20 },
+              { resource: Resources.SPEEDUP, amount: 60 * 60 + 60 * 20 + 60 * 20 },
             ]
           ],
           [
@@ -2544,7 +2550,7 @@ export const events: Event[] = [
               { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 100 },
               { resource: Resources.PURIFIED_ESSENCE, amount: 100 },
               { resource: Resources.VERDANT_SPLINTER, amount: 10000 },
-              { resource: Resources.SPEEDUP, amount: 60*100 },
+              { resource: Resources.SPEEDUP, amount: 60 * 100 },
             ]
           ],
         ]
@@ -2554,44 +2560,293 @@ export const events: Event[] = [
         description: "This has a 5x3 board layout.",
         headers: ["Board Position", "Task", "Reward"],
         rows: [
-          ["1-1", "Login in for 1 Day", "1x Lucky Dice, 1x Epic Spirit Shard"],
-          ["1-2", "Complete 80 Expditions", "1x Lucky Dice, 1x Epic Spirit Badge, 25,000 EXP"],
-          ["1-3", "Recruit 30,000 Benders", "2x Lucky Dice, 1x Epic Spirit Shard, 50,000 EXP"],
-          ["2-1", "Defeat 80 Shattered Skulls", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
-          ["2-2", "Increase Power by 100,000*", "1x Lucky Dice, 2x Epic Spirit Shard, 50,000 EXP"],
-          ["2-3", "Purchase 80 items at the Trading Post", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
-          ["3-1", "Use 8,0000min of Speedup", "2x Lucky Dice, 1x Epic Spirit Shard, 50,000 EXP"],
-          ["3-2", "Use 100 Scrolls", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
-          ["3-3", "Gather 3,000,000 Resources from the Field", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
-          ["4-1", "Destroy 10 Shattered Skull Fortresses", "2x Lucky Dice, 1x Epic Spirit Shard, 50,000 EXP"],
-          ["4-2", "Use 5,000 Gems", "2x Lucky Dice, 1x Epic Spirit Shard, 50,000 EXP"],
-          ["4-3", "Complete 30 Companion surveys", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
-          ["5-1", "Donate 200 to allinace research", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
-          ["5-2", "Win 25 arena fights", "1x Lucky Dice, 1x Epic Spirit Shard, 25,000 EXP"],
-          ["5-3", "Collect 500 Top-Up Points (by purchasing bundles)", "2x Lucky Dice, 1x Epic Spirit Shard, 50,000 EXP"],
-          ["1-4", "Complete 1-1, 1-2 and 1-3", "4x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
-          ["2-4", "Complete 2-1, 2-2 and 2-3", "4x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
-          ["3-4", "Complete 3-1, 3-2 and 3-3", "4x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
-          ["4-4", "Complete 4-1, 4-2 and 4-3", "4x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
-          ["5-4", "Complete 5-1, 5-2 and 5-3", "4x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
-          ["6-1", "Complete 1-1, 2-1, 3-1, 4-1, and 5-1", "5x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
-          ["6-2", "Complete 1-2, 2-2, 3-2, 4-2, and 5-2", "5x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
-          ["6-3", "Complete 1-3, 2-3, 3-3, 4-3, and 5-3", "5x Lucky Dice, 4x Epic Spirit Shard, Lv.5 Custom Resource Chest"],
-          ["None", "Complete all missions", "20x Lucky Dice, 10x Legendary Spirit Shard, 10x Legendary Spirit Badge, 10x Sacred Fruit, 10x Sacred Dew"],
+          [
+            "1-1",
+            "Login in for 1 Day",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 }
+            ]
+          ],
+          [
+            "1-2",
+            "Complete 80 Expditions",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 5 }
+            ]
+          ],
+          [
+            "1-3",
+            "Recruit 30,000 Benders",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 2 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 10 }
+            ]
+          ],
+          [
+            "2-1",
+            "Defeat 80 Shattered Skulls",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 5 }
+            ]
+          ],
+          [
+            "2-2",
+            "Increase Power by 100,000*",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 10 }
+            ]
+          ],
+          [
+            "2-3",
+            "Purchase 80 items at the Trading Post",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 5 }
+            ]
+          ],
+          [
+            "3-1",
+            "Use 8,0000min of Speedup",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 2 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 10 }
+            ]
+          ],
+          [
+            "3-2",
+            "Use 100 Scrolls",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 5 }
+            ]
+          ],
+          [
+            "3-3",
+            "Gather 3,000,000 Resources from the Field",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 5 }
+            ]
+          ],
+          [
+            "4-1",
+            "Destroy 10 Shattered Skull Fortresses",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 2 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 10 }
+            ]
+          ],
+          [
+            "4-2",
+            "Use 5,000 Gems",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 2 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 10 }
+            ]
+          ],
+          [
+            "4-3",
+            "Complete 30 Companion surveys",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 5 }
+            ]
+          ],
+          [
+            "5-1",
+            "Donate 200 to allinace research",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 5 }
+            ]
+          ],
+          [
+            "5-2",
+            "Win 25 arena fights",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 5 }
+            ]
+          ],
+          [
+            "5-3",
+            "Collect 500 Top-Up Points (by purchasing bundles)",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 2 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 10 }
+            ]
+          ],
+          [
+            "1-4",
+            "Complete 1-1, 1-2 and 1-3",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 4 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 4 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV5, amount: 1 }
+            ]
+          ],
+          [
+            "2-4",
+            "Complete 2-1, 2-2 and 2-3",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 4 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 4 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV5, amount: 1 }
+            ]
+          ],
+          [
+            "3-4",
+            "Complete 3-1, 3-2 and 3-3",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 4 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 4 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV5, amount: 1 }
+            ]
+          ],
+          [
+            "4-4",
+            "Complete 4-1, 4-2 and 4-3",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 4 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 4 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV5, amount: 1 }
+            ]
+          ],
+          [
+            "5-4",
+            "Complete 5-1, 5-2 and 5-3",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 4 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 4 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV5, amount: 1 }
+            ]
+          ],
+          [
+            "6-1",
+            "Complete 1-1, 2-1, 3-1, 4-1, and 5-1",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 5 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 4 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV5, amount: 1 }
+            ]
+          ],
+          [
+            "6-2",
+            "Complete 1-2, 2-2, 3-2, 4-2, and 5-2",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 5 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 4 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV5, amount: 1 }
+            ]
+          ],
+          [
+            "6-3",
+            "Complete 1-3, 2-3, 3-3, 4-3, and 5-3",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 5 },
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 4 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV5, amount: 1 }
+            ]
+          ],
+          [
+            "None",
+            "Complete all missions",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 20 },
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 10 },
+              { resource: Resources.SACRED_FRUIT, amount: 10 },
+              { resource: Resources.SACRED_DEW, amount: 10 }
+            ]
+          ],
         ]
       },
       {
         title: "Secret Tunnel",
         headers: ["Laps", "Reward"],
         rows: [
-          ["10", "2x Legendary Spirit Shard, 2x Legendary Spirit Badge, 20x Gear Material Custom Chest, 10x Companion Material Custom Chest"],
-          ["30", "3x Legendary Spirit Shard, 3x Legendary Spirit Badge, 30x Gear Material Custom Chest, 20x Companion Material Custom Chest"],
-          ["60", "5x Legendary Spirit Shard, 5x Legendary Spirit Badge, 40x Gear Material Custom Chest, 30x Companion Material Custom Chest"],
-          ["100", "8x Legendary Spirit Shard, 8x Legendary Spirit Badge, 50x Gear Material Custom Chest, 40x Companion Material Custom Chest"],
-          ["200", "12x Legendary Spirit Shard, 12x Legendary Spirit Badge, 70x Gear Material Custom Chest, 60x Companion Material Custom Chest"],
-          ["400", "20x Legendary Spirit Shard, 20x Legendary Spirit Badge, 90x Gear Material Custom Chest, 100x Companion Material Custom Chest"],
-          ["700", "30x Legendary Spirit Shard, 30x Legendary Spirit Badge, 150x Gear Material Custom Chest, 200x Companion Material Custom Chest"],
-          ["1000", '"1st Anniversary: Twilight" Town Hall Skin'],
+          [
+            "10",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 2 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 20 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 10 }
+            ]
+          ],
+          [
+            "30",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 3 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 3 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 30 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 20 }
+            ]
+          ],
+          [
+            "60",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 5 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 40 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 30 }
+            ]
+          ],
+          [
+            "100",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 8 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 8 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 50 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 40 }
+            ]
+          ],
+          [
+            "200",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 12 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 12 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 70 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 60 }
+            ]
+          ],
+          [
+            "400",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 20 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 20 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 90 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 100 }
+            ]
+          ],
+          [
+            "700",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 30 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 30 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 150 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 200 }
+            ]
+          ],
+          ["1000", [{ resource: Resources.TOWNHALL("1st Anniversary: Twilight"), amount: 1 }]]
         ]
       },
       {
@@ -2611,9 +2866,9 @@ export const events: Event[] = [
           ["Successfully raid 3 other airship", "20 S-coins"],
 
           // Alliance
-          ["Help 5 alliance members", "10 S-coin"],
-          ["Help 10 alliance members", "20 S-coin"],
-          ["Help 20 alliance members", "40 S-coin"],
+          ["Help 5 alliance members", "10 S-coins"],
+          ["Help 10 alliance members", "20 S-coins"],
+          ["Help 20 alliance members", "40 S-coins"],
           ["Donate 5 times to alliance research", "10 S-coins"],
           ["Donate 10 times to alliance research", "20 S-coins"],
           ["Donate 20 times to alliance research", "40 S-coins"],
@@ -2689,11 +2944,10 @@ export const events: Event[] = [
       },
       {
         title: "Harvest of Bonds I (Start: Day 6, Duration: 2 Days)",
-        description: "Tasks reset daily at 00:00 UTC.\nUnclaimed rewards expire.",
         headers: ["Task", "Reward"],
         rows: [
           [
-            "Destroy 5 Shattered Skulls' Fortress", 
+            "Destroy 5 Shattered Skulls' Fortress",
             [
               { resource: Resources.LUCKY_DICE, amount: 1 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
@@ -2707,7 +2961,7 @@ export const events: Event[] = [
               { resource: Resources.LUCKY_DICE, amount: 1 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 3 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 3 },
-              { resource: Resources.SPEEDUP, amount: 60*3 }
+              { resource: Resources.SPEEDUP, amount: 60 * 3 }
             ]
           ],
           [
@@ -2716,7 +2970,7 @@ export const events: Event[] = [
               { resource: Resources.LUCKY_DICE, amount: 2 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 5 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 5 },
-              { resource: Resources.SPEEDUP, amount: 60*5 }
+              { resource: Resources.SPEEDUP, amount: 60 * 5 }
             ]
           ],
           [
@@ -2734,7 +2988,7 @@ export const events: Event[] = [
               { resource: Resources.LUCKY_DICE, amount: 1 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
               { resource: Resources.MYSTIC_ORB, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*3 }
+              { resource: Resources.SPEEDUP, amount: 60 * 3 }
             ]
           ],
           [
@@ -2743,14 +2997,13 @@ export const events: Event[] = [
               { resource: Resources.LUCKY_DICE, amount: 2 },
               { resource: Resources.GOLDEN_SCROLL, amount: 2 },
               { resource: Resources.MYSTIC_ORB, amount: 2 },
-              { resource: Resources.SPEEDUP, amount: 60*5 }
+              { resource: Resources.SPEEDUP, amount: 60 * 5 }
             ]
           ],
         ]
       },
       {
         title: "Harvest of Bonds II (Start: Day 8: Duration: 2 Days)",
-        description: "Tasks reset daily at 00:00 UTC.\nUnclaimed rewards expire.",
         headers: ["Task", "Reward"],
         rows: [
           [
@@ -2767,7 +3020,7 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 2 },
               { resource: Resources.GOLDEN_SCROLL, amount: 2 },
-              { resource: Resources.SPEEDUP, amount: 60*3 },
+              { resource: Resources.SPEEDUP, amount: 60 * 3 },
               { resource: Resources.CUSTOM_RESOURCE_CHEST_LV4, amount: 3 }
             ]
           ],
@@ -2785,7 +3038,7 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 2 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 10 },
-              { resource: Resources.SPEEDUP, amount: 60*3 },
+              { resource: Resources.SPEEDUP, amount: 60 * 3 },
               { resource: Resources.CUSTOM_RESOURCE_CHEST_LV4, amount: 3 }
             ]
           ],
@@ -2803,7 +3056,7 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 2 },
               { resource: Resources.MYSTIC_ORB, amount: 2 },
-              { resource: Resources.SPEEDUP, amount: 60*3 },
+              { resource: Resources.SPEEDUP, amount: 60 * 3 },
               { resource: Resources.CUSTOM_RESOURCE_CHEST_LV4, amount: 3 }
             ]
           ],
@@ -2815,36 +3068,138 @@ export const events: Event[] = [
         title: "1st Anniversary Antiques (Lotus Shop)",
         headers: ["Lotus", "Item"],
         rows: [
-          ["10", "1x Legendary Spirit Shard: Cai (Cap: 100)"],
-          ["10", "1x Legendary Spirit Shard: Melon Lord (Cap: 20)"],
-          ["12", "1,500,000 Food/Wood/Stone (Cap: 50)"],
-          ["12", "750,000 Food/Wood/Stone (Cap: 50)"],
-          ["20", "1x Legendary Spirit Badge (Cap: 20)"],
-          ["20", "1x Legendary Spirit Shard (Cap: 20)"],
-          ["20", "10x Purified Essence (Cap: 50)"],
-          ["20", "1000x Verdant Splinter (Cap: 50)"],
-          ["34", "1,440m Speedup (Cap: 50)"],
-          ["150", "1x Epic Gear Custom Chest (Cap: 3)"],
-          ["200", "1x Epic Deco (Cap: 1 - 4 decos)"],
-          ["500", "1x Legendary Gear Custom Chest (Cap: 1)"],
-          ["2,000", "1x Frame Skin (Cap: 1 - 7 skins)"],
-          ["2,000", "1x Town Hall Skin (Cap: 1)"],
+          ["10", [{ resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 }]],
+          ["12", [{ resource: Resources.FOOD, amount: 1500000 }]],
+          ["12", [{ resource: Resources.WOOD, amount: 1500000 }]],
+          ["12", [{ resource: Resources.STONE, amount: 1500000 }]],
+          ["12", [{ resource: Resources.GOLD, amount: 750000 }]],
+          ["20", [{ resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 }]],
+          ["20", [{ resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 }]],
+          ["20", [{ resource: Resources.PURIFIED_ESSENCE, amount: 10 }]],
+          ["20", [{ resource: Resources.VERDANT_SPLINTER, amount: 1000 }]],
+          ["34", [{ resource: Resources.SPEEDUP, amount: 1440 }]],
+          ["150", [{ resource: Resources.GEAR_CUSTOM_CHEST_EPIC, amount: 1 }]],
+          ["200", [{ resource: Resources.EPIC_DECO, amount: 1 }]],
+          ["500", [{ resource: Resources.GEAR_CUSTOM_CHEST_LEGENDARY, amount: 1 }]],
+          ["2,000", [{ resource: Resources.FRAME(), amount: 1 }]],
+          ["20,000", [{ resource: Resources.TOWNHALL(), amount: 1 }]],
         ]
       },
       {
         title: "Secret Tunnel (Overall Ranking)",
         headers: ["Rank", "Reward"],
         rows: [
-          ["1", "Chibi Aang Portrait, Chibi Katara Portrait, 100x Legendary Spirit Shard, 100x Legendary Spirit Badge, 6,000m Speedup, 100x Gear Material Chest, 100x Companion Material Custom Chest"],
-          ["2", "Chibi Aang Portrait, Chibi Katara Portrait, 80x Legendary Spirit Shard, 80x Legendary Spirit Badge, 4,800m Speedup, 80x Gear Material Chest, 80x Companion Material Custom Chest"],
-          ["3", "Chibi Aang Portrait, Chibi Katara Portrait, 60x Legendary Spirit Shard, 60x Legendary Spirit Badge, 3,600m Speedup, 60x Gear Material Chest, 60x Companion Material Custom Chest"],
-          ["4-5", "Chibi Aang Portrait, Chibi Katara Portrait, 50x Legendary Spirit Shard, 50x Legendary Spirit Badge, 3,000m Speedup, 50x Gear Material Chest, 50x Companion Material Custom Chest"],
-          ["6-10", "Chibi Aang Portrait, Chibi Katara Portrait, 40x Legendary Spirit Shard, 40x Legendary Spirit Badge, 2,400m Speedup, 40x Gear Material Chest, 40x Companion Material Custom Chest"],
-          ["11-20", "30x Legendary Spirit Shard, 30x Legendary Spirit Badge, 1,800m Speedup, 30x Gear Material Chest, 30x Companion Material Custom Chest"],
-          ["21-30", "20x Legendary Spirit Shard, 20x Legendary Spirit Badge, 1,200m Speedup, 20x Gear Material Chest, 20x Companion Material Custom Chest"],
-          ["31-50", "10x Legendary Spirit Shard, 10x Legendary Spirit Badge, 600m Speedup, 10x Gear Material Chest, 10x Companion Material Custom Chest"],
-          ["51-100", "5x Legendary Spirit Shard, 5x Legendary Spirit Badge, 300m Speedup, 5x Gear Material Chest, 5x Companion Material Custom Chest"],
-          ["101-200", "2x Legendary Spirit Shard, 2x Legendary Spirit Badge, 120m Speedup, 2x Gear Material Chest, 2x Companion Material Custom Chest"],
+          [
+            "1",
+            [
+              { resource: Resources.PORTRAIT("Chibi Aang"), amount: 1 },
+              { resource: Resources.PORTRAIT("Chibi Katara"), amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 100 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 100 },
+              { resource: Resources.SPEEDUP, amount: 60 * 100 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 100 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 100 },
+            ]
+
+          ],
+          [
+            "2",
+            [
+              { resource: Resources.PORTRAIT("Chibi Aang"), amount: 1 },
+              { resource: Resources.PORTRAIT("Chibi Katara"), amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 80 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 80 },
+              { resource: Resources.SPEEDUP, amount: 60 * 80 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 80 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 80 },
+            ]
+          ],
+          [
+            "3",
+            [
+              { resource: Resources.PORTRAIT("Chibi Aang"), amount: 1 },
+              { resource: Resources.PORTRAIT("Chibi Katara"), amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 60 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 60 },
+              { resource: Resources.SPEEDUP, amount: 60 * 60 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 60 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 60 },
+            ]
+          ],
+          [
+            "4-5",
+            [
+              { resource: Resources.PORTRAIT("Chibi Aang"), amount: 1 },
+              { resource: Resources.PORTRAIT("Chibi Katara"), amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 50 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 50 },
+              { resource: Resources.SPEEDUP, amount: 60 * 50 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 50 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 50 },
+            ]
+          ],
+          [
+            "6-10",
+            [
+              { resource: Resources.PORTRAIT("Chibi Aang"), amount: 1 },
+              { resource: Resources.PORTRAIT("Chibi Katara"), amount: 1 },
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 40 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 40 },
+              { resource: Resources.SPEEDUP, amount: 60 * 40 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 40 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 40 },
+            ]
+          ],
+          [
+            "11-20",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 30 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 30 },
+              { resource: Resources.SPEEDUP, amount: 60 * 30 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 30 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 30 },
+            ]
+          ],
+          [
+            "21-30",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 20 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 20 },
+              { resource: Resources.SPEEDUP, amount: 60 * 20 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 20 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 20 },
+            ]
+          ],
+          [
+            "31-50",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 10 },
+              { resource: Resources.SPEEDUP, amount: 60 * 10 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 10 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 10 },
+            ]
+          ],
+          [
+            "51-100",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 5 },
+              { resource: Resources.SPEEDUP, amount: 60 * 5 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 5 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 5 },
+            ]
+          ],
+          [
+            "101-200",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2 },
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 2 },
+              { resource: Resources.SPEEDUP, amount: 60 * 2 },
+              { resource: Resources.GEAR_MATERIAL_CUSTOM_CHEST, amount: 2 },
+              { resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST, amount: 2 },
+            ]
+          ]
         ]
       },
       {
@@ -2852,13 +3207,76 @@ export const events: Event[] = [
         description: "Rewards reset daily at 00:00 UTC.\nUnclaimed rewards expire.",
         headers: ["S-Coins", "Reward"],
         rows: [
-          ["20", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 5,000 EXP, 1x Lv.3 Custom Resource Chest"],
-          ["50", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 10,000 EXP, 4x Lv.3 Custom Resource Chest"],
-          ["100", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 20,000 EXP, 8x Lv.3 Custom Resource Chest"],
-          ["170", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 40,000 EXP, 16x Lv.3 Custom Resource Chest"],
-          ["250", "1x Lucky Dice, 1x Golden Scroll, 1x Mystic Ore, 60,000 EXP, 24x Lv.3 Custom Resource Chest"],
-          ["360", "2x Lucky Dice, 2x Golden Scroll, 2x Mystic Ore, 80,000 EXP, 32x Lv.3 Custom Resource Chest"],
-          ["500", "3x Lucky Dice, 3x Golden Scroll, 3x Mystic Ore, 100,000 EXP, 40x Lv.3 Custom Resource Chest"],
+          [
+            "20",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.MYSTIC_ORB, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV3, amount: 1 },
+            ]
+          ],
+          [
+            "50",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.MYSTIC_ORB, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 2 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV3, amount: 4 },
+            ]
+          ],
+          [
+            "100",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.MYSTIC_ORB, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 4 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV3, amount: 8 },
+            ]
+          ],
+          [
+            "170",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.MYSTIC_ORB, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 8 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV3, amount: 16 },
+            ]
+          ],
+          [
+            "250",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 1 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.MYSTIC_ORB, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 12 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV3, amount: 24 },
+            ]
+          ],
+          [
+            "360",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 2 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 2 },
+              { resource: Resources.MYSTIC_ORB, amount: 2 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 16 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV3, amount: 32 },
+            ]
+          ],
+          [
+            "500",
+            [
+              { resource: Resources.LUCKY_DICE, amount: 3 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 3 },
+              { resource: Resources.MYSTIC_ORB, amount: 3 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 20 },
+              { resource: Resources.CUSTOM_RESOURCE_CHEST_LV3, amount: 40 },
+            ]
+          ]
         ]
       },
       {
@@ -2870,9 +3288,9 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 10 },
               { resource: Resources.GEM, amount: 300 },
-              { resource: Resources.FOOD, amount: 150000*20 },
-              { resource: Resources.WOOD, amount: 150000*20 },
-              { resource: Resources.STONE, amount: 150000*20 },
+              { resource: Resources.FOOD, amount: 150000 * 20 },
+              { resource: Resources.WOOD, amount: 150000 * 20 },
+              { resource: Resources.STONE, amount: 150000 * 20 },
             ]
           ],
           [
@@ -2880,9 +3298,9 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 8 },
               { resource: Resources.GEM, amount: 250 },
-              { resource: Resources.FOOD, amount: 150000*15 },
-              { resource: Resources.WOOD, amount: 150000*15 },
-              { resource: Resources.STONE, amount: 150000*15 },
+              { resource: Resources.FOOD, amount: 150000 * 15 },
+              { resource: Resources.WOOD, amount: 150000 * 15 },
+              { resource: Resources.STONE, amount: 150000 * 15 },
             ]
           ],
           [
@@ -2890,9 +3308,9 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 6 },
               { resource: Resources.GEM, amount: 200 },
-              { resource: Resources.FOOD, amount: 150000*12 },
-              { resource: Resources.WOOD, amount: 150000*12 },
-              { resource: Resources.STONE, amount: 150000*12 },
+              { resource: Resources.FOOD, amount: 150000 * 12 },
+              { resource: Resources.WOOD, amount: 150000 * 12 },
+              { resource: Resources.STONE, amount: 150000 * 12 },
             ]
           ],
           [
@@ -2900,9 +3318,9 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 4 },
               { resource: Resources.GEM, amount: 150 },
-              { resource: Resources.FOOD, amount: 150000*10 },
-              { resource: Resources.WOOD, amount: 150000*10 },
-              { resource: Resources.STONE, amount: 150000*10 },
+              { resource: Resources.FOOD, amount: 150000 * 10 },
+              { resource: Resources.WOOD, amount: 150000 * 10 },
+              { resource: Resources.STONE, amount: 150000 * 10 },
             ]
           ],
           [
@@ -2910,9 +3328,9 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 2 },
               { resource: Resources.GEM, amount: 100 },
-              { resource: Resources.FOOD, amount: 150000*8 },
-              { resource: Resources.WOOD, amount: 150000*8 },
-              { resource: Resources.STONE, amount: 150000*8 },
+              { resource: Resources.FOOD, amount: 150000 * 8 },
+              { resource: Resources.WOOD, amount: 150000 * 8 },
+              { resource: Resources.STONE, amount: 150000 * 8 },
             ]
           ],
           [
@@ -2920,9 +3338,9 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 1 },
               { resource: Resources.GEM, amount: 50 },
-              { resource: Resources.FOOD, amount: 150000*5 },
-              { resource: Resources.WOOD, amount: 150000*5 },
-              { resource: Resources.STONE, amount: 150000*5 },
+              { resource: Resources.FOOD, amount: 150000 * 5 },
+              { resource: Resources.WOOD, amount: 150000 * 5 },
+              { resource: Resources.STONE, amount: 150000 * 5 },
             ]
           ]
         ]
@@ -2936,9 +3354,9 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 10 },
               { resource: Resources.GEM, amount: 300 },
-              { resource: Resources.FOOD, amount: 150000*20 },
-              { resource: Resources.WOOD, amount: 150000*20 },
-              { resource: Resources.STONE, amount: 150000*20 },
+              { resource: Resources.FOOD, amount: 150000 * 20 },
+              { resource: Resources.WOOD, amount: 150000 * 20 },
+              { resource: Resources.STONE, amount: 150000 * 20 },
             ]
           ],
           [
@@ -2946,9 +3364,9 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 8 },
               { resource: Resources.GEM, amount: 250 },
-              { resource: Resources.FOOD, amount: 150000*15 },
-              { resource: Resources.WOOD, amount: 150000*15 },
-              { resource: Resources.STONE, amount: 150000*15 },
+              { resource: Resources.FOOD, amount: 150000 * 15 },
+              { resource: Resources.WOOD, amount: 150000 * 15 },
+              { resource: Resources.STONE, amount: 150000 * 15 },
             ]
           ],
           [
@@ -2956,9 +3374,9 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 6 },
               { resource: Resources.GEM, amount: 200 },
-              { resource: Resources.FOOD, amount: 150000*12 },
-              { resource: Resources.WOOD, amount: 150000*12 },
-              { resource: Resources.STONE, amount: 150000*12 },
+              { resource: Resources.FOOD, amount: 150000 * 12 },
+              { resource: Resources.WOOD, amount: 150000 * 12 },
+              { resource: Resources.STONE, amount: 150000 * 12 },
             ]
           ],
           [
@@ -2966,9 +3384,9 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 4 },
               { resource: Resources.GEM, amount: 150 },
-              { resource: Resources.FOOD, amount: 150000*10 },
-              { resource: Resources.WOOD, amount: 150000*10 },
-              { resource: Resources.STONE, amount: 150000*10 },
+              { resource: Resources.FOOD, amount: 150000 * 10 },
+              { resource: Resources.WOOD, amount: 150000 * 10 },
+              { resource: Resources.STONE, amount: 150000 * 10 },
             ]
           ],
           [
@@ -2976,9 +3394,9 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 2 },
               { resource: Resources.GEM, amount: 100 },
-              { resource: Resources.FOOD, amount: 150000*8 },
-              { resource: Resources.WOOD, amount: 150000*8 },
-              { resource: Resources.STONE, amount: 150000*8 },
+              { resource: Resources.FOOD, amount: 150000 * 8 },
+              { resource: Resources.WOOD, amount: 150000 * 8 },
+              { resource: Resources.STONE, amount: 150000 * 8 },
             ]
           ],
           [
@@ -2986,9 +3404,9 @@ export const events: Event[] = [
             [
               { resource: Resources.LUCKY_DICE, amount: 1 },
               { resource: Resources.GEM, amount: 50 },
-              { resource: Resources.FOOD, amount: 150000*5 },
-              { resource: Resources.WOOD, amount: 150000*5 },
-              { resource: Resources.STONE, amount: 150000*5 },
+              { resource: Resources.FOOD, amount: 150000 * 5 },
+              { resource: Resources.WOOD, amount: 150000 * 5 },
+              { resource: Resources.STONE, amount: 150000 * 5 },
             ]
           ]
         ]
@@ -2997,22 +3415,40 @@ export const events: Event[] = [
     disclaimer: "* Hero Power is excluded.",
     details: [
       { type: "p", content: "Harvest of Bonds I", space: true },
-      { type: "ul", items: [
-        "Per recruiting 1 bender (Tier-1): 25 Points",
-        "Per recruiting 1 bender (Tier-2): 50 Points",
-        "Per recruiting 1 bender (Tier-3): 75 Points",
-        "Per recruiting 1 bender (Tier-4): 100 Points",
-        "Per recruiting 1 bender (Tier-5): 150 Points",
-        "Per recruiting 1 bender (Tier-6): 350 Points"
-      ], space: true},
-      { type: "ul", items: [
-        "Destroy Shattered Skulls' Fortress Level 1: 10,000 Points",
-        "Destroy Shattered Skulls' Fortress Level 2: 12,000 Points",
-        "Destroy Shattered Skulls' Fortress Level 3: 14,000 Points",
-        "Destroy Shattered Skulls' Fortress Level 4: 16,000 Points",
-        "Destroy Shattered Skulls' Fortress Level 5: 18,000 Points",
-        "Destroy Shattered Skulls' Fortress Level 6: 20,000 Points",
-      ], space: true}
+      {
+        type: "ul", items: [
+          "Per recruiting 1 bender (Tier-1): 25 Points",
+          "Per recruiting 1 bender (Tier-2): 50 Points",
+          "Per recruiting 1 bender (Tier-3): 75 Points",
+          "Per recruiting 1 bender (Tier-4): 100 Points",
+          "Per recruiting 1 bender (Tier-5): 150 Points",
+          "Per recruiting 1 bender (Tier-6): 350 Points"
+        ], space: true
+      },
+      {
+        type: "ul", items: [
+          "Destroy Shattered Skulls' Fortress Level 1: 10,000 Points",
+          "Destroy Shattered Skulls' Fortress Level 2: 12,000 Points",
+          "Destroy Shattered Skulls' Fortress Level 3: 14,000 Points",
+          "Destroy Shattered Skulls' Fortress Level 4: 16,000 Points",
+          "Destroy Shattered Skulls' Fortress Level 5: 18,000 Points",
+          "Destroy Shattered Skulls' Fortress Level 6: 20,000 Points",
+        ], space: true
+      },
+      { type: "p", content: "Harvest of Bonds II", space: true },
+      {
+        type: "ul", items: [
+          "Defeat Shattered Skull Levels 1-5: 1,500 Points",
+          "Defeat Shattered Skull Levels 6-10: 1,800 Points",
+          "Defeat Shattered Skull Levels 11-15: 2,100 Points",
+          "Defeat Shattered Skull Levels 16-20: 2,400 Points",
+          "Defeat Shattered Skull Levels 21-25: 2,700 Points",
+          "Defeat Shattered Skull Levels 26-30: 3,000 Points",
+        ], space: true
+      },
+      { type: "p", content: "Donate to alliance research 1 time: 500 Points", space: true },
+      { type: "p", content: "Increase Power by 1: 20 (Hero Power Excluded)", space: true },
+      { type: "quotedate", author: "ANGames", date: "2026-04-11" }
     ],
     informations: [
       'This is a “mega” event that unlocks over time and features multiple smaller events running simultaneously.',
@@ -3182,7 +3618,7 @@ export const events: Event[] = [
     name: "Temple War",
     duration: 1,
     repeat: 14,
-    startDate: "2026-04-14",
+    startDate: "2026-03-31",
     description: "The event to capture the Temple of Corruption is approaching.",
     type: "TEMPLE_WAR",
     rewards: [
@@ -3193,11 +3629,11 @@ export const events: Event[] = [
         dividerAfterColumns: [1, 3, 4],
         rows: [
           [
-            "1", "10,000+", 
+            "1", "10,000+",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 },
               { resource: Resources.SPEEDUP, amount: 60 }
-            ], 
+            ],
             "→", "0+",
             [
               { resource: Resources.PURIFIED_ESSENCE, amount: 2 },
@@ -3208,7 +3644,7 @@ export const events: Event[] = [
             "2", "50,000+",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 }
             ],
             "→", "500+",
             [
@@ -3220,7 +3656,7 @@ export const events: Event[] = [
             "3", "200,000+",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2 },
-              { resource: Resources.SPEEDUP, amount: 60*3 }
+              { resource: Resources.SPEEDUP, amount: 60 * 3 }
             ],
             "→", "1,000+",
             [
@@ -3232,7 +3668,7 @@ export const events: Event[] = [
             "4", "500,000+",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 2 },
-              { resource: Resources.SPEEDUP, amount: 60*4 }
+              { resource: Resources.SPEEDUP, amount: 60 * 4 }
             ],
             "→", "1,500+",
             [
@@ -3244,7 +3680,7 @@ export const events: Event[] = [
             "5", "1,200,000+",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 3 },
-              { resource: Resources.SPEEDUP, amount: 60*5 }
+              { resource: Resources.SPEEDUP, amount: 60 * 5 }
             ],
             "→", "2,000+",
             [
@@ -3256,19 +3692,19 @@ export const events: Event[] = [
             "6", "2,500,000+",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 3 },
-              { resource: Resources.SPEEDUP, amount: 60*6 }
+              { resource: Resources.SPEEDUP, amount: 60 * 6 }
             ],
             "→", "3,000+",
             [
               { resource: Resources.PURIFIED_ESSENCE, amount: 15 },
               { resource: Resources.VERDANT_SPLINTER, amount: 15000 }
             ]
-           ],
+          ],
           [
             "7", "5,000,000+",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 4 },
-              { resource: Resources.SPEEDUP, amount: 60*7 }
+              { resource: Resources.SPEEDUP, amount: 60 * 7 }
             ],
             "→", "4,000+",
             [
@@ -3280,7 +3716,7 @@ export const events: Event[] = [
             "8", "10,000,000+",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 4 },
-              { resource: Resources.SPEEDUP, amount: 60*8 }
+              { resource: Resources.SPEEDUP, amount: 60 * 8 }
             ],
             "→", "5,000+",
             [
@@ -3292,7 +3728,7 @@ export const events: Event[] = [
             "9", "15,000,000+",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5 },
-              { resource: Resources.SPEEDUP, amount: 60*9 }
+              { resource: Resources.SPEEDUP, amount: 60 * 9 }
             ],
             "→", "7,000+",
             [
@@ -3304,7 +3740,7 @@ export const events: Event[] = [
             "10", "20,500,000+",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 5 },
-              { resource: Resources.SPEEDUP, amount: 60*10 }
+              { resource: Resources.SPEEDUP, amount: 60 * 10 }
             ],
             "→", "3,000+",
             [
@@ -3319,63 +3755,63 @@ export const events: Event[] = [
         headers: ["Rank", "Reward"],
         rows: [
           [
-            "1", 
+            "1",
             [
               { resource: Resources.GEM, amount: 5000 },
-              { resource: Resources.SPEEDUP, amount: 60*200 },
-              { resource: Resources.FOOD, amount: 1500000*20 },
-              { resource: Resources.WOOD, amount: 1500000*20 },
-              { resource: Resources.STONE, amount: 1500000*20 },
+              { resource: Resources.SPEEDUP, amount: 60 * 200 },
+              { resource: Resources.FOOD, amount: 1500000 * 20 },
+              { resource: Resources.WOOD, amount: 1500000 * 20 },
+              { resource: Resources.STONE, amount: 1500000 * 20 },
             ]
           ],
           [
-            "2", 
+            "2",
             [
               { resource: Resources.GEM, amount: 3000 },
-              { resource: Resources.SPEEDUP, amount: 60*150 },
-              { resource: Resources.FOOD, amount: 1500000*15 },
-              { resource: Resources.WOOD, amount: 1500000*15 },
-              { resource: Resources.STONE, amount: 1500000*15 },
+              { resource: Resources.SPEEDUP, amount: 60 * 150 },
+              { resource: Resources.FOOD, amount: 1500000 * 15 },
+              { resource: Resources.WOOD, amount: 1500000 * 15 },
+              { resource: Resources.STONE, amount: 1500000 * 15 },
             ]
           ],
           [
-            "3", 
+            "3",
             [
               { resource: Resources.GEM, amount: 2000 },
-              { resource: Resources.SPEEDUP, amount: 60*100 },
-              { resource: Resources.FOOD, amount: 1500000*10 },
-              { resource: Resources.WOOD, amount: 1500000*10 },
-              { resource: Resources.STONE, amount: 1500000*10 },
+              { resource: Resources.SPEEDUP, amount: 60 * 100 },
+              { resource: Resources.FOOD, amount: 1500000 * 10 },
+              { resource: Resources.WOOD, amount: 1500000 * 10 },
+              { resource: Resources.STONE, amount: 1500000 * 10 },
             ]
           ],
           [
             "4-10",
             [
               { resource: Resources.GEM, amount: 1000 },
-              { resource: Resources.SPEEDUP, amount: 60*80 },
-              { resource: Resources.FOOD, amount: 1500000*7 },
-              { resource: Resources.WOOD, amount: 1500000*7 },
-              { resource: Resources.STONE, amount: 1500000*7 },
+              { resource: Resources.SPEEDUP, amount: 60 * 80 },
+              { resource: Resources.FOOD, amount: 1500000 * 7 },
+              { resource: Resources.WOOD, amount: 1500000 * 7 },
+              { resource: Resources.STONE, amount: 1500000 * 7 },
             ]
           ],
           [
             "11-20",
             [
               { resource: Resources.GEM, amount: 500 },
-              { resource: Resources.SPEEDUP, amount: 60*60 },
-              { resource: Resources.FOOD, amount: 1500000*5 },
-              { resource: Resources.WOOD, amount: 1500000*5 },
-              { resource: Resources.STONE, amount: 1500000*5 },
+              { resource: Resources.SPEEDUP, amount: 60 * 60 },
+              { resource: Resources.FOOD, amount: 1500000 * 5 },
+              { resource: Resources.WOOD, amount: 1500000 * 5 },
+              { resource: Resources.STONE, amount: 1500000 * 5 },
             ]
           ],
           [
             "21-50",
             [
               { resource: Resources.GEM, amount: 300 },
-              { resource: Resources.SPEEDUP, amount: 60*40 },
-              { resource: Resources.FOOD, amount: 1500000*3 },
-              { resource: Resources.WOOD, amount: 1500000*3 },
-              { resource: Resources.STONE, amount: 1500000*3 },
+              { resource: Resources.SPEEDUP, amount: 60 * 40 },
+              { resource: Resources.FOOD, amount: 1500000 * 3 },
+              { resource: Resources.WOOD, amount: 1500000 * 3 },
+              { resource: Resources.STONE, amount: 1500000 * 3 },
             ]
           ],
         ]
@@ -3502,12 +3938,12 @@ export const events: Event[] = [
         description: "To fight Borte's Berserkers or Elite Borte's Berserkers, you need a Drum or Beads, respectively. These items can be obtained by defeating Shattered Skulls in the Field.",
         headers: ["Task", "Reward"],
         rows: [
-          ["Defeat 1x Borte's Berserker or Elite Borte's Berserker", 
+          ["Defeat 1x Borte's Berserker or Elite Borte's Berserker",
             [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 3, disclaimer: "*" },
-              { resource: Resources.SPEEDUP, amount: 4*5 },
-              { resource: Resources.FOOD, amount: 10000*5 },
-              { resource: Resources.WOOD, amount: 10000*5 },
+              { resource: Resources.SPEEDUP, amount: 4 * 5 },
+              { resource: Resources.FOOD, amount: 10000 * 5 },
+              { resource: Resources.WOOD, amount: 10000 * 5 },
             ]
           ]
         ]
@@ -3542,7 +3978,7 @@ export const events: Event[] = [
       {
         headers: ["Task", "Reward"],
         rows: [
-          ["Help alliance 10 times",  
+          ["Help alliance 10 times",
             [
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
               { resource: Resources.FOOD, amount: 10000 },
@@ -3551,42 +3987,42 @@ export const events: Event[] = [
               { resource: Resources.SEAL_OF_SOLIDARITY, amount: 1 },
             ]
           ],
-          ["Help alliance 20 times", 
+          ["Help alliance 20 times",
             [
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.FOOD, amount: 10000*3 },
-              { resource: Resources.WOOD, amount: 10000*3 },
-              { resource: Resources.STONE, amount: 10000*3 },
+              { resource: Resources.FOOD, amount: 10000 * 3 },
+              { resource: Resources.WOOD, amount: 10000 * 3 },
+              { resource: Resources.STONE, amount: 10000 * 3 },
               { resource: Resources.SEAL_OF_SOLIDARITY, amount: 2 },
             ]
           ],
-          ["Help alliance 30 times", 
+          ["Help alliance 30 times",
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.FOOD, amount: 10000*5 },
-              { resource: Resources.WOOD, amount: 10000*5 },
-              { resource: Resources.STONE, amount: 10000*5 },
+              { resource: Resources.FOOD, amount: 10000 * 5 },
+              { resource: Resources.WOOD, amount: 10000 * 5 },
+              { resource: Resources.STONE, amount: 10000 * 5 },
               { resource: Resources.SEAL_OF_SOLIDARITY, amount: 3 },
             ]
           ],
-          ["Donate 10 times to alliance research", 
+          ["Donate 10 times to alliance research",
             [
-              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 2},
-              { resource: Resources.SPEEDUP, amount: 10*5 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 2 },
+              { resource: Resources.SPEEDUP, amount: 10 * 5 },
               { resource: Resources.SEAL_OF_SOLIDARITY, amount: 1 },
             ]
           ],
-          ["Donate 20 times to alliance research", 
+          ["Donate 20 times to alliance research",
             [
-              { resource: Resources.SILVER_SCROLL, amount: 1},
-              { resource: Resources.SPEEDUP, amount: 20*5 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 20 * 5 },
               { resource: Resources.SEAL_OF_SOLIDARITY, amount: 2 },
             ]
           ],
-          ["Donate 30 times to alliance research", 
+          ["Donate 30 times to alliance research",
             [
-              { resource: Resources.GOLDEN_SCROLL, amount: 1},
-              { resource: Resources.SPEEDUP, amount: 30*5 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 30 * 5 },
               { resource: Resources.SEAL_OF_SOLIDARITY, amount: 3 },
             ]
           ],
@@ -3594,12 +4030,14 @@ export const events: Event[] = [
       }
     ],
     details: [
-      { type: "p", content: "Join forces with the alliance to crush the enemies!", space: true},
-      { type: "ol", items: [
-        "Help alliance members and donate to alliance research.",
-        "Reach the goals and get rewards."
-      ], space: true},
-      { type: "quotedate", author: "ANGames", date: "2026-04-06"}
+      { type: "p", content: "Join forces with the alliance to crush the enemies!", space: true },
+      {
+        type: "ol", items: [
+          "Help alliance members and donate to alliance research.",
+          "Reach the goals and get rewards."
+        ], space: true
+      },
+      { type: "quotedate", author: "ANGames", date: "2026-04-06" }
     ]
   },
   {
@@ -3615,7 +4053,7 @@ export const events: Event[] = [
         headers: ["Task", "Reward"],
         rows: [
           [
-            "Earn 200 points", 
+            "Earn 200 points",
             [
               { resource: Resources.GEM, amount: 30 },
               { resource: Resources.SPIRIT_SHARD_RARE, amount: 2 },
@@ -3624,30 +4062,30 @@ export const events: Event[] = [
             ]
           ],
           [
-            "Earn 400 points", 
+            "Earn 400 points",
             [
               { resource: Resources.GEM, amount: 60 },
               { resource: Resources.SPIRIT_SHARD_RARE, amount: 4 },
               { resource: Resources.SPIRIT_BADGE_RARE, amount: 4 },
-              { resource: Resources.SPEEDUP, amount: 2*60 }
+              { resource: Resources.SPEEDUP, amount: 2 * 60 }
             ]
           ],
           [
-            "Earn 600 points", 
+            "Earn 600 points",
             [
               { resource: Resources.GEM, amount: 90 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 2 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 2 },
-              { resource: Resources.SPEEDUP, amount: 3*60 }
+              { resource: Resources.SPEEDUP, amount: 3 * 60 }
             ]
           ],
           [
-            "Earn 800 points", 
+            "Earn 800 points",
             [
               { resource: Resources.GEM, amount: 120 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 4 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 4 },
-              { resource: Resources.SPEEDUP, amount: 5*60 }
+              { resource: Resources.SPEEDUP, amount: 5 * 60 }
             ]
           ]
         ]
@@ -3658,23 +4096,23 @@ export const events: Event[] = [
         headers: ["Rank", "Reward"],
         rows: [
           [
-            "1", 
+            "1",
             [
               { resource: Resources.GEM, amount: 500 },
               { resource: Resources.GOLDEN_SCROLL, amount: 10 },
-              { resource: Resources.SPEEDUP, amount: 60*10 },
-              { resource: Resources.FOOD, amount: 50000*10 },
-              { resource: Resources.WOOD, amount: 50000*10 }
+              { resource: Resources.SPEEDUP, amount: 60 * 10 },
+              { resource: Resources.FOOD, amount: 50000 * 10 },
+              { resource: Resources.WOOD, amount: 50000 * 10 }
             ]
           ],
           [
-            "2", 
+            "2",
             [
               { resource: Resources.GEM, amount: 400 },
               { resource: Resources.GOLDEN_SCROLL, amount: 8 },
-              { resource: Resources.SPEEDUP, amount: 60*8 },
-              { resource: Resources.FOOD, amount: 50000*8 },
-              { resource: Resources.WOOD, amount: 50000*8 }
+              { resource: Resources.SPEEDUP, amount: 60 * 8 },
+              { resource: Resources.FOOD, amount: 50000 * 8 },
+              { resource: Resources.WOOD, amount: 50000 * 8 }
             ]
           ],
           [
@@ -3682,43 +4120,43 @@ export const events: Event[] = [
             [
               { resource: Resources.GEM, amount: 300 },
               { resource: Resources.GOLDEN_SCROLL, amount: 6 },
-              { resource: Resources.SPEEDUP, amount: 60*6 },
-              { resource: Resources.FOOD, amount: 50000*6 },
-              { resource: Resources.WOOD, amount: 50000*6 }
+              { resource: Resources.SPEEDUP, amount: 60 * 6 },
+              { resource: Resources.FOOD, amount: 50000 * 6 },
+              { resource: Resources.WOOD, amount: 50000 * 6 }
             ]
           ],
           [
-            "4-10", 
+            "4-10",
             [
               { resource: Resources.GEM, amount: 200 },
               { resource: Resources.GOLDEN_SCROLL, amount: 4 },
-              { resource: Resources.SPEEDUP, amount: 60*4 },
-              { resource: Resources.FOOD, amount: 50000*4 },
-              { resource: Resources.WOOD, amount: 50000*4 }
+              { resource: Resources.SPEEDUP, amount: 60 * 4 },
+              { resource: Resources.FOOD, amount: 50000 * 4 },
+              { resource: Resources.WOOD, amount: 50000 * 4 }
             ]
           ],
           [
-            "11-20", 
+            "11-20",
             [
               { resource: Resources.GEM, amount: 100 },
               { resource: Resources.GOLDEN_SCROLL, amount: 3 },
-              { resource: Resources.SPEEDUP, amount: 60*3 },
-              { resource: Resources.FOOD, amount: 50000*3 },
-              { resource: Resources.WOOD, amount: 50000*3 }
+              { resource: Resources.SPEEDUP, amount: 60 * 3 },
+              { resource: Resources.FOOD, amount: 50000 * 3 },
+              { resource: Resources.WOOD, amount: 50000 * 3 }
             ]
           ],
           [
-            "21-50", 
+            "21-50",
             [
               { resource: Resources.GEM, amount: 50 },
               { resource: Resources.GOLDEN_SCROLL, amount: 2 },
-              { resource: Resources.SPEEDUP, amount: 60*2 },
-              { resource: Resources.FOOD, amount: 50000*2 },
-              { resource: Resources.WOOD, amount: 50000*2 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 },
+              { resource: Resources.FOOD, amount: 50000 * 2 },
+              { resource: Resources.WOOD, amount: 50000 * 2 }
             ]
           ],
           [
-            "51-100", 
+            "51-100",
             [
               { resource: Resources.GEM, amount: 20 },
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
@@ -3731,25 +4169,27 @@ export const events: Event[] = [
       }
     ],
     details: [
-      { type: "p", content: "To maintain balance and harmony there are times when you must fight.", space: true},
-      { type: "p", content: "Defeat Shattered Skulls on the field to earn points."},
-      { type: "p", content: "Shattered Skulls provide different scores absed on their level."},
-      { type: "p", content: "Highly ranked leaders who earn a minimum of 500 points by defeating Shattered Skulls will recieve amazing rewards", space: true},
-      { type: "p", content: "Scoring Rules"},      
-      { type: "ul", items: [
-        "Levels 1-6: 10 points",
-        "Levels 7-9: 20 points",
-        "Levels 10-12: 30 points",
-        "Levels 13-15: 40 points",
-        "Levels 16-17: 50 points",
-        "Levels 18-19: 60 points",
-        "Levels 20-22: 70 points",
-        "Levels 23-24: 80 points",
-        "Levels 25-26: 90 points",
-        "Levels 27-28: 100 points",
-        "Level 29: 110 points",
-        "Level 30: 120 points",
-      ], space: true},
+      { type: "p", content: "To maintain balance and harmony there are times when you must fight.", space: true },
+      { type: "p", content: "Defeat Shattered Skulls on the field to earn points." },
+      { type: "p", content: "Shattered Skulls provide different scores absed on their level." },
+      { type: "p", content: "Highly ranked leaders who earn a minimum of 500 points by defeating Shattered Skulls will recieve amazing rewards", space: true },
+      { type: "p", content: "Scoring Rules" },
+      {
+        type: "ul", items: [
+          "Levels 1-6: 10 points",
+          "Levels 7-9: 20 points",
+          "Levels 10-12: 30 points",
+          "Levels 13-15: 40 points",
+          "Levels 16-17: 50 points",
+          "Levels 18-19: 60 points",
+          "Levels 20-22: 70 points",
+          "Levels 23-24: 80 points",
+          "Levels 25-26: 90 points",
+          "Levels 27-28: 100 points",
+          "Level 29: 110 points",
+          "Level 30: 120 points",
+        ], space: true
+      },
       { type: "quotedate", author: "ANGames", date: "2026-04-07" }
     ]
   },
@@ -3766,7 +4206,7 @@ export const events: Event[] = [
         headers: ["Task", "Reward"],
         rows: [
           [
-            "Earn 30 points", 
+            "Earn 30 points",
             [
               { resource: Resources.GEM, amount: 100 },
               { resource: Resources.SPIRIT_SHARD_RARE, amount: 3 },
@@ -3775,30 +4215,30 @@ export const events: Event[] = [
             ]
           ],
           [
-            "Earn 70 points", 
+            "Earn 70 points",
             [
               { resource: Resources.GEM, amount: 150 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*3 }
+              { resource: Resources.SPEEDUP, amount: 60 * 3 }
             ]
           ],
           [
-            "Earn 120 points", 
+            "Earn 120 points",
             [
               { resource: Resources.GEM, amount: 20 },
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 3 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 3 },
-              { resource: Resources.SPEEDUP, amount: 60*5 }
+              { resource: Resources.SPEEDUP, amount: 60 * 5 }
             ]
           ],
           [
-            "Earn 200 points", 
+            "Earn 200 points",
             [
               { resource: Resources.GEM, amount: 300 },
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 },
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*10 }
+              { resource: Resources.SPEEDUP, amount: 60 * 10 }
             ]
           ]
         ]
@@ -3810,43 +4250,43 @@ export const events: Event[] = [
         headers: ["Rank", "Reward"],
         rows: [
           [
-            "1", 
+            "1",
             [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 20 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 20 },
-              { resource: Resources.SPEEDUP, amount: 60*10 },
+              { resource: Resources.SPEEDUP, amount: 60 * 10 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 20 }
             ]
           ],
           [
-            "2", 
+            "2",
             [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 15 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 15 },
-              { resource: Resources.SPEEDUP, amount: 60*5 },
+              { resource: Resources.SPEEDUP, amount: 60 * 5 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 15 }
             ]
           ],
           [
-            "3", 
+            "3",
             [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 10 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 10 },
-              { resource: Resources.SPEEDUP, amount: 60*3 },
+              { resource: Resources.SPEEDUP, amount: 60 * 3 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 10 }
             ]
           ],
           [
-            "4-5", 
+            "4-5",
             [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 5 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 5 },
-              { resource: Resources.SPEEDUP, amount: 60*2 },
+              { resource: Resources.SPEEDUP, amount: 60 * 2 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 5 }
             ]
           ],
           [
-            "6-10", 
+            "6-10",
             [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 2 },
               { resource: Resources.SPIRIT_BADGE_EPIC, amount: 2 },
@@ -3859,21 +4299,25 @@ export const events: Event[] = [
     ],
     details: [
       { type: "p", content: "The joy of victory is doubled when shared.", space: true },
-      { type: "ol", items: [
-        "Destroy Shattered Skulls' Fortresses on the field and earn points.",
-        "Shattered Skulls' Fortresses are very powerful. Cooperate with alliance members to destroy them.",
-        "Shattered SKulls' Fortresses provide different points depending on their level.",
-        "Alliances that rank in the event and score at least 200 points will recieve amazing rewards."
-      ], space: true},
-      { type: "p", content: "Scoring Rules", space: true},
-      { type: "ul", items: [
-        "Level 1: 10 Points",
-        "Level 2: 20 Points",
-        "Level 3: 30 Points",
-        "Level 4: 45 Points",
-        "Level 5: 50 Points",
-        "Level 6: 60 Points",
-      ], space: true},
+      {
+        type: "ol", items: [
+          "Destroy Shattered Skulls' Fortresses on the field and earn points.",
+          "Shattered Skulls' Fortresses are very powerful. Cooperate with alliance members to destroy them.",
+          "Shattered SKulls' Fortresses provide different points depending on their level.",
+          "Alliances that rank in the event and score at least 200 points will recieve amazing rewards."
+        ], space: true
+      },
+      { type: "p", content: "Scoring Rules", space: true },
+      {
+        type: "ul", items: [
+          "Level 1: 10 Points",
+          "Level 2: 20 Points",
+          "Level 3: 30 Points",
+          "Level 4: 45 Points",
+          "Level 5: 50 Points",
+          "Level 6: 60 Points",
+        ], space: true
+      },
       { type: "quotedate", author: "ANGames", date: "2026-04-11" }
     ]
   },
@@ -3890,16 +4334,16 @@ export const events: Event[] = [
       {
         headers: ["Task", "Reward"],
         rows: [
-          ["Gather 100,000 Resources from the Field", 
+          ["Gather 100,000 Resources from the Field",
             [
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5+5+5 }
+              { resource: Resources.SPEEDUP, amount: 5 + 5 + 5 }
             ]
           ],
-          ["Gather 300,000 Resources from the Field", 
+          ["Gather 300,000 Resources from the Field",
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 3*5+3*5+3*5 }
+              { resource: Resources.SPEEDUP, amount: 3 * 5 + 3 * 5 + 3 * 5 }
             ]
           ],
           ["Defeat 3 Shattered Skulls",
@@ -3910,7 +4354,7 @@ export const events: Event[] = [
               { resource: Resources.STONE, amount: 50000 }
             ]
           ],
-          ["Defeat 10 Shattered Skulls", 
+          ["Defeat 10 Shattered Skulls",
             [
               { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 },
               { resource: Resources.FOOD, amount: 50000 },
@@ -3926,12 +4370,12 @@ export const events: Event[] = [
               { resource: Resources.STONE, amount: 10000 },
             ]
           ],
-          ["Recruit 6,000 benders", 
+          ["Recruit 6,000 benders",
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.FOOD, amount: 3*10000 },
-              { resource: Resources.WOOD, amount: 3*10000 },
-              { resource: Resources.STONE, amount: 3*10000 },
+              { resource: Resources.FOOD, amount: 3 * 10000 },
+              { resource: Resources.WOOD, amount: 3 * 10000 },
+              { resource: Resources.STONE, amount: 3 * 10000 },
             ]
           ]
         ]
@@ -3939,11 +4383,13 @@ export const events: Event[] = [
     ],
     details: [
       { type: "p", content: "You are the guardians of balance and order.", space: true },
-      { type: "ol", items: [
-        "Gather resources on the field, recruit benders and defeat Shattered Skulls.",
-        "Reach the goals and get rewards.",
-        "This event resets at UTC 00:00."
-      ], space: true},
+      {
+        type: "ol", items: [
+          "Gather resources on the field, recruit benders and defeat Shattered Skulls.",
+          "Reach the goals and get rewards.",
+          "This event resets at UTC 00:00."
+        ], space: true
+      },
       { type: "quotedate", author: "ANGames", date: "2026-04-08" }
     ],
     informations: [
@@ -3963,35 +4409,35 @@ export const events: Event[] = [
         headers: ["Task", "Reward"],
         rows: [
           [
-            "Use 5 Silver Scrolls", 
+            "Use 5 Silver Scrolls",
             [
               { resource: Resources.SILVER_SCROLL, amount: 1 },
               { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5*5+5*5+5*5 }
+              { resource: Resources.SPEEDUP, amount: 5 * 5 + 5 * 5 + 5 * 5 }
             ]
           ],
           [
-            "Use 15 Silver Scrolls", 
+            "Use 15 Silver Scrolls",
             [
               { resource: Resources.SILVER_SCROLL, amount: 3 },
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60+60+60 }
+              { resource: Resources.SPEEDUP, amount: 60 + 60 + 60 }
             ]
           ],
           [
-            "Use 5 Golden Scrolls", 
+            "Use 5 Golden Scrolls",
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
               { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5*5+5*5+5*5 }
+              { resource: Resources.SPEEDUP, amount: 5 * 5 + 5 * 5 + 5 * 5 }
             ]
           ],
           [
-            "Use 15 Golden Scrolls", 
+            "Use 15 Golden Scrolls",
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 3 },
               { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60+60+60 }
+              { resource: Resources.SPEEDUP, amount: 60 + 60 + 60 }
             ]
           ],
           [
@@ -3999,15 +4445,15 @@ export const events: Event[] = [
             [
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
               { resource: Resources.AP, amount: 100 },
-              { resource: Resources.SPEEDUP, amount: 5*5+5*5 }
+              { resource: Resources.SPEEDUP, amount: 5 * 5 + 5 * 5 }
             ]
           ],
           [
             "Gather 500,000 Resources from the Field",
             [
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.AP, amount: 100*2 },
-              { resource: Resources.SPEEDUP, amount: 60+5*5 }
+              { resource: Resources.AP, amount: 100 * 2 },
+              { resource: Resources.SPEEDUP, amount: 60 + 5 * 5 }
             ]
           ],
           [
@@ -4015,7 +4461,7 @@ export const events: Event[] = [
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
               { resource: Resources.AP, amount: 500 },
-              { resource: Resources.SPEEDUP, amount: 60*2+5*5 },
+              { resource: Resources.SPEEDUP, amount: 60 * 2 + 5 * 5 },
               { resource: Resources.POWER_BOOST_RARE, amount: 1 }
             ]
           ],
@@ -4024,10 +4470,12 @@ export const events: Event[] = [
     ],
     details: [
       { type: "p", content: '"Failure is only the opportunity to begin again. Only this time, more wisely." - Uncle Iroh', space: true },
-      { type: "ol", items: [
-        "Use Scrolls and gather resources during the event period.",
-        "Reach the goals and get rewards."
-      ], space: true },
+      {
+        type: "ol", items: [
+          "Use Scrolls and gather resources during the event period.",
+          "Reach the goals and get rewards."
+        ], space: true
+      },
       { type: "quotedate", author: "ANGames", date: "2026-04-09" }
     ],
   },
@@ -4045,83 +4493,83 @@ export const events: Event[] = [
         headers: ["Goal", "Reward"],
         rows: [
           [
-            "Capture 1 Murong's structure", 
+            "Capture 1 Murong's structure",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 3 },
-              { resource: Resources.SPEEDUP, amount: 60*6 },
-              { resource: Resources.FOOD, amount: 150000*6 },
-              { resource: Resources.WOOD, amount: 150000*6 },
-              { resource: Resources.STONE, amount: 150000*6 }
+              { resource: Resources.SPEEDUP, amount: 60 * 6 },
+              { resource: Resources.FOOD, amount: 150000 * 6 },
+              { resource: Resources.WOOD, amount: 150000 * 6 },
+              { resource: Resources.STONE, amount: 150000 * 6 }
             ]
           ],
           [
-            "Capture 2 Murong's structures", 
+            "Capture 2 Murong's structures",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 4 },
-              { resource: Resources.SPEEDUP, amount: 60*8 },
-              { resource: Resources.FOOD, amount: 150000*8 },
-              { resource: Resources.WOOD, amount: 150000*8 },
-              { resource: Resources.STONE, amount: 150000*8 }
+              { resource: Resources.SPEEDUP, amount: 60 * 8 },
+              { resource: Resources.FOOD, amount: 150000 * 8 },
+              { resource: Resources.WOOD, amount: 150000 * 8 },
+              { resource: Resources.STONE, amount: 150000 * 8 }
             ]
           ],
           [
-            "Capture 3 Murong's structures", 
+            "Capture 3 Murong's structures",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5 },
-              { resource: Resources.SPEEDUP, amount: 60*10 },
-              { resource: Resources.FOOD, amount: 150000*10 },
-              { resource: Resources.WOOD, amount: 150000*10 },
-              { resource: Resources.STONE, amount: 150000*10 }
+              { resource: Resources.SPEEDUP, amount: 60 * 10 },
+              { resource: Resources.FOOD, amount: 150000 * 10 },
+              { resource: Resources.WOOD, amount: 150000 * 10 },
+              { resource: Resources.STONE, amount: 150000 * 10 }
             ]
           ],
           [
-            "Capture 5 Murong's structures", 
+            "Capture 5 Murong's structures",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 6 },
-              { resource: Resources.SPEEDUP, amount: 60*12 },
-              { resource: Resources.FOOD, amount: 150000*12 },
-              { resource: Resources.WOOD, amount: 150000*12 },
-              { resource: Resources.STONE, amount: 150000*12 }
+              { resource: Resources.SPEEDUP, amount: 60 * 12 },
+              { resource: Resources.FOOD, amount: 150000 * 12 },
+              { resource: Resources.WOOD, amount: 150000 * 12 },
+              { resource: Resources.STONE, amount: 150000 * 12 }
             ]
           ],
           [
-            "Capture 7 Murong's structures", 
+            "Capture 7 Murong's structures",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 7 },
-              { resource: Resources.SPEEDUP, amount: 60*14 },
-              { resource: Resources.FOOD, amount: 150000*14 },
-              { resource: Resources.WOOD, amount: 150000*14 },
-              { resource: Resources.STONE, amount: 150000*14 }
+              { resource: Resources.SPEEDUP, amount: 60 * 14 },
+              { resource: Resources.FOOD, amount: 150000 * 14 },
+              { resource: Resources.WOOD, amount: 150000 * 14 },
+              { resource: Resources.STONE, amount: 150000 * 14 }
             ]
           ],
           [
-            "Capture 10 Murong's structures", 
+            "Capture 10 Murong's structures",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 8 },
-              { resource: Resources.SPEEDUP, amount: 60*16 },
-              { resource: Resources.FOOD, amount: 150000*16 },
-              { resource: Resources.WOOD, amount: 150000*16 },
-              { resource: Resources.STONE, amount: 150000*16 }
+              { resource: Resources.SPEEDUP, amount: 60 * 16 },
+              { resource: Resources.FOOD, amount: 150000 * 16 },
+              { resource: Resources.WOOD, amount: 150000 * 16 },
+              { resource: Resources.STONE, amount: 150000 * 16 }
             ]
           ],
           [
-            "Capture 15 Murong's structures", 
+            "Capture 15 Murong's structures",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 9 },
-              { resource: Resources.SPEEDUP, amount: 60*18 },
-              { resource: Resources.FOOD, amount: 150000*18 },
-              { resource: Resources.WOOD, amount: 150000*18 },
-              { resource: Resources.STONE, amount: 150000*18 }
+              { resource: Resources.SPEEDUP, amount: 60 * 18 },
+              { resource: Resources.FOOD, amount: 150000 * 18 },
+              { resource: Resources.WOOD, amount: 150000 * 18 },
+              { resource: Resources.STONE, amount: 150000 * 18 }
             ]
           ],
           [
-            "Capture 20+ Murong's structures", 
+            "Capture 20+ Murong's structures",
             [
               { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10 },
-              { resource: Resources.SPEEDUP, amount: 60*20 },
-              { resource: Resources.FOOD, amount: 150000*20 },
-              { resource: Resources.WOOD, amount: 150000*20 },
-              { resource: Resources.STONE, amount: 150000*20 }
+              { resource: Resources.SPEEDUP, amount: 60 * 20 },
+              { resource: Resources.FOOD, amount: 150000 * 20 },
+              { resource: Resources.WOOD, amount: 150000 * 20 },
+              { resource: Resources.STONE, amount: 150000 * 20 }
             ]
           ],
         ]
@@ -4131,7 +4579,7 @@ export const events: Event[] = [
         headers: ["Goal", "Reward"],
         rows: [
           [
-            "Achieve 40,000+ Individual Points", 
+            "Achieve 40,000+ Individual Points",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 },
               { resource: Resources.PURIFIED_ESSENCE, amount: 2 },
@@ -4139,7 +4587,7 @@ export const events: Event[] = [
             ]
           ],
           [
-            "Achieve 80,000+ Individual Points", 
+            "Achieve 80,000+ Individual Points",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 2 },
               { resource: Resources.PURIFIED_ESSENCE, amount: 4 },
@@ -4147,7 +4595,7 @@ export const events: Event[] = [
             ]
           ],
           [
-            "Achieve 160,000+ Individual Points", 
+            "Achieve 160,000+ Individual Points",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 3 },
               { resource: Resources.PURIFIED_ESSENCE, amount: 6 },
@@ -4155,7 +4603,7 @@ export const events: Event[] = [
             ]
           ],
           [
-            "Achieve 400,000+ Individual Points", 
+            "Achieve 400,000+ Individual Points",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 4 },
               { resource: Resources.PURIFIED_ESSENCE, amount: 8 },
@@ -4163,7 +4611,7 @@ export const events: Event[] = [
             ]
           ],
           [
-            "Achieve 800,000+ Individual Points", 
+            "Achieve 800,000+ Individual Points",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 5 },
               { resource: Resources.PURIFIED_ESSENCE, amount: 10 },
@@ -4171,15 +4619,15 @@ export const events: Event[] = [
             ]
           ],
           [
-            "Achieve 1,440,000+ Individual Points", 
+            "Achieve 1,440,000+ Individual Points",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 6 },
               { resource: Resources.PURIFIED_ESSENCE, amount: 12 },
               { resource: Resources.VERDANT_SPLINTER, amount: 1200 },
             ]
           ],
-           [
-            "Achieve 2,400,000+ Individual Points", 
+          [
+            "Achieve 2,400,000+ Individual Points",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 7 },
               { resource: Resources.PURIFIED_ESSENCE, amount: 14 },
@@ -4187,7 +4635,7 @@ export const events: Event[] = [
             ]
           ],
           [
-            "Achieve 6,000,000+ Individual Points", 
+            "Achieve 6,000,000+ Individual Points",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 9 },
               { resource: Resources.PURIFIED_ESSENCE, amount: 18 },
@@ -4195,7 +4643,7 @@ export const events: Event[] = [
             ]
           ],
           [
-            "Achieve 8,000,000+ Individual Points", 
+            "Achieve 8,000,000+ Individual Points",
             [
               { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 10 },
               { resource: Resources.PURIFIED_ESSENCE, amount: 20 },
@@ -4210,118 +4658,144 @@ export const events: Event[] = [
     ],
     details: [
       { type: "p", content: "Introduction", space: true },
-      { type: "ul", items: 
-        [
-          "Vaults that were hidden by Murong, the King of the Shattered Skulls, are being discovered all over.", 
-          "Join your alliance members to capture the Vault of Murong and bring peace."
-        ], space: true },
+      {
+        type: "ul", items:
+          [
+            "Vaults that were hidden by Murong, the King of the Shattered Skulls, are being discovered all over.",
+            "Join your alliance members to capture the Vault of Murong and bring peace."
+          ], space: true
+      },
       { type: "p", content: "Schedule", space: true },
       { type: "p", content: "Vault of Murong is held once a week during the Chronicle.", space: true },
       { type: "p", content: "Registration", space: true },
-      { type: "ul", items: 
-        [
-          "Vault of Murong must be participated in as an alliance, and registration will be open for 24 hours.",
-          "Only alliance officers can register to participate.",
-          "Alliances that are not in the process of registering or participating in Vault of Murong temporarily cannot disband."
-        ], space: true },
+      {
+        type: "ul", items:
+          [
+            "Vault of Murong must be participated in as an alliance, and registration will be open for 24 hours.",
+            "Only alliance officers can register to participate.",
+            "Alliances that are not in the process of registering or participating in Vault of Murong temporarily cannot disband."
+          ], space: true
+      },
       { type: "p", content: "Participating Alliances and Matching", space: true },
-      { type: "ul", items: 
-        [
-          "Vault of Murong can have up to 3 Warzones per round, with at least 1 Warzone opening each time.",
-          "If more alliances register than the available slots, the participating alliances for this round will be selected based on their Terriotry Points ranking.",
-          "Each Warzone will have 4 alliances to capture Vault of Murong.",
-          "Once the matching is complete, you will be able to see which alliances you'll be facing in your Warzone. Analyze your strategy in advance and make a plan with your alliance."
-        ], space: true },
+      {
+        type: "ul", items:
+          [
+            "Vault of Murong can have up to 3 Warzones per round, with at least 1 Warzone opening each time.",
+            "If more alliances register than the available slots, the participating alliances for this round will be selected based on their Terriotry Points ranking.",
+            "Each Warzone will have 4 alliances to capture Vault of Murong.",
+            "Once the matching is complete, you will be able to see which alliances you'll be facing in your Warzone. Analyze your strategy in advance and make a plan with your alliance."
+          ], space: true
+      },
       { type: "p", content: "Basic Rules", space: true },
-      { type: "ol", items: 
-        [
-          "Vault of Murong lasts for 1 hour.",
-          "Vault of Murong will be held on a seperate Warzone map, and all alliance members can participate.",
-          "You cannot perform activites in the city while participating in Vault of Murong.",
-          "Participating in Vault of Murong will grant your city a City Shield for 1 hour.",
-          "Leaving the Vault event is allowed at any time, but once exited, re-entry into the Warzone is not permitted.",
-          "Even if leaving while participating in Vault of Murong, rewards will still be granted based on the results.",
-          "All benders owned will be brought into Vault of Murong, and while benders may be wounded during the event, all benders will be fully resotred once exiting Vault of Murong or when the event ends.",
-          "Buff items will remain active if their duration has not expired.",
-          "In the Warzone, all buffs you owned are applied. For Alliance Buffs, the buffs applied to the Warzone are determined once the matching is complete.",
-          "Selecting the city while it is under attack displays the [Emergency Return] function. In the Warzone, the city be relocated up to two times to a random location within the Alliance Landing Zone."
-        ], space: true },
+      {
+        type: "ol", items:
+          [
+            "Vault of Murong lasts for 1 hour.",
+            "Vault of Murong will be held on a seperate Warzone map, and all alliance members can participate.",
+            "You cannot perform activites in the city while participating in Vault of Murong.",
+            "Participating in Vault of Murong will grant your city a City Shield for 1 hour.",
+            "Leaving the Vault event is allowed at any time, but once exited, re-entry into the Warzone is not permitted.",
+            "Even if leaving while participating in Vault of Murong, rewards will still be granted based on the results.",
+            "All benders owned will be brought into Vault of Murong, and while benders may be wounded during the event, all benders will be fully resotred once exiting Vault of Murong or when the event ends.",
+            "Buff items will remain active if their duration has not expired.",
+            "In the Warzone, all buffs you owned are applied. For Alliance Buffs, the buffs applied to the Warzone are determined once the matching is complete.",
+            "Selecting the city while it is under attack displays the [Emergency Return] function. In the Warzone, the city be relocated up to two times to a random location within the Alliance Landing Zone."
+          ], space: true
+      },
       { type: "p", content: "Victory Condition", space: true },
-      { type: "p", content: "Restore Vault of Murong located at the center of the Warzone and successfully defend it for 15 minutes, or if your alliance controls Vault of Murong at the end of the event, victory will be achieved." , space: true },
+      { type: "p", content: "Restore Vault of Murong located at the center of the Warzone and successfully defend it for 15 minutes, or if your alliance controls Vault of Murong at the end of the event, victory will be achieved.", space: true },
       { type: "p", content: "Murong's Structures", space: true },
-      { type: "p", content: "All structres in the Warzone automatically begin restoration once captured. Restoration takes 1 minute and requires no resources." , space: true },
+      { type: "p", content: "All structres in the Warzone automatically begin restoration once captured. Restoration takes 1 minute and requires no resources.", space: true },
       { type: "p", content: "Murong's Tower", space: true },
-      { type: "ul", items: 
-        [
-          "Murong's Tower are located all over the Warzone.",
-          "By restoring one of the Murong's Tower, you can relocate your City to the surrounding territory and capture adjacent structures."
-        ], space: true },
+      {
+        type: "ul", items:
+          [
+            "Murong's Tower are located all over the Warzone.",
+            "By restoring one of the Murong's Tower, you can relocate your City to the surrounding territory and capture adjacent structures."
+          ], space: true
+      },
       { type: "p", content: "Murong's Post", space: true },
-      { type: "ul", items: 
-        [
-          "There are 4 Murong's Posts surrounding the final strucutre, Vault of Murong.",
-          "To attack the Vault of Murong, at least 2 Posts must be restored.",
-          "Restoring a Murong's Post does not allow you to relocate your City to the surrounding territory."
-        ], space: true },
+      {
+        type: "ul", items:
+          [
+            "There are 4 Murong's Posts surrounding the final strucutre, Vault of Murong.",
+            "To attack the Vault of Murong, at least 2 Posts must be restored.",
+            "Restoring a Murong's Post does not allow you to relocate your City to the surrounding territory."
+          ], space: true
+      },
       { type: "p", content: "Vault of Murong", space: true },
-      { type: "ul", items: 
-        [
-          "This structure must be captured to achieve victory.",
-          "Capture the Vault of Murong and bring glory to your Alliance!"
-        ], space: true },
+      {
+        type: "ul", items:
+          [
+            "This structure must be captured to achieve victory.",
+            "Capture the Vault of Murong and bring glory to your Alliance!"
+          ], space: true
+      },
       { type: "p", content: "Supplies", space: true },
-      { type: "ul", items: 
-        [
-          "Upon entering the Warzone, you can recieve supplies.",
-          "The supplies include Healing Speedups and City Relocations.",
-          "Once received, you can claim them again after 15 minutes.",
-          "When the Warzone ends, the Supplies will expire."
-        ], space: true },
+      {
+        type: "ul", items:
+          [
+            "Upon entering the Warzone, you can recieve supplies.",
+            "The supplies include Healing Speedups and City Relocations.",
+            "Once received, you can claim them again after 15 minutes.",
+            "When the Warzone ends, the Supplies will expire."
+          ], space: true
+      },
       { type: "p", content: "MVP/SVP", space: true },
       { type: "p", content: "MVP", space: true },
-      { type: "ul", items: 
-        [
-          "The leader who is part of the winning Alliance has the highest Individual Points in the Warzone will have the honor of being selected as MVP.",
-          "If there is no winning Alliance in the Warzone, an MVP will not be selected."
-        ], space: true },
+      {
+        type: "ul", items:
+          [
+            "The leader who is part of the winning Alliance has the highest Individual Points in the Warzone will have the honor of being selected as MVP.",
+            "If there is no winning Alliance in the Warzone, an MVP will not be selected."
+          ], space: true
+      },
       { type: "p", content: "SVP", space: true },
-      { type: "ul", items: 
-        [
-          "The leader who is not part of the winning Alliance and hast he highest Individual Points in the Warzone will have the honor of being selected as the SVP.",
-        ], space: true },
+      {
+        type: "ul", items:
+          [
+            "The leader who is not part of the winning Alliance and hast he highest Individual Points in the Warzone will have the honor of being selected as the SVP.",
+          ], space: true
+      },
       { type: "p", content: "Final Capture Reward", space: true },
-      { type: "ul", items: 
-        [
-          "Alliances that successfully capture Vault of Murong will recieve rewards.",
-          "These rewards can be distributed by the alliance leader to the alliance members, and once the leader distrbutes the rewards, they will be sent via mail."
-        ], space: true} ,
+      {
+        type: "ul", items:
+          [
+            "Alliances that successfully capture Vault of Murong will recieve rewards.",
+            "These rewards can be distributed by the alliance leader to the alliance members, and once the leader distrbutes the rewards, they will be sent via mail."
+          ], space: true
+      },
       { type: "p", content: "Territory Rewards", space: true },
-      { type: "ul", items: 
-        [
-          "Leaders participating in Vault of Murong will recieve rewards based on the number of Murong's Structures their alliance has captured by the end of the event.",
-        ], space: true },
+      {
+        type: "ul", items:
+          [
+            "Leaders participating in Vault of Murong will recieve rewards based on the number of Murong's Structures their alliance has captured by the end of the event.",
+          ], space: true
+      },
       { type: "p", content: "Individual Rewards", space: true },
-      { type: "ul", items: 
-        [ 
-          "Leaders particiapting in the Vault of Murong will recieve rewards based on Individual Points they earned from Vault of Murong.",
-           {
-            content: "Individual Points are earned based on the number of wounded benders inflicted on the enemy troop.",
-            children: [
-              {
-                type: "ul",
-                items: [
-                  "Tier 1 Unit: 2 points",
-                  "Tier 2 Unit: 4 points",
-                  "Tier 3 Unit: 12 points",
-                  "Tier 4 Unit: 32 points",
-                  "Tier 5 Unit: 80 points",
-                  "Tier 6 Unit: 200 points",
-                ]
-              }
-            ]
-          },
-        ], space: true },
-        { type: "quotedate", author: "ANGames", date: "2026-04-11" }
+      {
+        type: "ul", items:
+          [
+            "Leaders particiapting in the Vault of Murong will recieve rewards based on Individual Points they earned from Vault of Murong.",
+            {
+              content: "Individual Points are earned based on the number of wounded benders inflicted on the enemy troop.",
+              children: [
+                {
+                  type: "ul",
+                  items: [
+                    "Tier 1 Unit: 2 points",
+                    "Tier 2 Unit: 4 points",
+                    "Tier 3 Unit: 12 points",
+                    "Tier 4 Unit: 32 points",
+                    "Tier 5 Unit: 80 points",
+                    "Tier 6 Unit: 200 points",
+                  ]
+                }
+              ]
+            },
+          ], space: true
+      },
+      { type: "quotedate", author: "ANGames", date: "2026-04-11" }
     ],
     wip: true,
   },
@@ -4358,54 +4832,54 @@ export const events: Event[] = [
         headers: ["Task", "Reward"],
         rows: [
           [
-            "Increase Power by 40,000 with Construction", 
+            "Increase Power by 40,000 with Construction",
             [
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5*5 },
+              { resource: Resources.SPEEDUP, amount: 5 * 5 },
               { resource: Resources.FOOD, amount: 50000 },
               { resource: Resources.WOOD, amount: 50000 },
               { resource: Resources.STONE, amount: 50000 }
             ]
           ],
           [
-            "Increase Power by 80,000 with Construction", 
+            "Increase Power by 80,000 with Construction",
             [
               { resource: Resources.SILVER_SCROLL, amount: 1 },
               { resource: Resources.SPEEDUP, amount: 60 },
-              { resource: Resources.FOOD, amount: 50000*2 },
-              { resource: Resources.WOOD, amount: 50000*2 },
-              { resource: Resources.STONE, amount: 50000*2 }
+              { resource: Resources.FOOD, amount: 50000 * 2 },
+              { resource: Resources.WOOD, amount: 50000 * 2 },
+              { resource: Resources.STONE, amount: 50000 * 2 }
             ]
           ],
           [
-            "Increase Power by 120,000 with Construction", 
+            "Increase Power by 120,000 with Construction",
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 60*2 },
-              { resource: Resources.FOOD, amount: 50000*3 },
-              { resource: Resources.WOOD, amount: 50000*3 },
-              { resource: Resources.STONE, amount: 50000*3 }
+              { resource: Resources.SPEEDUP, amount: 60 * 2 },
+              { resource: Resources.FOOD, amount: 50000 * 3 },
+              { resource: Resources.WOOD, amount: 50000 * 3 },
+              { resource: Resources.STONE, amount: 50000 * 3 }
             ]
           ],
           [
-            "Complete 5 Expedition missions", 
+            "Complete 5 Expedition missions",
             [
               { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5*5+5*5+5*5 }
+              { resource: Resources.SPEEDUP, amount: 5 * 5 + 5 * 5 + 5 * 5 }
             ]
           ],
           [
-            "Complete 10 Expedition missions", 
+            "Complete 10 Expedition missions",
             [
               { resource: Resources.SILVER_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5*10+5*10+5*10 }
+              { resource: Resources.SPEEDUP, amount: 5 * 10 + 5 * 10 + 5 * 10 }
             ]
           ],
           [
-            "Complete 20 Expedition missions", 
+            "Complete 20 Expedition missions",
             [
               { resource: Resources.GOLDEN_SCROLL, amount: 1 },
-              { resource: Resources.SPEEDUP, amount: 5*15+5*15+5*15 },
+              { resource: Resources.SPEEDUP, amount: 5 * 15 + 5 * 15 + 5 * 15 },
               { resource: Resources.SQUAD_EXPANSION_EPIC, amount: 1 }
             ]
           ]
@@ -4530,18 +5004,19 @@ export const events: Event[] = [
     ],
     details: [
       { type: "p", content: "Clear the missions assigned to each day and earn Pass Points to use in the Unalaq Pass!", space: true },
-      { type: "ol", items: [
-        "The event runs for a total of 5 days.",
-        "Missions are limited each day.",
-        "Only missions unlocked on the current day can be completed.",
-        "Missions from previous days cannot be completed.",
-        "Pass Points earned from clearing missions can be used in [Unalaq Pass]"
-      ], space: true },
+      {
+        type: "ol", items: [
+          "The event runs for a total of 5 days.",
+          "Missions are limited each day.",
+          "Only missions unlocked on the current day can be completed.",
+          "Missions from previous days cannot be completed.",
+          "Pass Points earned from clearing missions can be used in [Unalaq Pass]"
+        ], space: true
+      },
       { type: "quotedate", author: "ANGames", date: "2026-04-11" }
     ],
     informations: [
       "Unlike most events, tasks must be completed on the same day they become available."
-    ],
-    wip: true,
+    ]
   },
 ]
