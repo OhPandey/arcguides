@@ -1,9 +1,9 @@
 import { HeroCategory, HeroRarity } from "@/src/talents/headers/hero";
 import { createHero } from "@/src/talents/src/hero";
 
-export const asamiTree = createHero({
-    iconImage: "images/heros/asami_icon.png",
-    title: "Asami Sato - Ingenious Inventor",
-    rarity: HeroRarity.Epic,
+export const zukoAHTree = createHero({
+    iconImage: "images/heros/zukoah_icon.png",
+    title: "Zuko - Avatar Hunter",
+    rarity: HeroRarity.Legendary,
     categories: [HeroCategory.Siege, HeroCategory.Fire, HeroCategory.Attack],
 })
