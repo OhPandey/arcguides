@@ -1147,7 +1147,7 @@ export const events: Event[] = [
     name: "Unbreakable Will",
     description: "What matters is an unyielding determination!",
     duration: 3,
-    repeat: "Unknown",
+    repeat: 14,
     startDate: "2026-04-01",
     type: "MINOR",
     tasks: [
@@ -1716,8 +1716,8 @@ export const events: Event[] = [
     ]
   },
   {
-    id: "way-of-harmony",
-    name: "Way of Harmony",
+    id: "way-to-harmony",
+    name: "Way to Harmony",
     description: "Waiting for it to happen [...]",
     duration: 5,
     repeat: 28,
@@ -4321,8 +4321,7 @@ export const events: Event[] = [
             ]
           },
         ], space: true },
-      
-
+        { type: "quotedate", author: "ANGames", date: "2026-04-11" }
     ],
     wip: true,
   },
@@ -4349,10 +4348,91 @@ export const events: Event[] = [
   {
     id: "search-and-upgrade",
     name: "Search & Upgrade",
-    description: "Waiting for it to happen [...]",
+    description: "To achieve faster growth, it's important to observe your surroundings carefully!",
     duration: 2,
     repeat: "Unknown",
     startDate: "2026-04-11",
+    type: "MINOR",
+    tasks: [
+      {
+        headers: ["Task", "Reward"],
+        rows: [
+          [
+            "Increase Power by 40,000 with Construction", 
+            [
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5*5 },
+              { resource: Resources.FOOD, amount: 50000 },
+              { resource: Resources.WOOD, amount: 50000 },
+              { resource: Resources.STONE, amount: 50000 }
+            ]
+          ],
+          [
+            "Increase Power by 80,000 with Construction", 
+            [
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 },
+              { resource: Resources.FOOD, amount: 50000*2 },
+              { resource: Resources.WOOD, amount: 50000*2 },
+              { resource: Resources.STONE, amount: 50000*2 }
+            ]
+          ],
+          [
+            "Increase Power by 120,000 with Construction", 
+            [
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60*2 },
+              { resource: Resources.FOOD, amount: 50000*3 },
+              { resource: Resources.WOOD, amount: 50000*3 },
+              { resource: Resources.STONE, amount: 50000*3 }
+            ]
+          ],
+          [
+            "Complete 5 Expedition missions", 
+            [
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5*5+5*5+5*5 }
+            ]
+          ],
+          [
+            "Complete 10 Expedition missions", 
+            [
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5*10+5*10+5*10 }
+            ]
+          ],
+          [
+            "Complete 20 Expedition missions", 
+            [
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5*15+5*15+5*15 },
+              { resource: Resources.SQUAD_EXPANSION_EPIC, amount: 1 }
+            ]
+          ]
+        ]
+      }
+    ],
+    details: [
+      { type: "p", content: "To achieve faster growth, it's important to observe your surroundings carefully!", space: true },
+      {
+        type: "ol", items: [
+          "During the event period, earn points by upgrading buildings and completing expeditions.",
+          "Reach the goal and get rewards."
+        ], space: true
+      },
+      { type: "quotedate", author: "ANGames", date: "2026-04-04" },
+    ],
+    tips: [
+      "Keep in mind that you can solo rally after reaching VIP 5"
+    ]
+  },
+  {
+    id: "timeless",
+    name: "Timeless",
+    description: "Waiting for it to happen [...]",
+    duration: 1,
+    repeat: "Unknown",
+    startDate: "2026-04-15",
     type: "MINOR",
     wip: true,
   },
@@ -4377,32 +4457,48 @@ export const events: Event[] = [
       },
       {
         title: "Day 2",
-        headers: ["Task"],
+        headers: ["Task", "Reward"],
         rows: [
-          ["TBD"]
+          ["Gather 500,000 Resources from the Field", "20x Unalaq Pass Points"],
+          ["Recruit 8,000 Tier 3 or Higher Benders", "40x Unalaq Pass Points"],
+          ["Destroy 5 Shattered Skulls' Fortresses", "30x Unalaq Pass Points"],
+          ["Participate in 5 arena fights", "30x Unalaq Pass Points"],
+          ["Use 1,000 AP", "30x Unalaq Pass Points"]
         ]
       },
       {
         title: "Day 3",
-        headers: ["Task"],
+        headers: ["Task", "Reward"],
         rows: [
-          ["TBD"]
+          ["Defeat 20 Shattered Skulls", "30x Unalaq Pass Points"],
+          ["Recruit 8,000 Tier 3 or Higher Benders", "40x Unalaq Pass Points"],
+          ["Donate 30 times to alliance research", "20x Unalaq Pass Points"],
+          ["Send 4 airships", "30x Unalaq Pass Points"],
+          ["Purchase 20 items at the Trading Post", "30x Unalaq Pass Points"]
         ]
       },
       {
         title: "Day 4",
-        headers: ["Task"],
+        headers: ["Task", "Reward"],
         rows: [
-          ["TBD"]
+          ["Gather 500,000 Resources in the City", "20x Unalaq Pass Points"],
+          ["Recruit 8,000 Tier 3 or Higher Benders", "40x Unalaq Pass Points"],
+          ["Destroy 5 Shattered Skulls' Fortresses", "30x Unalaq Pass Points"],
+          ["Participate in 5 arena fights", "30x Unalaq Pass Points"],
+          ["Use 1,000min of Speedup", "30x Unalaq Pass Points"],
         ]
       },
       {
         title: "Day 5",
-        headers: ["Task"],
+        headers: ["Task", "Reward"],
         rows: [
-          ["TBD"]
+          ["Defeat 20 Shattered Skulls", "30x Unalaq Pass Points"],
+          ["Recruit 8,000 Tier 3 or Higher Benders", "40x Unalaq Pass Points"],
+          ["Donate 30 times to alliance research", "20x Unalaq Pass Points"],
+          ["Clear Avatar Trail 1 time", "30x Unalaq Pass Points"],
+          ["Use 500 Gems", "50x Unalaq Pass Points"],
         ]
-      }
+      },
     ],
     rewards: [
       {
@@ -4433,14 +4529,15 @@ export const events: Event[] = [
       }
     ],
     details: [
-      { type: "p", content: "Clear the missions assigned to each day and earn Pass Points to use in the Unalaq Pass!" },
+      { type: "p", content: "Clear the missions assigned to each day and earn Pass Points to use in the Unalaq Pass!", space: true },
       { type: "ol", items: [
         "The event runs for a total of 5 days.",
         "Missions are limited each day.",
         "Only missions unlocked on the current day can be completed.",
         "Missions from previous days cannot be completed.",
         "Pass Points earned from clearing missions can be used in [Unalaq Pass]"
-      ], space: true}
+      ], space: true },
+      { type: "quotedate", author: "ANGames", date: "2026-04-11" }
     ],
     informations: [
       "Unlike most events, tasks must be completed on the same day they become available."
