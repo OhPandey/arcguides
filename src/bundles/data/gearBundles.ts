@@ -176,5 +176,44 @@ export const gearBundles: Bundle[] = [
                 amount: 1
             }
         ]
+    },
+    {
+        name: "Forge Coin Special Bundle",
+        image: "forge_coin_special.png",
+        priceUSD: 4.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 500
+            },
+            {
+                resource: Resources.FORGE_COIN,
+                amount: 12000
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500*700
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000*350
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*350
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*350
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 500
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV2,
+                amount: 1
+            }
+        ]
     }
 ]

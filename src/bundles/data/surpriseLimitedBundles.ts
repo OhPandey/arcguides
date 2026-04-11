@@ -3,7 +3,7 @@ import { Bundle } from "../type/bundle";
 
 export const surpriseLimitedBundles: Bundle[] = [
     {
-        name: "Surprise Limited Deal Bundle A I",
+        name: "Surprise Limited Deal Bundle (Growth) I",
         image: "surprise_limited_deal_a.png",
         priceUSD: 9.99,
         resources: [
@@ -50,7 +50,7 @@ export const surpriseLimitedBundles: Bundle[] = [
         ]
     },
     {
-        name: "Surprise Limited Deal Bundle A II",
+        name: "Surprise Limited Deal Bundle (Growth) II",
         image: "surprise_limited_deal_a.png",
         priceUSD: 19.99,
         resources: [
@@ -97,7 +97,7 @@ export const surpriseLimitedBundles: Bundle[] = [
         ]
     },
     {
-        name: "Surprise Limited Deal Bundle A III",
+        name: "Surprise Limited Deal Bundle (Growth) III",
         image: "surprise_limited_deal_a.png",
         priceUSD: 49.99,
         resources: [
@@ -144,7 +144,7 @@ export const surpriseLimitedBundles: Bundle[] = [
         ]
     },
     {
-        name: "Surprise Limited Deal Bundle A IV",
+        name: "Surprise Limited Deal Bundle (Growth) IV",
         image: "surprise_limited_deal_a.png",
         priceUSD: 99.99,
         resources: [
@@ -191,7 +191,7 @@ export const surpriseLimitedBundles: Bundle[] = [
         ]
     },
     {
-        name: "Surprise Limited Deal Bundle B I",
+        name: "Surprise Limited Deal Bundle (Gear Enhancement) I",
         image: "surprise_limited_deal_b.png",
         priceUSD: 4.99,
         resources: [
@@ -222,6 +222,303 @@ export const surpriseLimitedBundles: Bundle[] = [
             {
                 resource: Resources.STONE,
                 amount: 1000*1000
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 500
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV2,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Surprise Limited Deal Bundle (Companion) I",
+        image: "surprise_limited_deal_c.png",
+        priceUSD: 4.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 500
+            },
+            {
+                resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST,
+                amount: 135
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000*500
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*500
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*500
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500*500
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 500
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV2,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Surprise Limited Deal Bundle (Companion) II",
+        image: "surprise_limited_deal_c.png",
+        priceUSD: 9.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 1050
+            },
+            {
+                resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST,
+                amount: 270
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000*1000
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*1000
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*1000
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500*1000
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 1000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV3,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Surprise Limited Deal Bundle (Companion) III",
+        image: "surprise_limited_deal_c.png",
+        priceUSD: 19.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 2100
+            },
+            {
+                resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST,
+                amount: 540
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000*2000
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*2000
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*2000
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500*2000
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 2000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV4,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Surprise Limited Deal Bundle (Gear) I",
+        image: "surprise_limited_deal_d.png",
+        priceUSD: 9.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 1050
+            },
+            {
+                resource: Resources.GEAR_CUSTOM_CHEST_LEGENDARY,
+                amount: 1
+            },
+            {
+                resource: Resources.VERDANT_SPLINTER,
+                amount: 3500
+            },
+            {
+                resource: Resources.PURIFIED_ESSENCE,
+                amount: 30
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500*1400
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000*700
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*700
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*700
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 1000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV3,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Surprise Limited Deal Bundle (Gear) II",
+        image: "surprise_limited_deal_d.png",
+        priceUSD: 19.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 2100
+            },
+            {
+                resource: Resources.GEAR_CUSTOM_CHEST_LEGENDARY,
+                amount: 2
+            },
+            {
+                resource: Resources.VERDANT_SPLINTER,
+                amount: 7000
+            },
+            {
+                resource: Resources.PURIFIED_ESSENCE,
+                amount: 60
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500*2800
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000*1400
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*1400
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*1400
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 2000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV4,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Surprise Limited Deal Bundle (Gear) III",
+        image: "surprise_limited_deal_d.png",
+        priceUSD: 49.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 5500
+            },
+            {
+                resource: Resources.GEAR_CUSTOM_CHEST_LEGENDARY,
+                amount: 4
+            },
+            {
+                resource: Resources.VERDANT_SPLINTER,
+                amount: 21000
+            },
+            {
+                resource: Resources.PURIFIED_ESSENCE,
+                amount: 180
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500*8400
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000*4200
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*4200
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*4200
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 5000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV5,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Surprise Limited Deal Bundle (Speedup) I",
+        image: "surprise_limited_deal_e.png",
+        priceUSD: 4.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 500
+            },
+            {
+                resource: Resources.SPEEDUP,
+                amount: 60*30+5*120
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 10000*450
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 10000*450
+            },
+            {
+                resource: Resources.STONE,
+                amount: 10000*450
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 5000*450
             },
             {
                 resource: Resources.VIPPOINT,

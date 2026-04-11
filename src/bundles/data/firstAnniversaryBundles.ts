@@ -93,6 +93,49 @@ export const firstAnniversaryBundles: Bundle[] = [
         ]
     },
     {
+        name: "First Anniversary: Festival III",
+        image: "first_anniversary_festival.png",
+        priceUSD: 99.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 11500
+            },
+            {
+                resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST,
+                amount: 1000
+            },
+            {
+                resource: Resources.PURIFIED_ESSENCE,
+                amount: 300
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 5000*30000
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000*7000
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*7000
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*7000
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 10000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV6,
+                amount: 1
+            }
+        ]
+    },
+    {
         name: "First Anniversary: Frame",
         image: "first_anniversary_festival.png",
         priceUSD: 4.99,

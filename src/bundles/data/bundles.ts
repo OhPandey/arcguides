@@ -9,6 +9,7 @@ import { luckyDiceBundles } from "./luckyDiceBundles";
 import { monthlyBundles } from "./monthlyBundles";
 import { passBundles } from "./passBundles";
 import { rankUpBundles } from "./rankUpBundles";
+import { recruitmentBundles } from "./recruitmentBundles";
 import { researchBundles } from "./researchBundles";
 import { skillMasterBundles } from "./skillMasterBundles";
 import { skillUpBundles } from "./skillUpBundles";
@@ -47,5 +48,6 @@ export const bundles = [
   ...gearBundles,
   ...skillUpBundles,
   ...rankUpBundles,
-  ...surpriseLimitedBundles
+  ...surpriseLimitedBundles,
+  ...recruitmentBundles
 ];

@@ -173,5 +173,38 @@ export const starterBundles: Bundle[] = [
                 amount: 1
             }
         ]
-    }
+    },
+    {
+         name: "Cai's Bundle",
+        image: "cai.png",
+        priceUSD: 4.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 500
+            },
+            {
+                resource: Resources.FRAME("Cabbage Crew"),
+                amount: 1
+            },
+            {
+                resource: Resources.SPIRIT_SHARD_LEGENDARY,
+                amount: 12
+            },
+            {
+                resource: Resources.SPIRIT_BADGE_LEGENDARY,
+                amount: 2
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 500
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV2,
+                amount: 1
+            }
+        ]
+    },
+
+
 ]
