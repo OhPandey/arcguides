@@ -215,5 +215,44 @@ export const gearBundles: Bundle[] = [
                 amount: 1
             }
         ]
+    },
+    {
+        name: "Ultimate Hero Gear Enhancement Bundle",
+        image: "ultimate_hero_gear_enhancement.png",
+        priceUSD: 4.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 500
+            },
+            {
+                resource: Resources.VERDANT_SPLINTER,
+                amount: 5500
+            },
+            {
+                resource: Resources.PURIFIED_ESSENCE,
+                amount: 60
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 500*1000
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*500
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*500
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 500
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV2,
+                amount: 1
+            }
+        ]
     }
 ]

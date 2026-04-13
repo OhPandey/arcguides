@@ -1318,7 +1318,7 @@ export const events: Event[] = [
     name: "Harvest Season",
     description: "The seasons have turned, and harvest season is upon us.",
     duration: 2,
-    repeat: "Unknown",
+    repeat: 14,
     startDate: "2026-04-02",
     type: "MINOR",
     tasks: [
@@ -1724,7 +1724,7 @@ export const events: Event[] = [
   {
     id: "way-to-harmony",
     name: "Way to Harmony",
-    description: "Waiting for it to happen [...]",
+    description: "Acquire Coins of Harmony by clearing challenging missions!",
     duration: 5,
     repeat: 28,
     seedStartDate: {
@@ -1735,6 +1735,90 @@ export const events: Event[] = [
       SEED_C2: "2026-04-08",
     },
     type: "BIWEEKLY",
+    tasks: [
+      {
+        title: "Day 1",
+        headers: ["Task", "Reward"],
+        rows: [
+          [
+            "Recruit 1,000 Benders",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000 },
+              { resource: Resources.WOOD, amount: 10000 },
+              { resource: Resources.STONE, amount: 10000 }
+            ]
+          ],
+          [
+            "Recruit 3,000 Benders",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 2 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 2 },
+              { resource: Resources.FOOD, amount: 10000 * 2 },
+              { resource: Resources.WOOD, amount: 10000 * 2 },
+              { resource: Resources.STONE, amount: 10000 * 2 }
+            ]
+          ],
+          [
+            "Recruit 6,000 Benders",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 3 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 50000 },
+              { resource: Resources.WOOD, amount: 50000 },
+              { resource: Resources.STONE, amount: 50000 }
+            ]
+          ],
+          [
+            "Recruit 12,000 Benders",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 3 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 50000 * 2 },
+              { resource: Resources.WOOD, amount: 50000 * 2 },
+              { resource: Resources.STONE, amount: 50000 * 2 }
+            ]
+          ],
+          [
+            "Use 5 Scrolls",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5 * 2 + 5 * 2 + 5 * 2 }
+            ]
+          ],
+          [
+            "Use 10 Scrolls",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 3 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 5 * 5 + 5 * 5 + 5 * 5 }
+            ]
+          ],
+          [
+            "Use 15 Scrolls",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 5 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 + 60 + 60 }
+            ]
+          ],
+        ]
+      }
+    ],
+    details: [
+      { type: "p", content: "Restore harmony to the world by completing various daily goals during the event!", space: true },
+      {
+        type: "ol", items: [
+          "This event runs for 5 days.",
+          "Different types fo goals will be revealed each day.",
+          "Complete goals to earn [Harmony Coins]",
+          "Collect [Harmony Coins] to trade for amazing rewards at the exchange Shop."
+        ]
+      },
+      { type: "quotedate", author: "ANGames", date: "2026-04-13" }
+    ],
     wip: true
   },
   {
@@ -2249,7 +2333,7 @@ export const events: Event[] = [
     name: "Build Strength",
     description: "Strengthen your power through building upgrades, research and bender recruiting.",
     duration: 2,
-    repeat: "Unknown",
+    repeat: 14,
     startDate: "2026-04-03",
     type: "MINOR",
     tasks: [
@@ -4802,22 +4886,195 @@ export const events: Event[] = [
   {
     id: "supply-quest",
     name: "Supply Quest",
-    description: "Waiting for it to happen [...]",
+    description: "Collect as many Supply Chests as possible.",
     duration: 2,
     repeat: 14,
     startDate: "2026-03-30",
     type: "MINOR",
-    wip: true,
+    tasks: [
+      {
+        headers: ["Task", "Reward"],
+        rows: [
+          [
+            "Defeat 1 Shattered Skull (Repeatable)",
+            "1x Supply Chest"
+          ],
+          [
+            "Gather X (Unknown yet) Resoures from the Field (Repeatable)",
+            "1x Supply Chest"
+          ]
+        ]
+      }
+    ],
+    rewards: [
+      {
+        title: "Overall Ranking",
+        headers: ["Rank", "Reward"],
+        rows: [
+          [
+            "1",
+            [
+              { resource: Resources.GEM, amount: 500 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 10 },
+              { resource: Resources.SPEEDUP, amount: 60*10 },
+              { resource: Resources.FOOD, amount: 50000*10 },
+              { resource: Resources.WOOD, amount: 50000*10 }
+            ]
+          ],
+          [
+            "2",
+            [
+              { resource: Resources.GEM, amount: 400 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 8 },
+              { resource: Resources.SPEEDUP, amount: 60*8 },
+              { resource: Resources.FOOD, amount: 50000*8 },
+              { resource: Resources.WOOD, amount: 50000*8 }
+            ]
+          ],
+          [
+            "3",
+            [
+              { resource: Resources.GEM, amount: 300 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 6 },
+              { resource: Resources.SPEEDUP, amount: 60*6 },
+              { resource: Resources.FOOD, amount: 50000*6 },
+              { resource: Resources.WOOD, amount: 50000*6 }
+            ]
+          ],
+          [
+            "4-10",
+            [
+              { resource: Resources.GEM, amount: 200 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 4 },
+              { resource: Resources.SPEEDUP, amount: 60*4 },
+              { resource: Resources.FOOD, amount: 50000*4 },
+              { resource: Resources.WOOD, amount: 50000*4 }
+            ]
+          ],
+          [
+            "11-20",
+            [
+              { resource: Resources.GEM, amount: 100 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 3 },
+              { resource: Resources.SPEEDUP, amount: 60*3 },
+              { resource: Resources.FOOD, amount: 50000*3 },
+              { resource: Resources.WOOD, amount: 50000*3 }
+            ]
+          ],
+          [
+            "21-50",
+            [
+              { resource: Resources.GEM, amount: 50 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 2 },
+              { resource: Resources.SPEEDUP, amount: 60*2 },
+              { resource: Resources.FOOD, amount: 50000*2 },
+              { resource: Resources.WOOD, amount: 50000*2 }
+            ]
+          ],
+          [
+            "51-100",
+            [
+              { resource: Resources.GEM, amount: 20 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60 },
+              { resource: Resources.FOOD, amount: 50000 },
+              { resource: Resources.WOOD, amount: 50000 }
+            ]
+          ],
+        ]
+      }
+    ],
+    details: [
+      { type: "ol", items: [
+        "Gather resources on the world map, and defeat Shattered Skulls to obtain [Supply Chests].",
+        "Earn rank points by defeating Shattered Skulls and Gahtering resources on the Field.",
+        "This event resets at UTC 00:00"
+      ], space: true },
+      { type: "quotedate", author: "ANGames", date: "2026-04-13" }
+    ],
+    wip: true
   },
   {
     id: "journey-of-us",
     name: "Journey of Us",
-    description: "Waiting for it to happen [...]",
+    description: "Let's nto forget our journey. Every step has been meaningful.",
     duration: 2,
     repeat: 14,
     startDate: "2026-03-30",
     type: "MINOR",
-    wip: true,
+    tasks: [
+      {
+        headers: ["Task", "Reward"],
+        rows: [
+          [
+            "Use 5 Silver Scrolls",
+            [
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000 },
+              { resource: Resources.WOOD, amount: 10000 },
+              { resource: Resources.STONE, amount: 10000 }
+            ]
+          ],
+          [
+            "Use 20 Silver Scrolls",
+            [
+              { resource: Resources.SILVER_SCROLL, amount: 3 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000*3 },
+              { resource: Resources.WOOD, amount: 10000*3 },
+              { resource: Resources.STONE, amount: 10000*3 }
+            ]
+          ],
+          [
+            "Use 5 Golden Scrolls",
+            [
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000 },
+              { resource: Resources.WOOD, amount: 10000 },
+              { resource: Resources.STONE, amount: 10000 }
+            ]
+          ],
+          [
+            "Use 20 Golden Scrolls",
+            [
+              { resource: Resources.GOLDEN_SCROLL, amount: 3 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000*3 },
+              { resource: Resources.WOOD, amount: 10000*3 },
+              { resource: Resources.STONE, amount: 10000*3 }
+            ]
+          ],
+          [
+            "Send 4 airships",
+            [
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_RARE, amount: 2 },
+              { resource: Resources.SPEEDUP, amount: 5 * 5 + 5 * 5 + 5 * 5 }
+            ]
+          ],
+          [
+            "Successfully raid 4 other airships",
+            [
+              { resource: Resources.GOLD, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount: 60+60+60 }
+            ]
+          ],
+        ]
+      }
+    ],
+    details: [
+      { type: "p", content: "Let's not forget our journey. Every step has been meaningful.", space: true },
+      {
+        type: "ol", items: [
+          "Earn points during the event period by using scrolls in the Altar of Heroes, sending airships, or attacking enemy airships.",
+          "Reach the goal and get rewards."
+        ], space: true
+      },
+      { type: "quotedate", author: "ANGames", date: "2026-04-13" }
+    ]
   },
   {
     id: "search-and-upgrade",
@@ -4892,8 +5149,7 @@ export const events: Event[] = [
         type: "ol", items: [
           "During the event period, earn points by upgrading buildings and completing expeditions.",
           "Reach the goal and get rewards."
-        ], space: true
-      },
+        ], space: true },
       { type: "quotedate", author: "ANGames", date: "2026-04-04" },
     ],
     tips: [

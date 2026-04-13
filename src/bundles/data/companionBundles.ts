@@ -245,6 +245,92 @@ export const companionBundles: Bundle[] = [
         ]
     },
     {
+        name: "Companion Deal: Rank Up Bundle III",
+        image: "companion_deal_rank_up.png",
+        priceUSD: 19.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 2100
+            },
+            {
+                resource: Resources.SACRED_DEW,
+                amount: 1200
+            },
+            {
+                resource: Resources.SACRED_FRUIT,
+                amount: 80
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000*1400
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*1400
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*1400
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500*1400
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 2000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV4,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Companion Deal: Rank Up Bundle IV",
+        image: "companion_deal_rank_up.png",
+        priceUSD: 49.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 5500
+            },
+            {
+                resource: Resources.SACRED_DEW,
+                amount: 3000
+            },
+            {
+                resource: Resources.SACRED_FRUIT,
+                amount: 200
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000*3500
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*3500
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*3500
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500*3500
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 5000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV5,
+                amount: 1
+            }
+        ]
+    },
+    {
         name: "Companion Deal: Skill Up Bundle I",
         image: "companion_deal_skill_up.png",
         priceUSD: 4.99,

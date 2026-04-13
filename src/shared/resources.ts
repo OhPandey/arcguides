@@ -295,7 +295,6 @@ export const TAG = (variant?: string): Resource => ({
   gemValue: FRAME().gemValue // Should have the same value as Frame. They give similar buffs
 })
 
-
 export const PORTRAIT = (variant?: string): Resource => ({
   name: variant ? `"${variant}" Portrait`: "Portrait",
   gemValue:  0 // Portrait has new real value, just looks cool
@@ -360,4 +359,9 @@ export const SPECIAL_SUPPLY_BOX: Resource = {
 export const EPIC_DECO: Resource = {
   name: "Epic Deco",
   gemValue: 0  // has no value
+}
+
+export const COIN_OF_HARMONY: Resource = {
+  name: "Coin of Harmony (No value yet)",
+  gemValue: 0  // has no value yet, need to do some research
 }
