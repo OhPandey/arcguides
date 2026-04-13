@@ -37,6 +37,10 @@ const CHRONICLE_UNLOCKS = [
     "temple",
 ]
 
+const CHRONICLE_DURATIONS: Record<string, number> = {
+    temple: 2
+}
+
 /* ---------------- Context ---------------- */
 
 type EventContext = {
@@ -282,7 +286,7 @@ function getNewWorldEventStatus(event: Event, ctx: EventContext) {
 /* ---------------- Chronicle ---------------- */
 function getChronicleEventStatus(event: Event,ctx: EventContext): EventStatus {
 
-    const duration = getDuration(event)
+    const baseDuration = getDuration(event)
 
     const MILESTONE_EVENTS = chronicleOfHarmony.filter(e => CHRONICLE_UNLOCKS.includes(e.unlock))
 
@@ -303,6 +307,8 @@ function getChronicleEventStatus(event: Event,ctx: EventContext): EventStatus {
         id++
 
     const currentEvent = MILESTONE_EVENTS[id]
+
+    const duration = CHRONICLE_DURATIONS[currentEvent.unlock] ?? baseDuration
 
     const start = releaseMs + dayToMs(currentEvent.day - duration)
 
