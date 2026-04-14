@@ -6,6 +6,7 @@ import { events } from "@/src/events/data/events"
 import { sortEvents } from "@/src/events/utils/eventSchedule"
 import { servers } from "@/src/events/data/servers"
 import EventTimeLine from "@/components/EventTimeLine"
+import { getChronicleInfo } from "@/src/events/utils/chronicle"
 
 export default function EventsPage() {
   const [search, setSearch] = useState("") 
@@ -41,12 +42,37 @@ export default function EventsPage() {
     return sortEvents(filtered, server)
   }, [search, server])
   
+    const chronicleInfo = useMemo(() => {
+      if (!server) 
+        return null
+      const release = new Date(server.releaseDate).getTime()
+      return getChronicleInfo(release)
+    }, [server])
 
   return (
     <main className="mx-auto max-w-6xl p-6">
       <h1 className="text-2xl font-bold text-white mb-6">List of all events</h1>
 
+      <div className="mb-6 flex justify-end">
+        {chronicleInfo && (
+          <div className="rounded-lg bg-gray-900 border border-gray-700 p-4 text-white text-right">
+            <p>
+              Current Chronicle:{" "}
+              <span className="font-semibold">{chronicleInfo.current.name}</span>
+            </p>
 
+            {chronicleInfo.next && (
+              <p>
+                Next Chronicle{" "}
+                <span className="font-bold">
+                  {chronicleInfo.next.name} in {chronicleInfo.daysUntilNext}{" "}
+                  {chronicleInfo.daysUntilNext === 1 ? "day" : "days"}
+                </span>
+              </p>
+            )}
+          </div>
+        )}
+      </div>
       <EventTimeLine events={events} server={server} />
 
       <div className="mb-6 flex flex-col sm:flex-row gap-2">

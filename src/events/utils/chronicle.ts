@@ -27,3 +27,40 @@ export const chronicleOfHarmony: ChronicleEntry[] = [
     { day: 61, name: "Triumph of Harmony", unlock: "temple" },
     { day: 67, name: "Father Glowworm", unlock: "nothing" },
 ];
+
+export function getChronicleInfo(serverRelease: number) {
+    const DAY_MS = 86400000
+    const now = Date.now()
+
+    const serverAge = Math.floor((now - serverRelease) / DAY_MS)
+
+    const entries = chronicleOfHarmony
+
+    const currentIndex = entries.findLastIndex(e => serverAge >= e.day)
+
+    if (currentIndex === -1) 
+        return null
+
+    const current = entries[currentIndex]
+    const next = entries[currentIndex + 1]
+
+    if (!next) {
+        if (serverAge <= current.day + 7) {
+            return {
+                current,
+                next: null,
+                daysUntilNext: null
+            }
+        }
+
+        return null
+    }
+
+    const daysUntilNext = next.day - serverAge
+
+    return {
+        current,
+        next,
+        daysUntilNext
+    }
+}
