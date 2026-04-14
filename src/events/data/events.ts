@@ -1805,6 +1805,158 @@ export const events: Event[] = [
             ]
           ],
         ]
+      },
+      {
+        title: "Day 2",
+        headers: ["Task", "Reward"],
+        rows: [
+          [
+            "Defeat 5 Shattered Skulls",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount:  5 * 2 + 5 * 2 + 5 * 2 }
+            ]
+          ],
+          [
+            "Defeat 10 Shattered Skulls",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 3 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount:  5 * 5 + 5 * 5 + 5 * 5 }
+            ]
+          ],
+          [
+            "Defeat 15 Shattered Skulls",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 5 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount:  60 + 60 + 60 }
+            ]
+          ],
+          [
+            "Send 1 airship",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000 },
+              { resource: Resources.WOOD, amount: 10000 },
+              { resource: Resources.STONE, amount: 10000 }
+            ]
+          ],
+          [
+            "Send 2 airships",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 3 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000 * 2 },
+              { resource: Resources.WOOD, amount: 10000 * 2 },
+              { resource: Resources.STONE, amount: 10000 * 2 }
+            ]
+          ],
+          [
+            "Successfully raid 2 other airships",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 5 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 50000 },
+              { resource: Resources.WOOD, amount: 50000 },
+              { resource: Resources.STONE, amount: 50000 }
+            ]
+          ],
+        ]
+      }
+    ],
+    rewards: [
+      {
+        title: "Way to Harmony Exchange",
+        headers: ["Coins of Harmony", "Reward"],
+        rows: [
+          [
+            "1",
+            [
+              { resource: Resources.FOOD, amount: 50000 }
+            ]
+          ],
+          [
+            "1",
+            [
+              { resource: Resources.WOOD, amount: 50000 }
+            ]
+          ],
+          [
+            "1",
+            [
+              { resource: Resources.STONE, amount: 50000 }
+            ]
+          ],
+          [
+            "1",
+            [
+              { resource: Resources.GOLD, amount: 25000 }
+            ]
+          ],
+          [
+            "1",
+            [
+              { resource: Resources.SPEEDUP, amount: 60 }
+            ]
+          ],
+          [
+            "2",
+            [
+              { resource: Resources.SPIRIT_BADGE_RARE, amount: 1 }
+            ]
+          ],
+          [
+            "2",
+            [
+              { resource: Resources.SPIRIT_SHARD_RARE, amount: 1 }
+            ]
+          ],
+          [
+            "2",
+            [
+              { resource: Resources.SILVER_SCROLL, amount: 1 }
+            ]
+          ],
+          [
+            "8",
+            [
+              { resource: Resources.SPIRIT_BADGE_EPIC, amount: 1 }
+            ]
+          ],
+          [
+            "8",
+            [
+              { resource: Resources.SPIRIT_SHARD_EPIC, amount: 1 }
+            ]
+          ],
+          [
+            "10",
+            [
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 }
+            ]
+          ],
+          [
+            "10",
+            [
+              { resource: Resources.RESET_TALENT, amount: 1 }
+            ]
+          ],
+          [
+            "30",
+            [
+              { resource: Resources.SPIRIT_BADGE_LEGENDARY, amount: 1 }
+            ]
+          ],
+          [
+            "30",
+            [
+              { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 1 }
+            ]
+          ]
+        ]
       }
     ],
     details: [
