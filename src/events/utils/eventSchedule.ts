@@ -123,7 +123,7 @@ function computeEventStatus(ctx: EventContext, start: number | null, durationDay
     const hasRepeat = repeat > 0;
     const baseStart = transitionStart ?? start;
 
-    const cycles = hasRepeat ? Math.floor((now - baseStart) / repeat) : 0;
+    const cycles = hasRepeat ? Math.max(0, Math.floor((now - baseStart) / repeat)) : 0;
 
     const currentStart = transitionStart ? baseStart + (cycles + 1) * repeat : baseStart + cycles * repeat;
 
@@ -329,7 +329,8 @@ function getTempleEventStatus(event: Event, ctx: EventContext) {
 
     if (ctx.serverAge <= TEMPLE_UNLOCK)
         return defaultStatus({ isDisabled: true })
-    else if(ctx.serverAge < FIRST_APPEARENCE+1) // stays for one more day
+
+    if(ctx.serverAge < FIRST_APPEARENCE+1) // stays for one more day
         start = ctx.serverRelease + dayToMs(FIRST_APPEARENCE)
     else
         start = getTimestamp(event.startDate)
