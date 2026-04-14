@@ -2475,7 +2475,7 @@ export const events: Event[] = [
     name: "Stay Focused",
     description: "Maintain your focus!",
     duration: 2,
-    repeat: "Unknown",
+    repeat: 14,
     startDate: "2026-04-04",
     type: "MINOR",
     tasks: [
@@ -4014,7 +4014,7 @@ export const events: Event[] = [
     name: "Borte's Scheme",
     description: "High Priestress of the Shattered Skulls is seeking the throne of Murong.",
     duration: 2,
-    repeat: "Unknown",
+    repeat: 14,
     startDate: "2026-04-04",
     type: "MINOR",
     tasks: [
