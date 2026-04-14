@@ -88,7 +88,6 @@ function computeEventSegments(events: any[], server: Server, days: Date[]) {
 
         const clampedStart = Math.max(startKey, firstKey);
         const clampedEnd = Math.min(endKey, lastKey);
-        console.log(event.name, new Date(endKey).toDateString(), new Date(lastKey).toDateString())
 
         const startDay = dayIndex[clampedStart];
         const endDay = dayIndex[clampedEnd];
