@@ -410,6 +410,8 @@ function getTWEventStatus(event: Event, ctx: EventContext) {
     return computeFromEvent(ctx, event, start, transition);
 }
 
+/* ---------------- BiWeekly Events ---------------- */
+
 function getBiWeeklyEventStatus(event: Event, ctx: EventContext) {
 
     let currentSeed: SeedType = getServerSeed(ctx.server);
@@ -428,29 +430,9 @@ function getBiWeeklyEventStatus(event: Event, ctx: EventContext) {
     const startFromSeed = getSeedStart(event, currentSeed)!;
     const startFromSeedA = getSeedStart(event, "SEED_A")!;
 
-    const eventCount = completedEventsFromStart(
-        startFromSeed,
-        14,
-        getDuration(event),
-        ctx.serverRelease,
-        ctx.now
-    );
+    let start = (ctx.serverAge < 52) ? startFromSeed : startFromSeedA
 
-    let start: number;
-    let transition: number | undefined;
-
-    if (eventCount < 4) {
-        start = startFromSeed;
-        transition = undefined;
-    } else if (eventCount === 4) {
-        start = startFromSeed;
-        transition = startFromSeedA;
-    } else {
-        start = startFromSeedA;
-        transition = undefined;
-    }
-
-    return computeFromEvent(ctx, event, start, transition);
+    return computeFromEvent(ctx, event, start);
 }
 
 /* ---------------- Handler Map ---------------- */
