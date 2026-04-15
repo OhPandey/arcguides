@@ -1065,7 +1065,7 @@ export const events: Event[] = [
     name: "Beyond Limits",
     description: "Keep trying and strive to surpass your limits!",
     duration: 1,
-    repeat: "Unknown",
+    repeat: 14,  // Probably 2 weeks, need to check later for confirmation
     startDate: "2026-04-01",
     type: "MINOR",
     tasks: [
@@ -2346,7 +2346,7 @@ export const events: Event[] = [
     description: "Who can melt the candle first?",
     duration: 2,
     startDate: "2026-04-10",
-    repeat: "Unknown",
+    repeat: 14,  // Probably 2 weeks, need to check later for confirmation
     type: "MINOR",
     tasks: [
       {
@@ -4209,7 +4209,7 @@ export const events: Event[] = [
     description: "Join forces with the alliance to crush the enemies!",
     duration: 2,
     startDate: "2026-04-06",
-    repeat: "Unknown",
+    repeat: 14,  // Probably 2 weeks, need to check later for confirmation
     type: "MINOR",
     tasks: [
       {
@@ -4282,7 +4282,7 @@ export const events: Event[] = [
     name: "Roar of Battle",
     description: "Defeat Shattered Skulls and earn points to receive rewards.",
     duration: 2,
-    repeat: "Unknown",
+    repeat: 14,  // Probably 2 weeks, need to check later for confirmation
     startDate: "2026-04-07",
     type: "MINOR",
     tasks: [
@@ -4435,7 +4435,7 @@ export const events: Event[] = [
     name: "Glorious Victory",
     description: "Destroy Shattered Skulls' Fortresses with your alliance and earn rewards.",
     duration: 2,
-    repeat: "Unknown",
+    repeat: 14,  // Probably 2 weeks, need to check later for confirmation
     startDate: "2026-04-10",
     type: "MINOR",
     tasks: [
@@ -4563,8 +4563,7 @@ export const events: Event[] = [
     name: "Balance and Order",
     description: "You are the guardians fo balance and order.",
     duration: 3,
-
-    repeat: "Unknown",
+    repeat: 14,  // Probably 2 weeks, need to check later for confirmation
     startDate: "2026-04-08",
     type: "MINOR",
     tasks: [
@@ -4638,7 +4637,7 @@ export const events: Event[] = [
     name: "Readiness",
     description: '"Failure is only the opportunity to begin again. Only this time, more wisely." - Uncle Iroh',
     duration: 2,
-    repeat: "Unknown",
+    repeat: 14,  // Probably 2 weeks, need to check later for confirmation
     startDate: "2026-04-09",
     type: "MINOR",
     tasks: [
@@ -5234,7 +5233,7 @@ export const events: Event[] = [
     name: "Search & Upgrade",
     description: "To achieve faster growth, it's important to observe your surroundings carefully!",
     duration: 2,
-    repeat: "Unknown",
+    repeat: 14,  // Probably 2 weeks, need to check later for confirmation
     startDate: "2026-04-11",
     type: "MINOR",
     tasks: [

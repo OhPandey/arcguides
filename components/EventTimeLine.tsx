@@ -17,7 +17,8 @@ type TimelineEvent = {
 function getDayKey(input: unknown): number | null {
     const date = new Date(input as any);
 
-    if (isNaN(date.getTime())) return null;
+    if (isNaN(date.getTime())) 
+        return null;
 
     return Date.UTC(
         date.getUTCFullYear(),
@@ -30,9 +31,8 @@ function buildTimelineDays() {
     const now = new Date();
     const days: Date[] = [];
 
-    for (let i = 0; i <= 14; i++) {
+    for (let i = 0; i <= 14; i++)
         days.push(new Date(now.getTime() + i * DAY_MS));
-    }
 
     return days;
 }
@@ -40,10 +40,13 @@ function buildTimelineDays() {
 function buildDayIndex(days: Date[]) {
     const map: Record<number, number> = {};
 
-    days.forEach((d, i) => {
-        const key = getDayKey(d);
-        if (key !== null) map[key] = i;
-    });
+    days.forEach((d, i) => 
+        {
+            const key = getDayKey(d);
+            if (key !== null) 
+                map[key] = i;
+        }
+    );
 
     return map;
 }
@@ -54,7 +57,8 @@ function computeEventSegments(events: any[], server: Server, days: Date[]) {
     const firstKey = getDayKey(days[0]);
     const lastKey = getDayKey(days[days.length - 1]);
 
-    if (firstKey === null || lastKey === null) return [];
+    if (firstKey === null || lastKey === null)
+        return [];
 
     const dayIndex = buildDayIndex(days);
 
@@ -95,13 +99,15 @@ function computeEventSegments(events: any[], server: Server, days: Date[]) {
         if (startDay === undefined || endDay === undefined)
             continue;
 
-        segments.push({
-            id: event.id,
-            name: event.name,
-            startDay,
-            endDay,
-            status
-        });
+        segments.push(
+            {
+                id: event.id,
+                name: event.name,
+                startDay,
+                endDay,
+                status
+            }
+        );
     }
 
     return segments;
@@ -112,15 +118,17 @@ function assignLanes(events: Omit<TimelineEvent, "lane">[]): TimelineEvent[] {
 
     const result: TimelineEvent[] = [];
 
-    const sorted = [...events].sort((a, b) => {
-        if (a.startDay !== b.startDay)
-            return a.startDay - b.startDay;
+    const sorted = [...events].sort((a, b) => 
+        {
+            if (a.startDay !== b.startDay)
+                return a.startDay - b.startDay;
 
-        const aDuration = a.endDay - a.startDay;
-        const bDuration = b.endDay - b.startDay;
+            const aDuration = a.endDay - a.startDay;
+            const bDuration = b.endDay - b.startDay;
 
-        return bDuration - aDuration;
-    });
+            return bDuration - aDuration;
+        }
+    );
 
     for (const event of sorted) {
         let lane = 0;
@@ -129,10 +137,12 @@ function assignLanes(events: Omit<TimelineEvent, "lane">[]): TimelineEvent[] {
             if (lanes[lane] === undefined || lanes[lane] < event.startDay) {
                 lanes[lane] = event.endDay;
 
-                result.push({
-                    ...event,
-                    lane
-                });
+                result.push(
+                    {
+                        ...event,
+                        lane
+                    }
+                );
 
                 break;
             }
@@ -151,19 +161,17 @@ function buildTimeline(events: any[], server: Server, days: Date[]) {
 }
 
 function TimelineEventBox({ event }: { event: TimelineEvent }) {
+
     const isLastDay = event.endDay === 0;
     const isMultiDay = event.startDay !== event.endDay;
 
     const compact = !isMultiDay && isLastDay;
 
-    const displayName = compact && event.name.length > 13
-            ? event.name.slice(0, 13) + "..."
-            : event.name;
-
+    const displayName = compact && event.name.length > 13 ? event.name.slice(0, 13) + "..." : event.name;
 
     return (
         <div
-            className="h-10 rounded-lg border px-3 flex items-center justify-center text-sm shadow-sm bg-gray-900 border-gray-800 hover:border-indigo-500"
+            className="h-10 rounded-lg border px-3 flex items-center justify-center text-sm shadow-sm bg-gray-900 border-gray-500 hover:brightness-125"
             title={event.name}
         >
             {displayName}
@@ -201,8 +209,8 @@ export default function EventTimeline({ events, server }: { events: any[], serve
 
                             <div
                                 className={`text-xs mb-2 ${isToday
-                                        ? "text-indigo-400 font-semibold"
-                                        : "text-gray-500"
+                                    ? "text-indigo-400 font-semibold"
+                                    : "text-gray-500"
                                     }`}
                             >
                                 {isToday ? "TODAY" : day.toUTCString().slice(0, 11)}
