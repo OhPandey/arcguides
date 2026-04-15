@@ -1065,7 +1065,7 @@ export const events: Event[] = [
     name: "Beyond Limits",
     description: "Keep trying and strive to surpass your limits!",
     duration: 1,
-    repeat: 14,  // Probably 2 weeks, need to check later for confirmation
+    repeat: "Unknown",  // IS NOT 2 weeks
     startDate: "2026-04-01",
     type: "MINOR",
     tasks: [
