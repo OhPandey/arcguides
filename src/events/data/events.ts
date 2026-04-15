@@ -571,7 +571,7 @@ export const events: Event[] = [
           "Per gathering 100 Food on the field: 3 Points",
           "Per gathering 100 Stones on the field: 3 Points",
           "Per gathering 50 Gold on the field: 3 Points",
-          "Increase Power by 1 with Research or ebnder Recruitment: 25 Points",
+          "Increase Power by 1 with Research or Bender Recruitment: 25 Points",
           "Per 1 Lucky Ticket: 150,000 points"
         ], space: true
       },
@@ -5341,7 +5341,7 @@ export const events: Event[] = [
             ]
           ],
           [
-            "Use 3,000 of Speedup items",
+            "Use 3,000m of Speedup items",
             [
               { resource: Resources.GEM, amount: 200 },
               { resource: Resources.SPEEDUP, amount: 60 * 2 },
