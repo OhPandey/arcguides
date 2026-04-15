@@ -38,7 +38,7 @@ export function getChronicleInfo(serverRelease: number) {
 
     const currentIndex = entries.findLastIndex(e => serverAge >= e.day)
 
-    if (currentIndex === -1) 
+    if (currentIndex === -1)
         return null
 
     const current = entries[currentIndex]
@@ -49,7 +49,9 @@ export function getChronicleInfo(serverRelease: number) {
             return {
                 current,
                 next: null,
-                daysUntilNext: null
+                daysUntilNext: null,
+                index: currentIndex + 1,
+                total: entries.length
             }
         }
 
@@ -61,6 +63,8 @@ export function getChronicleInfo(serverRelease: number) {
     return {
         current,
         next,
-        daysUntilNext
+        daysUntilNext,
+        index: currentIndex + 1,
+        total: entries.length
     }
 }

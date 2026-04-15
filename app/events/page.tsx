@@ -9,7 +9,7 @@ import EventTimeLine from "@/components/EventTimeLine"
 import { getChronicleInfo } from "@/src/events/utils/chronicle"
 
 export default function EventsPage() {
-  const [search, setSearch] = useState("") 
+  const [search, setSearch] = useState("")
   const [serverId, setServer] = useState("1074")
   const [mounted, setMounted] = useState(false)
 
@@ -41,38 +41,57 @@ export default function EventsPage() {
     )
     return sortEvents(filtered, server)
   }, [search, server])
-  
-    const chronicleInfo = useMemo(() => {
-      if (!server) 
-        return null
-      const release = new Date(server.releaseDate).getTime()
-      return getChronicleInfo(release)
-    }, [server])
+
+  const chronicleInfo = useMemo(() => {
+    if (!server)
+      return null
+    const release = new Date(server.releaseDate).getTime()
+    return getChronicleInfo(release)
+  }, [server])
 
   return (
     <main className="mx-auto max-w-6xl p-6">
       <h1 className="text-2xl font-bold text-white mb-6">List of all events</h1>
 
-      <div className="mb-6 flex justify-end">
-        {chronicleInfo && (
-          <div className="rounded-lg bg-gray-900 border border-gray-700 p-4 text-white text-right">
-            <p>
-              Current Chronicle:{" "}
-              <span className="font-semibold">{chronicleInfo.current.name}</span>
-            </p>
-
-            {chronicleInfo.next && (
+      {chronicleInfo && (() => {
+        const isFinalChronicle = chronicleInfo?.index === chronicleInfo?.total
+        const isNextChronicleFinal = chronicleInfo ? chronicleInfo.index + 1 === chronicleInfo.total : false
+        const isSecondNextChronicleFinal = chronicleInfo ? chronicleInfo.index + 2 === chronicleInfo.total : false
+        return (
+          <div className="mb-6 flex justify-end">
+            <div className="rounded-lg bg-gray-900 border border-gray-700 p-4 text-white text-right">
               <p>
-                Next Chronicle{" "}
-                <span className="font-bold">
-                  {chronicleInfo.next.name} in {chronicleInfo.daysUntilNext}{" "}
-                  {chronicleInfo.daysUntilNext === 1 ? "day" : "days"}
+                Current Chronicle:{" "}
+                <span className="font-semibold">
+                  {chronicleInfo.current.name} ({chronicleInfo.index}/{chronicleInfo.total})
                 </span>
               </p>
-            )}
+
+              {chronicleInfo.next && !isFinalChronicle && (
+                <p>
+                  Next Chronicle{" "}: <span className="font-bold">{chronicleInfo.next.name}</span> in {chronicleInfo.daysUntilNext}{" "} {chronicleInfo.daysUntilNext === 1 ? "day" : "days"}
+                  {isSecondNextChronicleFinal && (
+                    <span className="text-green-600">
+                      <br />Temple is about to be released — get ready!
+                    </span>
+                  )}
+                  {isNextChronicleFinal && (
+                    <span className="text-orange-500">
+                      <br />This is the last step of the Chronicle - capture your Temple!
+                    </span>
+                  )}
+                </p>
+              )}
+
+              {isFinalChronicle && (
+                <p className="text-red-500">
+                  Chronicle concluded
+                </p>
+              )}
+            </div>
           </div>
-        )}
-      </div>
+        )
+      })()}
       <EventTimeLine events={events} server={server} />
 
       <div className="mb-6 flex flex-col sm:flex-row gap-2">
