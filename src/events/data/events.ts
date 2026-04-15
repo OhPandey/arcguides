@@ -1057,7 +1057,8 @@ export const events: Event[] = [
     ],
     informations: [
       "The hero rotates after **every third event**.\nThe rotation for The Greatest Leader (Cross Server) is **Yangchen → Roku → Kuruk → Zaheer → Kuivra → Jinora → Desna & Eska → Opal**.",
-    ]
+    ],
+    wip: true
   },
   {
     id: "beyond-limits",
