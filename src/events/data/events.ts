@@ -1580,8 +1580,8 @@ export const events: Event[] = [
       SEED_A: "2026-03-30",
       SEED_B: "2026-04-01",
       SEED_B2: "2026-04-15",
-      SEED_C: "2026-04-08",
-      SEED_C2: "2026-04-21",
+      SEED_C: "2026-04-15",
+      SEED_C2: "2026-04-28",
     },
     type: "BIWEEKLY",
     tasks: [
@@ -1732,8 +1732,8 @@ export const events: Event[] = [
       SEED_A: "2026-04-13",
       SEED_B: "2026-04-15",
       SEED_B2: "2026-04-01",
-      SEED_C: "2026-04-21",
-      SEED_C2: "2026-04-08",
+      SEED_C: "2026-04-28",
+      SEED_C2: "2026-04-15",
     },
     type: "BIWEEKLY",
     tasks: [
@@ -1866,6 +1866,126 @@ export const events: Event[] = [
             ]
           ],
         ]
+      },
+      {
+        title: "Day 3",
+        headers: ["Task", "Reward"],
+        rows: [
+          [
+            "Gather 100,000 Resources from the Field",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount:  5 * 2 + 5 * 2 + 5 * 2 }
+            ]
+          ],
+          [
+            "Gather 300,000 Resources from the Field",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 3 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount:  5 * 5 + 5 * 5 + 5 * 5 }
+            ]
+          ],
+          [
+            "Gather 500,000 Resources from the Field",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 5 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount:  60 + 60 + 60 }
+            ]
+          ],
+          [
+            "Purchase 3 items at the Trading Post",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000 },
+              { resource: Resources.WOOD, amount: 10000 },
+              { resource: Resources.STONE, amount: 10000 }
+            ]
+          ],
+          [
+            "Purchase 10 items at the Trading Post",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 3 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000 * 2 },
+              { resource: Resources.WOOD, amount: 10000 * 2 },
+              { resource: Resources.STONE, amount: 10000 * 2 }
+            ]
+          ],
+          [
+            "Purchase 15 items at the Trading Post",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 3 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 50000 },
+              { resource: Resources.WOOD, amount: 50000 },
+              { resource: Resources.STONE, amount: 50000 }
+            ]
+          ]
+        ]
+      },
+      {
+        title: "Day 4",
+        headers: ["Task", "Reward"],
+        rows: [
+          [
+            "Destroy a Shattered Skulls' Fortresses",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.SPEEDUP, amount:  5 * 2 + 5 * 2 + 5 * 2 }
+            ]
+          ],
+          [
+            "Destroy 3 Shattered Skulls' Fortresses",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 3 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount:  5 * 5 + 5 * 5 + 5 * 5 }
+            ]
+          ],
+          [
+            "Destroy 5 Shattered Skulls' Fortresses",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 5 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.SPEEDUP, amount:  60 + 60 + 60 }
+            ]
+          ],
+          [
+            "Donate 5 times to alliance research",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 1 },
+              { resource: Resources.BOOK_OF_EXPERIENCE_EPIC, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000 },
+              { resource: Resources.WOOD, amount: 10000 },
+              { resource: Resources.STONE, amount: 10000 }
+            ]
+          ],
+          [
+            "Donate 20 times to alliance research",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 3 },
+              { resource: Resources.SILVER_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 10000 * 2 },
+              { resource: Resources.WOOD, amount: 10000 * 2 },
+              { resource: Resources.STONE, amount: 10000 * 2 }
+            ]
+          ],
+          [
+            "Donate 40 times to alliance research",
+            [
+              { resource: Resources.COIN_OF_HARMONY, amount: 3 },
+              { resource: Resources.GOLDEN_SCROLL, amount: 1 },
+              { resource: Resources.FOOD, amount: 50000 },
+              { resource: Resources.WOOD, amount: 50000 },
+              { resource: Resources.STONE, amount: 50000 }
+            ]
+          ]
+        ]
       }
     ],
     rewards: [
@@ -1968,7 +2088,7 @@ export const events: Event[] = [
           "Different types fo goals will be revealed each day.",
           "Complete goals to earn [Harmony Coins]",
           "Collect [Harmony Coins] to trade for amazing rewards at the exchange Shop."
-        ]
+        ], space: true
       },
       { type: "quotedate", author: "ANGames", date: "2026-04-13" }
     ],

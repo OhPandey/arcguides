@@ -362,6 +362,6 @@ export const EPIC_DECO: Resource = {
 }
 
 export const COIN_OF_HARMONY: Resource = {
-  name: "Coin of Harmony (No value yet)",
-  gemValue: 0  // has no value yet, need to do some research
+  name: "Coin of Harmony",
+  gemValue: 41 // Average net worth (not normalised)
 }

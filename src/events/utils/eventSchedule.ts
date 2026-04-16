@@ -23,7 +23,6 @@ const BASE_STATUS: EventStatus = {
     nextStart: null,
 }
 
-
 const DAY_MS = 86400000
 
 const CHRONICLE_UNLOCKS = [
@@ -38,7 +37,8 @@ const CHRONICLE_UNLOCKS = [
 ]
 
 const CHRONICLE_DURATIONS: Record<string, number> = {
-    temple: 2
+    temple: 2,
+    gate: 2
 }
 
 /* ---------------- Context ---------------- */
@@ -429,6 +429,9 @@ function getBiWeeklyEventStatus(event: Event, ctx: EventContext) {
     
     const startFromSeed = getSeedStart(event, currentSeed)!;
     const startFromSeedA = getSeedStart(event, "SEED_A")!;
+    
+    if(ctx.serverAge <= 7) 
+        return defaultStatus({ isDisabled: true }) // BiWeekly Events cannot start during New World Event (Newest data from 2026/04/16)
 
     let start = (ctx.serverAge < 52) ? startFromSeed : startFromSeedA
 
