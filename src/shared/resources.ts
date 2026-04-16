@@ -363,5 +363,10 @@ export const EPIC_DECO: Resource = {
 
 export const COIN_OF_HARMONY: Resource = {
   name: "Coin of Harmony",
-  gemValue: 41 // Average net worth (not normalised)
+  gemValue: 41 // Average net worth (not weighted)
+}
+
+export const AVATAR_COOKIE: Resource = {
+  name: "Avatar Cookie",
+  gemValue: 41 // Average net worth (not weighted)
 }
