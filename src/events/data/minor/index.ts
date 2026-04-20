@@ -16,6 +16,7 @@ import { stayFocused } from "../minor/stayFocused";
 import { supplyQuest } from "../minor/supplyQuest";
 import { timeless } from "../minor/timeless";
 import { unbreakableWill } from "../minor/unbreakableWill";
+import { unitedMind } from "./unitedMind";
 
 export const minorEvents: Event[] = [
    { ...unbreakableWill, type: "MINOR" },
@@ -33,5 +34,6 @@ export const minorEvents: Event[] = [
    { ...supplyQuest, type: "MINOR" },
    { ...searchAndUpgrade, type: "MINOR" },
    { ...timeless, type: "MINOR" },
-   { ...beyondLimits, type: "MINOR" }
+   { ...beyondLimits, type: "MINOR" },
+   { ...unitedMind, type: "MINOR" }
 ]

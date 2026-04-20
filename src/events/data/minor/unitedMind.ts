@@ -1,7 +1,7 @@
 import * as Resources from "../../../shared/resources"
 import { Event } from "../../type/event"
 
-export const unitedMInd: Omit<Event, "type"> = {
+export const unitedMind: Omit<Event, "type"> = {
   id: "united_mind",
   name: "United Mind",
   description: "Join forces with the alliance to crush the enemies!",
