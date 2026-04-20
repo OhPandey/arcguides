@@ -109,6 +109,13 @@ function completedEventsFromStart(eventStart: number, repeatDays: number, durati
     return Math.min(totalEvents, maxPossibleEvents)
 }
 
+function isEventActive(now: number, baseStart: number, repeatMs: number, durationMs: number): boolean {
+    if (now < baseStart)
+        return false;
+
+    return ((now - baseStart) % repeatMs) < durationMs;
+}
+
 /* ---------------- Scheduler ---------------- */
 
 function computeEventStatus(ctx: EventContext, start: number | null, durationDays: number, repeatDays: number, transitionStart?: number): EventStatus {
@@ -180,6 +187,8 @@ function getUniqueEventStatus(event: Event, ctx: EventContext) {
 /* ---------------- TGL ---------------- */
 
 function getTGLSingleEventStatus(event: Event, ctx: EventContext) {
+     const { duration, repeat } = getTiming(event)
+
     const currentSeed: SeedType = getServerSeed(ctx.server);
     const startFromSeed = getSeedStart(event, currentSeed)!;
     const startFromSeedA = getSeedStart(event, "SEED_A")!;
@@ -202,8 +211,15 @@ function getTGLSingleEventStatus(event: Event, ctx: EventContext) {
         start = startFromSeed;
         transition = undefined;
     } else if (eventCount === 4) {
-        start = startFromSeed;
-        transition = startFromSeedA;
+        const isSeedAActive = isEventActive(ctx.now, startFromSeedA, dayToMs(repeat), dayToMs(duration));
+
+        if (isSeedAActive) {
+            start = startFromSeedA;
+            transition = undefined;
+        } else {
+            start = startFromSeed;
+            transition = startFromSeedA;
+        }
     } else {
         start = startFromSeedA;
         transition = undefined;
@@ -253,6 +269,7 @@ function getWheelEventStatus(event: Event, ctx: EventContext) {
         ctx.serverRelease,
         ctx.now
     );
+    
 
     let start: number;
     let transition: number | undefined;
@@ -260,9 +277,17 @@ function getWheelEventStatus(event: Event, ctx: EventContext) {
     if (eventCount < 4) {
         start = startFromSeed;
         transition = undefined;
+
     } else if (eventCount === 4) {
-        start = startFromSeed;
-        transition = startFromSeedA;
+        const isSeedAActive = isEventActive(ctx.now, startFromSeedA, dayToMs(repeat), dayToMs(duration));
+
+        if (isSeedAActive) {
+            start = startFromSeedA;
+            transition = undefined;
+        } else {
+            start = startFromSeed;
+            transition = startFromSeedA;
+        }
     } else {
         start = startFromSeedA;
         transition = undefined;
@@ -400,8 +425,15 @@ function getTWEventStatus(event: Event, ctx: EventContext) {
         start = startFromSeed;
         transition = undefined;
     } else if (eventCount === 5) {
-        start = startFromSeed;
-        transition = startFromSeedA;
+        const isSeedAActive = isEventActive(ctx.now, startFromSeedA, dayToMs(repeat), dayToMs(duration));
+        
+         if (isSeedAActive) {
+            start = startFromSeedA;
+            transition = undefined;
+        } else {
+            start = startFromSeed;
+            transition = startFromSeedA;
+        }
     } else {
         start = startFromSeedA;
         transition = undefined;
