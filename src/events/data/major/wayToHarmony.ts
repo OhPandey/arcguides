@@ -9,9 +9,9 @@ export const wayToHarmony: Omit<Event, "type"> = {
     repeat: 28,
     seedStartDate: {
         SEED_A: "2026-04-13",
-        SEED_B: "2026-04-15",
-        SEED_B2: "2026-04-01",
-        SEED_C: "2026-04-28",
+        SEED_B: "2026-04-22",
+        SEED_B2: "2026-04-08",
+        SEED_C: "2026-04-01",
         SEED_C2: "2026-04-15",
     },
     tasks: [
