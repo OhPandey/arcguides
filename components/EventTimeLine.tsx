@@ -31,7 +31,7 @@ function buildTimelineDays() {
     const now = new Date();
     const days: Date[] = [];
 
-    for (let i = 0; i <= 14; i++)
+    for (let i = 0; i < 14; i++)
         days.push(new Date(now.getTime() + i * DAY_MS));
 
     return days;
