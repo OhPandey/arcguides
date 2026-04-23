@@ -14,5 +14,6 @@ export enum AuraCategory {
   SIEGE = "Siege",
   GATHERING = "Gathering",
   UTILITY = "Utility",
+  CAPACITY = "Capacity",
   UNKNOWN = "Unknown",
 }

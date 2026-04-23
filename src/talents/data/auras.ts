@@ -11,7 +11,7 @@ export const auras: Record<number, Aura> = {
     7: { id: 7, name: "Squad Damage Reduction", effect: "The squad's normal damage reduction increases by {value}%.", unit: "%", category: AuraCategory.DEFENSIVE },
     8: { id: 8, name: "Squad Skill Damage", effect: "The squad's skill damage increases by {value}%.", unit: "%", category: AuraCategory.OFFENSIVE },
     9: { id: 9, name: "Squad Skill Damage Reduction", effect: "The squad's skill damage reduction increases by {value}%.", unit: "%", category: AuraCategory.DEFENSIVE },
-    10: { id: 10, name: "Squad Bender Capacity", effect: "The squad's max bender capacity increases by {value}%.", unit: "%" },
+    10: { id: 10, name: "Squad Bender Capacity", effect: "The squad's max bender capacity increases by {value}%.", unit: "%", category: AuraCategory.CAPACITY },
     11: { id: 11, name: "Squad Healing", effect: "The squad's base healing increases by {value}%.", unit: "%", category: AuraCategory.HEALING},
     12: { id: 12, name: "Hero Rage", effect: "Normal attacks grant additional hero rage by {value}.", unit: "", category: AuraCategory.OFFENSIVE },
     13: { id: 13, name: "Troop ATK", effect: "The troop's ATK increases by {value}%.", unit: "%", category: AuraCategory.OFFENSIVE },

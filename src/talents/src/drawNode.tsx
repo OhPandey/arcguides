@@ -138,10 +138,6 @@ export const DrawNode: React.FC<DrawNodeProps> = ({ talentNode, selectedTalentNo
                                     </>
                                 )}
                             </p>
-
-                            {/* DEBUG */}
-                            <p>Aura name: "{aura.name}"</p>
-                            <p>Aura id: {aura.id}</p>
                         </div>
 
                         {/* Arrow (bottom) */}
