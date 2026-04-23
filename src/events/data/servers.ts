@@ -74,15 +74,16 @@ export const servers: Server[] = [
     { id: 1071, name: "World 1071", releaseDate: "2026-01-23" },
     { id: 1072, name: "World 1072", releaseDate: "2026-01-30" },
     { id: 1073, name: "World 1073", releaseDate: "2026-02-06" },
-    { id: 1074, name: "World 1074", releaseDate: "2026-02-13", wip: true },
-    { id: 1075, name: "World 1075", releaseDate: "2026-02-20", wip: true },
-    { id: 1076, name: "World 1076", releaseDate: "2026-02-27", wip: true },
-    { id: 1077, name: "World 1077", releaseDate: "2026-03-06", wip: true },
-    { id: 1078, name: "World 1078", releaseDate: "2026-03-13", wip: true },
-    { id: 1079, name: "World 1079", releaseDate: "2026-03-20", wip: true },
-    { id: 1080, name: "World 1080", releaseDate: "2026-03-27", wip: true },
-    { id: 1081, name: "World 1081", releaseDate: "2026-04-03", wip: true },
-    { id: 1082, name: "World 1082", releaseDate: "2026-04-10", wip: true }
+    { id: 1074, name: "World 1074", releaseDate: "2026-02-13" },
+    { id: 1075, name: "World 1075", releaseDate: "2026-02-20" },
+    { id: 1076, name: "World 1076", releaseDate: "2026-02-27" },
+    { id: 1077, name: "World 1077", releaseDate: "2026-03-06" },
+    { id: 1078, name: "World 1078", releaseDate: "2026-03-13" },
+    { id: 1079, name: "World 1079", releaseDate: "2026-03-20" },
+    { id: 1080, name: "World 1080", releaseDate: "2026-03-27" },
+    { id: 1081, name: "World 1081", releaseDate: "2026-04-03" },
+    { id: 1082, name: "World 1082", releaseDate: "2026-04-10" },
+    { id: 1083, name: "World 1083", releaseDate: "2026-04-17" },
 ]
 
 export const Seed = ["SEED_A", "SEED_B", "SEED_C", "SEED_B2", "SEED_C2"] as const

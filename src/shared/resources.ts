@@ -330,8 +330,13 @@ export const BUNDLE_SUPPLY_CHEST_LV6: Resource = {
   gemValue: 254.25
 };
 
+export const CUSTOM_RESOURCE_CHEST_LV2: Resource = {
+  name: "Lv.2 Custom Resource Chest",
+  gemValue: FOOD.gemValue*10000
+};
+
 export const CUSTOM_RESOURCE_CHEST_LV3: Resource = {
-  name: "Lv.4 Custom Resource Chest",
+  name: "Lv.3 Custom Resource Chest",
   gemValue: FOOD.gemValue*50000
 };
 

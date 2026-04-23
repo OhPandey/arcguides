@@ -448,26 +448,20 @@ function getBiWeeklyEventStatus(event: Event, ctx: EventContext) {
 
     let currentSeed: SeedType = getServerSeed(ctx.server);
     
-    const pairParityEven = Math.floor(ctx.server.id / 2) % 2 === 0;
-
-    switch (currentSeed) {
-        case "SEED_A":
-        currentSeed = "SEED_A";
-        case "SEED_B":
-        currentSeed = pairParityEven ? "SEED_B2" : "SEED_B";
-        case "SEED_C":
-        currentSeed = pairParityEven ? "SEED_C" : "SEED_C2";
-    }
-    
-    const startFromSeed = getSeedStart(event, currentSeed)!;
-    const startFromSeedA = getSeedStart(event, "SEED_A")!;
-    
     if(ctx.serverAge <= 7) 
         return defaultStatus({ isDisabled: true }) // BiWeekly Events cannot start during New World Event (Newest data from 2026/04/16)
 
-    let start = (ctx.serverAge < 52) ? startFromSeed : startFromSeedA
+    if(ctx.serverAge > 52)
+        return computeFromEvent(ctx, event, getSeedStart(event, "SEED_A"))
+    
+    const pairParityEven = Math.floor(ctx.server.id / 2) % 2 === 0;
 
-    return computeFromEvent(ctx, event, start);
+    if(currentSeed == "SEED_B")
+        currentSeed = pairParityEven ? "SEED_B": "SEED_B2"
+    else if(currentSeed == "SEED_C")
+        currentSeed = pairParityEven ? "SEED_C": "SEED_C2"
+    
+    return computeFromEvent(ctx, event, getSeedStart(event, currentSeed));
 }
 
 /* ---------------- Handler Map ---------------- */

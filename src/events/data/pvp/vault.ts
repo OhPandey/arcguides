@@ -317,6 +317,5 @@ export const vaultOfMurang: Omit<Event, "type"> = {
           ], space: true
       },
       { type: "quotedate", author: "ANGames", date: "2026-04-11" }
-    ],
-    wip: true,
+    ]
   }

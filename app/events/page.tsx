@@ -10,12 +10,12 @@ import { getChronicleInfo } from "@/src/events/utils/chronicle"
 
 export default function EventsPage() {
   const [search, setSearch] = useState("")
-  const [serverId, setServer] = useState("1074")
+  const [serverId, setServer] = useState("1")
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     const savedSearch = localStorage.getItem("eventSearch") || ""
-    const savedServer = localStorage.getItem("eventServer") || "1074"
+    const savedServer = localStorage.getItem("eventServer") || "1"
     setSearch(savedSearch)
     setServer(savedServer)
     setMounted(true)
