@@ -34,6 +34,8 @@ export type ScheduleType =
   | "DESERT_TROUBLEMAKERS"
   | "BIWEEKLY"
   | "VAULT"
+  | "WORLDBOSS_SINGLE"
+  | "WORLDBOSS_MULTI"
 
 export type EventTableCell = string | Reward[]
 

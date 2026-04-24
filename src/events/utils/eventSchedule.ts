@@ -464,6 +464,24 @@ function getBiWeeklyEventStatus(event: Event, ctx: EventContext) {
     return computeFromEvent(ctx, event, getSeedStart(event, currentSeed));
 }
 
+/* ---------------- Worldboss Events ---------------- */
+
+function getWorldbossSingleEventStatus(event: Event, ctx: EventContext) {
+
+    if(ctx.serverAge >= 64) 
+        return defaultStatus({ isDisabled: true })
+
+    return computeFromEvent(ctx, event, getTimestamp(event.startDate));
+}
+
+function getWorldbossMultiEventStatus(event: Event, ctx: EventContext) {
+
+    if(ctx.serverAge < 64) 
+        return defaultStatus({ isDisabled: true })
+
+    return computeFromEvent(ctx, event, getTimestamp(event.startDate));
+}
+
 /* ---------------- Handler Map ---------------- */
 
 type EventHandler = (event: Event, ctx: EventContext) => EventStatus
@@ -480,7 +498,9 @@ const EVENT_HANDLERS: Record<string, EventHandler> = {
     UNALAQ_PASS: getUnalaqPassEventStatus,
     DESERT_TROUBLEMAKERS: getTWEventStatus,
     BIWEEKLY: getBiWeeklyEventStatus,
-    VAULT: getVaultEventStatus
+    VAULT: getVaultEventStatus,
+    WORLDBOSS_SINGLE: getWorldbossSingleEventStatus,
+    WORLDBOSS_MULTI: getWorldbossMultiEventStatus,
 }
 
 /* ---------------- Public API ---------------- */
