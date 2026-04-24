@@ -7,7 +7,7 @@ export const unavaatuMulti: Omit<Event, "type"> = {
     description: "Fight the Worldboss! More information needed.",
     duration: 2,
     repeat: 7, // Apparently it repeats every week, on Monday
-    startDate: "2026-04-27", // On Monday? I think article is wrong
+    startDate: "2026-05-04", // First start that should happen after maintenance
     informations: [
         "This event is cross-server."
     ],

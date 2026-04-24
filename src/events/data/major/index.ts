@@ -3,7 +3,7 @@ import { avatarDay } from "./avatarDay"
 import { desertTroublemakers } from "./desertTroublemakers"
 import { unalaqPass } from "./unalaqPass"
 import { unavaatuMulti } from "./unavaatuMulti"
-import { unavaatuSingle } from "./unavaatuSingle copy"
+import { unavaatuSingle } from "./unavaatuSingle"
 import { wayToHarmony } from "./wayToHarmony"
 
 export const majorEvents: Event[] = [
@@ -12,5 +12,5 @@ export const majorEvents: Event[] = [
     { ...avatarDay, type: "BIWEEKLY" },
     { ...wayToHarmony, type: "BIWEEKLY" },
     { ...unavaatuSingle, type: "WORLDBOSS_SINGLE" },
-    { ...unavaatuMulti, type: "WORLDBOSS_MULTI" },
+    { ...unavaatuMulti, type: "WORLDBOSS_MULTI" }
 ]
