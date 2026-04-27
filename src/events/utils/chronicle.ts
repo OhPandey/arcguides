@@ -45,7 +45,7 @@ export function getChronicleInfo(serverRelease: number) {
     const next = entries[currentIndex + 1]
 
     if (!next) {
-        if (serverAge <= current.day + 7) {
+        if (serverAge <= current.day) {
             return {
                 current,
                 next: null,

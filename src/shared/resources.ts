@@ -355,6 +355,11 @@ export const CUSTOM_RESOURCE_CHEST_LV6: Resource = {
   gemValue: FOOD.gemValue*1500000
 };
 
+export const CUSTOM_RESOURCE_CHEST_LV7: Resource = {
+  name: "Lv.7 Custom Resource Chest",
+  gemValue: FOOD.gemValue*5000000
+};
+
 export const SPECIAL_SUPPLY_BOX: Resource = {
   name: "Special Supply Box (1st Anniversary)",
   gemValue: 20 // Average reward
