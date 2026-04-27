@@ -46,17 +46,17 @@ export const SPIRIT_SHARD_LEGENDARY: Resource = {
 };
 
 export const SPIRIT_BADGE_RARE: Resource = {
-  name: "Rare Badge Shard",
+  name: "Rare Spirit Badge",
   gemValue: 40
 };
 
 export const SPIRIT_BADGE_EPIC: Resource = {
-  name: "Epic Badge Shard",
+  name: "Epic Spirit Badge",
   gemValue: 250
 };
 
 export const SPIRIT_BADGE_LEGENDARY: Resource = {
-  name: "Legendary Badge Shard",
+  name: "Legendary Spirit Badge",
   gemValue: 700
 };
 
