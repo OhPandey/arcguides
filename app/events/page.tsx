@@ -11,12 +11,12 @@ import ChroniclePanel from "@/components/ChroniclePanel"
 
 export default function EventsPage() {
   const [search, setSearch] = useState("")
-  const [serverId, setServer] = useState("1")
+  const [serverId, setServer] = useState("1001")
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     const savedSearch = localStorage.getItem("eventSearch") || ""
-    const savedServer = localStorage.getItem("eventServer") || "1"
+    const savedServer = localStorage.getItem("eventServer") || "1001"
     setSearch(savedSearch)
     setServer(savedServer)
     setMounted(true)

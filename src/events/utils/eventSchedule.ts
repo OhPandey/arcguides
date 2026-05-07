@@ -201,7 +201,7 @@ function getTGLSingleEventStatus(event: Event, ctx: EventContext) {
         ctx.now
     );
 
-    if (eventCount > 6)
+    if (eventCount >= 5)
         return defaultStatus({ isDisabled: true });
 
     let start: number;
@@ -244,7 +244,7 @@ function getTGLCrossEventStatus(event: Event, ctx: EventContext) {
         ctx.now
     );
 
-    if (eventCount <= 6)
+    if (eventCount < 5)
         return defaultStatus({ isDisabled: true });
 
     const start: number = startFromSeedA;
