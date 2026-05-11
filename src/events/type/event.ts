@@ -17,6 +17,7 @@ export type Event = {
   tips?: string[]
   informations?: string[]
   wip?: boolean
+  image?: string
 }
 
 // Still WIP - Need more data!

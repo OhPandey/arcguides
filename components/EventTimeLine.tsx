@@ -12,6 +12,7 @@ type TimelineEvent = {
     endDay: number;
     lane: number;
     status: any;
+    image: string;
 };
 
 function getDayKey(input: unknown): number | null {
@@ -100,7 +101,8 @@ function computeEventSegments(events: any[], server: Server, days: Date[]) {
             name: event.name,
             startDay,
             endDay,
-            status
+            status,
+            image: event.image
         });
     }
 
@@ -158,6 +160,13 @@ function TimelineEventBox({ event }: { event: TimelineEvent }) {
             className="h-10 w-full rounded-lg border px-3 flex items-center justify-center text-sm shadow-sm bg-gray-900 border-gray-500 hover:brightness-125"
             title={event.name}
         >
+            {event.image && (
+                <img
+                    src={`/arcguides/images/events/icons/${event.image}`}
+                    alt={event.name}
+                    className="w-8 h-7 rounded-lg object-cover pr-2"
+                />
+            )}
             {displayName}
         </div>
     );

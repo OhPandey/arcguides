@@ -8,8 +8,6 @@ export const unavaatuSingle: Omit<Event, "type"> = {
      duration: 2,
     repeat: 7, // Apparently it repeats every week, on Monday
     startDate: "2026-05-04",  // First start that should happen after maintenance
-    informations: [
-        "This event is cross-server."
-    ],
-    wip: true
+    wip: true,
+    image: "unavaatu.png"
 }

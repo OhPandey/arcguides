@@ -370,5 +370,6 @@ export const wayToHarmony: Omit<Event, "type"> = {
         },
         { type: "quotedate", author: "ANGames", date: "2026-04-13" }
     ],
-    wip: true
+    wip: true,
+    image: "wth.png"
 }

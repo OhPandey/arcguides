@@ -257,9 +257,9 @@ export const unavaatuMulti: Omit<Event, "type"> = {
                         { resource: Resources.GEM, amount: 2000 },
                         { resource: Resources.SACRED_GLYPH, amount: 70 },
                         { resource: Resources.SACRED_DEW, amount: 150 },
-                        { resource: Resources.SPEEDUP, amount: 60*30 },
-                        { resource: Resources.FOOD, amount: 150000*20 },
-                        { resource: Resources.WOOD, amount: 150000*20 }
+                        { resource: Resources.SPEEDUP, amount: 60 * 30 },
+                        { resource: Resources.FOOD, amount: 150000 * 20 },
+                        { resource: Resources.WOOD, amount: 150000 * 20 }
                     ]
                 ],
                 [
@@ -269,9 +269,9 @@ export const unavaatuMulti: Omit<Event, "type"> = {
                         { resource: Resources.GEM, amount: 1500 },
                         { resource: Resources.SACRED_GLYPH, amount: 50 },
                         { resource: Resources.SACRED_DEW, amount: 120 },
-                        { resource: Resources.SPEEDUP, amount: 60*20 },
-                        { resource: Resources.FOOD, amount: 150000*10 },
-                        { resource: Resources.WOOD, amount: 150000*10 }
+                        { resource: Resources.SPEEDUP, amount: 60 * 20 },
+                        { resource: Resources.FOOD, amount: 150000 * 10 },
+                        { resource: Resources.WOOD, amount: 150000 * 10 }
                     ]
                 ],
                 [
@@ -281,9 +281,9 @@ export const unavaatuMulti: Omit<Event, "type"> = {
                         { resource: Resources.GEM, amount: 1200 },
                         { resource: Resources.SACRED_GLYPH, amount: 45 },
                         { resource: Resources.SACRED_DEW, amount: 100 },
-                        { resource: Resources.SPEEDUP, amount: 60*15 },
-                        { resource: Resources.FOOD, amount: 150000*8 },
-                        { resource: Resources.WOOD, amount: 150000*8 }
+                        { resource: Resources.SPEEDUP, amount: 60 * 15 },
+                        { resource: Resources.FOOD, amount: 150000 * 8 },
+                        { resource: Resources.WOOD, amount: 150000 * 8 }
                     ]
                 ],
                 [
@@ -292,9 +292,9 @@ export const unavaatuMulti: Omit<Event, "type"> = {
                         { resource: Resources.GEM, amount: 1000 },
                         { resource: Resources.SACRED_GLYPH, amount: 40 },
                         { resource: Resources.SACRED_DEW, amount: 80 },
-                        { resource: Resources.SPEEDUP, amount: 60*10 },
-                        { resource: Resources.FOOD, amount: 150000*6 },
-                        { resource: Resources.WOOD, amount: 150000*6 }
+                        { resource: Resources.SPEEDUP, amount: 60 * 10 },
+                        { resource: Resources.FOOD, amount: 150000 * 6 },
+                        { resource: Resources.WOOD, amount: 150000 * 6 }
                     ]
                 ],
                 [
@@ -303,9 +303,9 @@ export const unavaatuMulti: Omit<Event, "type"> = {
                         { resource: Resources.GEM, amount: 800 },
                         { resource: Resources.SACRED_GLYPH, amount: 30 },
                         { resource: Resources.SACRED_DEW, amount: 60 },
-                        { resource: Resources.SPEEDUP, amount: 60*8 },
-                        { resource: Resources.FOOD, amount: 150000*5 },
-                        { resource: Resources.WOOD, amount: 150000*5 }
+                        { resource: Resources.SPEEDUP, amount: 60 * 8 },
+                        { resource: Resources.FOOD, amount: 150000 * 5 },
+                        { resource: Resources.WOOD, amount: 150000 * 5 }
                     ]
                 ],
                 [
@@ -314,9 +314,9 @@ export const unavaatuMulti: Omit<Event, "type"> = {
                         { resource: Resources.GEM, amount: 500 },
                         { resource: Resources.SACRED_GLYPH, amount: 25 },
                         { resource: Resources.SACRED_DEW, amount: 50 },
-                        { resource: Resources.SPEEDUP, amount: 60*5 },
-                        { resource: Resources.FOOD, amount: 150000*4 },
-                        { resource: Resources.WOOD, amount: 150000*4 }
+                        { resource: Resources.SPEEDUP, amount: 60 * 5 },
+                        { resource: Resources.FOOD, amount: 150000 * 4 },
+                        { resource: Resources.WOOD, amount: 150000 * 4 }
                     ]
                 ],
                 [
@@ -325,9 +325,9 @@ export const unavaatuMulti: Omit<Event, "type"> = {
                         { resource: Resources.GEM, amount: 300 },
                         { resource: Resources.SACRED_GLYPH, amount: 20 },
                         { resource: Resources.SACRED_DEW, amount: 40 },
-                        { resource: Resources.SPEEDUP, amount: 60*3 },
-                        { resource: Resources.FOOD, amount: 150000*3 },
-                        { resource: Resources.WOOD, amount: 150000*3 }
+                        { resource: Resources.SPEEDUP, amount: 60 * 3 },
+                        { resource: Resources.FOOD, amount: 150000 * 3 },
+                        { resource: Resources.WOOD, amount: 150000 * 3 }
                     ]
                 ],
                 [
@@ -336,9 +336,9 @@ export const unavaatuMulti: Omit<Event, "type"> = {
                         { resource: Resources.GEM, amount: 200 },
                         { resource: Resources.SACRED_GLYPH, amount: 15 },
                         { resource: Resources.SACRED_DEW, amount: 30 },
-                        { resource: Resources.SPEEDUP, amount: 60*2 },
-                        { resource: Resources.FOOD, amount: 150000*2 },
-                        { resource: Resources.WOOD, amount: 150000*2 }
+                        { resource: Resources.SPEEDUP, amount: 60 * 2 },
+                        { resource: Resources.FOOD, amount: 150000 * 2 },
+                        { resource: Resources.WOOD, amount: 150000 * 2 }
                     ]
                 ],
                 [
@@ -347,9 +347,9 @@ export const unavaatuMulti: Omit<Event, "type"> = {
                         { resource: Resources.GEM, amount: 100 },
                         { resource: Resources.SACRED_GLYPH, amount: 10 },
                         { resource: Resources.SACRED_DEW, amount: 20 },
-                        { resource: Resources.SPEEDUP, amount: 60*1 },
-                        { resource: Resources.FOOD, amount: 150000*1 },
-                        { resource: Resources.WOOD, amount: 150000*1 }
+                        { resource: Resources.SPEEDUP, amount: 60 * 1 },
+                        { resource: Resources.FOOD, amount: 150000 * 1 },
+                        { resource: Resources.WOOD, amount: 150000 * 1 }
                     ]
                 ]
             ]
@@ -359,39 +359,44 @@ export const unavaatuMulti: Omit<Event, "type"> = {
         "(Known) rotation: Water → Earth ",
     ],
     details: [
-    { type: "p", content: "Challenge 'Furious UnaVaatu', a powerful interdimensional threat on a whole different level. Challenge the weekly Battlegrounds with the favored Bending Arts to achieve higher points.", space: true },
-    { type: "p", content: "[Schedule]" },
-    { type: "ol", items: 
-        [
-            "UnaVaatu's Sanctuary is held weekly and can be challenged every Monday and Tuesday."
-        ],
-        space: true
-    },
-    { type: "p", content: "[Rankings]" },
-    { type: "ol", items: 
-        [
-            "Your 'Highest Damage Dealt' to UnaVaatu will be recorded in the Rankings, and you will compete against Leaders from other Worlds within the same group.",
-            "Rankings are reset weekly. Rewards will be sent via in-game mail on Wednesdays."
-        ],
-        space: true
-    },
-    { type: "p", content: "[Particiaption Rewards]" },
-    { type: "ol", items: 
-        [
-            "You can earn Participation Rewards up to 3 times a day.",
-            "Particiaption Rewards are distributed immeediately after the battle ends."
-        ],
-        space: true
-    },
-    { type: "p", content: "[Achievement Rewards]" },
-    { type: "ol", items: 
-        [
-            "You can obtain score achievement rewards based on the 'highest damage' dealt to UnaVaatu in battle.",
-            "The score achievement reward for each battleground can be claimed only once."
-        ],
-        space: true
-    },
-    { type: "quotedate", author: "ANGames", date: "2026-05-11" }
-  ],
-    wip: true
+        { type: "p", content: "Challenge 'Furious UnaVaatu', a powerful interdimensional threat on a whole different level. Challenge the weekly Battlegrounds with the favored Bending Arts to achieve higher points.", space: true },
+        { type: "p", content: "[Schedule]" },
+        {
+            type: "ol", items:
+                [
+                    "UnaVaatu's Sanctuary is held weekly and can be challenged every Monday and Tuesday."
+                ],
+            space: true
+        },
+        { type: "p", content: "[Rankings]" },
+        {
+            type: "ol", items:
+                [
+                    "Your 'Highest Damage Dealt' to UnaVaatu will be recorded in the Rankings, and you will compete against Leaders from other Worlds within the same group.",
+                    "Rankings are reset weekly. Rewards will be sent via in-game mail on Wednesdays."
+                ],
+            space: true
+        },
+        { type: "p", content: "[Particiaption Rewards]" },
+        {
+            type: "ol", items:
+                [
+                    "You can earn Participation Rewards up to 3 times a day.",
+                    "Particiaption Rewards are distributed immeediately after the battle ends."
+                ],
+            space: true
+        },
+        { type: "p", content: "[Achievement Rewards]" },
+        {
+            type: "ol", items:
+                [
+                    "You can obtain score achievement rewards based on the 'highest damage' dealt to UnaVaatu in battle.",
+                    "The score achievement reward for each battleground can be claimed only once."
+                ],
+            space: true
+        },
+        { type: "quotedate", author: "ANGames", date: "2026-05-11" }
+    ],
+    wip: true,
+    image: "unavaatu.png"
 }
