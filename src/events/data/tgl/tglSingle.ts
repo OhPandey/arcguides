@@ -625,5 +625,6 @@ export const tglSingle: Omit<Event, "type"> = {
   informations: [
     "For the first 6 times, The Greatest Leader (TGL) only takes place on **your server**, after that the event will become [cross-server](tgl-crossserver).",
     "The hero rotates after **every third event**.\nThe rotation for The Greatest Leader (Single Server) is **Aang → Amon**.",
-  ]
+  ],
+  image: "tgl.png"
 }

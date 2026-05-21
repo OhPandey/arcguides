@@ -112,5 +112,6 @@ export const pathToDevelopment: Omit<Event, "type"> = {
     informations: [
       "This is a special event everyone gets upon unlocking the calendar (Town Hall 4 and Chapter 4)."
     ],
-    wip: true
+    wip: true,
+    image: "development.png"
   }

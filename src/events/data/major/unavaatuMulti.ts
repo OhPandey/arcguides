@@ -356,7 +356,7 @@ export const unavaatuMulti: Omit<Event, "type"> = {
         }
     ],
     informations: [
-        "(Known) rotation: Water → Earth ",
+        "Rotation: Water → Earth → Fire → Air",
     ],
     details: [
         { type: "p", content: "Challenge 'Furious UnaVaatu', a powerful interdimensional threat on a whole different level. Challenge the weekly Battlegrounds with the favored Bending Arts to achieve higher points.", space: true },
@@ -397,6 +397,5 @@ export const unavaatuMulti: Omit<Event, "type"> = {
         },
         { type: "quotedate", author: "ANGames", date: "2026-05-11" }
     ],
-    wip: true,
     image: "unavaatu.png"
 }

@@ -72,5 +72,6 @@ export const balanceAndOrder: Omit<Event, "type"> = {
   ],
   informations: [
     "Balance and Order resets every day at 00:00 UTC, for 3 days.",
-  ]
+  ],
+  image: "bno.png"
 }

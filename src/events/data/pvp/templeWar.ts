@@ -309,6 +309,6 @@ export const templeWar: Omit<Event, "type"> = {
         ], space: true
       },
       { type: "quotedate", author: "ANGames", date: "2026-04-03" },
-
-    ]
+    ],
+    image: "temple.png"
   }

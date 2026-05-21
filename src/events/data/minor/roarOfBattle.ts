@@ -6,7 +6,7 @@ export const roarOfBattle: Omit<Event, "type"> = {
   name: "Roar of Battle",
   description: "Defeat Shattered Skulls and earn points to receive rewards.",
   duration: 2,
-  repeat: 14,  // Probably 2 weeks, need to check later for confirmation
+  repeat: 14,
   startDate: "2026-04-07",
   tasks: [
     {
@@ -151,5 +151,6 @@ export const roarOfBattle: Omit<Event, "type"> = {
       ], space: true
     },
     { type: "quotedate", author: "ANGames", date: "2026-04-07" }
-  ]
+  ],
+  image: "rob.png"
 }
