@@ -28,6 +28,15 @@ export default function EventCard({ event, server }: EventCardProps) {
     <div className="rounded-xl border border-gray-800 bg-gray-900 p-5 hover:border-indigo-500 transition flex flex-col">
 
       <div className="flex items-center justify-center gap-2">
+        {event.image && (
+          <div className="text-s text-center">
+            <img
+              src={`/arcguides/images/events/icons/${event.image}`}
+              alt={event.name}
+              className="w-8 h-7 rounded-lg object-cover"
+            />
+          </div>
+        )}
         <h3 className="text-lg font-semibold text-white">
           {event.name}
         </h3>

@@ -14,6 +14,9 @@ export function formatResource(resource: Resource, amount: number) {
   const formattedAmount = formatNumber(amount)
 
   if (resource === SPEEDUP) {
+    if(amount >= 1440)
+        return `${formattedAmount}min (~${formatNumber(Math.round(amount/1440))}d) ${resource.name}`
+
     return `${formattedAmount}min ${resource.name}`
   }
 

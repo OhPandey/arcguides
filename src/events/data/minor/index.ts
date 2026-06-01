@@ -16,6 +16,8 @@ import { stayFocused } from "../minor/stayFocused";
 import { supplyQuest } from "../minor/supplyQuest";
 import { timeless } from "../minor/timeless";
 import { unbreakableWill } from "../minor/unbreakableWill";
+import { gemRush } from "./gemRush";
+import { journeyOfUs } from "./journeyOfUs";
 import { unitedMind } from "./unitedMind";
 
 export const minorEvents: Event[] = [
@@ -35,5 +37,7 @@ export const minorEvents: Event[] = [
    { ...searchAndUpgrade, type: "MINOR" },
    { ...timeless, type: "MINOR" },
    { ...beyondLimits, type: "MINOR" },
-   { ...unitedMind, type: "MINOR" }
+   { ...unitedMind, type: "MINOR" },
+   { ...journeyOfUs, type: "MINOR" },
+   { ...gemRush, type: "MINOR" }
 ]

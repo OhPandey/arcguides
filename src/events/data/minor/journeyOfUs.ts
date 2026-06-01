@@ -80,5 +80,6 @@ export const journeyOfUs: Omit<Event, "type"> = {
       ], space: true
     },
     { type: "quotedate", author: "ANGames", date: "2026-04-13" }
-  ]
+  ],
+  image: "journey.png"
 }

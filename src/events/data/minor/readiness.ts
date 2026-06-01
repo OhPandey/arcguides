@@ -82,4 +82,5 @@ export const readiness: Omit<Event, "type"> = {
     },
     { type: "quotedate", author: "ANGames", date: "2026-04-09" }
   ],
+  image: "readiness.png"
 }

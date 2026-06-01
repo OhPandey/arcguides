@@ -9,6 +9,7 @@ import { opalTree } from "./air/opal";
 import { tenzinTree } from "./air/tenzin";
 import { yangchenTree } from "./air/yangchen";
 import { zaheerTree } from "./air/zaheer";
+import { bolinTree } from "./earth/bolin";
 import { caiTree } from "./earth/cai";
 import { kingBumiTree } from "./earth/kingBumi";
 import { kueiTree } from "./earth/kuei";
@@ -35,6 +36,7 @@ import { desnaTree } from "./water/desna";
 import { kataraTree } from "./water/katara";
 import { kataraPLTree } from "./water/kataraPL";
 import { korraTree } from "./water/korra";
+import { korraEqTree } from "./water/korraEq";
 import { kurukTree } from "./water/kuruk";
 import { phyanTree } from "./water/phyan";
 import { sokkaTree } from "./water/sokka";
@@ -84,5 +86,7 @@ export const heroMapping: Record<string, HeroTree> = {
     mako: makoTree,
     tophLB: tophLBTree,
     desna: desnaTree,
-    opal: opalTree
+    opal: opalTree,
+    bolin: bolinTree,
+    korraEq: korraEqTree
 }

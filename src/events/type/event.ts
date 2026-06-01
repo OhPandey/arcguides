@@ -17,6 +17,7 @@ export type Event = {
   tips?: string[]
   informations?: string[]
   wip?: boolean
+  image?: string
 }
 
 // Still WIP - Need more data!
@@ -34,6 +35,8 @@ export type ScheduleType =
   | "DESERT_TROUBLEMAKERS"
   | "BIWEEKLY"
   | "VAULT"
+  | "WORLDBOSS_SINGLE"
+  | "WORLDBOSS_MULTI"
 
 export type EventTableCell = string | Reward[]
 

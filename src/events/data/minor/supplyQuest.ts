@@ -14,11 +14,15 @@ export const supplyQuest: Omit<Event, "type"> = {
       rows: [
         [
           "Defeat 1 Shattered Skull (Repeatable)",
-          "1x Supply Chest"
+          [
+            { resource: Resources.SUPPLY_BOX, amount: 1}
+          ]
         ],
         [
-          "Gather X (Unknown yet) Resoures from the Field (Repeatable)",
-          "1x Supply Chest"
+          "Gather 50,000 Resources from the Field (Repeatable)",
+          [
+            { resource: Resources.SUPPLY_BOX, amount: 1}
+          ]
         ]
       ]
     }
@@ -105,11 +109,11 @@ export const supplyQuest: Omit<Event, "type"> = {
     {
       type: "ol", items: [
         "Gather resources on the world map, and defeat Shattered Skulls to obtain [Supply Chests].",
-        "Earn rank points by defeating Shattered Skulls and Gahtering resources on the Field.",
+        "Earn rank points by defeating Shattered Skulls and Gathering resources on the Field.",
         "This event resets at UTC 00:00"
       ], space: true
     },
     { type: "quotedate", author: "ANGames", date: "2026-04-13" }
   ],
-  wip: true
+  image: "supply.png"
 }

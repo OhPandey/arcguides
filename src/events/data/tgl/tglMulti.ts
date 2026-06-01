@@ -350,10 +350,11 @@ export const tglMulti: Omit<Event, "type"> = {
   ],
   disclaimer: '* This is not a generic Legendary Spirit Shard. The Legendary Spirit Shard obtained depends on the current hero rotation (See information box above).\n** Hero Power is excluded',
   tips: [
-    "You can prepare your recruitments, researches, and constructions in advance so that once the event starts, you can immediately gain points.",
-    "During the first three days, the [Wheel of Fate](wheel-of-fate) event runs and gives you up to 15M points, which is otherwise very hard to achieve. If you are a top competing player, this is a must-buy.",
-    "This event can be quite competitive. If you're a budget player (or free-to-play), try to focus on reaching at least Rank 50, which will grant you 5 Spirit Shards. After two events, you can obtain the hero.",
-    "Keep in mind that after the event ends, you can still get the hero under *Daily Deals* in the shop. So if you miss out on the event or can't compete, you can still obtain the hero later!\n This **is not** a Fear Of Missing Out (FOMO) event.",
+    "Prepare your researches (Stage I), recruitments (Stage II) and constructions (Stage IV) in advance so you can immediately start earning points once the event begins.",
+    "During the first three days, the [Wheel of Fate](wheel-of-fate) event is available and can provide up to 15M points, which are otherwise difficult to obtain. For highly competitive players, this is a must-buy.",
+    "The event is usually very competitive. Budget and free-to-play players should aim for at least Rank 50, which rewards 5 Spirit Shards. Reaching this milestone in two events is enough to unlock the hero.",
+    "Even after the event ends, the hero can still be obtained later through *Daily Deals* in the shop. Missing the event will not permanently lock you out of acquiring the hero.",
+    "Cross-server TGL's activity varies quite a lot as each of the 4 server on your server-pool gets the new hero cycle on different times. If obtaining the hero immediately is not a priority, consider keeping track of which TGL is the least active one.",
   ],
   details: [
     { type: "p", content: "Determine the greatest leader in the world." },
@@ -428,7 +429,8 @@ export const tglMulti: Omit<Event, "type"> = {
     { type: "quotedate", author: "AGN Games", date: "2026-04-01" }
   ],
   informations: [
-    "The hero rotates after **every third event**.\nThe rotation for The Greatest Leader (Cross Server) is **Yangchen → Roku → Kuruk → Zaheer → Kuivra → Jinora → Desna & Eska → Opal**.",
+    "The hero rotates after **every third event**.\nThe rotation for The Greatest Leader (Cross Server) is **Yangchen → Roku → Kuruk → Zaheer → Kuivra → Jinora → Desna & Eska → Opal → Bolin**.",
   ],
-  wip: true
+  wip: true,
+  image: "tgl.png"
 }

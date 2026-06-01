@@ -67,10 +67,10 @@ export const wheelOfFate: Omit<Event, "type"> = {
     "The $100 bundle available in the shop during this event can be purchased up to 3 times.",
     "Lucky Tickets carry over to the next event, so don't stress about using all of them in a single event.",
     "The average reward for a single spin is 1,744 Gems, and one spin costs 400 Gems.",
-    "The Wheel of Fate runs during [The Greatest Leader](tgl-single). You can get up to 15M points each day by using all of your Lucky Tickets, which gives you an incredible boost for TGL.",
+    "The Wheel of Fate runs during [The Greatest Leader (Single Server)](tgl-single) and [The Greatest Leader (Cross Server)](tgl-single). You can get up to 15M points each day by using all of your Lucky Tickets, which gives you an incredible boost for TGL.",
   ],
   informations: [
     "During the Wheel of Fate event, you can spin the wheel by using Lucky Tickets.",
     "The Wheel of Fate resets every day at 00:00 UTC, for 3 days.",
-    "The hero rotates after **every third event**.\nThe rotation for the Wheel of Fate is **Uncle Iroh → King Bumi → Painted Lady Katara → Fire Nation Aang → Avatar Hunter Zuko → White Wolf Sokka → Mako → Lady Beifong Toph → Ozai**",]
+    "The hero rotates after **every third event**.\nThe rotation for the Wheel of Fate is **Uncle Iroh → King Bumi → Painted Lady Katara → Fire Nation Aang → Avatar Hunter Zuko → White Wolf Sokka → Mako → Lady Beifong Toph → Ozai → Disguised Equalist Korra**",]
 }
