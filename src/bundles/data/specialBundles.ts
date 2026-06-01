@@ -516,5 +516,134 @@ export const specialBundles: Bundle[] = [
                 amount: 1
             },
         ]
+    },
+    {
+        name: "Anima Crystal Bundle I",
+        image: "placeholder.png",
+        priceUSD: 4.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 500
+            },
+            {
+                resource: Resources.ANIMA_CRYSTAL,
+                amount: 250
+            },
+            {
+                resource: Resources.SPEEDUP,
+                amount: 60 * 5 + 5 * 30
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000 * 500
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000 * 500
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000 * 500
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500 * 500
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 500
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV2,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Anima Crystal Bundle II",
+        image: "placeholder.png",
+        priceUSD: 9.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 1050
+            },
+            {
+                resource: Resources.ANIMA_CRYSTAL,
+                amount: 500
+            },
+            {
+                resource: Resources.SPEEDUP,
+                amount: 60 * 10 + 5 * 60
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000 * 1000
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000 * 1000
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000 * 1000
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500 * 1000
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 1000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV3,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Anima Crystal Bundle III",
+        image: "placeholder.png",
+        priceUSD: 19.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 2100
+            },
+            {
+                resource: Resources.ANIMA_CRYSTAL,
+                amount: 1000
+            },
+            {
+                resource: Resources.SPEEDUP,
+                amount: 60 * 20 + 5 * 120
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000 * 2000
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000 * 2000
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000 * 2000
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500 * 2000
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 2000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV4,
+                amount: 1
+            }
+        ]
     }
 ]

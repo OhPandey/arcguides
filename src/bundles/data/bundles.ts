@@ -1,3 +1,4 @@
+import { animaCrystalBundles } from "./animaCrystalBundles";
 import { companionBundles } from "./companionBundles";
 import { dailyDealBundles } from "./dailyDealsBundles";
 import { firstAnniversaryBundles } from "./firstAnniversaryBundles";
@@ -49,5 +50,6 @@ export const bundles = [
   ...skillUpBundles,
   ...rankUpBundles,
   ...surpriseLimitedBundles,
-  ...recruitmentBundles
+  ...recruitmentBundles,
+  ...animaCrystalBundles
 ];

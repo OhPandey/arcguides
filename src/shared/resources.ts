@@ -375,3 +375,8 @@ export const AVATAR_COOKIE: Resource = {
   name: "Avatar Cookie",
   gemValue: 41 // Average net worth (not weighted)
 }
+
+export const ANIMA_CRYSTAL: Resource = {
+  name: "Anima Crystal",
+  gemValue: 40
+}

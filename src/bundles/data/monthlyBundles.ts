@@ -237,4 +237,51 @@ export const monthlyBundles: Bundle[] = [
             }
         ]
     },
+    {
+        name: "Monthly Bundle VI",
+        image: "monthly.png",
+        priceUSD: 99.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 11500
+            },
+            {
+                resource: Resources.SPIRIT_SHARD_LEGENDARY,
+                amount: 100
+            },
+            {
+                resource: Resources.SPIRIT_BADGE_LEGENDARY,
+                amount: 100
+            },
+            {
+                resource: Resources.SPEEDUP,
+                amount: 60 * 200 + 5 * 4800
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000*7000
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*7000
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*7000
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500*7000
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 10000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV6,
+                amount: 1
+            }
+        ]
+    }
 ]
