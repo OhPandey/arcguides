@@ -257,4 +257,157 @@ export const summerSplashBundles: Bundle[] = [
             }
         ]
     },
+    {
+        name: "Summer Splash: Hero Badge Bundle I",
+        image: "summer_splash_hero_badge_bundle.png",
+        priceUSD: 4.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 500
+            },
+            {
+                resource: Resources.SPIRIT_BADGE_LEGENDARY,
+                amount: 30
+            },
+            {
+                resource: Resources.SPIRIT_SHARD_LEGENDARY,
+                amount: 3
+            },
+            {
+                resource: Resources.BOOK_OF_EXPERIENCE_EPIC,
+                amount: 120
+            },
+            {
+                resource: Resources.SPEEDUP,
+                amount: 5 * 100
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000 * 350
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000 * 350
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000 * 350
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500 * 350
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 500
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV2,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Summer Splash: Hero Badge Bundle II",
+        image: "summer_splash_hero_badge_bundle.png",
+        priceUSD: 9.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 1050
+            },
+            {
+                resource: Resources.SPIRIT_BADGE_LEGENDARY,
+                amount: 60
+            },
+            {
+                resource: Resources.SPIRIT_SHARD_LEGENDARY,
+                amount: 6
+            },
+            {
+                resource: Resources.BOOK_OF_EXPERIENCE_EPIC,
+                amount: 240
+            },
+            {
+                resource: Resources.SPEEDUP,
+                amount: 5 * 200
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000 * 700
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000 * 700
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000 * 700
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500 * 700
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 1000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV3,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Summer Splash: Hero Badge Bundle III",
+        image: "summer_splash_hero_badge_bundle.png",
+        priceUSD: 19.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 2100
+            },
+            {
+                resource: Resources.SPIRIT_BADGE_LEGENDARY,
+                amount: 120
+            },
+            {
+                resource: Resources.SPIRIT_SHARD_LEGENDARY,
+                amount: 12
+            },
+            {
+                resource: Resources.BOOK_OF_EXPERIENCE_EPIC,
+                amount: 480
+            },
+            {
+                resource: Resources.SPEEDUP,
+                amount: 5 * 400
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000 * 1400
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000 * 1400
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000 * 1400
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500 * 1400
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 2000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV4,
+                amount: 1
+            }
+        ]
+    },
 ];
