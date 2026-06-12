@@ -16,6 +16,7 @@ import { skillMasterBundles } from "./skillMasterBundles";
 import { skillUpBundles } from "./skillUpBundles";
 import { specialBundles } from "./specialBundles";
 import { starterBundles } from "./starterBundles";
+import { summerSplashBundles } from "./summerSplashBundles";
 import { supplyDepotBundles } from "./supplyDepotBundles";
 import { surpriseLimitedBundles } from "./surpriseLimitedBundles";
 import { tglBundles } from "./tglBundles";
@@ -51,5 +52,6 @@ export const bundles = [
   ...rankUpBundles,
   ...surpriseLimitedBundles,
   ...recruitmentBundles,
-  ...animaCrystalBundles
+  ...animaCrystalBundles,
+  ...summerSplashBundles
 ];

@@ -80,4 +80,47 @@ export const animaCrystalBundles: Bundle[] = [
             }
         ]
     },
+    {
+        name: "Anima Crystal Special Bundle I",
+        image: "anima_crystal_special_bundle.png",
+        priceUSD: 4.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 500
+            },
+            {
+                resource: Resources.ANIMA_CRYSTAL,
+                amount: 375
+            },
+            {
+                resource: Resources.SPEEDUP,
+                amount: 60 * 5 + 5 * 30
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000 * 500
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000 * 500
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000 * 500
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500 * 500
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 500
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV2,
+                amount: 1
+            }
+        ]
+    },
 ];
