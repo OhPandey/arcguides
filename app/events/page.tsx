@@ -52,7 +52,7 @@ export default function EventsPage() {
 
   return (
     <main className="mx-auto max-w-6xl p-6">
-      <h1 className="text-2xl font-bold text-white mb-6">List of all events</h1>
+      <h1 className="text-2xl font-bold text-white mb-6">List of all events {serverId}</h1>
 
       <ChroniclePanel server={server} />
       <EventTimeLine events={events} server={server} />

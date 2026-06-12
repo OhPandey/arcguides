@@ -92,21 +92,24 @@ function getTiming(event: Event) {
 }
 
 function completedEventsFromStart(eventStart: number, repeatDays: number, durationDays: number, serverReleaseMs: number, referenceMs: number): number {
-    if (repeatDays <= 0) 
-        return 0
+    if (repeatDays <= 0 || durationDays <= 0) 
+        return 0;
 
-    const serverDay = Math.floor(serverReleaseMs / DAY_MS)
-    const referenceDay = Math.floor(referenceMs / DAY_MS)
-    const eventEndDay = Math.floor(eventStart / DAY_MS) + (durationDays - 1)
+    const releaseDay = Math.floor(serverReleaseMs / DAY_MS);
+    const nowDay = Math.floor(referenceMs / DAY_MS);
+    const anchorDay = Math.floor(eventStart / DAY_MS);
 
-    const daysBetween = eventEndDay - serverDay
-    if (daysBetween < 0) 
-        return 0
+    const diffFromRelease = anchorDay - releaseDay;
+    const offset = ((diffFromRelease % repeatDays) + repeatDays) % repeatDays;
 
-    const totalEvents = Math.floor(daysBetween / repeatDays) + 1
-    const maxPossibleEvents = Math.floor((referenceDay - serverDay) / repeatDays) + 1
+    const firstStartDay = releaseDay + offset;
 
-    return Math.min(totalEvents, maxPossibleEvents)
+    const lastCountableDay = nowDay - durationDays;
+
+    if (lastCountableDay < firstStartDay) 
+        return 0;
+
+    return Math.floor((lastCountableDay - firstStartDay) / repeatDays) + 1;
 }
 
 function isEventActive(now: number, baseStart: number, repeatMs: number, durationMs: number): boolean {

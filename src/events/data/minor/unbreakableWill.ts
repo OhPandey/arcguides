@@ -87,5 +87,6 @@ export const unbreakableWill: Omit<Event, "type"> = {
     ],
     informations: [
         "Unbreakable Will resets every day at 00:00 UTC, for 3 days.",
-    ]
+    ],
+    image: "will.png"
 }

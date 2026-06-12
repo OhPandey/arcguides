@@ -649,5 +649,6 @@ export const desertTroublemakers: Omit<Event, "type"> = {
   informations: [
     "Before starting this event, you have to select a difficulty. You cannot change the difficulty afterward."
   ],
+  image: "dt.png",
   wip: true
 }

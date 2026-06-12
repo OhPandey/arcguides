@@ -78,5 +78,6 @@ export const harvestSeason: Omit<Event, "type"> = {
         ], space: true
       },
       { type: "quotedate", author: "ANGames", date: "2026-04-02" }
-    ]
+    ],
+    image: "harvest.png"
   }
