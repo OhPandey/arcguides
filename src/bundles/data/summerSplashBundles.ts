@@ -207,7 +207,7 @@ export const summerSplashBundles: Bundle[] = [
         ]
     },
     {
-        name: "Summer Splash: Hero Shard Bundle IV",
+        name: "Summer Splash: Hero Shard Bundle V",
         image: "summer_splash_hero_shard_bundle.png",
         priceUSD: 99.99,
         resources: [
