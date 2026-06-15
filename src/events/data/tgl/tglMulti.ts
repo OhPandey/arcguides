@@ -319,32 +319,246 @@ export const tglMulti: Omit<Event, "type"> = {
       title: "Daily Reward",
       headers: ["Rank", "Reward"],
       rows: [
-        ["1", "10 Legendary Spirit Shards*, 500 Gems, 100,000 Experience, 1,500,000 Food, 1,500,000 Wood, 1,500,000 Stone"],
-        ["2", "5 Legendary Spirit Shards*, 300 Gems, 80,000 Experience, 1,250,000 Food, 1,250,000 Wood, 1,250,000 Stone"],
-        ["3", "2 Legendary Spirit Shards*, 200 Gems, 60,000 Experience, 1,000,000 Food, 1,000,000 Wood, 1,000,000 Stone"],
-        ["4-5", "100 Gems, 40,000 Experience, 750,000 Food, 750,000 Wood, 750,000 Stone"],
-        ["6-10", "50 Gems, 30,000 Experience, 500,000 Food, 500,000 Wood, 500,000 Stone"],
-        ["11-15", "40 Gems, 20,000 Experience, 250,000 Food, 250,000 Wood, 250,000 Stone"],
-        ["16-20", "30 Gems, 10,000 Experience, 200,000 Food, 200,000 Wood, 200,000 Stone"],
-        ["21-25", "20 Gems, 5,000 Experience, 150,000 Food, 150,000 Wood, 150,000 Stone"],
-        ["26-50", "10 Gems, 3,000 Experience, 100,000 Food, 100,000 Wood, 100,000 Stone"],
-        ["50-100", "5 Gems, 2,000 Experience, 50,000 Food, 50,000 Wood, 50,000 Stone"],
+        [
+          "1",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 20, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 500 },
+            { resource: Resources.MYSTIC_ORB, amount: 10 },
+            { resource: Resources.FOOD, amount: 150000 * 30 },
+            { resource: Resources.WOOD, amount: 150000 * 30 },
+            { resource: Resources.STONE, amount: 150000 * 30 }
+          ]
+        ],
+        [
+          "2",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 300 },
+            { resource: Resources.MYSTIC_ORB, amount: 8 },
+            { resource: Resources.FOOD, amount: 150000 * 25 },
+            { resource: Resources.WOOD, amount: 150000 * 25 },
+            { resource: Resources.STONE, amount: 150000 * 25 }
+          ]
+        ],
+        [
+          "3",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 200 },
+            { resource: Resources.MYSTIC_ORB, amount: 6 },
+            { resource: Resources.FOOD, amount: 150000 * 20 },
+            { resource: Resources.WOOD, amount: 150000 * 20 },
+            { resource: Resources.STONE, amount: 150000 * 20 }
+          ]
+        ],
+        [
+          "4-5",
+          [
+            { resource: Resources.GEM, amount: 100 },
+            { resource: Resources.MYSTIC_ORB, amount: 5 },
+            { resource: Resources.FOOD, amount: 150000 * 15 },
+            { resource: Resources.WOOD, amount: 150000 * 15 },
+            { resource: Resources.STONE, amount: 150000 * 15 }
+          ]
+        ],
+        [
+          "6-10",
+          [
+            { resource: Resources.GEM, amount: 50 },
+            { resource: Resources.MYSTIC_ORB, amount: 4 },
+            { resource: Resources.FOOD, amount: 150000 * 10 },
+            { resource: Resources.WOOD, amount: 150000 * 10 },
+            { resource: Resources.STONE, amount: 150000 * 10 }
+          ]
+        ],
+        [
+          "11-15",
+          [
+            { resource: Resources.GEM, amount: 40 },
+            { resource: Resources.MYSTIC_ORB, amount: 3 },
+            { resource: Resources.FOOD, amount: 150000 * 7 },
+            { resource: Resources.WOOD, amount: 150000 * 7 },
+            { resource: Resources.STONE, amount: 150000 * 7 }
+          ]
+        ],
+        [
+          "16-20",
+          [
+            { resource: Resources.GEM, amount: 30 },
+            { resource: Resources.MYSTIC_ORB, amount: 2 },
+            { resource: Resources.FOOD, amount: 150000 * 5 },
+            { resource: Resources.WOOD, amount: 150000 * 5 },
+            { resource: Resources.STONE, amount: 150000 * 5 }
+          ]
+        ],
+        [
+          "21-25",
+          [
+            { resource: Resources.GEM, amount: 20 },
+            { resource: Resources.MYSTIC_ORB, amount: 1 },
+            { resource: Resources.FOOD, amount: 150000 * 4 },
+            { resource: Resources.WOOD, amount: 150000 * 4 },
+            { resource: Resources.STONE, amount: 150000 * 4 }
+          ]
+        ],
+        [
+          "26-50",
+          [
+            { resource: Resources.GEM, amount: 15 },
+            { resource: Resources.MYSTIC_ORB, amount: 1 },
+            { resource: Resources.FOOD, amount: 150000 * 3 },
+            { resource: Resources.WOOD, amount: 150000 * 3 },
+            { resource: Resources.STONE, amount: 150000 * 3 }
+          ]
+        ],
+        [
+          "50-100",
+          [
+            { resource: Resources.GEM, amount: 10 },
+            { resource: Resources.MYSTIC_ORB, amount: 1 },
+            { resource: Resources.FOOD, amount: 150000 * 2 },
+            { resource: Resources.WOOD, amount: 150000 * 2 },
+            { resource: Resources.STONE, amount: 150000 * 2 }
+          ]
+        ],
+        [
+          "101-200",
+          [
+            { resource: Resources.GEM, amount: 5 },
+            { resource: Resources.MYSTIC_ORB, amount: 1 },
+            { resource: Resources.FOOD, amount: 150000 },
+            { resource: Resources.WOOD, amount: 150000 },
+            { resource: Resources.STONE, amount: 150000 }
+          ]
+        ]
       ]
     },
     {
       title: "Overall Reward",
       headers: ["Rank", "Reward"],
       rows: [
-        ["1", "200 Legendary Spirit Shards*, 2,000 Gems, 1,800m Speedup, 5,000,000 Food, 5,000,000 Wood, 5,000,000 Stone"],
-        ["2", "150 Legendary Spirit Shards*, 1,500 Gems, 1,500m Speedup, 4,000,000 Food, 4,000,000 Wood, 4,000,000 Stone"],
-        ["3", "100 Legendary Spirit Shards*, 1,000 Gems, 1,200m Speedup, 3,500,000 Food, 3,500,000 Wood, 3,500,000 Stone"],
-        ["4-5", "70 Legendary Spirit Shards*, 700 Gems, 900m Speedup, 3,000,000 Food, 3,000,000 Wood, 3,000,000 Stone"],
-        ["6-10", "50 Legendary Spirit Shards*, 500 Gems, 720m Speedup, 2,500,000 Food, 2,500,000 Wood, 2,500,000 Stone"],
-        ["11-15", "30 Legendary Spirit Shards*, 300 Gems, 600m Speedup, 2,000,000 Food, 2,000,000 Wood, 2,000,000 Stone"],
-        ["16-20", "20 Legendary Spirit Shards*, 200 Gems, 480m Speedup, 1,500,000 Food, 1,500,000 Wood, 1,500,000 Stone"],
-        ["21-25", "10 Legendary Spirit Shards*, 100 Gems, 360m Speedup, 1,000,000 Food, 1,000,000 Wood, 1,000,000 Stone"],
-        ["26-50", "5 Legendary Spirit Shards*, 50 Gems, 240m Speedup, 500,000 Food, 500,000 Wood, 500,000 Stone"],
-        ["50-100", "2 Legendary Spirit Shards*, 20 Gems, 120m Speedup, 250,000 Food, 250,000 Wood, 250,000 Stone"],
+        [
+          "1",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 250, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 2500 },
+            { resource: Resources.PURIFIED_ESSENCE, amount: 25 },
+            { resource: Resources.VERDANT_SPLINTER, amount: 2500 },
+            { resource: Resources.SPEEDUP, amount: 60 * 50 },
+            { resource: Resources.FORGE_COIN, amount: 2500 },
+          ]
+        ],
+        [
+          "2",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 200, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 2000 },
+            { resource: Resources.PURIFIED_ESSENCE, amount: 20 },
+            { resource: Resources.VERDANT_SPLINTER, amount: 2000 },
+            { resource: Resources.SPEEDUP, amount: 60 * 40 },
+            { resource: Resources.FORGE_COIN, amount: 2000 },
+          ]
+        ],
+        [
+          "3",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 150, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 1500 },
+            { resource: Resources.PURIFIED_ESSENCE, amount: 15 },
+            { resource: Resources.VERDANT_SPLINTER, amount: 1500 },
+            { resource: Resources.SPEEDUP, amount: 60 * 30 },
+            { resource: Resources.FORGE_COIN, amount: 1500 },
+          ]
+        ],
+        [
+          "4-5",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 100, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 1000 },
+            { resource: Resources.PURIFIED_ESSENCE, amount: 10 },
+            { resource: Resources.VERDANT_SPLINTER, amount: 1000 },
+            { resource: Resources.SPEEDUP, amount: 60 * 25 },
+            { resource: Resources.FORGE_COIN, amount: 1000 },
+          ]
+        ],
+        [
+          "6-10",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 70, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 700 },
+            { resource: Resources.PURIFIED_ESSENCE, amount: 7 },
+            { resource: Resources.VERDANT_SPLINTER, amount: 700 },
+            { resource: Resources.SPEEDUP, amount: 60 * 20 },
+            { resource: Resources.FORGE_COIN, amount: 700 },
+          ]
+        ],
+        [
+          "11-15",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 50, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 500 },
+            { resource: Resources.PURIFIED_ESSENCE, amount: 5 },
+            { resource: Resources.VERDANT_SPLINTER, amount: 500 },
+            { resource: Resources.SPEEDUP, amount: 60 * 15 },
+            { resource: Resources.FORGE_COIN, amount: 500 },
+          ]
+        ],
+        [
+          "16-20",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 30, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 300 },
+            { resource: Resources.PURIFIED_ESSENCE, amount: 3 },
+            { resource: Resources.VERDANT_SPLINTER, amount: 300 },
+            { resource: Resources.SPEEDUP, amount: 60 * 10 },
+            { resource: Resources.FORGE_COIN, amount: 300 },
+          ]
+        ],
+        [
+          "21-25",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 20, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 200 },
+            { resource: Resources.PURIFIED_ESSENCE, amount: 2 },
+            { resource: Resources.VERDANT_SPLINTER, amount: 200 },
+            { resource: Resources.SPEEDUP, amount: 60 * 5 },
+            { resource: Resources.FORGE_COIN, amount: 200 },
+          ]
+        ],
+        [
+          "26-50",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 10, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 100 },
+            { resource: Resources.PURIFIED_ESSENCE, amount: 1 },
+            { resource: Resources.VERDANT_SPLINTER, amount: 100 },
+            { resource: Resources.SPEEDUP, amount: 60 * 3 },
+            { resource: Resources.FORGE_COIN, amount: 100 },
+          ]
+        ],
+        [
+          "50-100",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 5, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 50 },
+            { resource: Resources.PURIFIED_ESSENCE, amount: 1 },
+            { resource: Resources.VERDANT_SPLINTER, amount: 50 },
+            { resource: Resources.SPEEDUP, amount: 60 * 2 },
+            { resource: Resources.FORGE_COIN, amount: 50 },
+          ]
+        ],
+        [
+          "101-200",
+          [
+            { resource: Resources.SPIRIT_SHARD_LEGENDARY, amount: 2, disclaimer: "*" },
+            { resource: Resources.GEM, amount: 20 },
+            { resource: Resources.PURIFIED_ESSENCE, amount: 1 },
+            { resource: Resources.VERDANT_SPLINTER, amount: 20 },
+            { resource: Resources.SPEEDUP, amount: 60 * 1 },
+            { resource: Resources.FORGE_COIN, amount: 20 },
+          ]
+        ]
       ]
     }
   ],
@@ -431,6 +645,5 @@ export const tglMulti: Omit<Event, "type"> = {
   informations: [
     "The hero rotates after **every third event**.\nThe rotation for The Greatest Leader (Cross Server) is **Yangchen → Roku → Kuruk → Zaheer → Kuivra → Jinora → Desna & Eska → Opal → Bolin**.",
   ],
-  wip: true,
   image: "tgl.png"
 }

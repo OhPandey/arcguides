@@ -72,5 +72,7 @@ export const wheelOfFate: Omit<Event, "type"> = {
   informations: [
     "During the Wheel of Fate event, you can spin the wheel by using Lucky Tickets.",
     "The Wheel of Fate resets every day at 00:00 UTC, for 3 days.",
-    "The hero rotates after **every third event**.\nThe rotation for the Wheel of Fate is **Uncle Iroh → King Bumi → Painted Lady Katara → Fire Nation Aang → Avatar Hunter Zuko → White Wolf Sokka → Mako → Lady Beifong Toph → Ozai → Disguised Equalist Korra**",]
+    "The hero rotates after **every third event**.\nThe rotation for the Wheel of Fate is **Uncle Iroh → King Bumi → Painted Lady Katara → Fire Nation Aang → Avatar Hunter Zuko → White Wolf Sokka → Mako → Lady Beifong Toph → Ozai → Disguised Equalist Korra**"
+  ],
+  image: "wheel.png"
 }

@@ -72,5 +72,6 @@ export const unitedMind: Omit<Event, "type"> = {
       ], space: true
     },
     { type: "quotedate", author: "ANGames", date: "2026-04-06" }
-  ]
+  ],
+  image: "um.png"
 }
