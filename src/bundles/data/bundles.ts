@@ -7,6 +7,7 @@ import { growthFundBundles } from "./growthFundBundles";
 import { heroGrowthBundles } from "./heroGrowthBundles";
 import { lotusBundles } from "./lotusBundles";
 import { luckyDiceBundles } from "./luckyDiceBundles";
+import { migrationBundles } from "./migrationBundles";
 import { monthlyBundles } from "./monthlyBundles";
 import { passBundles } from "./passBundles";
 import { rankUpBundles } from "./rankUpBundles";
@@ -53,5 +54,6 @@ export const bundles = [
   ...surpriseLimitedBundles,
   ...recruitmentBundles,
   ...animaCrystalBundles,
-  ...summerSplashBundles
+  ...summerSplashBundles,
+  ...migrationBundles
 ];

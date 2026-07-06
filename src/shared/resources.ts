@@ -390,3 +390,7 @@ export const ANIMA_CRYSTAL: Resource = {
   name: "Anima Crystal",
   gemValue: 40
 }
+export const MIGRATION_TICKET: Resource = {
+  name: "Migration Ticket",
+  gemValue: 2500
+}
