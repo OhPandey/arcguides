@@ -92,6 +92,10 @@ export const servers: Server[] = [
     { id: 1089, name: "World 1089", releaseDate: "2026-05-29" },
     { id: 1090, name: "World 1090", releaseDate: "2026-06-05" },
     { id: 1091, name: "World 1091", releaseDate: "2026-06-12" },
+    { id: 1092, name: "World 1092", releaseDate: "2026-06-19" },
+    { id: 1093, name: "World 1093", releaseDate: "2026-06-26" },
+    { id: 1094, name: "World 1094", releaseDate: "2026-07-03" },
+    { id: 1095, name: "World 1095", releaseDate: "2026-07-10" },
 ]
 
 export const Seed = ["SEED_A", "SEED_B", "SEED_C", "SEED_B2", "SEED_C2"] as const
