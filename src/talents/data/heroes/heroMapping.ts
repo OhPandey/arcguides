@@ -13,6 +13,7 @@ import { zaheerTree } from "./air/zaheer";
 import { bolinTree } from "./earth/bolin";
 import { caiTree } from "./earth/cai";
 import { kingBumiTree } from "./earth/kingBumi";
+import { kingBumiMKTree } from "./earth/kingBumiMK";
 import { kueiTree } from "./earth/kuei";
 import { kuviraTree } from "./earth/kuvira";
 import { kyoshiTree } from "./earth/kyoshi";
@@ -37,6 +38,7 @@ import { amonTree } from "./water/amon";
 import { desnaTree } from "./water/desna";
 import { kataraTree } from "./water/katara";
 import { kataraPLTree } from "./water/kataraPL";
+import { kataraSFTree } from "./water/kataraSF";
 import { korraTree } from "./water/korra";
 import { korraEqTree } from "./water/korraEq";
 import { kurukTree } from "./water/kuruk";
@@ -92,5 +94,7 @@ export const heroMapping: Record<string, HeroTree> = {
     bolin: bolinTree,
     korraEq: korraEqTree,
     jetsun: jetsunTree,
-    tyLee: tyLeeTree
+    tyLee: tyLeeTree,
+    kataraSF: kataraSFTree,
+    kingBumiMK: kingBumiMKTree,
 }
