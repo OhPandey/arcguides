@@ -5,6 +5,7 @@ import { borteTree } from "./air/borte";
 import { bumiTree } from "./air/bumi";
 import { jetsunTree } from "./air/jetsun";
 import { jinoraTree } from "./air/jinora";
+import { kelsangTree } from "./air/kelsang";
 import { meeloTree } from "./air/meelo";
 import { opalTree } from "./air/opal";
 import { tenzinTree } from "./air/tenzin";
@@ -30,6 +31,7 @@ import { kenshiTree } from "./fire/kenshi";
 import { makoTree } from "./fire/mako";
 import { ozaiTree } from "./fire/ozai";
 import { piandaoTree } from "./fire/piandao";
+import { rangiTree } from "./fire/rangi";
 import { rokuTree } from "./fire/roku";
 import { tyLeeTree } from "./fire/tyLee";
 import { zukoTree } from "./fire/zuko";
@@ -97,4 +99,6 @@ export const heroMapping: Record<string, HeroTree> = {
     tyLee: tyLeeTree,
     kataraSF: kataraSFTree,
     kingBumiMK: kingBumiMKTree,
+    rangi: rangiTree,
+    kelsang: kelsangTree
 }
