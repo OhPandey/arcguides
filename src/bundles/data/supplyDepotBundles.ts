@@ -3,7 +3,7 @@ import { Bundle } from "../type/bundle";
 
 export const supplyDepotBundles: Bundle[] = [
     {
-        name: "Supply Depot > 30 days of Gems",
+        name: "Supply Depot > 30 days of Gems (Deprecated)",
         image: "supply_depot_gem.png",
         priceUSD: 4.99,
         resources: [
@@ -14,8 +14,8 @@ export const supplyDepotBundles: Bundle[] = [
         ]
     },
     {
-        name: "Supply Depot > 30 days of Speedups",
-        image: "supply_depot_gem.png",
+        name: "Supply Depot > 30 days of Speedups (Deprecated)",
+        image: "supply_depot_speedup.png",
         priceUSD: 4.99,
         resources: [
             {
@@ -29,8 +29,8 @@ export const supplyDepotBundles: Bundle[] = [
         ]
     },
     {
-        name: "Supply Depot > 14 days of Companion Material Custom Chest",
-        image: "supply_depot_gem.png",
+        name: "Supply Depot > 14 days of Companion Material Custom Chest (Deprecated)",
+        image: "supply_depot_companion.png",
         priceUSD: 4.99,
         resources: [
             {
@@ -44,8 +44,8 @@ export const supplyDepotBundles: Bundle[] = [
         ]
     },
     {
-        name: "Supply Depot > 14 days of Forge Coin",
-        image: "supply_depot_gem.png",
+        name: "Supply Depot > 14 days of Forge Coin (Deprecated)",
+        image: "supply_depot_forge_coin.png",
         priceUSD: 4.99,
         resources: [
             {
@@ -59,8 +59,8 @@ export const supplyDepotBundles: Bundle[] = [
         ]
     },
     {
-        name: "Supply Depot > 14 days of Hero Gear Enhancement",
-        image: "supply_depot_gem.png",
+        name: "Supply Depot > 14 days of Hero Gear Enhancement (Deprecated)",
+        image: "supply_depot_hero_gear.png",
         priceUSD: 4.99,
         resources: [
             {
@@ -74,8 +74,8 @@ export const supplyDepotBundles: Bundle[] = [
         ]
     },
     {
-        name: "Supply Depot > 14 days of Food",
-        image: "supply_depot_gem.png",
+        name: "Supply Depot > 14 days of Food (Deprecated)",
+        image: "supply_depot_food.png",
         priceUSD: 4.99,
         resources: [
             {
@@ -89,8 +89,8 @@ export const supplyDepotBundles: Bundle[] = [
         ]
     },
     {
-        name: "Supply Depot > 14 days of Wood",
-        image: "supply_depot_gem.png",
+        name: "Supply Depot > 14 days of Wood (Deprecated)",
+        image: "supply_depot_wood.png",
         priceUSD: 4.99,
         resources: [
             {
@@ -104,8 +104,8 @@ export const supplyDepotBundles: Bundle[] = [
         ]
     },
     {
-        name: "Supply Depot > 14 days of Stone",
-        image: "supply_depot_gem.png",
+        name: "Supply Depot > 14 days of Stone (Deprecated)",
+        image: "supply_depot_stone.png",
         priceUSD: 4.99,
         resources: [
             {
@@ -119,8 +119,8 @@ export const supplyDepotBundles: Bundle[] = [
         ]
     },
     {
-        name: "Supply Depot > 14 days of Gold",
-        image: "supply_depot_gem.png",
+        name: "Supply Depot > 14 days of Gold (Deprecated)",
+        image: "supply_depot_gold.png",
         priceUSD: 4.99,
         resources: [
             {

@@ -1,6 +1,7 @@
 import { animaCrystalBundles } from "./animaCrystalBundles";
 import { companionBundles } from "./companionBundles";
 import { dailyDealBundles } from "./dailyDealsBundles";
+import { dailySpecial } from "./dailySpecial";
 import { firstAnniversaryBundles } from "./firstAnniversaryBundles";
 import { gearBundles } from "./gearBundles";
 import { growthFundBundles } from "./growthFundBundles";
@@ -25,6 +26,7 @@ import { tierBundles } from "./tierBundles";
 import { townHallBundles } from "./townHallBundles";
 import { vaultBundles } from "./vaultBundles";
 import { vipBundles } from "./vipBundles";
+import { weeklyCardBundles } from "./weeklyCardBundles";
 import { wheelBundles } from "./wheelBundles";
 
 export const bundles = [
@@ -55,5 +57,7 @@ export const bundles = [
   ...recruitmentBundles,
   ...animaCrystalBundles,
   ...summerSplashBundles,
-  ...migrationBundles
+  ...migrationBundles,
+  ...weeklyCardBundles,
+  ...dailySpecial
 ];

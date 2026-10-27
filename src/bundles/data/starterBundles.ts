@@ -175,7 +175,50 @@ export const starterBundles: Bundle[] = [
         ]
     },
     {
-         name: "Cai's Bundle",
+        name: "Starter Bundle VI",
+        image: "starter.png",
+        priceUSD: 99.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 11500
+            },
+            {
+                resource: Resources.GOLDEN_SCROLL,
+                amount: 40
+            },
+            {
+                resource: Resources.SPEEDUP,
+                amount: 60*600+5*3600
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 10000*9000
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 10000*9000
+            },
+            {
+                resource: Resources.STONE,
+                amount: 10000*9000
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 5000*9000
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 10000
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV6,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Cai's Bundle",
         image: "cai.png",
         priceUSD: 4.99,
         resources: [
