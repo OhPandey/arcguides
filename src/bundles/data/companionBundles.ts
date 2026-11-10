@@ -5,6 +5,45 @@ export const companionBundles: Bundle[] = [
     {
         name: "Cozy Haven I",
         image: "cozy_haven.png",
+        priceUSD: 4.99,
+        resources: [
+            {
+                resource: Resources.GEM,
+                amount: 500
+            },
+            {
+                resource: Resources.COMPANION_MATERIAL_CUSTOM_CHEST,
+                amount: 165
+            },
+            {
+                resource: Resources.FOOD,
+                amount: 1000*500
+            },
+            {
+                resource: Resources.WOOD,
+                amount: 1000*500
+            },
+            {
+                resource: Resources.STONE,
+                amount: 1000*500
+            },
+            {
+                resource: Resources.GOLD,
+                amount: 500*500
+            },
+            {
+                resource: Resources.VIPPOINT,
+                amount: 500
+            },
+            {
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV2,
+                amount: 1
+            }
+        ]
+    },
+    {
+        name: "Cozy Haven II",
+        image: "cozy_haven.png",
         priceUSD: 9.99,
         resources: [
             {
@@ -42,7 +81,7 @@ export const companionBundles: Bundle[] = [
         ]
     },
     {
-        name: "Cozy Haven II",
+        name: "Cozy Haven III",
         image: "cozy_haven.png",
         priceUSD: 19.99,
         resources: [
@@ -81,7 +120,7 @@ export const companionBundles: Bundle[] = [
         ]
     },
     {
-        name: "Cozy Haven III", // need proof of this bundle - just theoratical
+        name: "Cozy Haven IV", // need proof of this bundle - just theoratical
         image: "cozy_haven.png",
         priceUSD: 49.99,
         resources: [
@@ -114,13 +153,13 @@ export const companionBundles: Bundle[] = [
                 amount: 5000
             },
             {
-                resource: Resources.BUNDLE_SUPPLY_CHEST_LV6,
+                resource: Resources.BUNDLE_SUPPLY_CHEST_LV5,
                 amount: 1
             }
         ]
     },
     {
-        name: "Cozy Haven IV",
+        name: "Cozy Haven V",
         image: "cozy_haven.png",
         priceUSD: 99.99,
         resources: [
